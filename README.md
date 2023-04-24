@@ -8,3 +8,5 @@ developmental assessment of fairness definitions_
 ## Experiment reproduction
 
 ## License
+
+This work is released under GPL-3.0 license
