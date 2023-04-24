@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fairness:GroupAnalysis
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:fairness="http://www.example.org/fairness"
+    xsi:schemaLocation="http://www.example.org/fairness Fairmetric.ecore"
+    name="Compas">
+  <metric name="statistical"
+      toleranceValue="2.0"/>
+  <dataset/>
+</fairness:GroupAnalysis>

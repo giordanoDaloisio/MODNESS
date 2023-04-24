@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/metamodel/src" modelPluginID="metamodel" modelName="Fairness"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>Fairness.ecore</foreignModel>
+  <genPackages prefix="Fairness" disposableProviderFactory="true" ecorePackage="Fairness.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Fairness.ecore#//LogicalOperator">
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//LogicalOperator/AND"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//LogicalOperator/OR"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Fairness.ecore#//SingleOperatorParameter">
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//SingleOperatorParameter/EQUAL"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//SingleOperatorParameter/GREATER"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//SingleOperatorParameter/MINOR"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//SingleOperatorParameter/GREATER_EQUAL"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//SingleOperatorParameter/MINOR_EQUAL"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//SingleOperatorParameter/NOT_EQUAL"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Fairness.ecore#//RangeOperatorParameter">
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//RangeOperatorParameter/IN_INCLUDED"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//RangeOperatorParameter/IN_EXCLUDED"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//RangeOperatorParameter/IN_LOWER_INCLUDED"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//RangeOperatorParameter/IN_GREATER_INCLUDED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Fairness.ecore#//LabelValueType">
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//LabelValueType/GROUND_TRUTH"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//LabelValueType/PREDICTED_VALUE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Fairness.ecore#//ArithmeticOperator">
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//ArithmeticOperator/SUM"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//ArithmeticOperator/DIFFERENCE"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//ArithmeticOperator/MULTIPLICATION"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//ArithmeticOperator/RATIO"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Fairness.ecore#//BiasSource">
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//BiasSource/WRONG_ALGORITHM_BEHAVIOUR"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//BiasSource/HUMAN_DISCRIMINATION"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//BiasSource/WRONG_MEASUREMENT"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//BiasSource/OMITTED_VARIABLE"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//BiasSource/WRONG_SAMPLING"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//BiasSource/WRONG_AGGREGATION"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//BiasSource/WRONG_LINKING"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//BiasSource/WRONG_PRESENTATION"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//BiasSource/RESULT_RANKING"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//BiasSource/WRONG_SYSTEM_EVALUATION"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//BiasSource/WRONG_SYSTEM_TARGET_POPULATION"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//BiasSource/CHANGE_IN_TARGET_POPULATION"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Fairness.ecore#//FairnessMetric">
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//FairnessMetric/STATISTICAL_PARITY"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//FairnessMetric/DISPARATE_IMPACT"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//FairnessMetric/EQUALIZED_ODDS"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//FairnessMetric/EQUAL_ACCURACY"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//FairnessMetric/FALSE_POSITIVE_DIFFERENCE"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//FairnessMetric/TRUE_POSITIVE_DIFFERENCE"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="Fairness.ecore#//NamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//NamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//Operation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//Operation/equalityOperator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Operation/leftSide"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Operation/rightSide"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//OperatorComponent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//OperatorComponent/function"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//OperatorComponent/operationvalue"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Fairness.ecore#//Analysis">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Analysis/metric"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Analysis/dataset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//Analysis/scope"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//GroupAnalysis">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//GroupAnalysis/datasetUnprivilegedGroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//GroupAnalysis/datasetPrivilegedGroup"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//IndividualAnalysis"/>
+    <genClasses image="false" ecoreClass="Fairness.ecore#//Function"/>
+    <genClasses ecoreClass="Fairness.ecore#//SensitiveVariable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//SensitiveVariable/sensitiveVariableValue"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Fairness.ecore#//Variable"/>
+    <genClasses ecoreClass="Fairness.ecore#//Probability">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Probability/object"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Probability/condition"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//ExpectedValue">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//ExpectedValue/condition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//ExpectedValue/columnName"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//GroupSize">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//GroupSize/groupCondition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fairness.ecore#//GroupSize/variable"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//LogicalCondition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//LogicalCondition/sublogicalcondition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fairness.ecore#//LogicalCondition/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fairness.ecore#//LogicalCondition/sensitivegroup"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//OperationValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//OperationValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//SubLogicalCondition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//SubLogicalCondition/logicalOperator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//SubLogicalCondition/logicalcondition"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Fairness.ecore#//Bias">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//Bias/domain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//Bias/source"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Bias/sensitiveVariables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Bias/positiveOutcome"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//PositiveOutcome">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//PositiveOutcome/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//GroupBias">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//GroupBias/unprivilegedGroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//GroupBias/privilegedGroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//GroupBias/analysis"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//IndividualBias">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//IndividualBias/individualAnalysis"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//SensitiveGroup">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fairness.ecore#//SensitiveGroup/sensitiveValue"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//VariableValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//VariableValue/relativeToDatasetSize"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//VariableValue/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//SensitiveVariableValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//SensitiveVariableValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//DatasetSize"/>
+    <genClasses ecoreClass="Fairness.ecore#//Logaritm">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Logaritm/operatorcomponent"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//Summation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Summation/startRange"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Summation/endRange"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Summation/body"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//OtherVariable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//OtherVariable/othervariablevalue"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//ExistingFairnessMetric">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//ExistingFairnessMetric/metric"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//Metric">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Metric/operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Metric/function"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//Metric/toleranceValue"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//Dataset">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Dataset/otherVariable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//Dataset/groundTruthLabelName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//Dataset/predictedLabelName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Dataset/positiveOutcome"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Dataset/datasetSentiveVariable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//Dataset/filePath"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//DatasetSensitiveVariable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fairness.ecore#//DatasetSensitiveVariable/mappingSensitiveVariable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//DatasetSensitiveVariable/datasetsensitivevariablevalue"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//DatasetPositiveOutcome">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fairness.ecore#//DatasetPositiveOutcome/mappingPositiveOutcome"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//DatasetSensitiveGroup">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fairness.ecore#//DatasetSensitiveGroup/sensitiveVariables"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fairness.ecore#//DatasetSensitiveGroup/mappingGroup"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//DatasetSensitiveVariableValue">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fairness.ecore#//DatasetSensitiveVariableValue/mappingValue"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Fairness.ecore#//EqualityOperator"/>
+    <genClasses ecoreClass="Fairness.ecore#//SingleOperator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//SingleOperator/operator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//SingleOperator/value"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//RangeOperator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//RangeOperator/operator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//RangeOperator/lowerValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//RangeOperator/greaterValue"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fairness:GroupBias xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fairness="http://www.example.org/fairness">
+  <sensitiveVariables name="gender">
+    <sensitiveVariableValue value="woman"/>
+    <sensitiveVariableValue value="man"/>
+  </sensitiveVariables>
+  <positiveOutcome value="credit granted"/>
+  <unprivilegedGroup name="women" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.0"/>
+  <privilegedGroup name="men" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.1"/>
+  <analysis name="" scope="A person should have a credit granted regardless their gender">
+    <metric name="equalized odds" toleranceValue="0.2">
+      <operator xsi:type="fairness:SingleOperator"/>
+      <function xsi:type="fairness:ExistingFairnessMetric" name="eo" metric="EQUALIZED_ODDS"/>
+    </metric>
+    <dataset name="German dataset" groundTruthLabelName="credit" predictedLabelName="prediction" filePath="german.csv">
+      <positiveOutcome mappingPositiveOutcome="//@positiveOutcome">
+        <operator xsi:type="fairness:SingleOperator" value="1.0"/>
+      </positiveOutcome>
+      <datasetSentiveVariable name="sex" mappingSensitiveVariable="//@sensitiveVariables.0">
+        <datasetsensitivevariablevalue name="man" mappingValue="//@sensitiveVariables.0/@sensitiveVariableValue.1">
+          <operator xsi:type="fairness:SingleOperator"/>
+        </datasetsensitivevariablevalue>
+        <datasetsensitivevariablevalue name="woman" mappingValue="//@sensitiveVariables.0/@sensitiveVariableValue.0">
+          <operator xsi:type="fairness:SingleOperator" value="1.0"/>
+        </datasetsensitivevariablevalue>
+      </datasetSentiveVariable>
+    </dataset>
+    <datasetUnprivilegedGroup name="women" sensitiveVariables="//@analysis.0/@dataset.0/@datasetSentiveVariable.0/@datasetsensitivevariablevalue.1" mappingGroup="//@unprivilegedGroup.0"/>
+    <datasetPrivilegedGroup name="men" sensitiveVariables="//@analysis.0/@dataset.0/@datasetSentiveVariable.0/@datasetsensitivevariablevalue.0" mappingGroup="//@privilegedGroup.0"/>
+  </analysis>
+</fairness:GroupBias>

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fairness" nsURI="http://www.example.org/fairness" nsPrefix="fairness">
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Operation" eSuperTypes="#//Function">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="equalityOperator" lowerBound="1"
+        eType="#//ArithmeticOperator"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="leftSide" lowerBound="1"
+        eType="#//OperatorComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rightSide" lowerBound="1"
+        eType="#//OperatorComponent" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperatorComponent" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="function" eType="#//Function"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operationvalue" eType="#//OperationValue"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LogicalOperator">
+    <eLiterals name="AND"/>
+    <eLiterals name="OR" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Analysis" abstract="true" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metric" lowerBound="1"
+        upperBound="-1" eType="#//Metric" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataset" lowerBound="1"
+        upperBound="-1" eType="#//Dataset" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scope" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GroupAnalysis" eSuperTypes="#//Analysis">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datasetUnprivilegedGroup"
+        lowerBound="1" upperBound="-1" eType="#//DatasetSensitiveGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datasetPrivilegedGroup"
+        lowerBound="1" upperBound="-1" eType="#//DatasetSensitiveGroup" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IndividualAnalysis" eSuperTypes="#//Analysis"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Function" abstract="true" eSuperTypes="#//NamedElement"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="SingleOperatorParameter">
+    <eLiterals name="EQUAL"/>
+    <eLiterals name="GREATER" value="1"/>
+    <eLiterals name="MINOR" value="2"/>
+    <eLiterals name="GREATER_EQUAL" value="3"/>
+    <eLiterals name="MINOR_EQUAL" value="4"/>
+    <eLiterals name="NOT_EQUAL" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RangeOperatorParameter">
+    <eLiterals name="IN_INCLUDED"/>
+    <eLiterals name="IN_EXCLUDED" value="1"/>
+    <eLiterals name="IN_LOWER_INCLUDED" value="2"/>
+    <eLiterals name="IN_GREATER_INCLUDED" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SensitiveVariable" eSuperTypes="#//Variable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensitiveVariableValue"
+        lowerBound="1" upperBound="-1" eType="#//SensitiveVariableValue" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" abstract="true" eSuperTypes="#//NamedElement"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="LabelValueType">
+    <eLiterals name="GROUND_TRUTH" literal="GROUND_TRUTH"/>
+    <eLiterals name="PREDICTED_VALUE" value="1" literal="PREDICTED_VALUE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Probability" eSuperTypes="#//Function">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="object" lowerBound="1"
+        eType="#//LogicalCondition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//LogicalCondition"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpectedValue" eSuperTypes="#//Function">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//LogicalCondition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="columnName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GroupSize" eSuperTypes="#//Function">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groupCondition" ordered="false"
+        eType="#//LogicalCondition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" eType="#//Variable"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalCondition" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sublogicalcondition" eType="#//SubLogicalCondition"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//VariableValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensitivegroup" eType="#//DatasetSensitiveGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ArithmeticOperator">
+    <eLiterals name="SUM"/>
+    <eLiterals name="DIFFERENCE" value="1"/>
+    <eLiterals name="MULTIPLICATION" value="2"/>
+    <eLiterals name="RATIO" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperationValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SubLogicalCondition" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="logicalOperator" lowerBound="1"
+        eType="#//LogicalOperator"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="logicalcondition" lowerBound="1"
+        eType="#//LogicalCondition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Bias" abstract="true" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="domain" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" lowerBound="1"
+        upperBound="-1" eType="#//BiasSource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensitiveVariables" lowerBound="1"
+        upperBound="-1" eType="#//SensitiveVariable" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="positiveOutcome" lowerBound="1"
+        eType="#//PositiveOutcome" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PositiveOutcome">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GroupBias" eSuperTypes="#//Bias">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unprivilegedGroup" lowerBound="1"
+        upperBound="-1" eType="#//SensitiveGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="privilegedGroup" lowerBound="1"
+        upperBound="-1" eType="#//SensitiveGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="analysis" lowerBound="1"
+        upperBound="-1" eType="#//GroupAnalysis" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IndividualBias" eSuperTypes="#//Bias">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="individualAnalysis" lowerBound="1"
+        upperBound="-1" eType="#//IndividualAnalysis" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SensitiveGroup" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensitiveValue" lowerBound="1"
+        upperBound="-1" eType="#//SensitiveVariableValue"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="BiasSource">
+    <eLiterals name="WRONG_ALGORITHM_BEHAVIOUR"/>
+    <eLiterals name="HUMAN_DISCRIMINATION" value="1"/>
+    <eLiterals name="WRONG_MEASUREMENT" value="2"/>
+    <eLiterals name="OMITTED_VARIABLE" value="3"/>
+    <eLiterals name="WRONG_SAMPLING" value="4"/>
+    <eLiterals name="WRONG_AGGREGATION" value="5"/>
+    <eLiterals name="WRONG_LINKING" value="6"/>
+    <eLiterals name="WRONG_PRESENTATION" value="7"/>
+    <eLiterals name="RESULT_RANKING" value="8"/>
+    <eLiterals name="WRONG_SYSTEM_EVALUATION" value="9"/>
+    <eLiterals name="WRONG_SYSTEM_TARGET_POPULATION" value="10"/>
+    <eLiterals name="CHANGE_IN_TARGET_POPULATION" value="11"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VariableValue" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="relativeToDatasetSize"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" lowerBound="1"
+        eType="#//EqualityOperator" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SensitiveVariableValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DatasetSize" eSuperTypes="#//Function"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Logaritm" eSuperTypes="#//Function">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operatorcomponent" lowerBound="1"
+        eType="#//OperatorComponent" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Summation" eSuperTypes="#//Function">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="startRange" lowerBound="1"
+        eType="#//OperatorComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="endRange" lowerBound="1"
+        eType="#//OperatorComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" lowerBound="1" eType="#//OperatorComponent"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OtherVariable" eSuperTypes="#//Variable">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="othervariablevalue" upperBound="-1"
+        eType="#//VariableValue" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExistingFairnessMetric" eSuperTypes="#//Function">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="metric" lowerBound="1"
+        eType="#//FairnessMetric"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Metric" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operator" lowerBound="1"
+        eType="#//EqualityOperator" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="function" lowerBound="1"
+        eType="#//Function" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="toleranceValue" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dataset" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="otherVariable" upperBound="-1"
+        eType="#//OtherVariable" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="groundTruthLabelName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="predictedLabelName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="positiveOutcome" lowerBound="1"
+        eType="#//DatasetPositiveOutcome" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datasetSentiveVariable"
+        lowerBound="1" upperBound="-1" eType="#//DatasetSensitiveVariable" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filePath" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DatasetSensitiveVariable" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mappingSensitiveVariable"
+        lowerBound="1" eType="#//SensitiveVariable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datasetsensitivevariablevalue"
+        lowerBound="1" upperBound="-1" eType="#//DatasetSensitiveVariableValue" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DatasetPositiveOutcome" eSuperTypes="#//VariableValue">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mappingPositiveOutcome"
+        lowerBound="1" eType="#//PositiveOutcome"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DatasetSensitiveGroup" eSuperTypes="#//NamedElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensitiveVariables" lowerBound="1"
+        upperBound="-1" eType="#//DatasetSensitiveVariableValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mappingGroup" lowerBound="1"
+        eType="#//SensitiveGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DatasetSensitiveVariableValue" eSuperTypes="#//VariableValue">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mappingValue" lowerBound="1"
+        eType="#//SensitiveVariableValue"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FairnessMetric">
+    <eLiterals name="STATISTICAL_PARITY"/>
+    <eLiterals name="DISPARATE_IMPACT" value="1"/>
+    <eLiterals name="EQUALIZED_ODDS" value="2"/>
+    <eLiterals name="EQUAL_ACCURACY" value="3"/>
+    <eLiterals name="FALSE_POSITIVE_DIFFERENCE" value="4"/>
+    <eLiterals name="TRUE_POSITIVE_DIFFERENCE" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EqualityOperator" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SingleOperator" eSuperTypes="#//EqualityOperator">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" lowerBound="1"
+        eType="#//SingleOperatorParameter"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RangeOperator" eSuperTypes="#//EqualityOperator">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" lowerBound="1"
+        eType="#//RangeOperatorParameter"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowerValue" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="greaterValue" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+  </eClassifiers>
+</ecore:EPackage>

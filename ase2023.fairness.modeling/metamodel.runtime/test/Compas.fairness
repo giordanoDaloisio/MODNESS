@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fairness:GroupBias xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fairness="http://www.example.org/fairness" name="compas" domain="social">
+  <source>HUMAN_DISCRIMINATION</source>
+  <source>WRONG_SAMPLING</source>
+  <sensitiveVariables name="gender">
+    <sensitiveVariableValue value="male"/>
+    <sensitiveVariableValue value="female"/>
+  </sensitiveVariables>
+  <sensitiveVariables name="race">
+    <sensitiveVariableValue value="white"/>
+    <sensitiveVariableValue value="non-white"/>
+  </sensitiveVariables>
+  <positiveOutcome value="non recidiv"/>
+  <unprivilegedGroup name="non-white men" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.0 //@sensitiveVariables.1/@sensitiveVariableValue.1"/>
+  <privilegedGroup name="white female" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.1 //@sensitiveVariables.1/@sensitiveVariableValue.0"/>
+  <analysis name="compas fairness" scope="all people must be predicted as recidiv only if the attributes different from the sensitive variables say that">
+    <metric name="statistical parity" toleranceValue="0.2">
+      <operator xsi:type="fairness:SingleOperator"/>
+      <function xsi:type="fairness:ExistingFairnessMetric" name="stat_parity"/>
+    </metric>
+    <dataset name="compas" groundTruthLabelName="two_year_recid" predictedLabelName="prediction" filePath="compas.csv">
+      <positiveOutcome name="non-recidiv" mappingPositiveOutcome="//@positiveOutcome">
+        <operator xsi:type="fairness:SingleOperator" value="1.0"/>
+      </positiveOutcome>
+      <datasetSentiveVariable name="sex" mappingSensitiveVariable="//@sensitiveVariables.0">
+        <datasetsensitivevariablevalue name="male" mappingValue="//@sensitiveVariables.0/@sensitiveVariableValue.0">
+          <operator xsi:type="fairness:SingleOperator"/>
+        </datasetsensitivevariablevalue>
+        <datasetsensitivevariablevalue name="female" mappingValue="//@sensitiveVariables.0/@sensitiveVariableValue.1">
+          <operator xsi:type="fairness:SingleOperator" value="1.0"/>
+        </datasetsensitivevariablevalue>
+      </datasetSentiveVariable>
+      <datasetSentiveVariable name="race" mappingSensitiveVariable="//@sensitiveVariables.1">
+        <datasetsensitivevariablevalue name="non-white" mappingValue="//@sensitiveVariables.1/@sensitiveVariableValue.1">
+          <operator xsi:type="fairness:SingleOperator"/>
+        </datasetsensitivevariablevalue>
+        <datasetsensitivevariablevalue name="white" mappingValue="//@sensitiveVariables.1/@sensitiveVariableValue.0">
+          <operator xsi:type="fairness:SingleOperator" value="1.0"/>
+        </datasetsensitivevariablevalue>
+      </datasetSentiveVariable>
+    </dataset>
+    <datasetUnprivilegedGroup name="non-white men" sensitiveVariables="//@analysis.0/@dataset.0/@datasetSentiveVariable.1/@datasetsensitivevariablevalue.0 //@analysis.0/@dataset.0/@datasetSentiveVariable.0/@datasetsensitivevariablevalue.0" mappingGroup="//@unprivilegedGroup.0"/>
+    <datasetPrivilegedGroup name="white female" sensitiveVariables="//@analysis.0/@dataset.0/@datasetSentiveVariable.0/@datasetsensitivevariablevalue.1 //@analysis.0/@dataset.0/@datasetSentiveVariable.1/@datasetsensitivevariablevalue.1" mappingGroup="//@privilegedGroup.0"/>
+  </analysis>
+</fairness:GroupBias>
