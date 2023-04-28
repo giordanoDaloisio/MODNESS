@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
-  <mtl:Module name="generateFairnessBusinessLogic" nsURI="org::eclipse::acceleo::fairness::generator::main::generateFairnessBusinessLogic" startHeaderPosition="29" endHeaderPosition="858">
+  <mtl:Module name="generateFairnessBusinessLogic" nsURI="org::eclipse::acceleo::fairness::generator::main::generateFairnessBusinessLogic" startHeaderPosition="30" endHeaderPosition="889">
     <input>
       <takesTypesFrom href="http://www.example.org/fairness#/"/>
     </input>
     <ownedModuleElement xsi:type="mtl:Template" name="generateElement" visibility="Public">
-      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+      <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
       <body xsi:type="mtl:FileBlock" openMode="OverWrite">
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;&#xA;from aif360.metrics import ClassificationMetric&#xA;from aif360.datasets import BinaryLabelDataset&#xA;import pandas as pd&#xA;import math&#xA;&#xA;&#xA;def summation(startRange, endRange, body):&#xA;    ris = 0&#xA;    for i in range(startRange, endRange):&#xA;        ris += body(i)&#xA;    return ris&#xA;&#xA;&#xA;def logaritm(x):&#xA;    return math.log(x)&#xA;&#xA;&#xA;class FairnessMetric(ClassificationMetric):&#xA;&#xA;    def __init__(self, dataset_name: str, unprivileged_groups: dict, privileged_group: dict, true_label_name: str, predicted_label_name: str, positive_value: int):&#xA;        self.df = pd.read_csv(dataset_name)&#xA;        self.dataset_true = BinaryLabelDataset(&#xA;            df=self.df.drop(columns="/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;&#xD;&#xA;from aif360.metrics import ClassificationMetric&#xD;&#xA;from aif360.datasets import BinaryLabelDataset&#xD;&#xA;import pandas as pd&#xD;&#xA;import math&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;def summation(startRange, endRange, body):&#xD;&#xA;    ris = 0&#xD;&#xA;    for i in range(startRange, endRange):&#xD;&#xA;        ris += body(i)&#xD;&#xA;    return ris&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;def logaritm(x):&#xD;&#xA;    return math.log(x)&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;class FairnessMetric(ClassificationMetric):&#xD;&#xA;&#xD;&#xA;    def __init__(self, dataset_name: str, unprivileged_groups: dict, privileged_group: dict, true_label_name: str, predicted_label_name: str, positive_value: int):&#xD;&#xA;        self.df = pd.read_csv(dataset_name)&#xD;&#xA;        self.dataset_true = BinaryLabelDataset(&#xD;&#xA;            df=self.df.drop(columns="/>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
@@ -15,7 +15,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="),&#xA;            label_names="/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="),&#xD;&#xA;            label_names="/>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
@@ -23,7 +23,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=",&#xA;            protected_attribute_names=list(unprivileged_groups.keys()),&#xA;            favorable_label=positive_value,&#xA;            unfavorable_label=1-positive_value)&#xA;        self.dataset_pred = self.dataset_true.copy(deepcopy=True)&#xA;        self.dataset_pred.labels = self.df"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=",&#xD;&#xA;            protected_attribute_names=list(unprivileged_groups.keys()),&#xD;&#xA;            favorable_label=positive_value,&#xD;&#xA;            unfavorable_label=1-positive_value)&#xD;&#xA;        self.dataset_pred = self.dataset_true.copy(deepcopy=True)&#xD;&#xA;        self.dataset_pred.labels = self.df"/>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
@@ -31,7 +31,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".values.reshape(&#xA;            -1, 1)&#xA;        super().__init__(self.dataset_true, self.dataset_pred,&#xA;                         unprivileged_groups="/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".values.reshape(&#xD;&#xA;            -1, 1)&#xD;&#xA;        super().__init__(self.dataset_true, self.dataset_pred,&#xD;&#xA;                         unprivileged_groups="/>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
@@ -47,7 +47,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=")&#xA;&#xA;    def probability(self, object: str, condition: str = '') -> float:&#xA;        probability = self.df.query(object).shape"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=")&#xD;&#xA;&#xD;&#xA;    def probability(self, object: str, condition: str = '') -> float:&#xD;&#xA;        probability = self.df.query(object).shape"/>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
@@ -63,7 +63,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;        if condition == '':&#xA;            return probability&#xA;        else:&#xA;&#xA;            return (self.df.query(condition + ' and ' + object).shape"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;        if condition == '':&#xD;&#xA;            return probability&#xD;&#xA;        else:&#xD;&#xA;&#xD;&#xA;            return (self.df.query(condition + ' and ' + object).shape"/>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
@@ -79,7 +79,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=") / probability&#xA;&#xA;    def expected_value(self, column_name: str, condition: str = '') -> float:&#xA;        subdata = self.df"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=") / probability&#xD;&#xA;&#xD;&#xA;    def expected_value(self, column_name: str, condition: str = '') -> float:&#xD;&#xA;        subdata = self.df"/>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
@@ -87,7 +87,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;        if condition == '':&#xA;            expected_value = 0&#xA;            for val in subdata.unique().tolist():&#xA;                expected_value += val * \&#xA;                    self.probability(column_name + ' == ' + str(val))&#xA;            return expected_value&#xA;        else:&#xA;            expected_value = 0&#xA;            for val in subdata.unique().tolist():&#xA;                expected_value += val * \&#xA;                    self.probability(column_name + ' == ' +&#xA;                                     str(val), condition)&#xA;            return expected_value&#xA;&#xA;    def group_size(self, groupCondition: str = '', variable: str = ''):&#xA;        if groupCondition != '':&#xA;            return self.df.query(groupCondition).shape"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;        if condition == '':&#xD;&#xA;            expected_value = 0&#xD;&#xA;            for val in subdata.unique().tolist():&#xD;&#xA;                expected_value += val * \&#xD;&#xA;                    self.probability(column_name + ' == ' + str(val))&#xD;&#xA;            return expected_value&#xD;&#xA;        else:&#xD;&#xA;            expected_value = 0&#xD;&#xA;            for val in subdata.unique().tolist():&#xD;&#xA;                expected_value += val * \&#xD;&#xA;                    self.probability(column_name + ' == ' +&#xD;&#xA;                                     str(val), condition)&#xD;&#xA;            return expected_value&#xD;&#xA;&#xD;&#xA;    def group_size(self, groupCondition: str = '', variable: str = ''):&#xD;&#xA;        if groupCondition != '':&#xD;&#xA;            return self.df.query(groupCondition).shape"/>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
@@ -95,7 +95,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;        elif variable != '':&#xA;            return len(self.df"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;        elif variable != '':&#xD;&#xA;            return len(self.df"/>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
@@ -103,7 +103,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".unique())&#xA;        return 0&#xA;&#xA;    def dataset_size(self):&#xA;        return self.df.shape"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=".unique())&#xD;&#xA;        return 0&#xD;&#xA;&#xD;&#xA;    def dataset_size(self):&#xD;&#xA;        return self.df.shape"/>
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
@@ -111,7 +111,7 @@
         <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="]">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </body>
-        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xA;"/>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="&#xD;&#xA;"/>
         <fileUrl xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="FairnessMetric.py">
           <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
         </fileUrl>
@@ -282,298 +282,298 @@
   </ocl.ecore:Variable>
   <ecore:EAnnotation source="positions">
     <eAnnotations source="positions.0" references="/0/generateElement">
-      <details key="start" value="105"/>
-      <details key="end" value="2876"/>
+      <details key="start" value="109"/>
+      <details key="end" value="2952"/>
       <details key="line" value="5"/>
     </eAnnotations>
     <eAnnotations source="positions.1" references="/0/generateElement/%">
-      <details key="start" value="161"/>
-      <details key="end" value="162"/>
+      <details key="start" value="166"/>
+      <details key="end" value="168"/>
       <details key="line" value="6"/>
     </eAnnotations>
     <eAnnotations source="positions.2" references="/0/generateElement/%.1">
-      <details key="start" value="162"/>
-      <details key="end" value="2864"/>
+      <details key="start" value="168"/>
+      <details key="end" value="2939"/>
       <details key="line" value="7"/>
     </eAnnotations>
     <eAnnotations source="positions.3" references="/0/generateElement/%.1/%">
-      <details key="start" value="207"/>
-      <details key="end" value="854"/>
+      <details key="start" value="214"/>
+      <details key="end" value="885"/>
       <details key="line" value="8"/>
     </eAnnotations>
     <eAnnotations source="positions.4" references="/0/generateElement/%.1/%.1">
-      <details key="start" value="855"/>
-      <details key="end" value="858"/>
+      <details key="start" value="886"/>
+      <details key="end" value="889"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.5" references="/0/generateElement/%.1/%.2">
-      <details key="start" value="860"/>
-      <details key="end" value="880"/>
+      <details key="start" value="891"/>
+      <details key="end" value="911"/>
       <details key="line" value="32"/>
     </eAnnotations>
     <eAnnotations source="positions.6" references="/0/generateElement/%.1/%.3">
-      <details key="start" value="881"/>
-      <details key="end" value="884"/>
+      <details key="start" value="912"/>
+      <details key="end" value="915"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.7" references="/0/generateElement/%.1/%.4">
-      <details key="start" value="886"/>
-      <details key="end" value="913"/>
+      <details key="start" value="917"/>
+      <details key="end" value="945"/>
       <details key="line" value="32"/>
     </eAnnotations>
     <eAnnotations source="positions.8" references="/0/generateElement/%.1/%.5">
-      <details key="start" value="914"/>
-      <details key="end" value="917"/>
+      <details key="start" value="946"/>
+      <details key="end" value="949"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.9" references="/0/generateElement/%.1/%.6">
-      <details key="start" value="919"/>
-      <details key="end" value="934"/>
+      <details key="start" value="951"/>
+      <details key="end" value="966"/>
       <details key="line" value="33"/>
     </eAnnotations>
     <eAnnotations source="positions.10" references="/0/generateElement/%.1/%.7">
-      <details key="start" value="935"/>
-      <details key="end" value="938"/>
+      <details key="start" value="967"/>
+      <details key="end" value="970"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.11" references="/0/generateElement/%.1/%.8">
-      <details key="start" value="940"/>
-      <details key="end" value="1214"/>
+      <details key="start" value="972"/>
+      <details key="end" value="1251"/>
       <details key="line" value="33"/>
     </eAnnotations>
     <eAnnotations source="positions.12" references="/0/generateElement/%.1/%.9">
-      <details key="start" value="1215"/>
-      <details key="end" value="1218"/>
+      <details key="start" value="1252"/>
+      <details key="end" value="1255"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.13" references="/0/generateElement/%.1/%.10">
-      <details key="start" value="1220"/>
-      <details key="end" value="1240"/>
+      <details key="start" value="1257"/>
+      <details key="end" value="1277"/>
       <details key="line" value="38"/>
     </eAnnotations>
     <eAnnotations source="positions.14" references="/0/generateElement/%.1/%.11">
-      <details key="start" value="1241"/>
-      <details key="end" value="1244"/>
+      <details key="start" value="1278"/>
+      <details key="end" value="1281"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.15" references="/0/generateElement/%.1/%.12">
-      <details key="start" value="1246"/>
-      <details key="end" value="1390"/>
+      <details key="start" value="1283"/>
+      <details key="end" value="1430"/>
       <details key="line" value="38"/>
     </eAnnotations>
     <eAnnotations source="positions.16" references="/0/generateElement/%.1/%.13">
-      <details key="start" value="1391"/>
-      <details key="end" value="1394"/>
+      <details key="start" value="1431"/>
+      <details key="end" value="1434"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.17" references="/0/generateElement/%.1/%.14">
-      <details key="start" value="1396"/>
-      <details key="end" value="1415"/>
+      <details key="start" value="1436"/>
+      <details key="end" value="1455"/>
       <details key="line" value="41"/>
     </eAnnotations>
     <eAnnotations source="positions.18" references="/0/generateElement/%.1/%.15">
-      <details key="start" value="1416"/>
-      <details key="end" value="1419"/>
+      <details key="start" value="1456"/>
+      <details key="end" value="1459"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.19" references="/0/generateElement/%.1/%.16">
-      <details key="start" value="1421"/>
-      <details key="end" value="1441"/>
+      <details key="start" value="1461"/>
+      <details key="end" value="1481"/>
       <details key="line" value="41"/>
     </eAnnotations>
     <eAnnotations source="positions.20" references="/0/generateElement/%.1/%.17">
-      <details key="start" value="1442"/>
-      <details key="end" value="1445"/>
+      <details key="start" value="1482"/>
+      <details key="end" value="1485"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.21" references="/0/generateElement/%.1/%.18">
-      <details key="start" value="1447"/>
-      <details key="end" value="1463"/>
+      <details key="start" value="1487"/>
+      <details key="end" value="1503"/>
       <details key="line" value="41"/>
     </eAnnotations>
     <eAnnotations source="positions.22" references="/0/generateElement/%.1/%.19">
-      <details key="start" value="1464"/>
-      <details key="end" value="1467"/>
+      <details key="start" value="1504"/>
+      <details key="end" value="1507"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.23" references="/0/generateElement/%.1/%.20">
-      <details key="start" value="1469"/>
-      <details key="end" value="1591"/>
+      <details key="start" value="1509"/>
+      <details key="end" value="1634"/>
       <details key="line" value="41"/>
     </eAnnotations>
     <eAnnotations source="positions.24" references="/0/generateElement/%.1/%.21">
-      <details key="start" value="1592"/>
-      <details key="end" value="1595"/>
+      <details key="start" value="1635"/>
+      <details key="end" value="1638"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.25" references="/0/generateElement/%.1/%.22">
-      <details key="start" value="1597"/>
-      <details key="end" value="1598"/>
+      <details key="start" value="1640"/>
+      <details key="end" value="1641"/>
       <details key="line" value="44"/>
     </eAnnotations>
     <eAnnotations source="positions.26" references="/0/generateElement/%.1/%.23">
-      <details key="start" value="1599"/>
-      <details key="end" value="1602"/>
+      <details key="start" value="1642"/>
+      <details key="end" value="1645"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.27" references="/0/generateElement/%.1/%.24">
-      <details key="start" value="1604"/>
-      <details key="end" value="1620"/>
+      <details key="start" value="1647"/>
+      <details key="end" value="1663"/>
       <details key="line" value="44"/>
     </eAnnotations>
     <eAnnotations source="positions.28" references="/0/generateElement/%.1/%.25">
-      <details key="start" value="1621"/>
-      <details key="end" value="1624"/>
+      <details key="start" value="1664"/>
+      <details key="end" value="1667"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.29" references="/0/generateElement/%.1/%.26">
-      <details key="start" value="1626"/>
-      <details key="end" value="1627"/>
+      <details key="start" value="1669"/>
+      <details key="end" value="1670"/>
       <details key="line" value="44"/>
     </eAnnotations>
     <eAnnotations source="positions.30" references="/0/generateElement/%.1/%.27">
-      <details key="start" value="1628"/>
-      <details key="end" value="1631"/>
+      <details key="start" value="1671"/>
+      <details key="end" value="1674"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.31" references="/0/generateElement/%.1/%.28">
-      <details key="start" value="1633"/>
-      <details key="end" value="1777"/>
+      <details key="start" value="1676"/>
+      <details key="end" value="1825"/>
       <details key="line" value="45"/>
     </eAnnotations>
     <eAnnotations source="positions.32" references="/0/generateElement/%.1/%.29">
-      <details key="start" value="1778"/>
-      <details key="end" value="1781"/>
+      <details key="start" value="1826"/>
+      <details key="end" value="1829"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.33" references="/0/generateElement/%.1/%.30">
-      <details key="start" value="1783"/>
-      <details key="end" value="1784"/>
+      <details key="start" value="1831"/>
+      <details key="end" value="1832"/>
       <details key="line" value="49"/>
     </eAnnotations>
     <eAnnotations source="positions.34" references="/0/generateElement/%.1/%.31">
-      <details key="start" value="1785"/>
-      <details key="end" value="1788"/>
+      <details key="start" value="1833"/>
+      <details key="end" value="1836"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.35" references="/0/generateElement/%.1/%.32">
-      <details key="start" value="1790"/>
-      <details key="end" value="1804"/>
+      <details key="start" value="1838"/>
+      <details key="end" value="1852"/>
       <details key="line" value="49"/>
     </eAnnotations>
     <eAnnotations source="positions.36" references="/0/generateElement/%.1/%.33">
-      <details key="start" value="1805"/>
-      <details key="end" value="1808"/>
+      <details key="start" value="1853"/>
+      <details key="end" value="1856"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.37" references="/0/generateElement/%.1/%.34">
-      <details key="start" value="1810"/>
-      <details key="end" value="1811"/>
+      <details key="start" value="1858"/>
+      <details key="end" value="1859"/>
       <details key="line" value="49"/>
     </eAnnotations>
     <eAnnotations source="positions.38" references="/0/generateElement/%.1/%.35">
-      <details key="start" value="1812"/>
-      <details key="end" value="1815"/>
+      <details key="start" value="1860"/>
+      <details key="end" value="1863"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.39" references="/0/generateElement/%.1/%.36">
-      <details key="start" value="1817"/>
-      <details key="end" value="1937"/>
+      <details key="start" value="1865"/>
+      <details key="end" value="1988"/>
       <details key="line" value="49"/>
     </eAnnotations>
     <eAnnotations source="positions.40" references="/0/generateElement/%.1/%.37">
-      <details key="start" value="1938"/>
-      <details key="end" value="1941"/>
+      <details key="start" value="1989"/>
+      <details key="end" value="1992"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.41" references="/0/generateElement/%.1/%.38">
-      <details key="start" value="1943"/>
-      <details key="end" value="1954"/>
+      <details key="start" value="1994"/>
+      <details key="end" value="2005"/>
       <details key="line" value="52"/>
     </eAnnotations>
     <eAnnotations source="positions.42" references="/0/generateElement/%.1/%.39">
-      <details key="start" value="1955"/>
-      <details key="end" value="1958"/>
+      <details key="start" value="2006"/>
+      <details key="end" value="2009"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.43" references="/0/generateElement/%.1/%.40">
-      <details key="start" value="1960"/>
-      <details key="end" value="2665"/>
+      <details key="start" value="2011"/>
+      <details key="end" value="2733"/>
       <details key="line" value="53"/>
     </eAnnotations>
     <eAnnotations source="positions.44" references="/0/generateElement/%.1/%.41">
-      <details key="start" value="2666"/>
-      <details key="end" value="2669"/>
+      <details key="start" value="2734"/>
+      <details key="end" value="2737"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.45" references="/0/generateElement/%.1/%.42">
-      <details key="start" value="2671"/>
-      <details key="end" value="2672"/>
+      <details key="start" value="2739"/>
+      <details key="end" value="2740"/>
       <details key="line" value="69"/>
     </eAnnotations>
     <eAnnotations source="positions.46" references="/0/generateElement/%.1/%.43">
-      <details key="start" value="2673"/>
-      <details key="end" value="2676"/>
+      <details key="start" value="2741"/>
+      <details key="end" value="2744"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.47" references="/0/generateElement/%.1/%.44">
-      <details key="start" value="2678"/>
-      <details key="end" value="2738"/>
+      <details key="start" value="2746"/>
+      <details key="end" value="2808"/>
       <details key="line" value="70"/>
     </eAnnotations>
     <eAnnotations source="positions.48" references="/0/generateElement/%.1/%.45">
-      <details key="start" value="2739"/>
-      <details key="end" value="2742"/>
+      <details key="start" value="2809"/>
+      <details key="end" value="2812"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.49" references="/0/generateElement/%.1/%.46">
-      <details key="start" value="2744"/>
-      <details key="end" value="2752"/>
+      <details key="start" value="2814"/>
+      <details key="end" value="2822"/>
       <details key="line" value="71"/>
     </eAnnotations>
     <eAnnotations source="positions.50" references="/0/generateElement/%.1/%.47">
-      <details key="start" value="2753"/>
-      <details key="end" value="2756"/>
+      <details key="start" value="2823"/>
+      <details key="end" value="2826"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.51" references="/0/generateElement/%.1/%.48">
-      <details key="start" value="2758"/>
-      <details key="end" value="2843"/>
+      <details key="start" value="2828"/>
+      <details key="end" value="2917"/>
       <details key="line" value="71"/>
     </eAnnotations>
     <eAnnotations source="positions.52" references="/0/generateElement/%.1/%.49">
-      <details key="start" value="2844"/>
-      <details key="end" value="2847"/>
+      <details key="start" value="2918"/>
+      <details key="end" value="2921"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.53" references="/0/generateElement/%.1/%.50">
-      <details key="start" value="2849"/>
-      <details key="end" value="2850"/>
+      <details key="start" value="2923"/>
+      <details key="end" value="2924"/>
       <details key="line" value="75"/>
     </eAnnotations>
     <eAnnotations source="positions.54" references="/0/generateElement/%.1/%.51">
-      <details key="start" value="2851"/>
-      <details key="end" value="2854"/>
+      <details key="start" value="2925"/>
+      <details key="end" value="2928"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.55" references="/0/generateElement/%.1/%.52">
-      <details key="start" value="2856"/>
-      <details key="end" value="2857"/>
+      <details key="start" value="2930"/>
+      <details key="end" value="2932"/>
       <details key="line" value="76"/>
     </eAnnotations>
     <eAnnotations source="positions.56" references="/0/generateElement/%.1/%.53">
-      <details key="start" value="169"/>
-      <details key="end" value="188"/>
+      <details key="start" value="175"/>
+      <details key="end" value="194"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.57" references="/0/generateElement/%.1/%.54">
-      <details key="start" value="197"/>
-      <details key="end" value="204"/>
+      <details key="start" value="203"/>
+      <details key="end" value="210"/>
       <details key="line" value="0"/>
     </eAnnotations>
     <eAnnotations source="positions.58" references="/0/generateElement/aFunction">
-      <details key="start" value="138"/>
-      <details key="end" value="158"/>
+      <details key="start" value="142"/>
+      <details key="end" value="162"/>
       <details key="line" value="5"/>
     </eAnnotations>
   </ecore:EAnnotation>
