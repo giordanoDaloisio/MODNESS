@@ -13,7 +13,7 @@
   <positiveOutcome value="non recidiv"/>
   <unprivilegedGroup name="non-white men" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.0 //@sensitiveVariables.1/@sensitiveVariableValue.1"/>
   <privilegedGroup name="white female" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.1 //@sensitiveVariables.1/@sensitiveVariableValue.0"/>
-  <analysis name="compas fairness" scope="all people must be predicted as recidiv only if the attributes different from the sensitive variables say that">
+  <analysis name="compas" scope="all people must be predicted as recidiv only if the attributes different from the sensitive variables say that">
     <metric name="statistical parity" toleranceValue="0.2">
       <operator xsi:type="fairness:SingleOperator"/>
       <function xsi:type="fairness:ExistingFairnessMetric" name="stat_parity"/>

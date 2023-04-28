@@ -10,7 +10,7 @@
   <positiveOutcome value="high ranking"/>
   <unprivilegedGroup name="non frequent items" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.1"/>
   <privilegedGroup name="frequent items" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.0"/>
-  <analysis name="pop bias analysis" scope="the proportion of recommended items must be equal for all groups">
+  <analysis name="pop_bias" scope="the proportion of recommended items must be equal for all groups">
     <metric name="coverage" toleranceValue="0.2">
       <operator xsi:type="fairness:SingleOperator" value="1.0"/>
       <function xsi:type="fairness:Operation" equalityOperator="RATIO">

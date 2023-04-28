@@ -7,7 +7,7 @@
   <positiveOutcome value="credit granted"/>
   <unprivilegedGroup name="women" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.0"/>
   <privilegedGroup name="men" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.1"/>
-  <analysis name="" scope="A person should have a credit granted regardless their gender">
+  <analysis name="german" scope="A person should have a credit granted regardless their gender">
     <metric name="equalized odds" toleranceValue="0.2">
       <operator xsi:type="fairness:SingleOperator"/>
       <function xsi:type="fairness:ExistingFairnessMetric" name="eo" metric="EQUALIZED_ODDS"/>
