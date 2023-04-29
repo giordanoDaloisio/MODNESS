@@ -5,7 +5,7 @@
 [template public generateFairnessModel(biasModel: GroupAnalysis )]
 
 [comment @main/]
-[file (biasModel.name, false, 'UTF-8')]
+[file (biasModel.name + '.py', false, 'UTF-8')]
 from fairnessMetric import FairnessMetric, binarize
 
 import pandas as pd
@@ -35,16 +35,26 @@ binarize(data, 'frequency', SingleOperator.GREATER_EQUAL, 0.8, True)
 
 
 
+
+[if biasModel.dataset.datasetSentiveVariable -> size()>1]
 indexes = ['['/]
-[if biasModel.dataset.datasetSentiveVariable -> size()>0]
 [for(val: DatasetSensitiveVariable | biasModel.dataset.datasetSentiveVariable)]
-'[val.name/]'
+'[val.name/]',
 [/for]
 [']'/]
-[/if]
-dataset_unprivileged_group = {'race': 0, 'sex': 0}
-dataset_privileged_group = {'race': 1, 'sex': 1}
+dataset_unprivileged_group = {'indexes['['/]0[']'/]': 0, 'indexes['['/]1[']'/]' : 0}
+dataset_privileged_group = {'indexes['['/]0[']'/]' : 1, 'indexes['['/]1[']'/]' : 1}
 dataset_positive_outcome = 1
+[/if]
+[if biasModel.dataset.datasetSentiveVariable -> size()=1]
+[for(val: DatasetSensitiveVariable | biasModel.dataset.datasetSentiveVariable)]
+dataset_unprivileged_group = {'[val.name/]': 0}
+dataset_privileged_group = {'[val.name/]' : 1}
+dataset_positive_outcome = 1
+[/for]
+[/if]
+
+
 [if biasModel.metric -> size()>0]
 [for (metric: Metric | biasModel.metric)]
 [if (metric.operator.oclIsTypeOf(SingleOperator))]
@@ -71,7 +81,15 @@ if(metrics.statistical_parity_difference() != threshold + tolerance_value):
 else:
     print("The dataset is fair")
 [/if]
+[if (metric.function.oclAsType(ExistingFairnessMetric).metric = FairnessMetric :: EQUALIZED_ODDS )]
+print(metrics.equal_opportunity_difference())
+if metrics.equal_opportunity_difference() != threshold + tolerance_value:
+    print("The dataset is biased")
+else:
+    print("The dataset is fair")
 [/if]
+[/if]
+
 [/for]
 
 [/file]
