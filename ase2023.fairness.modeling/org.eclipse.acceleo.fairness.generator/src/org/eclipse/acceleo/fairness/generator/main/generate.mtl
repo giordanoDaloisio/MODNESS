@@ -6,7 +6,7 @@
 
 [comment @main/]
 [file (biasModel.name + '.py', false, 'UTF-8')]
-from fairnessMetric import FairnessMetric, binarize
+from FairnessMetric import FairnessMetric, binarize
 
 import pandas as pd
 from operators import SingleOperator
@@ -22,16 +22,29 @@ data = pd.read_csv(file_path)
 
 [for(val: DatasetSensitiveVariable | biasModel.dataset.datasetSentiveVariable)]
 
-[for (sens : DatasetSensitiveVariableValue | val.datasetsensitivevariablevalue)]
-[if(sens.relativeToDatasetSize)]
-# High rank
-binarize(data, 'ranking', SingleOperator.GREATER_EQUAL, 0.8, True)
-# Frequent items
-binarize(data, 'frequency', SingleOperator.GREATER_EQUAL, 0.8, True)
+[for (op: SingleOperator | val.datasetsensitivevariablevalue.operator.oclAsType(SingleOperator))]
+
+operator_value = [op.value /]
+[if (op.operator = SingleOperatorParameter :: GREATER_EQUAL)]
+operator = SingleOperator.GREATER_EQUAL
 [/if]
+binarize(data, '[val.name /]', operator, operator_value, [val.datasetsensitivevariablevalue.relativeToDatasetSize.toString().toUpperFirst()/])
 [/for]
 [/for]
- 
+
+
+
+[for(val: DatasetPositiveOutcome | biasModel.dataset.positiveOutcome)]
+
+[for (op: SingleOperator | val.operator.oclAsType(SingleOperator))]
+
+operator_value = [op.value /]
+[if (op.operator = SingleOperatorParameter :: GREATER_EQUAL)]
+operator = SingleOperator.GREATER_EQUAL
+[/if]
+binarize(data, '[val.name /]', operator, operator_value, [val.relativeToDatasetSize.toString().toUpperFirst()/])
+[/for]
+[/for]
 
 
 
@@ -76,20 +89,30 @@ metrics = FairnessMetric(data, dataset_unprivileged_group, dataset_privileged_gr
 
 [if (metric.function.oclAsType(ExistingFairnessMetric).metric = FairnessMetric :: STATISTICAL_PARITY )]
 print(metrics.statistical_parity_difference())
-if(metrics.statistical_parity_difference() != threshold + tolerance_value):
+if abs((metrics.statistical_parity_difference()) > threshold + tolerance_value):
     print("The dataset is biased")
 else:
     print("The dataset is fair")
 [/if]
 [if (metric.function.oclAsType(ExistingFairnessMetric).metric = FairnessMetric :: EQUALIZED_ODDS )]
 print(metrics.equal_opportunity_difference())
-if metrics.equal_opportunity_difference() != threshold + tolerance_value:
+if abs(metrics.equal_opportunity_difference()) > threshold + tolerance_value:
     print("The dataset is biased")
 else:
     print("The dataset is fair")
 [/if]
 [/if]
+[if (metric.function.oclIsTypeOf(ExistingFairnessMetric)= false)]
+[metric.name/] = metrics.group_size(
+    'frequency == 0 and ranking == 1')/metrics.group_size('ranking == 1')
 
+print(coverage)
+if(abs(coverage) < threshold + tolerance_value):
+    print("The dataset is biased")
+else:
+    print("The dataset is fair")
+
+[/if]
 [/for]
 
 [/file]
