@@ -89,7 +89,11 @@ metrics = FairnessMetric(data, dataset_unprivileged_group, dataset_privileged_gr
 
 [if (metric.function.oclAsType(ExistingFairnessMetric).metric = FairnessMetric :: STATISTICAL_PARITY )]
 print(metrics.statistical_parity_difference())
+<<<<<<< HEAD
 if abs((metrics.statistical_parity_difference()) > threshold + tolerance_value):
+=======
+if abs(metrics.statistical_parity_difference()) > (threshold + tolerance_value):
+>>>>>>> 5611bdf87b14babb8ab34bfec2eb0b8406affa1b
     print("The dataset is biased")
 else:
     print("The dataset is fair")
