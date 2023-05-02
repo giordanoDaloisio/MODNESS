@@ -174,16 +174,7 @@ def binarize(df: pd.DataFrame, column: str, operator: Operator, value: float, re
 class FairnessMetric(ClassificationMetric):
 
     def __init__(self, df: pd.DataFrame, unprivileged_groups: dict, privileged_group: dict, true_label_name: str, predicted_label_name: str, positive_value: int):
-        
-        super().__init__(self.dataset_true, self.dataset_pred,
-                         unprivileged_groups=['['/]unprivileged_groups[']'/], privileged_groups=['['/]privileged_group[']'/])
-
-    def probability(self, object: str, condition: str = '') -> float:
-        probability = self.df.query(object).shape['['/]0[']'/] / self.df.shape['['/]0[']'/]
-        if condition == '':
-            return probability
-        else:
-            self.df = df
+        self.df = df
         if true_label_name != "" and predicted_label_name != "":
             self.dataset_true = BinaryLabelDataset(
                 df=self.df.drop(columns=['['/]predicted_label_name[']'/]),
@@ -214,6 +205,15 @@ class FairnessMetric(ClassificationMetric):
                 unfavorable_label=1 - positive_value,
             )
             self.dataset_pred = self.dataset_true.copy(deepcopy=True)
+        
+        super().__init__(self.dataset_true, self.dataset_pred,
+                         unprivileged_groups=['['/]unprivileged_groups[']'/], privileged_groups=['['/]privileged_group[']'/])
+
+    def probability(self, object: str, condition: str = '') -> float:
+        probability = self.df.query(object).shape['['/]0[']'/] / self.df.shape['['/]0[']'/]
+        if condition == '':
+            return probability
+        else:
             return (self.df.query(condition + ' and ' + object).shape['['/]0[']'/]/self.df.shape['['/]0[']'/]) / probability
 
     def expected_value(self, column_name: str, condition: str = '') -> float:
