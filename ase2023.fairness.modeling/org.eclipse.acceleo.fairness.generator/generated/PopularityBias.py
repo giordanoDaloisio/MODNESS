@@ -45,10 +45,10 @@ metrics = FairnessMetric(data, dataset_unprivileged_group, dataset_privileged_gr
 
 
 coverage = metrics.group_size(
-    'frequency == 0 and ranking == 1')/metrics.dataset_size()
+    'frequency == 0 and ranking == 1')/metrics.group_size('ranking == 1')
 
 print(coverage)
-if(abs(coverage) != threshold + tolerance_value):
+if(abs(coverage) < threshold + tolerance_value):
     print("The dataset is biased")
 else:
     print("The dataset is fair")
