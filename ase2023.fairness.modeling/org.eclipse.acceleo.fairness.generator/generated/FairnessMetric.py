@@ -69,15 +69,37 @@ class FairnessMetric(ClassificationMetric):
         positive_value: int,
     ):
         self.df = df
-        self.dataset_true = BinaryLabelDataset(
-            df=self.df.drop(columns=[predicted_label_name]),
-            label_names=[true_label_name],
-            protected_attribute_names=list(unprivileged_groups.keys()),
-            favorable_label=positive_value,
-            unfavorable_label=1 - positive_value,
-        )
-        self.dataset_pred = self.dataset_true.copy(deepcopy=True)
-        self.dataset_pred.labels = self.df[predicted_label_name].values.reshape(-1, 1)
+        if true_label_name != "" and predicted_label_name != "":
+            self.dataset_true = BinaryLabelDataset(
+                df=self.df.drop(columns=[predicted_label_name]),
+                label_names=[true_label_name],
+                protected_attribute_names=list(unprivileged_groups.keys()),
+                favorable_label=positive_value,
+                unfavorable_label=1 - positive_value,
+            )
+            self.dataset_pred = self.dataset_true.copy(deepcopy=True)
+            self.dataset_pred.labels = self.df[predicted_label_name].values.reshape(
+                -1, 1
+            )
+        elif true_label_name != "":
+            self.dataset_true = BinaryLabelDataset(
+                df=self.df,
+                label_names=[true_label_name],
+                protected_attribute_names=list(unprivileged_groups.keys()),
+                favorable_label=positive_value,
+                unfavorable_label=1 - positive_value,
+            )
+            self.dataset_pred = self.dataset_true.copy(deepcopy=True)
+        elif predicted_label_name != "":
+            self.dataset_true = BinaryLabelDataset(
+                df=self.df,
+                label_names=[predicted_label_name],
+                protected_attribute_names=list(unprivileged_groups.keys()),
+                favorable_label=positive_value,
+                unfavorable_label=1 - positive_value,
+            )
+            self.dataset_pred = self.dataset_true.copy(deepcopy=True)
+
         super().__init__(
             self.dataset_true,
             self.dataset_pred,

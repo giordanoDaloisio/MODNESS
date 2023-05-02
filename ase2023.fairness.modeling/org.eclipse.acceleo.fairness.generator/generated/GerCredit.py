@@ -31,7 +31,7 @@ metrics = FairnessMetric(
 
 
 print(metrics.equal_opportunity_difference())
-if metrics.equal_opportunity_difference() != threshold + tolerance_value:
+if abs(metrics.equal_opportunity_difference()) > threshold + tolerance_value:
     print("The dataset is biased")
 else:
     print("The dataset is fair")
