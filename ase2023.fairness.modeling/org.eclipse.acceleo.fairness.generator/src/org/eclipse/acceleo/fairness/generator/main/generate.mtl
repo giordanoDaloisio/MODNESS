@@ -90,16 +90,16 @@ metrics = FairnessMetric(data, dataset_unprivileged_group, dataset_privileged_gr
 [if (metric.function.oclAsType(ExistingFairnessMetric).metric = FairnessMetric :: STATISTICAL_PARITY )]
 print(metrics.statistical_parity_difference())
 if abs((metrics.statistical_parity_difference()) > threshold + tolerance_value):
-    print("The dataset is biased")
+    print("Biased")
 else:
-    print("The dataset is fair")
+    print("Fair")
 [/if]
 [if (metric.function.oclAsType(ExistingFairnessMetric).metric = FairnessMetric :: EQUALIZED_ODDS )]
 print(metrics.equal_opportunity_difference())
 if abs(metrics.equal_opportunity_difference()) > threshold + tolerance_value:
-    print("The dataset is biased")
+    print("Biased")
 else:
-    print("The dataset is fair")
+    print("Fair")
 [/if]
 [/if]
 [if (metric.function.oclIsTypeOf(ExistingFairnessMetric)= false)]
@@ -108,9 +108,9 @@ else:
 
 print(coverage)
 if(abs(coverage) < threshold + tolerance_value):
-    print("The dataset is biased")
+    print("Biased")
 else:
-    print("The dataset is fair")
+    print("Fair")
 
 [/if]
 [/for]
