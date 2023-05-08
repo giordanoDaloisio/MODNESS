@@ -33,7 +33,7 @@ In the new instance, TODO
 3. Save the model with the .xmi extension
 4. Run the generate.mtl file with right click -> Run as -> Launch Acceleo application by setting the following parameters:
 
-![To do](http://url/to/img.png)
+![To do](https://github.com/giordanoDaloisio/ase2023-modness/blob/main/assets/acceleo_screen.png)
 
 
 
