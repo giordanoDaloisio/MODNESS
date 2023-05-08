@@ -31,6 +31,6 @@ metrics = FairnessMetric(
 
 print(metrics.statistical_parity_difference())
 if abs(metrics.statistical_parity_difference()) > (threshold + tolerance_value):
-    print("The dataset is biased")
+    print("Biased")
 else:
-    print("The dataset is fair")
+    print("Fair")

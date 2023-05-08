@@ -46,6 +46,6 @@ coverage = metrics.group_size("frequency == 0 and ranking == 1") / metrics.group
 
 print(coverage)
 if abs(coverage) < threshold + tolerance_value:
-    print("The dataset is biased")
+    print("Biased")
 else:
-    print("The dataset is fair")
+    print("Fair")
