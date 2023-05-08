@@ -2,6 +2,21 @@
 
 This repository contains the implementation of the MODNESS framework described in the paper _How fair are we? From conceptualization to automated assessment of fairness definitions_
 
+## Table of contents
+
+- [MODNESS](#modness)
+  - [Table of contents](#table-of-contents)
+  - [Project structure](#project-structure)
+  - [Evaluation reproduction](#evaluation-reproduction)
+    - [How to import the models and generate the code](#how-to-import-the-metamodel-the-models-and-generate-the-code)
+      - [Requirements](#requirements)
+      - [Import the metamodel and models](#import-the-metamodel-and-models)
+      - [Generate the code](#generate-the-code)
+    - [Run the generated code](#run-the-generated-code)
+      - [Requirements](#requirements-1)
+      - [Run the code](#run-the-code)
+  - [License](#license)
+
 ## Project structure
 
 The project is structured as follows:
