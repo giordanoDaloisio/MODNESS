@@ -13,7 +13,7 @@
   <analysis name="pop_bias" scope="the proportion of recommended items must be equal for all groups">
     <metric name="coverage" toleranceValue="0.2">
       <operator xsi:type="fairness:SingleOperator" value="1.0"/>
-      <function xsi:type="fairness:Operation" equalityOperator="RATIO">
+      <function xsi:type="fairness:Operation" name="Ratio" equalityOperator="RATIO">
         <leftSide>
           <function xsi:type="fairness:GroupSize">
             <groupCondition name="non frequent items" value="//@analysis.0/@dataset.0/@datasetSentiveVariable.0/@datasetsensitivevariablevalue.1">
