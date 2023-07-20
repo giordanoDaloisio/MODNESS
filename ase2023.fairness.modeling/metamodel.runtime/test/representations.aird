@@ -3,4 +3,5 @@
   <semanticResources>Compas.fairness</semanticResources>
   <semanticResources>German.fairness</semanticResources>
   <semanticResources>PopBias.fairness</semanticResources>
+  <semanticResources>Resyduo.fairness</semanticResources>
 </viewpoint:DAnalysis>
