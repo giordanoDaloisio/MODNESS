@@ -21,7 +21,7 @@ This repository contains the implementation of the MODNESS framework described i
 
 The project is structured as follows:
 
-- `ase2023.fairness.modeling`: contains the implementation of the MODNESS framework (refer to the README.md file in the folder for more details)
+- `modness`: contains the implementation of the MODNESS framework (refer to the README.md file in the folder for more details)
 - `assets`: contains pictures of the MODNESS metamodel and of the models implemented for the considered use cases
 - `data`: contains the datasets used in the evaluation
 
