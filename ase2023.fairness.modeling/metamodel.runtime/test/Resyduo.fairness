@@ -107,7 +107,7 @@
           <function xsi:type="fairness:Operation" equalityOperator="MULTIPLICATION">
             <leftSide>
               <function xsi:type="fairness:Probability" name="high respected projects recommented">
-                <object sensitivegroup="//@analysis.1/@datasetUnprivilegedGroup.1">
+                <object>
                   <sublogicalcondition>
                     <logicalcondition value="//@analysis.0/@dataset.0/@positiveOutcome"/>
                   </sublogicalcondition>
@@ -141,6 +141,6 @@
       </datasetSentiveVariable>
     </dataset>
     <datasetUnprivilegedGroup name="low respected projects" sensitiveVariables="//@analysis.1/@dataset.0/@datasetSentiveVariable.0/@datasetsensitivevariablevalue.1" mappingGroup="//@unprivilegedGroup.1"/>
-    <datasetUnprivilegedGroup name="high respected projects" sensitiveVariables="//@analysis.1/@dataset.0/@datasetSentiveVariable.0/@datasetsensitivevariablevalue.0" mappingGroup="//@privilegedGroup.1"/>
+    <datasetPrivilegedGroup name="high respected projects" sensitiveVariables="//@analysis.1/@dataset.0/@datasetSentiveVariable.0/@datasetsensitivevariablevalue.0" mappingGroup="//@privilegedGroup.1"/>
   </analysis>
 </fairness:GroupBias>
