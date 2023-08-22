@@ -10,7 +10,7 @@
     <sensitiveVariableValue value="high respected projects"/>
     <sensitiveVariableValue value="low respected projects"/>
   </sensitiveVariables>
-  <positiveOutcome value="high recommendations"/>
+  <positiveOutcome value="high ranking"/>
   <unprivilegedGroup name="low viewed projects" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.1"/>
   <unprivilegedGroup name="low respected projects" sensitiveValue="//@sensitiveVariables.1/@sensitiveVariableValue.1"/>
   <privilegedGroup name="high viewed projects" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.0"/>
@@ -40,35 +40,25 @@
           </function>
         </leftSide>
         <rightSide>
-          <function xsi:type="fairness:Summation">
-            <startRange name="0">
-              <operationvalue/>
-            </startRange>
-            <endRange name="dataset size">
-              <function xsi:type="fairness:DatasetSize"/>
-            </endRange>
-            <body>
-              <function xsi:type="fairness:Operation" equalityOperator="MULTIPLICATION">
-                <leftSide>
-                  <function xsi:type="fairness:Probability" name="high viewed projects recommented">
-                    <object sensitivegroup="//@analysis.0/@datasetPrivilegedGroup.0">
-                      <sublogicalcondition>
-                        <logicalcondition value="//@analysis.0/@dataset.0/@positiveOutcome"/>
-                      </sublogicalcondition>
-                    </object>
-                  </function>
-                </leftSide>
-                <rightSide>
-                  <function xsi:type="fairness:Probability" name="low viewed projects recommented">
-                    <object sensitivegroup="//@analysis.0/@datasetUnprivilegedGroup.0">
-                      <sublogicalcondition>
-                        <logicalcondition value="//@analysis.0/@dataset.0/@positiveOutcome"/>
-                      </sublogicalcondition>
-                    </object>
-                  </function>
-                </rightSide>
+          <function xsi:type="fairness:Operation" equalityOperator="MULTIPLICATION">
+            <leftSide>
+              <function xsi:type="fairness:Probability" name="high viewed projects recommented">
+                <object sensitivegroup="//@analysis.0/@datasetPrivilegedGroup.0">
+                  <sublogicalcondition>
+                    <logicalcondition value="//@analysis.0/@dataset.0/@positiveOutcome"/>
+                  </sublogicalcondition>
+                </object>
               </function>
-            </body>
+            </leftSide>
+            <rightSide>
+              <function xsi:type="fairness:Probability" name="low viewed projects recommented">
+                <object sensitivegroup="//@analysis.0/@datasetUnprivilegedGroup.0">
+                  <sublogicalcondition>
+                    <logicalcondition value="//@analysis.0/@dataset.0/@positiveOutcome"/>
+                  </sublogicalcondition>
+                </object>
+              </function>
+            </rightSide>
           </function>
         </rightSide>
       </function>
@@ -88,5 +78,69 @@
     </dataset>
     <datasetUnprivilegedGroup name="low viewed projects" sensitiveVariables="//@analysis.0/@dataset.0/@datasetSentiveVariable.0/@datasetsensitivevariablevalue.1" mappingGroup="//@unprivilegedGroup.0"/>
     <datasetPrivilegedGroup name="high viewed projects" sensitiveVariables="//@analysis.0/@dataset.0/@datasetSentiveVariable.0/@datasetsensitivevariablevalue.0" mappingGroup="//@privilegedGroup.0"/>
+  </analysis>
+  <analysis name="pop_bias_respect" scope="the probability of an item to be recommented must not consider the level of respect">
+    <metric name="generalized entropy index">
+      <operator xsi:type="fairness:SingleOperator" operator="GREATER" value="0.8"/>
+      <function xsi:type="fairness:Operation" equalityOperator="MULTIPLICATION">
+        <leftSide>
+          <function xsi:type="fairness:Operation" equalityOperator="RATIO">
+            <leftSide>
+              <operationvalue value="1.0"/>
+            </leftSide>
+            <rightSide>
+              <function xsi:type="fairness:Operation" equalityOperator="MULTIPLICATION">
+                <leftSide name="alfa">
+                  <operationvalue value="0.8"/>
+                </leftSide>
+                <rightSide>
+                  <function xsi:type="fairness:Operation" equalityOperator="DIFFERENCE">
+                    <leftSide name="1"/>
+                    <rightSide name="0.8"/>
+                  </function>
+                </rightSide>
+              </function>
+            </rightSide>
+          </function>
+        </leftSide>
+        <rightSide>
+          <function xsi:type="fairness:Operation" equalityOperator="MULTIPLICATION">
+            <leftSide>
+              <function xsi:type="fairness:Probability" name="high respected projects recommented">
+                <object sensitivegroup="//@analysis.1/@datasetUnprivilegedGroup.1">
+                  <sublogicalcondition>
+                    <logicalcondition value="//@analysis.0/@dataset.0/@positiveOutcome"/>
+                  </sublogicalcondition>
+                </object>
+              </function>
+            </leftSide>
+            <rightSide>
+              <function xsi:type="fairness:Probability" name="low respected projects recommented">
+                <object sensitivegroup="//@analysis.1/@datasetUnprivilegedGroup.0">
+                  <sublogicalcondition>
+                    <logicalcondition value="//@analysis.0/@dataset.0/@positiveOutcome"/>
+                  </sublogicalcondition>
+                </object>
+              </function>
+            </rightSide>
+          </function>
+        </rightSide>
+      </function>
+    </metric>
+    <dataset name="Resyduo dataset" predictedLabelName="tot_recommendations" filePath="data/resyduo.csv">
+      <positiveOutcome name="high recommented items" relativeToDatasetSize="true" mappingPositiveOutcome="//@positiveOutcome">
+        <operator xsi:type="fairness:SingleOperator" operator="GREATER" value="0.8"/>
+      </positiveOutcome>
+      <datasetSentiveVariable name="respect" mappingSensitiveVariable="//@sensitiveVariables.1">
+        <datasetsensitivevariablevalue name="high respected projects" relativeToDatasetSize="true" mappingValue="//@sensitiveVariables.1/@sensitiveVariableValue.0">
+          <operator xsi:type="fairness:SingleOperator" operator="GREATER" value="0.8"/>
+        </datasetsensitivevariablevalue>
+        <datasetsensitivevariablevalue name="low respected projects" relativeToDatasetSize="true" mappingValue="//@sensitiveVariables.1/@sensitiveVariableValue.1">
+          <operator xsi:type="fairness:SingleOperator" operator="MINOR_EQUAL" value="0.8"/>
+        </datasetsensitivevariablevalue>
+      </datasetSentiveVariable>
+    </dataset>
+    <datasetUnprivilegedGroup name="low respected projects" sensitiveVariables="//@analysis.1/@dataset.0/@datasetSentiveVariable.0/@datasetsensitivevariablevalue.1" mappingGroup="//@unprivilegedGroup.1"/>
+    <datasetUnprivilegedGroup name="high respected projects" sensitiveVariables="//@analysis.1/@dataset.0/@datasetSentiveVariable.0/@datasetsensitivevariablevalue.0" mappingGroup="//@privilegedGroup.1"/>
   </analysis>
 </fairness:GroupBias>
