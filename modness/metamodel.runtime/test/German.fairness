@@ -10,7 +10,7 @@
   <analysis name="german" scope="A person should have a credit granted regardless their gender">
     <metric name="equalized odds" toleranceValue="0.2">
       <operator xsi:type="fairness:SingleOperator"/>
-      <function xsi:type="fairness:ExistingFairnessMetric" name="eo" metric="EQUALIZED_ODDS"/>
+      <function xsi:type="fairness:ExistingGroupFairnessMetric" name="eq_odds" metric="EQUALIZED_ODDS"/>
     </metric>
     <dataset name="German dataset" groundTruthLabelName="credit" predictedLabelName="prediction" filePath="german.csv">
       <positiveOutcome mappingPositiveOutcome="//@positiveOutcome">

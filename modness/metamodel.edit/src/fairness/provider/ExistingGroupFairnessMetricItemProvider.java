@@ -3,7 +3,7 @@
 package fairness.provider;
 
 
-import fairness.ExistingFairnessMetric;
+import fairness.ExistingGroupFairnessMetric;
 import fairness.FairnessPackage;
 
 import java.util.Collection;
@@ -18,19 +18,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link fairness.ExistingFairnessMetric} object.
+ * This is the item provider adapter for a {@link fairness.ExistingGroupFairnessMetric} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ExistingFairnessMetricItemProvider extends FunctionItemProvider {
+public class ExistingGroupFairnessMetricItemProvider extends FunctionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExistingFairnessMetricItemProvider(AdapterFactory adapterFactory) {
+	public ExistingGroupFairnessMetricItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -61,9 +61,9 @@ public class ExistingFairnessMetricItemProvider extends FunctionItemProvider {
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ExistingFairnessMetric_metric_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ExistingFairnessMetric_metric_feature", "_UI_ExistingFairnessMetric_type"),
-				 FairnessPackage.Literals.EXISTING_FAIRNESS_METRIC__METRIC,
+				 getString("_UI_ExistingGroupFairnessMetric_metric_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ExistingGroupFairnessMetric_metric_feature", "_UI_ExistingGroupFairnessMetric_type"),
+				 FairnessPackage.Literals.EXISTING_GROUP_FAIRNESS_METRIC__METRIC,
 				 true,
 				 false,
 				 false,
@@ -73,14 +73,14 @@ public class ExistingFairnessMetricItemProvider extends FunctionItemProvider {
 	}
 
 	/**
-	 * This returns ExistingFairnessMetric.gif.
+	 * This returns ExistingGroupFairnessMetric.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ExistingFairnessMetric"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ExistingGroupFairnessMetric"));
 	}
 
 	/**
@@ -91,10 +91,10 @@ public class ExistingFairnessMetricItemProvider extends FunctionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ExistingFairnessMetric)object).getName();
+		String label = ((ExistingGroupFairnessMetric)object).getName();
 		return label == null || label.length() == 0 ?
-			getString("_UI_ExistingFairnessMetric_type") :
-			getString("_UI_ExistingFairnessMetric_type") + " " + label;
+			getString("_UI_ExistingGroupFairnessMetric_type") :
+			getString("_UI_ExistingGroupFairnessMetric_type") + " " + label;
 	}
 
 
@@ -109,8 +109,8 @@ public class ExistingFairnessMetricItemProvider extends FunctionItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ExistingFairnessMetric.class)) {
-			case FairnessPackage.EXISTING_FAIRNESS_METRIC__METRIC:
+		switch (notification.getFeatureID(ExistingGroupFairnessMetric.class)) {
+			case FairnessPackage.EXISTING_GROUP_FAIRNESS_METRIC__METRIC:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

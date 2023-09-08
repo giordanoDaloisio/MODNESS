@@ -6,6 +6,7 @@ import fairness.Bias;
 import fairness.BiasSource;
 import fairness.FairnessPackage;
 import fairness.PositiveOutcome;
+import fairness.SensitiveGroup;
 import fairness.SensitiveVariable;
 
 import java.util.Collection;
@@ -36,6 +37,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fairness.impl.BiasImpl#getSource <em>Source</em>}</li>
  *   <li>{@link fairness.impl.BiasImpl#getSensitiveVariables <em>Sensitive Variables</em>}</li>
  *   <li>{@link fairness.impl.BiasImpl#getPositiveOutcome <em>Positive Outcome</em>}</li>
+ *   <li>{@link fairness.impl.BiasImpl#getUnprivilegedGroup <em>Unprivileged Group</em>}</li>
+ *   <li>{@link fairness.impl.BiasImpl#getPrivilegedGroup <em>Privileged Group</em>}</li>
  * </ul>
  *
  * @generated
@@ -90,6 +93,26 @@ public abstract class BiasImpl extends NamedElementImpl implements Bias {
 	 * @ordered
 	 */
 	protected PositiveOutcome positiveOutcome;
+
+	/**
+	 * The cached value of the '{@link #getUnprivilegedGroup() <em>Unprivileged Group</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getUnprivilegedGroup()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SensitiveGroup> unprivilegedGroup;
+
+	/**
+	 * The cached value of the '{@link #getPrivilegedGroup() <em>Privileged Group</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrivilegedGroup()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<SensitiveGroup> privilegedGroup;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -203,6 +226,30 @@ public abstract class BiasImpl extends NamedElementImpl implements Bias {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<SensitiveGroup> getUnprivilegedGroup() {
+		if (unprivilegedGroup == null) {
+			unprivilegedGroup = new EObjectContainmentEList<SensitiveGroup>(SensitiveGroup.class, this, FairnessPackage.BIAS__UNPRIVILEGED_GROUP);
+		}
+		return unprivilegedGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<SensitiveGroup> getPrivilegedGroup() {
+		if (privilegedGroup == null) {
+			privilegedGroup = new EObjectContainmentEList<SensitiveGroup>(SensitiveGroup.class, this, FairnessPackage.BIAS__PRIVILEGED_GROUP);
+		}
+		return privilegedGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -210,6 +257,10 @@ public abstract class BiasImpl extends NamedElementImpl implements Bias {
 				return ((InternalEList<?>)getSensitiveVariables()).basicRemove(otherEnd, msgs);
 			case FairnessPackage.BIAS__POSITIVE_OUTCOME:
 				return basicSetPositiveOutcome(null, msgs);
+			case FairnessPackage.BIAS__UNPRIVILEGED_GROUP:
+				return ((InternalEList<?>)getUnprivilegedGroup()).basicRemove(otherEnd, msgs);
+			case FairnessPackage.BIAS__PRIVILEGED_GROUP:
+				return ((InternalEList<?>)getPrivilegedGroup()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -230,6 +281,10 @@ public abstract class BiasImpl extends NamedElementImpl implements Bias {
 				return getSensitiveVariables();
 			case FairnessPackage.BIAS__POSITIVE_OUTCOME:
 				return getPositiveOutcome();
+			case FairnessPackage.BIAS__UNPRIVILEGED_GROUP:
+				return getUnprivilegedGroup();
+			case FairnessPackage.BIAS__PRIVILEGED_GROUP:
+				return getPrivilegedGroup();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -257,6 +312,14 @@ public abstract class BiasImpl extends NamedElementImpl implements Bias {
 			case FairnessPackage.BIAS__POSITIVE_OUTCOME:
 				setPositiveOutcome((PositiveOutcome)newValue);
 				return;
+			case FairnessPackage.BIAS__UNPRIVILEGED_GROUP:
+				getUnprivilegedGroup().clear();
+				getUnprivilegedGroup().addAll((Collection<? extends SensitiveGroup>)newValue);
+				return;
+			case FairnessPackage.BIAS__PRIVILEGED_GROUP:
+				getPrivilegedGroup().clear();
+				getPrivilegedGroup().addAll((Collection<? extends SensitiveGroup>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -281,6 +344,12 @@ public abstract class BiasImpl extends NamedElementImpl implements Bias {
 			case FairnessPackage.BIAS__POSITIVE_OUTCOME:
 				setPositiveOutcome((PositiveOutcome)null);
 				return;
+			case FairnessPackage.BIAS__UNPRIVILEGED_GROUP:
+				getUnprivilegedGroup().clear();
+				return;
+			case FairnessPackage.BIAS__PRIVILEGED_GROUP:
+				getPrivilegedGroup().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -301,6 +370,10 @@ public abstract class BiasImpl extends NamedElementImpl implements Bias {
 				return sensitiveVariables != null && !sensitiveVariables.isEmpty();
 			case FairnessPackage.BIAS__POSITIVE_OUTCOME:
 				return positiveOutcome != null;
+			case FairnessPackage.BIAS__UNPRIVILEGED_GROUP:
+				return unprivilegedGroup != null && !unprivilegedGroup.isEmpty();
+			case FairnessPackage.BIAS__PRIVILEGED_GROUP:
+				return privilegedGroup != null && !privilegedGroup.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

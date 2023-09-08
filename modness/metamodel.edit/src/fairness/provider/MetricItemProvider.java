@@ -214,7 +214,12 @@ public class MetricItemProvider extends NamedElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(FairnessPackage.Literals.METRIC__FUNCTION,
-				 FairnessFactory.eINSTANCE.createExistingFairnessMetric()));
+				 FairnessFactory.eINSTANCE.createExistingGroupFairnessMetric()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FairnessPackage.Literals.METRIC__FUNCTION,
+				 FairnessFactory.eINSTANCE.createExistingIndividualFairnessMetric()));
 	}
 
 }

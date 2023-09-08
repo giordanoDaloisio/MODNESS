@@ -62,8 +62,6 @@ public class GroupBiasItemProvider extends BiasItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(FairnessPackage.Literals.GROUP_BIAS__UNPRIVILEGED_GROUP);
-			childrenFeatures.add(FairnessPackage.Literals.GROUP_BIAS__PRIVILEGED_GROUP);
 			childrenFeatures.add(FairnessPackage.Literals.GROUP_BIAS__ANALYSIS);
 		}
 		return childrenFeatures;
@@ -120,8 +118,6 @@ public class GroupBiasItemProvider extends BiasItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(GroupBias.class)) {
-			case FairnessPackage.GROUP_BIAS__UNPRIVILEGED_GROUP:
-			case FairnessPackage.GROUP_BIAS__PRIVILEGED_GROUP:
 			case FairnessPackage.GROUP_BIAS__ANALYSIS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -142,16 +138,6 @@ public class GroupBiasItemProvider extends BiasItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(FairnessPackage.Literals.GROUP_BIAS__UNPRIVILEGED_GROUP,
-				 FairnessFactory.eINSTANCE.createSensitiveGroup()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(FairnessPackage.Literals.GROUP_BIAS__PRIVILEGED_GROUP,
-				 FairnessFactory.eINSTANCE.createSensitiveGroup()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(FairnessPackage.Literals.GROUP_BIAS__ANALYSIS,
 				 FairnessFactory.eINSTANCE.createGroupAnalysis()));
 	}
@@ -168,8 +154,8 @@ public class GroupBiasItemProvider extends BiasItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == FairnessPackage.Literals.GROUP_BIAS__UNPRIVILEGED_GROUP ||
-			childFeature == FairnessPackage.Literals.GROUP_BIAS__PRIVILEGED_GROUP;
+			childFeature == FairnessPackage.Literals.BIAS__UNPRIVILEGED_GROUP ||
+			childFeature == FairnessPackage.Literals.BIAS__PRIVILEGED_GROUP;
 
 		if (qualify) {
 			return getString

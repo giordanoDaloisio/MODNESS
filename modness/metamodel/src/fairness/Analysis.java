@@ -16,6 +16,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link fairness.Analysis#getMetric <em>Metric</em>}</li>
  *   <li>{@link fairness.Analysis#getDataset <em>Dataset</em>}</li>
  *   <li>{@link fairness.Analysis#getScope <em>Scope</em>}</li>
+ *   <li>{@link fairness.Analysis#getDatasetUnprivilegedGroup <em>Dataset Unprivileged Group</em>}</li>
+ *   <li>{@link fairness.Analysis#getDatasetPrivilegedGroup <em>Dataset Privileged Group</em>}</li>
  * </ul>
  *
  * @see fairness.FairnessPackage#getAnalysis()
@@ -68,5 +70,29 @@ public interface Analysis extends NamedElement {
 	 * @generated
 	 */
 	void setScope(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Dataset Unprivileged Group</b></em>' containment reference list.
+	 * The list contents are of type {@link fairness.DatasetSensitiveGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Dataset Unprivileged Group</em>' containment reference list.
+	 * @see fairness.FairnessPackage#getAnalysis_DatasetUnprivilegedGroup()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<DatasetSensitiveGroup> getDatasetUnprivilegedGroup();
+
+	/**
+	 * Returns the value of the '<em><b>Dataset Privileged Group</b></em>' containment reference list.
+	 * The list contents are of type {@link fairness.DatasetSensitiveGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Dataset Privileged Group</em>' containment reference list.
+	 * @see fairness.FairnessPackage#getAnalysis_DatasetPrivilegedGroup()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<DatasetSensitiveGroup> getDatasetPrivilegedGroup();
 
 } // Analysis

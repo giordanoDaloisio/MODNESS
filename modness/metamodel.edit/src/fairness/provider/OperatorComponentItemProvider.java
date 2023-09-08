@@ -176,7 +176,12 @@ public class OperatorComponentItemProvider extends NamedElementItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(FairnessPackage.Literals.OPERATOR_COMPONENT__FUNCTION,
-				 FairnessFactory.eINSTANCE.createExistingFairnessMetric()));
+				 FairnessFactory.eINSTANCE.createExistingGroupFairnessMetric()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FairnessPackage.Literals.OPERATOR_COMPONENT__FUNCTION,
+				 FairnessFactory.eINSTANCE.createExistingIndividualFairnessMetric()));
 
 		newChildDescriptors.add
 			(createChildParameter

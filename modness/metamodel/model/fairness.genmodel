@@ -47,13 +47,18 @@
       <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//BiasSource/WRONG_SYSTEM_TARGET_POPULATION"/>
       <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//BiasSource/CHANGE_IN_TARGET_POPULATION"/>
     </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Fairness.ecore#//FairnessMetric">
-      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//FairnessMetric/STATISTICAL_PARITY"/>
-      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//FairnessMetric/DISPARATE_IMPACT"/>
-      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//FairnessMetric/EQUALIZED_ODDS"/>
-      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//FairnessMetric/EQUAL_ACCURACY"/>
-      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//FairnessMetric/FALSE_POSITIVE_DIFFERENCE"/>
-      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//FairnessMetric/TRUE_POSITIVE_DIFFERENCE"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Fairness.ecore#//GroupFairnessMetric">
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//GroupFairnessMetric/STATISTICAL_PARITY"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//GroupFairnessMetric/DISPARATE_IMPACT"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//GroupFairnessMetric/EQUALIZED_ODDS"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//GroupFairnessMetric/EQUAL_ACCURACY"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//GroupFairnessMetric/FALSE_POSITIVE_DIFFERENCE"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//GroupFairnessMetric/TRUE_POSITIVE_DIFFERENCE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Fairness.ecore#//IndividualFairnessMetric">
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//IndividualFairnessMetric/MANHATTAN_DISTANCE"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//IndividualFairnessMetric/EUCLIDEAN_DISTANCE"/>
+      <genEnumLiterals ecoreEnumLiteral="Fairness.ecore#//IndividualFairnessMetric/MAHALANOBIS_DISTANCE"/>
     </genEnums>
     <genClasses image="false" ecoreClass="Fairness.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//NamedElement/name"/>
@@ -71,11 +76,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Analysis/metric"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Analysis/dataset"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//Analysis/scope"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Analysis/datasetUnprivilegedGroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Analysis/datasetPrivilegedGroup"/>
     </genClasses>
-    <genClasses ecoreClass="Fairness.ecore#//GroupAnalysis">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//GroupAnalysis/datasetUnprivilegedGroup"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//GroupAnalysis/datasetPrivilegedGroup"/>
-    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//GroupAnalysis"/>
     <genClasses ecoreClass="Fairness.ecore#//IndividualAnalysis"/>
     <genClasses image="false" ecoreClass="Fairness.ecore#//Function"/>
     <genClasses ecoreClass="Fairness.ecore#//SensitiveVariable">
@@ -111,13 +115,13 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//Bias/source"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Bias/sensitiveVariables"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Bias/positiveOutcome"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Bias/unprivilegedGroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Bias/privilegedGroup"/>
     </genClasses>
     <genClasses ecoreClass="Fairness.ecore#//PositiveOutcome">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//PositiveOutcome/value"/>
     </genClasses>
     <genClasses ecoreClass="Fairness.ecore#//GroupBias">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//GroupBias/unprivilegedGroup"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//GroupBias/privilegedGroup"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//GroupBias/analysis"/>
     </genClasses>
     <genClasses ecoreClass="Fairness.ecore#//IndividualBias">
@@ -145,8 +149,11 @@
     <genClasses ecoreClass="Fairness.ecore#//OtherVariable">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//OtherVariable/othervariablevalue"/>
     </genClasses>
-    <genClasses ecoreClass="Fairness.ecore#//ExistingFairnessMetric">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//ExistingFairnessMetric/metric"/>
+    <genClasses ecoreClass="Fairness.ecore#//ExistingGroupFairnessMetric">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//ExistingGroupFairnessMetric/metric"/>
+    </genClasses>
+    <genClasses ecoreClass="Fairness.ecore#//ExistingIndividualFairnessMetric">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//ExistingIndividualFairnessMetric/metric"/>
     </genClasses>
     <genClasses ecoreClass="Fairness.ecore#//Metric">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Metric/operator"/>

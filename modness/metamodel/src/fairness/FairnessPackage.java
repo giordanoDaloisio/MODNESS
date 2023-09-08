@@ -297,13 +297,31 @@ public interface FairnessPackage extends EPackage {
 	int ANALYSIS__SCOPE = NAMED_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Dataset Unprivileged Group</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANALYSIS__DATASET_UNPRIVILEGED_GROUP = NAMED_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Dataset Privileged Group</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANALYSIS__DATASET_PRIVILEGED_GROUP = NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Analysis</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ANALYSIS_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 3;
+	int ANALYSIS_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Analysis</em>' class.
@@ -367,7 +385,7 @@ public interface FairnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_ANALYSIS__DATASET_UNPRIVILEGED_GROUP = ANALYSIS_FEATURE_COUNT + 0;
+	int GROUP_ANALYSIS__DATASET_UNPRIVILEGED_GROUP = ANALYSIS__DATASET_UNPRIVILEGED_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>Dataset Privileged Group</b></em>' containment reference list.
@@ -376,7 +394,7 @@ public interface FairnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_ANALYSIS__DATASET_PRIVILEGED_GROUP = ANALYSIS_FEATURE_COUNT + 1;
+	int GROUP_ANALYSIS__DATASET_PRIVILEGED_GROUP = ANALYSIS__DATASET_PRIVILEGED_GROUP;
 
 	/**
 	 * The number of structural features of the '<em>Group Analysis</em>' class.
@@ -385,7 +403,7 @@ public interface FairnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_ANALYSIS_FEATURE_COUNT = ANALYSIS_FEATURE_COUNT + 2;
+	int GROUP_ANALYSIS_FEATURE_COUNT = ANALYSIS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Group Analysis</em>' class.
@@ -441,6 +459,24 @@ public interface FairnessPackage extends EPackage {
 	 * @ordered
 	 */
 	int INDIVIDUAL_ANALYSIS__SCOPE = ANALYSIS__SCOPE;
+
+	/**
+	 * The feature id for the '<em><b>Dataset Unprivileged Group</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDIVIDUAL_ANALYSIS__DATASET_UNPRIVILEGED_GROUP = ANALYSIS__DATASET_UNPRIVILEGED_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Dataset Privileged Group</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDIVIDUAL_ANALYSIS__DATASET_PRIVILEGED_GROUP = ANALYSIS__DATASET_PRIVILEGED_GROUP;
 
 	/**
 	 * The number of structural features of the '<em>Individual Analysis</em>' class.
@@ -920,13 +956,31 @@ public interface FairnessPackage extends EPackage {
 	int BIAS__POSITIVE_OUTCOME = NAMED_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Unprivileged Group</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BIAS__UNPRIVILEGED_GROUP = NAMED_ELEMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Privileged Group</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BIAS__PRIVILEGED_GROUP = NAMED_ELEMENT_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>Bias</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BIAS_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 4;
+	int BIAS_FEATURE_COUNT = NAMED_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>Bias</em>' class.
@@ -1066,7 +1120,7 @@ public interface FairnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_BIAS__UNPRIVILEGED_GROUP = BIAS_FEATURE_COUNT + 0;
+	int GROUP_BIAS__UNPRIVILEGED_GROUP = BIAS__UNPRIVILEGED_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>Privileged Group</b></em>' containment reference list.
@@ -1075,7 +1129,7 @@ public interface FairnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_BIAS__PRIVILEGED_GROUP = BIAS_FEATURE_COUNT + 1;
+	int GROUP_BIAS__PRIVILEGED_GROUP = BIAS__PRIVILEGED_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>Analysis</b></em>' containment reference list.
@@ -1084,7 +1138,7 @@ public interface FairnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_BIAS__ANALYSIS = BIAS_FEATURE_COUNT + 2;
+	int GROUP_BIAS__ANALYSIS = BIAS_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Group Bias</em>' class.
@@ -1093,7 +1147,7 @@ public interface FairnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GROUP_BIAS_FEATURE_COUNT = BIAS_FEATURE_COUNT + 3;
+	int GROUP_BIAS_FEATURE_COUNT = BIAS_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Group Bias</em>' class.
@@ -1148,6 +1202,24 @@ public interface FairnessPackage extends EPackage {
 	 * @ordered
 	 */
 	int INDIVIDUAL_BIAS__POSITIVE_OUTCOME = BIAS__POSITIVE_OUTCOME;
+
+	/**
+	 * The feature id for the '<em><b>Unprivileged Group</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDIVIDUAL_BIAS__UNPRIVILEGED_GROUP = BIAS__UNPRIVILEGED_GROUP;
+
+	/**
+	 * The feature id for the '<em><b>Privileged Group</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDIVIDUAL_BIAS__PRIVILEGED_GROUP = BIAS__PRIVILEGED_GROUP;
 
 	/**
 	 * The feature id for the '<em><b>Individual Analysis</b></em>' containment reference list.
@@ -1488,14 +1560,14 @@ public interface FairnessPackage extends EPackage {
 	int OTHER_VARIABLE_OPERATION_COUNT = VARIABLE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link fairness.impl.ExistingFairnessMetricImpl <em>Existing Fairness Metric</em>}' class.
+	 * The meta object id for the '{@link fairness.impl.ExistingGroupFairnessMetricImpl <em>Existing Group Fairness Metric</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fairness.impl.ExistingFairnessMetricImpl
-	 * @see fairness.impl.FairnessPackageImpl#getExistingFairnessMetric()
+	 * @see fairness.impl.ExistingGroupFairnessMetricImpl
+	 * @see fairness.impl.FairnessPackageImpl#getExistingGroupFairnessMetric()
 	 * @generated
 	 */
-	int EXISTING_FAIRNESS_METRIC = 26;
+	int EXISTING_GROUP_FAIRNESS_METRIC = 26;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1504,7 +1576,7 @@ public interface FairnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXISTING_FAIRNESS_METRIC__NAME = FUNCTION__NAME;
+	int EXISTING_GROUP_FAIRNESS_METRIC__NAME = FUNCTION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Metric</b></em>' attribute.
@@ -1513,25 +1585,71 @@ public interface FairnessPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXISTING_FAIRNESS_METRIC__METRIC = FUNCTION_FEATURE_COUNT + 0;
+	int EXISTING_GROUP_FAIRNESS_METRIC__METRIC = FUNCTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Existing Fairness Metric</em>' class.
+	 * The number of structural features of the '<em>Existing Group Fairness Metric</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXISTING_FAIRNESS_METRIC_FEATURE_COUNT = FUNCTION_FEATURE_COUNT + 1;
+	int EXISTING_GROUP_FAIRNESS_METRIC_FEATURE_COUNT = FUNCTION_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Existing Fairness Metric</em>' class.
+	 * The number of operations of the '<em>Existing Group Fairness Metric</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXISTING_FAIRNESS_METRIC_OPERATION_COUNT = FUNCTION_OPERATION_COUNT + 0;
+	int EXISTING_GROUP_FAIRNESS_METRIC_OPERATION_COUNT = FUNCTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link fairness.impl.ExistingIndividualFairnessMetricImpl <em>Existing Individual Fairness Metric</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fairness.impl.ExistingIndividualFairnessMetricImpl
+	 * @see fairness.impl.FairnessPackageImpl#getExistingIndividualFairnessMetric()
+	 * @generated
+	 */
+	int EXISTING_INDIVIDUAL_FAIRNESS_METRIC = 27;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXISTING_INDIVIDUAL_FAIRNESS_METRIC__NAME = FUNCTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Metric</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXISTING_INDIVIDUAL_FAIRNESS_METRIC__METRIC = FUNCTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Existing Individual Fairness Metric</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXISTING_INDIVIDUAL_FAIRNESS_METRIC_FEATURE_COUNT = FUNCTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Existing Individual Fairness Metric</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXISTING_INDIVIDUAL_FAIRNESS_METRIC_OPERATION_COUNT = FUNCTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fairness.impl.MetricImpl <em>Metric</em>}' class.
@@ -1541,7 +1659,7 @@ public interface FairnessPackage extends EPackage {
 	 * @see fairness.impl.FairnessPackageImpl#getMetric()
 	 * @generated
 	 */
-	int METRIC = 27;
+	int METRIC = 28;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1605,7 +1723,7 @@ public interface FairnessPackage extends EPackage {
 	 * @see fairness.impl.FairnessPackageImpl#getDataset()
 	 * @generated
 	 */
-	int DATASET = 28;
+	int DATASET = 29;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1696,7 +1814,7 @@ public interface FairnessPackage extends EPackage {
 	 * @see fairness.impl.FairnessPackageImpl#getDatasetSensitiveVariable()
 	 * @generated
 	 */
-	int DATASET_SENSITIVE_VARIABLE = 29;
+	int DATASET_SENSITIVE_VARIABLE = 30;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1751,7 +1869,7 @@ public interface FairnessPackage extends EPackage {
 	 * @see fairness.impl.FairnessPackageImpl#getDatasetPositiveOutcome()
 	 * @generated
 	 */
-	int DATASET_POSITIVE_OUTCOME = 30;
+	int DATASET_POSITIVE_OUTCOME = 31;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1815,7 +1933,7 @@ public interface FairnessPackage extends EPackage {
 	 * @see fairness.impl.FairnessPackageImpl#getDatasetSensitiveGroup()
 	 * @generated
 	 */
-	int DATASET_SENSITIVE_GROUP = 31;
+	int DATASET_SENSITIVE_GROUP = 32;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1870,7 +1988,7 @@ public interface FairnessPackage extends EPackage {
 	 * @see fairness.impl.FairnessPackageImpl#getDatasetSensitiveVariableValue()
 	 * @generated
 	 */
-	int DATASET_SENSITIVE_VARIABLE_VALUE = 32;
+	int DATASET_SENSITIVE_VARIABLE_VALUE = 33;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1934,7 +2052,7 @@ public interface FairnessPackage extends EPackage {
 	 * @see fairness.impl.FairnessPackageImpl#getLogicalOperator()
 	 * @generated
 	 */
-	int LOGICAL_OPERATOR = 36;
+	int LOGICAL_OPERATOR = 37;
 
 	/**
 	 * The meta object id for the '{@link fairness.SingleOperatorParameter <em>Single Operator Parameter</em>}' enum.
@@ -1944,7 +2062,7 @@ public interface FairnessPackage extends EPackage {
 	 * @see fairness.impl.FairnessPackageImpl#getSingleOperatorParameter()
 	 * @generated
 	 */
-	int SINGLE_OPERATOR_PARAMETER = 37;
+	int SINGLE_OPERATOR_PARAMETER = 38;
 
 	/**
 	 * The meta object id for the '{@link fairness.RangeOperatorParameter <em>Range Operator Parameter</em>}' enum.
@@ -1954,7 +2072,7 @@ public interface FairnessPackage extends EPackage {
 	 * @see fairness.impl.FairnessPackageImpl#getRangeOperatorParameter()
 	 * @generated
 	 */
-	int RANGE_OPERATOR_PARAMETER = 38;
+	int RANGE_OPERATOR_PARAMETER = 39;
 
 	/**
 	 * The meta object id for the '{@link fairness.impl.EqualityOperatorImpl <em>Equality Operator</em>}' class.
@@ -1964,7 +2082,7 @@ public interface FairnessPackage extends EPackage {
 	 * @see fairness.impl.FairnessPackageImpl#getEqualityOperator()
 	 * @generated
 	 */
-	int EQUALITY_OPERATOR = 33;
+	int EQUALITY_OPERATOR = 34;
 
 	/**
 	 * The number of structural features of the '<em>Equality Operator</em>' class.
@@ -1992,7 +2110,7 @@ public interface FairnessPackage extends EPackage {
 	 * @see fairness.impl.FairnessPackageImpl#getSingleOperator()
 	 * @generated
 	 */
-	int SINGLE_OPERATOR = 34;
+	int SINGLE_OPERATOR = 35;
 
 	/**
 	 * The feature id for the '<em><b>Operator</b></em>' attribute.
@@ -2038,7 +2156,7 @@ public interface FairnessPackage extends EPackage {
 	 * @see fairness.impl.FairnessPackageImpl#getRangeOperator()
 	 * @generated
 	 */
-	int RANGE_OPERATOR = 35;
+	int RANGE_OPERATOR = 36;
 
 	/**
 	 * The feature id for the '<em><b>Operator</b></em>' attribute.
@@ -2093,7 +2211,7 @@ public interface FairnessPackage extends EPackage {
 	 * @see fairness.impl.FairnessPackageImpl#getLabelValueType()
 	 * @generated
 	 */
-	int LABEL_VALUE_TYPE = 39;
+	int LABEL_VALUE_TYPE = 40;
 
 	/**
 	 * The meta object id for the '{@link fairness.ArithmeticOperator <em>Arithmetic Operator</em>}' enum.
@@ -2103,7 +2221,7 @@ public interface FairnessPackage extends EPackage {
 	 * @see fairness.impl.FairnessPackageImpl#getArithmeticOperator()
 	 * @generated
 	 */
-	int ARITHMETIC_OPERATOR = 40;
+	int ARITHMETIC_OPERATOR = 41;
 
 	/**
 	 * The meta object id for the '{@link fairness.BiasSource <em>Bias Source</em>}' enum.
@@ -2113,19 +2231,28 @@ public interface FairnessPackage extends EPackage {
 	 * @see fairness.impl.FairnessPackageImpl#getBiasSource()
 	 * @generated
 	 */
-	int BIAS_SOURCE = 41;
+	int BIAS_SOURCE = 42;
 
 
 	/**
-	 * The meta object id for the '{@link fairness.FairnessMetric <em>Metric</em>}' enum.
+	 * The meta object id for the '{@link fairness.GroupFairnessMetric <em>Group Fairness Metric</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fairness.FairnessMetric
-	 * @see fairness.impl.FairnessPackageImpl#getFairnessMetric()
+	 * @see fairness.GroupFairnessMetric
+	 * @see fairness.impl.FairnessPackageImpl#getGroupFairnessMetric()
 	 * @generated
 	 */
-	int FAIRNESS_METRIC = 42;
+	int GROUP_FAIRNESS_METRIC = 43;
 
+	/**
+	 * The meta object id for the '{@link fairness.IndividualFairnessMetric <em>Individual Fairness Metric</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fairness.IndividualFairnessMetric
+	 * @see fairness.impl.FairnessPackageImpl#getIndividualFairnessMetric()
+	 * @generated
+	 */
+	int INDIVIDUAL_FAIRNESS_METRIC = 44;
 
 	/**
 	 * Returns the meta object for class '{@link fairness.NamedElement <em>Named Element</em>}'.
@@ -2267,6 +2394,28 @@ public interface FairnessPackage extends EPackage {
 	EAttribute getAnalysis_Scope();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link fairness.Analysis#getDatasetUnprivilegedGroup <em>Dataset Unprivileged Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Dataset Unprivileged Group</em>'.
+	 * @see fairness.Analysis#getDatasetUnprivilegedGroup()
+	 * @see #getAnalysis()
+	 * @generated
+	 */
+	EReference getAnalysis_DatasetUnprivilegedGroup();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link fairness.Analysis#getDatasetPrivilegedGroup <em>Dataset Privileged Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Dataset Privileged Group</em>'.
+	 * @see fairness.Analysis#getDatasetPrivilegedGroup()
+	 * @see #getAnalysis()
+	 * @generated
+	 */
+	EReference getAnalysis_DatasetPrivilegedGroup();
+
+	/**
 	 * Returns the meta object for class '{@link fairness.GroupAnalysis <em>Group Analysis</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2275,28 +2424,6 @@ public interface FairnessPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGroupAnalysis();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link fairness.GroupAnalysis#getDatasetUnprivilegedGroup <em>Dataset Unprivileged Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Dataset Unprivileged Group</em>'.
-	 * @see fairness.GroupAnalysis#getDatasetUnprivilegedGroup()
-	 * @see #getGroupAnalysis()
-	 * @generated
-	 */
-	EReference getGroupAnalysis_DatasetUnprivilegedGroup();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link fairness.GroupAnalysis#getDatasetPrivilegedGroup <em>Dataset Privileged Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Dataset Privileged Group</em>'.
-	 * @see fairness.GroupAnalysis#getDatasetPrivilegedGroup()
-	 * @see #getGroupAnalysis()
-	 * @generated
-	 */
-	EReference getGroupAnalysis_DatasetPrivilegedGroup();
 
 	/**
 	 * Returns the meta object for class '{@link fairness.IndividualAnalysis <em>Individual Analysis</em>}'.
@@ -2596,6 +2723,28 @@ public interface FairnessPackage extends EPackage {
 	EReference getBias_PositiveOutcome();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link fairness.Bias#getUnprivilegedGroup <em>Unprivileged Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Unprivileged Group</em>'.
+	 * @see fairness.Bias#getUnprivilegedGroup()
+	 * @see #getBias()
+	 * @generated
+	 */
+	EReference getBias_UnprivilegedGroup();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link fairness.Bias#getPrivilegedGroup <em>Privileged Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Privileged Group</em>'.
+	 * @see fairness.Bias#getPrivilegedGroup()
+	 * @see #getBias()
+	 * @generated
+	 */
+	EReference getBias_PrivilegedGroup();
+
+	/**
 	 * Returns the meta object for class '{@link fairness.PositiveOutcome <em>Positive Outcome</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2625,28 +2774,6 @@ public interface FairnessPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getGroupBias();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link fairness.GroupBias#getUnprivilegedGroup <em>Unprivileged Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Unprivileged Group</em>'.
-	 * @see fairness.GroupBias#getUnprivilegedGroup()
-	 * @see #getGroupBias()
-	 * @generated
-	 */
-	EReference getGroupBias_UnprivilegedGroup();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link fairness.GroupBias#getPrivilegedGroup <em>Privileged Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Privileged Group</em>'.
-	 * @see fairness.GroupBias#getPrivilegedGroup()
-	 * @see #getGroupBias()
-	 * @generated
-	 */
-	EReference getGroupBias_PrivilegedGroup();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link fairness.GroupBias#getAnalysis <em>Analysis</em>}'.
@@ -2850,25 +2977,46 @@ public interface FairnessPackage extends EPackage {
 	EReference getOtherVariable_Othervariablevalue();
 
 	/**
-	 * Returns the meta object for class '{@link fairness.ExistingFairnessMetric <em>Existing Fairness Metric</em>}'.
+	 * Returns the meta object for class '{@link fairness.ExistingGroupFairnessMetric <em>Existing Group Fairness Metric</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Existing Fairness Metric</em>'.
-	 * @see fairness.ExistingFairnessMetric
+	 * @return the meta object for class '<em>Existing Group Fairness Metric</em>'.
+	 * @see fairness.ExistingGroupFairnessMetric
 	 * @generated
 	 */
-	EClass getExistingFairnessMetric();
+	EClass getExistingGroupFairnessMetric();
 
 	/**
-	 * Returns the meta object for the attribute '{@link fairness.ExistingFairnessMetric#getMetric <em>Metric</em>}'.
+	 * Returns the meta object for the attribute '{@link fairness.ExistingGroupFairnessMetric#getMetric <em>Metric</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Metric</em>'.
-	 * @see fairness.ExistingFairnessMetric#getMetric()
-	 * @see #getExistingFairnessMetric()
+	 * @see fairness.ExistingGroupFairnessMetric#getMetric()
+	 * @see #getExistingGroupFairnessMetric()
 	 * @generated
 	 */
-	EAttribute getExistingFairnessMetric_Metric();
+	EAttribute getExistingGroupFairnessMetric_Metric();
+
+	/**
+	 * Returns the meta object for class '{@link fairness.ExistingIndividualFairnessMetric <em>Existing Individual Fairness Metric</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Existing Individual Fairness Metric</em>'.
+	 * @see fairness.ExistingIndividualFairnessMetric
+	 * @generated
+	 */
+	EClass getExistingIndividualFairnessMetric();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fairness.ExistingIndividualFairnessMetric#getMetric <em>Metric</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Metric</em>'.
+	 * @see fairness.ExistingIndividualFairnessMetric#getMetric()
+	 * @see #getExistingIndividualFairnessMetric()
+	 * @generated
+	 */
+	EAttribute getExistingIndividualFairnessMetric_Metric();
 
 	/**
 	 * Returns the meta object for class '{@link fairness.Metric <em>Metric</em>}'.
@@ -3241,14 +3389,24 @@ public interface FairnessPackage extends EPackage {
 	EEnum getBiasSource();
 
 	/**
-	 * Returns the meta object for enum '{@link fairness.FairnessMetric <em>Metric</em>}'.
+	 * Returns the meta object for enum '{@link fairness.GroupFairnessMetric <em>Group Fairness Metric</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>Metric</em>'.
-	 * @see fairness.FairnessMetric
+	 * @return the meta object for enum '<em>Group Fairness Metric</em>'.
+	 * @see fairness.GroupFairnessMetric
 	 * @generated
 	 */
-	EEnum getFairnessMetric();
+	EEnum getGroupFairnessMetric();
+
+	/**
+	 * Returns the meta object for enum '{@link fairness.IndividualFairnessMetric <em>Individual Fairness Metric</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Individual Fairness Metric</em>'.
+	 * @see fairness.IndividualFairnessMetric
+	 * @generated
+	 */
+	EEnum getIndividualFairnessMetric();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3386,6 +3544,22 @@ public interface FairnessPackage extends EPackage {
 		EAttribute ANALYSIS__SCOPE = eINSTANCE.getAnalysis_Scope();
 
 		/**
+		 * The meta object literal for the '<em><b>Dataset Unprivileged Group</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ANALYSIS__DATASET_UNPRIVILEGED_GROUP = eINSTANCE.getAnalysis_DatasetUnprivilegedGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Dataset Privileged Group</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ANALYSIS__DATASET_PRIVILEGED_GROUP = eINSTANCE.getAnalysis_DatasetPrivilegedGroup();
+
+		/**
 		 * The meta object literal for the '{@link fairness.impl.GroupAnalysisImpl <em>Group Analysis</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3394,22 +3568,6 @@ public interface FairnessPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GROUP_ANALYSIS = eINSTANCE.getGroupAnalysis();
-
-		/**
-		 * The meta object literal for the '<em><b>Dataset Unprivileged Group</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GROUP_ANALYSIS__DATASET_UNPRIVILEGED_GROUP = eINSTANCE.getGroupAnalysis_DatasetUnprivilegedGroup();
-
-		/**
-		 * The meta object literal for the '<em><b>Dataset Privileged Group</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GROUP_ANALYSIS__DATASET_PRIVILEGED_GROUP = eINSTANCE.getGroupAnalysis_DatasetPrivilegedGroup();
 
 		/**
 		 * The meta object literal for the '{@link fairness.impl.IndividualAnalysisImpl <em>Individual Analysis</em>}' class.
@@ -3658,6 +3816,22 @@ public interface FairnessPackage extends EPackage {
 		EReference BIAS__POSITIVE_OUTCOME = eINSTANCE.getBias_PositiveOutcome();
 
 		/**
+		 * The meta object literal for the '<em><b>Unprivileged Group</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BIAS__UNPRIVILEGED_GROUP = eINSTANCE.getBias_UnprivilegedGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Privileged Group</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BIAS__PRIVILEGED_GROUP = eINSTANCE.getBias_PrivilegedGroup();
+
+		/**
 		 * The meta object literal for the '{@link fairness.impl.PositiveOutcomeImpl <em>Positive Outcome</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3684,22 +3858,6 @@ public interface FairnessPackage extends EPackage {
 		 * @generated
 		 */
 		EClass GROUP_BIAS = eINSTANCE.getGroupBias();
-
-		/**
-		 * The meta object literal for the '<em><b>Unprivileged Group</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GROUP_BIAS__UNPRIVILEGED_GROUP = eINSTANCE.getGroupBias_UnprivilegedGroup();
-
-		/**
-		 * The meta object literal for the '<em><b>Privileged Group</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GROUP_BIAS__PRIVILEGED_GROUP = eINSTANCE.getGroupBias_PrivilegedGroup();
 
 		/**
 		 * The meta object literal for the '<em><b>Analysis</b></em>' containment reference list feature.
@@ -3870,14 +4028,14 @@ public interface FairnessPackage extends EPackage {
 		EReference OTHER_VARIABLE__OTHERVARIABLEVALUE = eINSTANCE.getOtherVariable_Othervariablevalue();
 
 		/**
-		 * The meta object literal for the '{@link fairness.impl.ExistingFairnessMetricImpl <em>Existing Fairness Metric</em>}' class.
+		 * The meta object literal for the '{@link fairness.impl.ExistingGroupFairnessMetricImpl <em>Existing Group Fairness Metric</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see fairness.impl.ExistingFairnessMetricImpl
-		 * @see fairness.impl.FairnessPackageImpl#getExistingFairnessMetric()
+		 * @see fairness.impl.ExistingGroupFairnessMetricImpl
+		 * @see fairness.impl.FairnessPackageImpl#getExistingGroupFairnessMetric()
 		 * @generated
 		 */
-		EClass EXISTING_FAIRNESS_METRIC = eINSTANCE.getExistingFairnessMetric();
+		EClass EXISTING_GROUP_FAIRNESS_METRIC = eINSTANCE.getExistingGroupFairnessMetric();
 
 		/**
 		 * The meta object literal for the '<em><b>Metric</b></em>' attribute feature.
@@ -3885,7 +4043,25 @@ public interface FairnessPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXISTING_FAIRNESS_METRIC__METRIC = eINSTANCE.getExistingFairnessMetric_Metric();
+		EAttribute EXISTING_GROUP_FAIRNESS_METRIC__METRIC = eINSTANCE.getExistingGroupFairnessMetric_Metric();
+
+		/**
+		 * The meta object literal for the '{@link fairness.impl.ExistingIndividualFairnessMetricImpl <em>Existing Individual Fairness Metric</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fairness.impl.ExistingIndividualFairnessMetricImpl
+		 * @see fairness.impl.FairnessPackageImpl#getExistingIndividualFairnessMetric()
+		 * @generated
+		 */
+		EClass EXISTING_INDIVIDUAL_FAIRNESS_METRIC = eINSTANCE.getExistingIndividualFairnessMetric();
+
+		/**
+		 * The meta object literal for the '<em><b>Metric</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXISTING_INDIVIDUAL_FAIRNESS_METRIC__METRIC = eINSTANCE.getExistingIndividualFairnessMetric_Metric();
 
 		/**
 		 * The meta object literal for the '{@link fairness.impl.MetricImpl <em>Metric</em>}' class.
@@ -4198,14 +4374,24 @@ public interface FairnessPackage extends EPackage {
 		EEnum BIAS_SOURCE = eINSTANCE.getBiasSource();
 
 		/**
-		 * The meta object literal for the '{@link fairness.FairnessMetric <em>Metric</em>}' enum.
+		 * The meta object literal for the '{@link fairness.GroupFairnessMetric <em>Group Fairness Metric</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see fairness.FairnessMetric
-		 * @see fairness.impl.FairnessPackageImpl#getFairnessMetric()
+		 * @see fairness.GroupFairnessMetric
+		 * @see fairness.impl.FairnessPackageImpl#getGroupFairnessMetric()
 		 * @generated
 		 */
-		EEnum FAIRNESS_METRIC = eINSTANCE.getFairnessMetric();
+		EEnum GROUP_FAIRNESS_METRIC = eINSTANCE.getGroupFairnessMetric();
+
+		/**
+		 * The meta object literal for the '{@link fairness.IndividualFairnessMetric <em>Individual Fairness Metric</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fairness.IndividualFairnessMetric
+		 * @see fairness.impl.FairnessPackageImpl#getIndividualFairnessMetric()
+		 * @generated
+		 */
+		EEnum INDIVIDUAL_FAIRNESS_METRIC = eINSTANCE.getIndividualFairnessMetric();
 
 	}
 

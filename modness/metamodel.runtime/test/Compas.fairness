@@ -16,7 +16,7 @@
   <analysis name="compas" scope="all people must be predicted as recidiv only if the attributes different from the sensitive variables say that">
     <metric name="statistical parity" toleranceValue="0.2">
       <operator xsi:type="fairness:SingleOperator"/>
-      <function xsi:type="fairness:ExistingFairnessMetric" name="stat_parity"/>
+      <function xsi:type="fairness:ExistingGroupFairnessMetric" name="statistical_parity"/>
     </metric>
     <dataset name="compas" groundTruthLabelName="two_year_recid" predictedLabelName="prediction" filePath="compas.csv">
       <positiveOutcome name="non-recidiv" mappingPositiveOutcome="//@positiveOutcome">

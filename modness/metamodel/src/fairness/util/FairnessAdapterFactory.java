@@ -172,8 +172,12 @@ public class FairnessAdapterFactory extends AdapterFactoryImpl {
 				return createOtherVariableAdapter();
 			}
 			@Override
-			public Adapter caseExistingFairnessMetric(ExistingFairnessMetric object) {
-				return createExistingFairnessMetricAdapter();
+			public Adapter caseExistingGroupFairnessMetric(ExistingGroupFairnessMetric object) {
+				return createExistingGroupFairnessMetricAdapter();
+			}
+			@Override
+			public Adapter caseExistingIndividualFairnessMetric(ExistingIndividualFairnessMetric object) {
+				return createExistingIndividualFairnessMetricAdapter();
 			}
 			@Override
 			public Adapter caseMetric(Metric object) {
@@ -596,16 +600,30 @@ public class FairnessAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fairness.ExistingFairnessMetric <em>Existing Fairness Metric</em>}'.
+	 * Creates a new adapter for an object of class '{@link fairness.ExistingGroupFairnessMetric <em>Existing Group Fairness Metric</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fairness.ExistingFairnessMetric
+	 * @see fairness.ExistingGroupFairnessMetric
 	 * @generated
 	 */
-	public Adapter createExistingFairnessMetricAdapter() {
+	public Adapter createExistingGroupFairnessMetricAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fairness.ExistingIndividualFairnessMetric <em>Existing Individual Fairness Metric</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fairness.ExistingIndividualFairnessMetric
+	 * @generated
+	 */
+	public Adapter createExistingIndividualFairnessMetricAdapter() {
 		return null;
 	}
 

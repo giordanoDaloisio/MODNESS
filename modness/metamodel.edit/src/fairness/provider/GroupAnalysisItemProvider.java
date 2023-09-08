@@ -3,7 +3,6 @@
 package fairness.provider;
 
 
-import fairness.FairnessFactory;
 import fairness.FairnessPackage;
 import fairness.GroupAnalysis;
 
@@ -12,11 +11,7 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link fairness.GroupAnalysis} object.
@@ -48,37 +43,6 @@ public class GroupAnalysisItemProvider extends AnalysisItemProvider {
 
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(FairnessPackage.Literals.GROUP_ANALYSIS__DATASET_UNPRIVILEGED_GROUP);
-			childrenFeatures.add(FairnessPackage.Literals.GROUP_ANALYSIS__DATASET_PRIVILEGED_GROUP);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -117,13 +81,6 @@ public class GroupAnalysisItemProvider extends AnalysisItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(GroupAnalysis.class)) {
-			case FairnessPackage.GROUP_ANALYSIS__DATASET_UNPRIVILEGED_GROUP:
-			case FairnessPackage.GROUP_ANALYSIS__DATASET_PRIVILEGED_GROUP:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 
@@ -137,16 +94,6 @@ public class GroupAnalysisItemProvider extends AnalysisItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(FairnessPackage.Literals.GROUP_ANALYSIS__DATASET_UNPRIVILEGED_GROUP,
-				 FairnessFactory.eINSTANCE.createDatasetSensitiveGroup()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(FairnessPackage.Literals.GROUP_ANALYSIS__DATASET_PRIVILEGED_GROUP,
-				 FairnessFactory.eINSTANCE.createDatasetSensitiveGroup()));
 	}
 
 	/**
@@ -161,8 +108,8 @@ public class GroupAnalysisItemProvider extends AnalysisItemProvider {
 		Object childObject = child;
 
 		boolean qualify =
-			childFeature == FairnessPackage.Literals.GROUP_ANALYSIS__DATASET_UNPRIVILEGED_GROUP ||
-			childFeature == FairnessPackage.Literals.GROUP_ANALYSIS__DATASET_PRIVILEGED_GROUP;
+			childFeature == FairnessPackage.Literals.ANALYSIS__DATASET_UNPRIVILEGED_GROUP ||
+			childFeature == FairnessPackage.Literals.ANALYSIS__DATASET_PRIVILEGED_GROUP;
 
 		if (qualify) {
 			return getString

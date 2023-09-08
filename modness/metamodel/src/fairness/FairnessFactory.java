@@ -211,13 +211,22 @@ public interface FairnessFactory extends EFactory {
 	OtherVariable createOtherVariable();
 
 	/**
-	 * Returns a new object of class '<em>Existing Fairness Metric</em>'.
+	 * Returns a new object of class '<em>Existing Group Fairness Metric</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Existing Fairness Metric</em>'.
+	 * @return a new object of class '<em>Existing Group Fairness Metric</em>'.
 	 * @generated
 	 */
-	ExistingFairnessMetric createExistingFairnessMetric();
+	ExistingGroupFairnessMetric createExistingGroupFairnessMetric();
+
+	/**
+	 * Returns a new object of class '<em>Existing Individual Fairness Metric</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Existing Individual Fairness Metric</em>'.
+	 * @generated
+	 */
+	ExistingIndividualFairnessMetric createExistingIndividualFairnessMetric();
 
 	/**
 	 * Returns a new object of class '<em>Metric</em>'.

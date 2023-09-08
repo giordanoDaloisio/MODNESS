@@ -78,7 +78,8 @@ public class FairnessFactoryImpl extends EFactoryImpl implements FairnessFactory
 			case FairnessPackage.LOGARITM: return createLogaritm();
 			case FairnessPackage.SUMMATION: return createSummation();
 			case FairnessPackage.OTHER_VARIABLE: return createOtherVariable();
-			case FairnessPackage.EXISTING_FAIRNESS_METRIC: return createExistingFairnessMetric();
+			case FairnessPackage.EXISTING_GROUP_FAIRNESS_METRIC: return createExistingGroupFairnessMetric();
+			case FairnessPackage.EXISTING_INDIVIDUAL_FAIRNESS_METRIC: return createExistingIndividualFairnessMetric();
 			case FairnessPackage.METRIC: return createMetric();
 			case FairnessPackage.DATASET: return createDataset();
 			case FairnessPackage.DATASET_SENSITIVE_VARIABLE: return createDatasetSensitiveVariable();
@@ -112,8 +113,10 @@ public class FairnessFactoryImpl extends EFactoryImpl implements FairnessFactory
 				return createArithmeticOperatorFromString(eDataType, initialValue);
 			case FairnessPackage.BIAS_SOURCE:
 				return createBiasSourceFromString(eDataType, initialValue);
-			case FairnessPackage.FAIRNESS_METRIC:
-				return createFairnessMetricFromString(eDataType, initialValue);
+			case FairnessPackage.GROUP_FAIRNESS_METRIC:
+				return createGroupFairnessMetricFromString(eDataType, initialValue);
+			case FairnessPackage.INDIVIDUAL_FAIRNESS_METRIC:
+				return createIndividualFairnessMetricFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -139,8 +142,10 @@ public class FairnessFactoryImpl extends EFactoryImpl implements FairnessFactory
 				return convertArithmeticOperatorToString(eDataType, instanceValue);
 			case FairnessPackage.BIAS_SOURCE:
 				return convertBiasSourceToString(eDataType, instanceValue);
-			case FairnessPackage.FAIRNESS_METRIC:
-				return convertFairnessMetricToString(eDataType, instanceValue);
+			case FairnessPackage.GROUP_FAIRNESS_METRIC:
+				return convertGroupFairnessMetricToString(eDataType, instanceValue);
+			case FairnessPackage.INDIVIDUAL_FAIRNESS_METRIC:
+				return convertIndividualFairnessMetricToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -361,9 +366,19 @@ public class FairnessFactoryImpl extends EFactoryImpl implements FairnessFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExistingFairnessMetric createExistingFairnessMetric() {
-		ExistingFairnessMetricImpl existingFairnessMetric = new ExistingFairnessMetricImpl();
-		return existingFairnessMetric;
+	public ExistingGroupFairnessMetric createExistingGroupFairnessMetric() {
+		ExistingGroupFairnessMetricImpl existingGroupFairnessMetric = new ExistingGroupFairnessMetricImpl();
+		return existingGroupFairnessMetric;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExistingIndividualFairnessMetric createExistingIndividualFairnessMetric() {
+		ExistingIndividualFairnessMetricImpl existingIndividualFairnessMetric = new ExistingIndividualFairnessMetricImpl();
+		return existingIndividualFairnessMetric;
 	}
 
 	/**
@@ -571,8 +586,8 @@ public class FairnessFactoryImpl extends EFactoryImpl implements FairnessFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public FairnessMetric createFairnessMetricFromString(EDataType eDataType, String initialValue) {
-		FairnessMetric result = FairnessMetric.get(initialValue);
+	public GroupFairnessMetric createGroupFairnessMetricFromString(EDataType eDataType, String initialValue) {
+		GroupFairnessMetric result = GroupFairnessMetric.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -582,7 +597,27 @@ public class FairnessFactoryImpl extends EFactoryImpl implements FairnessFactory
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertFairnessMetricToString(EDataType eDataType, Object instanceValue) {
+	public String convertGroupFairnessMetricToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IndividualFairnessMetric createIndividualFairnessMetricFromString(EDataType eDataType, String initialValue) {
+		IndividualFairnessMetric result = IndividualFairnessMetric.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertIndividualFairnessMetricToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -4,6 +4,7 @@ package fairness.impl;
 
 import fairness.Analysis;
 import fairness.Dataset;
+import fairness.DatasetSensitiveGroup;
 import fairness.FairnessPackage;
 import fairness.Metric;
 import java.util.Collection;
@@ -31,6 +32,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fairness.impl.AnalysisImpl#getMetric <em>Metric</em>}</li>
  *   <li>{@link fairness.impl.AnalysisImpl#getDataset <em>Dataset</em>}</li>
  *   <li>{@link fairness.impl.AnalysisImpl#getScope <em>Scope</em>}</li>
+ *   <li>{@link fairness.impl.AnalysisImpl#getDatasetUnprivilegedGroup <em>Dataset Unprivileged Group</em>}</li>
+ *   <li>{@link fairness.impl.AnalysisImpl#getDatasetPrivilegedGroup <em>Dataset Privileged Group</em>}</li>
  * </ul>
  *
  * @generated
@@ -75,6 +78,26 @@ public abstract class AnalysisImpl extends NamedElementImpl implements Analysis 
 	 * @ordered
 	 */
 	protected String scope = SCOPE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getDatasetUnprivilegedGroup() <em>Dataset Unprivileged Group</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDatasetUnprivilegedGroup()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DatasetSensitiveGroup> datasetUnprivilegedGroup;
+
+	/**
+	 * The cached value of the '{@link #getDatasetPrivilegedGroup() <em>Dataset Privileged Group</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDatasetPrivilegedGroup()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DatasetSensitiveGroup> datasetPrivilegedGroup;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -145,6 +168,30 @@ public abstract class AnalysisImpl extends NamedElementImpl implements Analysis 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<DatasetSensitiveGroup> getDatasetUnprivilegedGroup() {
+		if (datasetUnprivilegedGroup == null) {
+			datasetUnprivilegedGroup = new EObjectContainmentEList<DatasetSensitiveGroup>(DatasetSensitiveGroup.class, this, FairnessPackage.ANALYSIS__DATASET_UNPRIVILEGED_GROUP);
+		}
+		return datasetUnprivilegedGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<DatasetSensitiveGroup> getDatasetPrivilegedGroup() {
+		if (datasetPrivilegedGroup == null) {
+			datasetPrivilegedGroup = new EObjectContainmentEList<DatasetSensitiveGroup>(DatasetSensitiveGroup.class, this, FairnessPackage.ANALYSIS__DATASET_PRIVILEGED_GROUP);
+		}
+		return datasetPrivilegedGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -152,6 +199,10 @@ public abstract class AnalysisImpl extends NamedElementImpl implements Analysis 
 				return ((InternalEList<?>)getMetric()).basicRemove(otherEnd, msgs);
 			case FairnessPackage.ANALYSIS__DATASET:
 				return ((InternalEList<?>)getDataset()).basicRemove(otherEnd, msgs);
+			case FairnessPackage.ANALYSIS__DATASET_UNPRIVILEGED_GROUP:
+				return ((InternalEList<?>)getDatasetUnprivilegedGroup()).basicRemove(otherEnd, msgs);
+			case FairnessPackage.ANALYSIS__DATASET_PRIVILEGED_GROUP:
+				return ((InternalEList<?>)getDatasetPrivilegedGroup()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -170,6 +221,10 @@ public abstract class AnalysisImpl extends NamedElementImpl implements Analysis 
 				return getDataset();
 			case FairnessPackage.ANALYSIS__SCOPE:
 				return getScope();
+			case FairnessPackage.ANALYSIS__DATASET_UNPRIVILEGED_GROUP:
+				return getDatasetUnprivilegedGroup();
+			case FairnessPackage.ANALYSIS__DATASET_PRIVILEGED_GROUP:
+				return getDatasetPrivilegedGroup();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -194,6 +249,14 @@ public abstract class AnalysisImpl extends NamedElementImpl implements Analysis 
 			case FairnessPackage.ANALYSIS__SCOPE:
 				setScope((String)newValue);
 				return;
+			case FairnessPackage.ANALYSIS__DATASET_UNPRIVILEGED_GROUP:
+				getDatasetUnprivilegedGroup().clear();
+				getDatasetUnprivilegedGroup().addAll((Collection<? extends DatasetSensitiveGroup>)newValue);
+				return;
+			case FairnessPackage.ANALYSIS__DATASET_PRIVILEGED_GROUP:
+				getDatasetPrivilegedGroup().clear();
+				getDatasetPrivilegedGroup().addAll((Collection<? extends DatasetSensitiveGroup>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -215,6 +278,12 @@ public abstract class AnalysisImpl extends NamedElementImpl implements Analysis 
 			case FairnessPackage.ANALYSIS__SCOPE:
 				setScope(SCOPE_EDEFAULT);
 				return;
+			case FairnessPackage.ANALYSIS__DATASET_UNPRIVILEGED_GROUP:
+				getDatasetUnprivilegedGroup().clear();
+				return;
+			case FairnessPackage.ANALYSIS__DATASET_PRIVILEGED_GROUP:
+				getDatasetPrivilegedGroup().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -233,6 +302,10 @@ public abstract class AnalysisImpl extends NamedElementImpl implements Analysis 
 				return dataset != null && !dataset.isEmpty();
 			case FairnessPackage.ANALYSIS__SCOPE:
 				return SCOPE_EDEFAULT == null ? scope != null : !SCOPE_EDEFAULT.equals(scope);
+			case FairnessPackage.ANALYSIS__DATASET_UNPRIVILEGED_GROUP:
+				return datasetUnprivilegedGroup != null && !datasetUnprivilegedGroup.isEmpty();
+			case FairnessPackage.ANALYSIS__DATASET_PRIVILEGED_GROUP:
+				return datasetPrivilegedGroup != null && !datasetPrivilegedGroup.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

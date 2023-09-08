@@ -17,6 +17,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link fairness.Bias#getSource <em>Source</em>}</li>
  *   <li>{@link fairness.Bias#getSensitiveVariables <em>Sensitive Variables</em>}</li>
  *   <li>{@link fairness.Bias#getPositiveOutcome <em>Positive Outcome</em>}</li>
+ *   <li>{@link fairness.Bias#getUnprivilegedGroup <em>Unprivileged Group</em>}</li>
+ *   <li>{@link fairness.Bias#getPrivilegedGroup <em>Privileged Group</em>}</li>
  * </ul>
  *
  * @see fairness.FairnessPackage#getBias()
@@ -93,5 +95,29 @@ public interface Bias extends NamedElement {
 	 * @generated
 	 */
 	void setPositiveOutcome(PositiveOutcome value);
+
+	/**
+	 * Returns the value of the '<em><b>Unprivileged Group</b></em>' containment reference list.
+	 * The list contents are of type {@link fairness.SensitiveGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Unprivileged Group</em>' containment reference list.
+	 * @see fairness.FairnessPackage#getBias_UnprivilegedGroup()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<SensitiveGroup> getUnprivilegedGroup();
+
+	/**
+	 * Returns the value of the '<em><b>Privileged Group</b></em>' containment reference list.
+	 * The list contents are of type {@link fairness.SensitiveGroup}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Privileged Group</em>' containment reference list.
+	 * @see fairness.FairnessPackage#getBias_PrivilegedGroup()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<SensitiveGroup> getPrivilegedGroup();
 
 } // Bias

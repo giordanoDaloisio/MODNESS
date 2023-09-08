@@ -257,11 +257,19 @@ public class FairnessSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FairnessPackage.EXISTING_FAIRNESS_METRIC: {
-				ExistingFairnessMetric existingFairnessMetric = (ExistingFairnessMetric)theEObject;
-				T result = caseExistingFairnessMetric(existingFairnessMetric);
-				if (result == null) result = caseFunction(existingFairnessMetric);
-				if (result == null) result = caseNamedElement(existingFairnessMetric);
+			case FairnessPackage.EXISTING_GROUP_FAIRNESS_METRIC: {
+				ExistingGroupFairnessMetric existingGroupFairnessMetric = (ExistingGroupFairnessMetric)theEObject;
+				T result = caseExistingGroupFairnessMetric(existingGroupFairnessMetric);
+				if (result == null) result = caseFunction(existingGroupFairnessMetric);
+				if (result == null) result = caseNamedElement(existingGroupFairnessMetric);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FairnessPackage.EXISTING_INDIVIDUAL_FAIRNESS_METRIC: {
+				ExistingIndividualFairnessMetric existingIndividualFairnessMetric = (ExistingIndividualFairnessMetric)theEObject;
+				T result = caseExistingIndividualFairnessMetric(existingIndividualFairnessMetric);
+				if (result == null) result = caseFunction(existingIndividualFairnessMetric);
+				if (result == null) result = caseNamedElement(existingIndividualFairnessMetric);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -724,17 +732,32 @@ public class FairnessSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Existing Fairness Metric</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Existing Group Fairness Metric</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Existing Fairness Metric</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Existing Group Fairness Metric</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseExistingFairnessMetric(ExistingFairnessMetric object) {
+	public T caseExistingGroupFairnessMetric(ExistingGroupFairnessMetric object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Existing Individual Fairness Metric</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Existing Individual Fairness Metric</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExistingIndividualFairnessMetric(ExistingIndividualFairnessMetric object) {
 		return null;
 	}
 

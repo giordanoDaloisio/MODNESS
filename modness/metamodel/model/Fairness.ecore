@@ -28,13 +28,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataset" lowerBound="1"
         upperBound="-1" eType="#//Dataset" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="scope" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GroupAnalysis" eSuperTypes="#//Analysis">
     <eStructuralFeatures xsi:type="ecore:EReference" name="datasetUnprivilegedGroup"
         lowerBound="1" upperBound="-1" eType="#//DatasetSensitiveGroup" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datasetPrivilegedGroup"
         lowerBound="1" upperBound="-1" eType="#//DatasetSensitiveGroup" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GroupAnalysis" eSuperTypes="#//Analysis"/>
   <eClassifiers xsi:type="ecore:EClass" name="IndividualAnalysis" eSuperTypes="#//Analysis"/>
   <eClassifiers xsi:type="ecore:EClass" name="Function" abstract="true" eSuperTypes="#//NamedElement"/>
   <eClassifiers xsi:type="ecore:EEnum" name="SingleOperatorParameter">
@@ -107,15 +106,15 @@
         upperBound="-1" eType="#//SensitiveVariable" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="positiveOutcome" lowerBound="1"
         eType="#//PositiveOutcome" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unprivilegedGroup" lowerBound="1"
+        upperBound="-1" eType="#//SensitiveGroup" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="privilegedGroup" lowerBound="1"
+        upperBound="-1" eType="#//SensitiveGroup" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PositiveOutcome">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GroupBias" eSuperTypes="#//Bias">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="unprivilegedGroup" lowerBound="1"
-        upperBound="-1" eType="#//SensitiveGroup" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="privilegedGroup" lowerBound="1"
-        upperBound="-1" eType="#//SensitiveGroup" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="analysis" lowerBound="1"
         upperBound="-1" eType="#//GroupAnalysis" containment="true"/>
   </eClassifiers>
@@ -167,9 +166,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="othervariablevalue" upperBound="-1"
         eType="#//VariableValue" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExistingFairnessMetric" eSuperTypes="#//Function">
+  <eClassifiers xsi:type="ecore:EClass" name="ExistingGroupFairnessMetric" eSuperTypes="#//Function">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="metric" lowerBound="1"
-        eType="#//FairnessMetric"/>
+        eType="#//GroupFairnessMetric"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExistingIndividualFairnessMetric" eSuperTypes="#//Function">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="metric" lowerBound="1"
+        eType="#//IndividualFairnessMetric"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Metric" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="operator" lowerBound="1"
@@ -211,13 +214,18 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="mappingValue" lowerBound="1"
         eType="#//SensitiveVariableValue"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="FairnessMetric">
+  <eClassifiers xsi:type="ecore:EEnum" name="GroupFairnessMetric">
     <eLiterals name="STATISTICAL_PARITY"/>
     <eLiterals name="DISPARATE_IMPACT" value="1"/>
     <eLiterals name="EQUALIZED_ODDS" value="2"/>
     <eLiterals name="EQUAL_ACCURACY" value="3"/>
     <eLiterals name="FALSE_POSITIVE_DIFFERENCE" value="4"/>
     <eLiterals name="TRUE_POSITIVE_DIFFERENCE" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="IndividualFairnessMetric">
+    <eLiterals name="MANHATTAN_DISTANCE"/>
+    <eLiterals name="EUCLIDEAN_DISTANCE" value="1"/>
+    <eLiterals name="MAHALANOBIS_DISTANCE" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EqualityOperator" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="SingleOperator" eSuperTypes="#//EqualityOperator">

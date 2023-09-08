@@ -89,6 +89,8 @@ public class AnalysisItemProvider extends NamedElementItemProvider {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(FairnessPackage.Literals.ANALYSIS__METRIC);
 			childrenFeatures.add(FairnessPackage.Literals.ANALYSIS__DATASET);
+			childrenFeatures.add(FairnessPackage.Literals.ANALYSIS__DATASET_UNPRIVILEGED_GROUP);
+			childrenFeatures.add(FairnessPackage.Literals.ANALYSIS__DATASET_PRIVILEGED_GROUP);
 		}
 		return childrenFeatures;
 	}
@@ -138,6 +140,8 @@ public class AnalysisItemProvider extends NamedElementItemProvider {
 				return;
 			case FairnessPackage.ANALYSIS__METRIC:
 			case FairnessPackage.ANALYSIS__DATASET:
+			case FairnessPackage.ANALYSIS__DATASET_UNPRIVILEGED_GROUP:
+			case FairnessPackage.ANALYSIS__DATASET_PRIVILEGED_GROUP:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -164,6 +168,39 @@ public class AnalysisItemProvider extends NamedElementItemProvider {
 			(createChildParameter
 				(FairnessPackage.Literals.ANALYSIS__DATASET,
 				 FairnessFactory.eINSTANCE.createDataset()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FairnessPackage.Literals.ANALYSIS__DATASET_UNPRIVILEGED_GROUP,
+				 FairnessFactory.eINSTANCE.createDatasetSensitiveGroup()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(FairnessPackage.Literals.ANALYSIS__DATASET_PRIVILEGED_GROUP,
+				 FairnessFactory.eINSTANCE.createDatasetSensitiveGroup()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == FairnessPackage.Literals.ANALYSIS__DATASET_UNPRIVILEGED_GROUP ||
+			childFeature == FairnessPackage.Literals.ANALYSIS__DATASET_PRIVILEGED_GROUP;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

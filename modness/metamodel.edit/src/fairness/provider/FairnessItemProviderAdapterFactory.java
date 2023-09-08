@@ -555,26 +555,49 @@ public class FairnessItemProviderAdapterFactory extends FairnessAdapterFactory i
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link fairness.ExistingFairnessMetric} instances.
+	 * This keeps track of the one adapter used for all {@link fairness.ExistingGroupFairnessMetric} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ExistingFairnessMetricItemProvider existingFairnessMetricItemProvider;
+	protected ExistingGroupFairnessMetricItemProvider existingGroupFairnessMetricItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link fairness.ExistingFairnessMetric}.
+	 * This creates an adapter for a {@link fairness.ExistingGroupFairnessMetric}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createExistingFairnessMetricAdapter() {
-		if (existingFairnessMetricItemProvider == null) {
-			existingFairnessMetricItemProvider = new ExistingFairnessMetricItemProvider(this);
+	public Adapter createExistingGroupFairnessMetricAdapter() {
+		if (existingGroupFairnessMetricItemProvider == null) {
+			existingGroupFairnessMetricItemProvider = new ExistingGroupFairnessMetricItemProvider(this);
 		}
 
-		return existingFairnessMetricItemProvider;
+		return existingGroupFairnessMetricItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link fairness.ExistingIndividualFairnessMetric} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ExistingIndividualFairnessMetricItemProvider existingIndividualFairnessMetricItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link fairness.ExistingIndividualFairnessMetric}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExistingIndividualFairnessMetricAdapter() {
+		if (existingIndividualFairnessMetricItemProvider == null) {
+			existingIndividualFairnessMetricItemProvider = new ExistingIndividualFairnessMetricItemProvider(this);
+		}
+
+		return existingIndividualFairnessMetricItemProvider;
 	}
 
 	/**
@@ -881,7 +904,8 @@ public class FairnessItemProviderAdapterFactory extends FairnessAdapterFactory i
 		if (logaritmItemProvider != null) logaritmItemProvider.dispose();
 		if (summationItemProvider != null) summationItemProvider.dispose();
 		if (otherVariableItemProvider != null) otherVariableItemProvider.dispose();
-		if (existingFairnessMetricItemProvider != null) existingFairnessMetricItemProvider.dispose();
+		if (existingGroupFairnessMetricItemProvider != null) existingGroupFairnessMetricItemProvider.dispose();
+		if (existingIndividualFairnessMetricItemProvider != null) existingIndividualFairnessMetricItemProvider.dispose();
 		if (metricItemProvider != null) metricItemProvider.dispose();
 		if (datasetItemProvider != null) datasetItemProvider.dispose();
 		if (datasetSensitiveVariableItemProvider != null) datasetSensitiveVariableItemProvider.dispose();

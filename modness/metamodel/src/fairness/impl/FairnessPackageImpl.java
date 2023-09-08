@@ -13,17 +13,19 @@ import fairness.DatasetSensitiveVariable;
 import fairness.DatasetSensitiveVariableValue;
 import fairness.DatasetSize;
 import fairness.EqualityOperator;
-import fairness.ExistingFairnessMetric;
+import fairness.ExistingGroupFairnessMetric;
+import fairness.ExistingIndividualFairnessMetric;
 import fairness.ExpectedValue;
 import fairness.FairnessFactory;
-import fairness.FairnessMetric;
 import fairness.FairnessPackage;
 import fairness.Function;
 import fairness.GroupAnalysis;
 import fairness.GroupBias;
+import fairness.GroupFairnessMetric;
 import fairness.GroupSize;
 import fairness.IndividualAnalysis;
 import fairness.IndividualBias;
+import fairness.IndividualFairnessMetric;
 import fairness.LabelValueType;
 import fairness.Logaritm;
 import fairness.LogicalCondition;
@@ -250,7 +252,14 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass existingFairnessMetricEClass = null;
+	private EClass existingGroupFairnessMetricEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass existingIndividualFairnessMetricEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -362,7 +371,14 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum fairnessMetricEEnum = null;
+	private EEnum groupFairnessMetricEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum individualFairnessMetricEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -547,26 +563,26 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAnalysis_DatasetUnprivilegedGroup() {
+		return (EReference)analysisEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAnalysis_DatasetPrivilegedGroup() {
+		return (EReference)analysisEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getGroupAnalysis() {
 		return groupAnalysisEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGroupAnalysis_DatasetUnprivilegedGroup() {
-		return (EReference)groupAnalysisEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGroupAnalysis_DatasetPrivilegedGroup() {
-		return (EReference)groupAnalysisEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -826,6 +842,24 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getBias_UnprivilegedGroup() {
+		return (EReference)biasEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBias_PrivilegedGroup() {
+		return (EReference)biasEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPositiveOutcome() {
 		return positiveOutcomeEClass;
 	}
@@ -853,26 +887,8 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGroupBias_UnprivilegedGroup() {
-		return (EReference)groupBiasEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGroupBias_PrivilegedGroup() {
-		return (EReference)groupBiasEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getGroupBias_Analysis() {
-		return (EReference)groupBiasEClass.getEStructuralFeatures().get(2);
+		return (EReference)groupBiasEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1042,8 +1058,8 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getExistingFairnessMetric() {
-		return existingFairnessMetricEClass;
+	public EClass getExistingGroupFairnessMetric() {
+		return existingGroupFairnessMetricEClass;
 	}
 
 	/**
@@ -1051,8 +1067,26 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExistingFairnessMetric_Metric() {
-		return (EAttribute)existingFairnessMetricEClass.getEStructuralFeatures().get(0);
+	public EAttribute getExistingGroupFairnessMetric_Metric() {
+		return (EAttribute)existingGroupFairnessMetricEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getExistingIndividualFairnessMetric() {
+		return existingIndividualFairnessMetricEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExistingIndividualFairnessMetric_Metric() {
+		return (EAttribute)existingIndividualFairnessMetricEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1375,8 +1409,17 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getFairnessMetric() {
-		return fairnessMetricEEnum;
+	public EEnum getGroupFairnessMetric() {
+		return groupFairnessMetricEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getIndividualFairnessMetric() {
+		return individualFairnessMetricEEnum;
 	}
 
 	/**
@@ -1423,10 +1466,10 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 		createEReference(analysisEClass, ANALYSIS__METRIC);
 		createEReference(analysisEClass, ANALYSIS__DATASET);
 		createEAttribute(analysisEClass, ANALYSIS__SCOPE);
+		createEReference(analysisEClass, ANALYSIS__DATASET_UNPRIVILEGED_GROUP);
+		createEReference(analysisEClass, ANALYSIS__DATASET_PRIVILEGED_GROUP);
 
 		groupAnalysisEClass = createEClass(GROUP_ANALYSIS);
-		createEReference(groupAnalysisEClass, GROUP_ANALYSIS__DATASET_UNPRIVILEGED_GROUP);
-		createEReference(groupAnalysisEClass, GROUP_ANALYSIS__DATASET_PRIVILEGED_GROUP);
 
 		individualAnalysisEClass = createEClass(INDIVIDUAL_ANALYSIS);
 
@@ -1466,13 +1509,13 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 		createEAttribute(biasEClass, BIAS__SOURCE);
 		createEReference(biasEClass, BIAS__SENSITIVE_VARIABLES);
 		createEReference(biasEClass, BIAS__POSITIVE_OUTCOME);
+		createEReference(biasEClass, BIAS__UNPRIVILEGED_GROUP);
+		createEReference(biasEClass, BIAS__PRIVILEGED_GROUP);
 
 		positiveOutcomeEClass = createEClass(POSITIVE_OUTCOME);
 		createEAttribute(positiveOutcomeEClass, POSITIVE_OUTCOME__VALUE);
 
 		groupBiasEClass = createEClass(GROUP_BIAS);
-		createEReference(groupBiasEClass, GROUP_BIAS__UNPRIVILEGED_GROUP);
-		createEReference(groupBiasEClass, GROUP_BIAS__PRIVILEGED_GROUP);
 		createEReference(groupBiasEClass, GROUP_BIAS__ANALYSIS);
 
 		individualBiasEClass = createEClass(INDIVIDUAL_BIAS);
@@ -1501,8 +1544,11 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 		otherVariableEClass = createEClass(OTHER_VARIABLE);
 		createEReference(otherVariableEClass, OTHER_VARIABLE__OTHERVARIABLEVALUE);
 
-		existingFairnessMetricEClass = createEClass(EXISTING_FAIRNESS_METRIC);
-		createEAttribute(existingFairnessMetricEClass, EXISTING_FAIRNESS_METRIC__METRIC);
+		existingGroupFairnessMetricEClass = createEClass(EXISTING_GROUP_FAIRNESS_METRIC);
+		createEAttribute(existingGroupFairnessMetricEClass, EXISTING_GROUP_FAIRNESS_METRIC__METRIC);
+
+		existingIndividualFairnessMetricEClass = createEClass(EXISTING_INDIVIDUAL_FAIRNESS_METRIC);
+		createEAttribute(existingIndividualFairnessMetricEClass, EXISTING_INDIVIDUAL_FAIRNESS_METRIC__METRIC);
 
 		metricEClass = createEClass(METRIC);
 		createEReference(metricEClass, METRIC__OPERATOR);
@@ -1549,7 +1595,8 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 		labelValueTypeEEnum = createEEnum(LABEL_VALUE_TYPE);
 		arithmeticOperatorEEnum = createEEnum(ARITHMETIC_OPERATOR);
 		biasSourceEEnum = createEEnum(BIAS_SOURCE);
-		fairnessMetricEEnum = createEEnum(FAIRNESS_METRIC);
+		groupFairnessMetricEEnum = createEEnum(GROUP_FAIRNESS_METRIC);
+		individualFairnessMetricEEnum = createEEnum(INDIVIDUAL_FAIRNESS_METRIC);
 	}
 
 	/**
@@ -1602,7 +1649,8 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 		logaritmEClass.getESuperTypes().add(this.getFunction());
 		summationEClass.getESuperTypes().add(this.getFunction());
 		otherVariableEClass.getESuperTypes().add(this.getVariable());
-		existingFairnessMetricEClass.getESuperTypes().add(this.getFunction());
+		existingGroupFairnessMetricEClass.getESuperTypes().add(this.getFunction());
+		existingIndividualFairnessMetricEClass.getESuperTypes().add(this.getFunction());
 		metricEClass.getESuperTypes().add(this.getNamedElement());
 		datasetEClass.getESuperTypes().add(this.getNamedElement());
 		datasetSensitiveVariableEClass.getESuperTypes().add(this.getNamedElement());
@@ -1629,10 +1677,10 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 		initEReference(getAnalysis_Metric(), this.getMetric(), null, "metric", null, 1, -1, Analysis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAnalysis_Dataset(), this.getDataset(), null, "dataset", null, 1, -1, Analysis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAnalysis_Scope(), ecorePackage.getEString(), "scope", null, 0, 1, Analysis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAnalysis_DatasetUnprivilegedGroup(), this.getDatasetSensitiveGroup(), null, "datasetUnprivilegedGroup", null, 1, -1, Analysis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAnalysis_DatasetPrivilegedGroup(), this.getDatasetSensitiveGroup(), null, "datasetPrivilegedGroup", null, 1, -1, Analysis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(groupAnalysisEClass, GroupAnalysis.class, "GroupAnalysis", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGroupAnalysis_DatasetUnprivilegedGroup(), this.getDatasetSensitiveGroup(), null, "datasetUnprivilegedGroup", null, 1, -1, GroupAnalysis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGroupAnalysis_DatasetPrivilegedGroup(), this.getDatasetSensitiveGroup(), null, "datasetPrivilegedGroup", null, 1, -1, GroupAnalysis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(individualAnalysisEClass, IndividualAnalysis.class, "IndividualAnalysis", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1672,13 +1720,13 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 		initEAttribute(getBias_Source(), this.getBiasSource(), "source", null, 1, -1, Bias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBias_SensitiveVariables(), this.getSensitiveVariable(), null, "sensitiveVariables", null, 1, -1, Bias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBias_PositiveOutcome(), this.getPositiveOutcome(), null, "positiveOutcome", null, 1, 1, Bias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBias_UnprivilegedGroup(), this.getSensitiveGroup(), null, "unprivilegedGroup", null, 1, -1, Bias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBias_PrivilegedGroup(), this.getSensitiveGroup(), null, "privilegedGroup", null, 1, -1, Bias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(positiveOutcomeEClass, PositiveOutcome.class, "PositiveOutcome", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPositiveOutcome_Value(), ecorePackage.getEString(), "value", null, 1, 1, PositiveOutcome.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(groupBiasEClass, GroupBias.class, "GroupBias", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGroupBias_UnprivilegedGroup(), this.getSensitiveGroup(), null, "unprivilegedGroup", null, 1, -1, GroupBias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGroupBias_PrivilegedGroup(), this.getSensitiveGroup(), null, "privilegedGroup", null, 1, -1, GroupBias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGroupBias_Analysis(), this.getGroupAnalysis(), null, "analysis", null, 1, -1, GroupBias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(individualBiasEClass, IndividualBias.class, "IndividualBias", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1707,8 +1755,11 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 		initEClass(otherVariableEClass, OtherVariable.class, "OtherVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getOtherVariable_Othervariablevalue(), this.getVariableValue(), null, "othervariablevalue", null, 0, -1, OtherVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(existingFairnessMetricEClass, ExistingFairnessMetric.class, "ExistingFairnessMetric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getExistingFairnessMetric_Metric(), this.getFairnessMetric(), "metric", null, 1, 1, ExistingFairnessMetric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(existingGroupFairnessMetricEClass, ExistingGroupFairnessMetric.class, "ExistingGroupFairnessMetric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExistingGroupFairnessMetric_Metric(), this.getGroupFairnessMetric(), "metric", null, 1, 1, ExistingGroupFairnessMetric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(existingIndividualFairnessMetricEClass, ExistingIndividualFairnessMetric.class, "ExistingIndividualFairnessMetric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExistingIndividualFairnessMetric_Metric(), this.getIndividualFairnessMetric(), "metric", null, 1, 1, ExistingIndividualFairnessMetric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(metricEClass, Metric.class, "Metric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMetric_Operator(), this.getEqualityOperator(), null, "operator", null, 1, 1, Metric.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1791,13 +1842,18 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 		addEEnumLiteral(biasSourceEEnum, BiasSource.WRONG_SYSTEM_TARGET_POPULATION);
 		addEEnumLiteral(biasSourceEEnum, BiasSource.CHANGE_IN_TARGET_POPULATION);
 
-		initEEnum(fairnessMetricEEnum, FairnessMetric.class, "FairnessMetric");
-		addEEnumLiteral(fairnessMetricEEnum, FairnessMetric.STATISTICAL_PARITY);
-		addEEnumLiteral(fairnessMetricEEnum, FairnessMetric.DISPARATE_IMPACT);
-		addEEnumLiteral(fairnessMetricEEnum, FairnessMetric.EQUALIZED_ODDS);
-		addEEnumLiteral(fairnessMetricEEnum, FairnessMetric.EQUAL_ACCURACY);
-		addEEnumLiteral(fairnessMetricEEnum, FairnessMetric.FALSE_POSITIVE_DIFFERENCE);
-		addEEnumLiteral(fairnessMetricEEnum, FairnessMetric.TRUE_POSITIVE_DIFFERENCE);
+		initEEnum(groupFairnessMetricEEnum, GroupFairnessMetric.class, "GroupFairnessMetric");
+		addEEnumLiteral(groupFairnessMetricEEnum, GroupFairnessMetric.STATISTICAL_PARITY);
+		addEEnumLiteral(groupFairnessMetricEEnum, GroupFairnessMetric.DISPARATE_IMPACT);
+		addEEnumLiteral(groupFairnessMetricEEnum, GroupFairnessMetric.EQUALIZED_ODDS);
+		addEEnumLiteral(groupFairnessMetricEEnum, GroupFairnessMetric.EQUAL_ACCURACY);
+		addEEnumLiteral(groupFairnessMetricEEnum, GroupFairnessMetric.FALSE_POSITIVE_DIFFERENCE);
+		addEEnumLiteral(groupFairnessMetricEEnum, GroupFairnessMetric.TRUE_POSITIVE_DIFFERENCE);
+
+		initEEnum(individualFairnessMetricEEnum, IndividualFairnessMetric.class, "IndividualFairnessMetric");
+		addEEnumLiteral(individualFairnessMetricEEnum, IndividualFairnessMetric.MANHATTAN_DISTANCE);
+		addEEnumLiteral(individualFairnessMetricEEnum, IndividualFairnessMetric.EUCLIDEAN_DISTANCE);
+		addEEnumLiteral(individualFairnessMetricEEnum, IndividualFairnessMetric.MAHALANOBIS_DISTANCE);
 
 		// Create resource
 		createResource(eNS_URI);
