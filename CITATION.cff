@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+authors:
+  - family-names: "Daloisio"
+    given-names: "Giordano"
+title: "MODNESS"
+version: "1.0.0"
+date-released: "2024-04-08"
+url: "https://github.com/giordanoDaloisio/MODNESS"
+license: "GPL-3.0"
