@@ -1,7 +1,13 @@
 cff-version: 1.2.0
 authors:
-  - family-names: "Daloisio"
+  - family-names: "d'Aloisio"
     given-names: "Giordano"
+  - family-names: "Di Sipio"
+    given-names: "Claudio"
+  - family-names: "Di Marco"
+    given-names: "Antinisca"
+  - family-names: "Di Ruscio"
+    given-names: "Davide"
 title: "MODNESS"
 version: "1.0.0"
 date-released: "2024-04-08"
