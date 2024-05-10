@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.xtext.example.modness
+Bundle-ManifestVersion: 2
+Bundle-Name: org.xtext.example.modness
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.xtext.example.modness; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: metamodel,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.16.0",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.35.0",
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: org.xtext.example.modness.parser.antlr.internal,
+ org.xtext.example.modness.validation,
+ org.xtext.example.modness,
+ org.xtext.example.modness.serializer,
+ org.xtext.example.modness.generator,
+ org.xtext.example.modness.scoping,
+ org.xtext.example.modness.formatting2,
+ org.xtext.example.modness.services,
+ org.xtext.example.modness.parser.antlr
+Import-Package: org.apache.log4j

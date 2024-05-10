@@ -16,7 +16,7 @@
       <function xsi:type="fairness:Operation" name="Ratio" equalityOperator="RATIO">
         <leftSide>
           <function xsi:type="fairness:GroupSize">
-            <groupCondition name="non frequent items" value="//@analysis.0/@dataset.0/@datasetSentiveVariable.0/@datasetsensitivevariablevalue.1">
+            <groupCondition name="non frequent items" sensitivegroup="//@analysis.0/@datasetUnprivilegedGroup.0">
               <sublogicalcondition name="and">
                 <logicalcondition name="high-ranking" value="//@analysis.0/@dataset.0/@positiveOutcome"/>
               </sublogicalcondition>
@@ -24,7 +24,9 @@
           </function>
         </leftSide>
         <rightSide>
-          <function xsi:type="fairness:DatasetSize"/>
+          <function xsi:type="fairness:GroupSize">
+            <groupCondition name="high-ranking" value="//@analysis.0/@dataset.0/@positiveOutcome"/>
+          </function>
         </rightSide>
       </function>
     </metric>

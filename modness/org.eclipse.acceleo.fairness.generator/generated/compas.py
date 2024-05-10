@@ -29,8 +29,8 @@ metrics = FairnessMetric(
 )
 
 
-print(metrics.statistical_parity_difference())
-if abs(metrics.statistical_parity_difference()) > (threshold + tolerance_value):
+print(metrics.average_odds_difference())
+if abs(metrics.average_odds_difference()) > (threshold + tolerance_value):
     print("Biased")
 else:
     print("Fair")

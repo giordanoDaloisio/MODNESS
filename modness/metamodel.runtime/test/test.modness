@@ -1,0 +1,15 @@
+GroupBias compas {
+	domain education
+	source { HUMAN_DISCRIMINATION, WRONG_SAMPLING}
+	sensitiveVariables {
+		SensitiveVariable gender {
+			sensitiveVariableValue { 
+				SensitiveVariableValue {value male},
+				SensitiveVariableValue {value female}
+				}
+			}	
+		}
+		positiveOutcome PositiveOutcome non-recidiv
+		unprivilegedGroup 
+	}
+		

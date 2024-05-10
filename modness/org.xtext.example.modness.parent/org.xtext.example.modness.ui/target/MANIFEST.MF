@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.xtext.example.modness.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: org.xtext.example.modness.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.202405092318
+Bundle-SymbolicName: org.xtext.example.modness.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.xtext.example.modness,org.xtext.example.modness.ide,
+ metamodel,org.eclipse.xtext.ui,org.eclipse.xtext.ui.shared,org.eclipse.
+ xtext.ui.codetemplates.ui,org.eclipse.ui.editors;bundle-version="3.14.3
+ 00",org.eclipse.ui.ide;bundle-version="3.18.500",org.eclipse.ui,org.ecl
+ ipse.compare,org.eclipse.xtext.builder
+Import-Package: org.apache.log4j
+Export-Package: org.xtext.example.modness.ui.internal,org.xtext.example.
+ modness.ui.quickfix,org.xtext.example.modness.ui.contentassist
+Bundle-Activator: org.xtext.example.modness.ui.internal.ModnessActivator
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=17))"
+
