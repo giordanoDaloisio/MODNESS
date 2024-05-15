@@ -6,4 +6,6 @@
   <semanticResources>Resyduo.fairness</semanticResources>
   <semanticResources>University.fairness</semanticResources>
   <semanticResources>test.modness</semanticResources>
+  <semanticResources>compas.modness</semanticResources>
+  <semanticResources>University.modness</semanticResources>
 </viewpoint:DAnalysis>

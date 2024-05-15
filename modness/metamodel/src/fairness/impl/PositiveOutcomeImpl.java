@@ -18,31 +18,30 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fairness.impl.PositiveOutcomeImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link fairness.impl.PositiveOutcomeImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class PositiveOutcomeImpl extends MinimalEObjectImpl.Container implements PositiveOutcome {
 	/**
-	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValue()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VALUE_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 	/**
-	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValue()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String value = VALUE_EDEFAULT;
-
+	protected String name = NAME_EDEFAULT;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,8 +66,8 @@ public class PositiveOutcomeImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getValue() {
-		return value;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -76,11 +75,11 @@ public class PositiveOutcomeImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(String newValue) {
-		String oldValue = value;
-		value = newValue;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FairnessPackage.POSITIVE_OUTCOME__VALUE, oldValue, value));
+			eNotify(new ENotificationImpl(this, Notification.SET, FairnessPackage.POSITIVE_OUTCOME__NAME, oldName, name));
 	}
 
 	/**
@@ -91,8 +90,8 @@ public class PositiveOutcomeImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case FairnessPackage.POSITIVE_OUTCOME__VALUE:
-				return getValue();
+			case FairnessPackage.POSITIVE_OUTCOME__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -105,8 +104,8 @@ public class PositiveOutcomeImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case FairnessPackage.POSITIVE_OUTCOME__VALUE:
-				setValue((String)newValue);
+			case FairnessPackage.POSITIVE_OUTCOME__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -120,8 +119,8 @@ public class PositiveOutcomeImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case FairnessPackage.POSITIVE_OUTCOME__VALUE:
-				setValue(VALUE_EDEFAULT);
+			case FairnessPackage.POSITIVE_OUTCOME__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -135,8 +134,8 @@ public class PositiveOutcomeImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case FairnessPackage.POSITIVE_OUTCOME__VALUE:
-				return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+			case FairnessPackage.POSITIVE_OUTCOME__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -151,8 +150,8 @@ public class PositiveOutcomeImpl extends MinimalEObjectImpl.Container implements
 		if (eIsProxy()) return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (value: ");
-		result.append(value);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

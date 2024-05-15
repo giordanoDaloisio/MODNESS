@@ -3,7 +3,7 @@ Automatic-Module-Name: org.xtext.example.modness.ide
 Bundle-ManifestVersion: 2
 Bundle-Name: org.xtext.example.modness.ide
 Bundle-Vendor: My Company
-Bundle-Version: 1.0.0.202405092318
+Bundle-Version: 1.0.0.202405141259
 Bundle-SymbolicName: org.xtext.example.modness.ide; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.xtext.example.modness,metamodel,org.eclipse.xtext.id

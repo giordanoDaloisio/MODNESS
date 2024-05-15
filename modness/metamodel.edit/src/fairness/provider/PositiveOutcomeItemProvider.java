@@ -60,25 +60,25 @@ public class PositiveOutcomeItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addValuePropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Value feature.
+	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addValuePropertyDescriptor(Object object) {
+	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_PositiveOutcome_value_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_PositiveOutcome_value_feature", "_UI_PositiveOutcome_type"),
-				 FairnessPackage.Literals.POSITIVE_OUTCOME__VALUE,
+				 getString("_UI_PositiveOutcome_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_PositiveOutcome_name_feature", "_UI_PositiveOutcome_type"),
+				 FairnessPackage.Literals.POSITIVE_OUTCOME__NAME,
 				 true,
 				 false,
 				 false,
@@ -106,7 +106,7 @@ public class PositiveOutcomeItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PositiveOutcome)object).getValue();
+		String label = ((PositiveOutcome)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_PositiveOutcome_type") :
 			getString("_UI_PositiveOutcome_type") + " " + label;
@@ -125,7 +125,7 @@ public class PositiveOutcomeItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(PositiveOutcome.class)) {
-			case FairnessPackage.POSITIVE_OUTCOME__VALUE:
+			case FairnessPackage.POSITIVE_OUTCOME__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

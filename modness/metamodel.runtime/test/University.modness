@@ -1,0 +1,116 @@
+GroupBias "university"{
+	domain: "education";
+	source: WRONG_ALGORITHM_BEHAVIOUR,HUMAN_DISCRIMINATION;
+	sensitiveVariables: {
+		SensitiveVariable{
+			name: "gender";
+			values: "male","female";
+		},
+		SensitiveVariable{
+			name: "race";
+			values: "white","non-white";
+		}
+	};
+	positiveOutcome: "admission";
+	unprivilegedGroup: {
+		SensitiveGroup{
+			name: "non-white women";
+			sensitiveValue: "race.non-white","gender.female";
+		};
+	};
+	privilegedGroup: {
+		SensitiveGroup{
+			name: "white men";
+			sensitiveValue: "race.white","gender.male";
+		};
+	};
+	analysis: {
+		GroupAnalysis{
+			scope: "all people must have same admission probability despite gender";
+			metric: {
+				Metric{
+					name: "StatisticalParity";
+					toleranceValue: 0.2;
+					operator: {
+						parameter: EQUAL;
+						value: 0.0;
+					};
+					function: ExistingGroupFairnessMetric { 
+						metric: STATISTICAL_PARITY; 
+					};
+				};
+			};
+			dataset: {
+				Dataset {
+					name: 'admissions';
+					predictedLabelName: 'admitted';
+					filePath: 'admissions.csv';
+					positiveOutcome: {
+						outcome: admission;
+						value: {
+							parameter: EQUAL;
+							value: 0.0;
+						};
+					};
+				datasetSentiveVariable: {
+					DatasetSensitiveVariable{
+						name: "sex";
+						mappingSensitiveVariable: gender;
+						values: {
+							SensitiveVariableValue{
+								id: "female";
+								mappingValue: "gender.female";
+								value: {
+									parameter: EQUAL;
+									value: 0.0;	
+								};
+							},
+							SensitiveVariableValue{
+								id: "male";						
+								mappingValue: "gender.male";
+								value: {
+									parameter: EQUAL;
+									value: 1.0;
+								};
+							}
+						}
+					},
+					DatasetSensitiveVariable{
+						name: "race";
+						mappingSensitiveVariable: race;
+						values: {
+							SensitiveVariableValue{
+								id: "white";
+								mappingValue: "race.white";
+								value: {
+									parameter: EQUAL;
+									value: 1.0;
+								};
+							},
+							SensitiveVariableValue{
+								id: "non-white";
+								mappingValue: "race.non-white";
+								value:{
+									parameter: EQUAL;
+									value: 0.0;
+								};
+							}							
+						}
+						
+					}
+				};
+				
+			}
+		};
+		datasetUnprivilegedGroup: {
+				mappingGroup: "non-white women";
+				sensitiveVariables: ("admissions.sex.female","admissions.race.non-white");
+		};
+		datasetPrivilegedGroup: {
+			mappingGroup: "white men";
+			sensitiveVariables: ("admissions.sex.male","admissions.race.white");
+			
+		};
+
+	};
+}

@@ -869,7 +869,7 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPositiveOutcome_Value() {
+	public EAttribute getPositiveOutcome_Name() {
 		return (EAttribute)positiveOutcomeEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -968,7 +968,7 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSensitiveVariableValue_Value() {
+	public EAttribute getSensitiveVariableValue_Name() {
 		return (EAttribute)sensitiveVariableValueEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1513,7 +1513,7 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 		createEReference(biasEClass, BIAS__PRIVILEGED_GROUP);
 
 		positiveOutcomeEClass = createEClass(POSITIVE_OUTCOME);
-		createEAttribute(positiveOutcomeEClass, POSITIVE_OUTCOME__VALUE);
+		createEAttribute(positiveOutcomeEClass, POSITIVE_OUTCOME__NAME);
 
 		groupBiasEClass = createEClass(GROUP_BIAS);
 		createEReference(groupBiasEClass, GROUP_BIAS__ANALYSIS);
@@ -1529,7 +1529,7 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 		createEReference(variableValueEClass, VARIABLE_VALUE__OPERATOR);
 
 		sensitiveVariableValueEClass = createEClass(SENSITIVE_VARIABLE_VALUE);
-		createEAttribute(sensitiveVariableValueEClass, SENSITIVE_VARIABLE_VALUE__VALUE);
+		createEAttribute(sensitiveVariableValueEClass, SENSITIVE_VARIABLE_VALUE__NAME);
 
 		datasetSizeEClass = createEClass(DATASET_SIZE);
 
@@ -1724,7 +1724,7 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 		initEReference(getBias_PrivilegedGroup(), this.getSensitiveGroup(), null, "privilegedGroup", null, 1, -1, Bias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(positiveOutcomeEClass, PositiveOutcome.class, "PositiveOutcome", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getPositiveOutcome_Value(), ecorePackage.getEString(), "value", null, 1, 1, PositiveOutcome.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPositiveOutcome_Name(), ecorePackage.getEString(), "name", null, 1, 1, PositiveOutcome.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(groupBiasEClass, GroupBias.class, "GroupBias", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getGroupBias_Analysis(), this.getGroupAnalysis(), null, "analysis", null, 1, -1, GroupBias.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1740,7 +1740,7 @@ public class FairnessPackageImpl extends EPackageImpl implements FairnessPackage
 		initEReference(getVariableValue_Operator(), this.getEqualityOperator(), null, "operator", null, 1, 1, VariableValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(sensitiveVariableValueEClass, SensitiveVariableValue.class, "SensitiveVariableValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getSensitiveVariableValue_Value(), ecorePackage.getEString(), "value", null, 1, 1, SensitiveVariableValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSensitiveVariableValue_Name(), ecorePackage.getEString(), "name", null, 1, 1, SensitiveVariableValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(datasetSizeEClass, DatasetSize.class, "DatasetSize", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

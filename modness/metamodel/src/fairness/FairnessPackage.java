@@ -1042,13 +1042,13 @@ public interface FairnessPackage extends EPackage {
 	int POSITIVE_OUTCOME = 16;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POSITIVE_OUTCOME__VALUE = 0;
+	int POSITIVE_OUTCOME__NAME = 0;
 
 	/**
 	 * The number of structural features of the '<em>Positive Outcome</em>' class.
@@ -1340,13 +1340,13 @@ public interface FairnessPackage extends EPackage {
 	int SENSITIVE_VARIABLE_VALUE = 21;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SENSITIVE_VARIABLE_VALUE__VALUE = 0;
+	int SENSITIVE_VARIABLE_VALUE__NAME = 0;
 
 	/**
 	 * The number of structural features of the '<em>Sensitive Variable Value</em>' class.
@@ -2755,15 +2755,15 @@ public interface FairnessPackage extends EPackage {
 	EClass getPositiveOutcome();
 
 	/**
-	 * Returns the meta object for the attribute '{@link fairness.PositiveOutcome#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link fairness.PositiveOutcome#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see fairness.PositiveOutcome#getValue()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see fairness.PositiveOutcome#getName()
 	 * @see #getPositiveOutcome()
 	 * @generated
 	 */
-	EAttribute getPositiveOutcome_Value();
+	EAttribute getPositiveOutcome_Name();
 
 	/**
 	 * Returns the meta object for class '{@link fairness.GroupBias <em>Group Bias</em>}'.
@@ -2871,15 +2871,15 @@ public interface FairnessPackage extends EPackage {
 	EClass getSensitiveVariableValue();
 
 	/**
-	 * Returns the meta object for the attribute '{@link fairness.SensitiveVariableValue#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link fairness.SensitiveVariableValue#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see fairness.SensitiveVariableValue#getValue()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see fairness.SensitiveVariableValue#getName()
 	 * @see #getSensitiveVariableValue()
 	 * @generated
 	 */
-	EAttribute getSensitiveVariableValue_Value();
+	EAttribute getSensitiveVariableValue_Name();
 
 	/**
 	 * Returns the meta object for class '{@link fairness.DatasetSize <em>Dataset Size</em>}'.
@@ -3842,12 +3842,12 @@ public interface FairnessPackage extends EPackage {
 		EClass POSITIVE_OUTCOME = eINSTANCE.getPositiveOutcome();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute POSITIVE_OUTCOME__VALUE = eINSTANCE.getPositiveOutcome_Value();
+		EAttribute POSITIVE_OUTCOME__NAME = eINSTANCE.getPositiveOutcome_Name();
 
 		/**
 		 * The meta object literal for the '{@link fairness.impl.GroupBiasImpl <em>Group Bias</em>}' class.
@@ -3940,12 +3940,12 @@ public interface FairnessPackage extends EPackage {
 		EClass SENSITIVE_VARIABLE_VALUE = eINSTANCE.getSensitiveVariableValue();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SENSITIVE_VARIABLE_VALUE__VALUE = eINSTANCE.getSensitiveVariableValue_Value();
+		EAttribute SENSITIVE_VARIABLE_VALUE__NAME = eINSTANCE.getSensitiveVariableValue_Name();
 
 		/**
 		 * The meta object literal for the '{@link fairness.impl.DatasetSizeImpl <em>Dataset Size</em>}' class.
