@@ -1,0 +1,113 @@
+
+
+GroupBias "compas"{
+	highLevelDefinition: {
+		domain: "justice";
+		source:HUMAN_DISCRIMINATION;
+		sensitiveVariables: {
+			SensitiveVariable{
+				name: "gender";
+				values: "male","female";
+			},
+			SensitiveVariable{
+				name: "race";
+				values: "white","non-white";
+			}
+		};
+		positiveOutcome: "Non Recidiv";
+		unprivilegedGroup: {
+			SensitiveGroup{
+				name: "non-white men";
+				sensitiveValue: "race.non-white", "gender.male";
+			};
+		};
+		privilegedGroup: {
+			SensitiveGroup{
+				name: "white women";
+				sensitiveValue: "race.white","gender.female";
+			};
+		};	
+	};
+	
+	analysis: {
+		GroupAnalysis{
+			scope: "people must be marked as recidiv 
+					only if relevant features say that";
+			dataset: {
+				Dataset {
+					name: 'compas';
+					groundTruthLabelName: 'two-year-recid';
+					predictedLabelName: 'prediction';
+					filePath: 'compas.csv';
+					positiveOutcome: {
+						id: "non-recidiv";
+						mappingOutcome: "Non Recidiv";
+						value: { operator: EQUAL; value: 0.0; };
+					};
+				datasetSentiveVariable: {
+					DatasetSensitiveVariable{
+						name: "sex";
+						mappingSensitiveVariable: gender;
+						values: {
+							SensitiveVariableValue{
+								id: "female";
+								mappingValue: "gender.female";
+								value: { operator: EQUAL; value: 0.0; };
+							},
+							SensitiveVariableValue{
+								id: "male";						
+								mappingValue: "gender.male";
+								value: { operator: EQUAL; value: 1.0; };
+							}
+						}
+					},
+					DatasetSensitiveVariable{
+						name: "race";
+						mappingSensitiveVariable: race;
+						values: {
+							SensitiveVariableValue{
+								id: "white";
+								mappingValue: "race.white";
+								value: { operator: EQUAL; value: 1.0; };
+							},
+							SensitiveVariableValue{
+								id: "non-white";
+								mappingValue: "race.non-white";
+								value:{ operator: EQUAL; value: 0.0; };
+							}							
+						}
+						
+					}
+				};
+				
+			}
+		};
+		datasetUnprivilegedGroup: {
+				id: "non-white-men";
+				mappingGroup: "non-white men";
+				sensitiveVariables: ("compas.sex.female", "compas.sex.male");
+		};
+		datasetPrivilegedGroup: {
+			id: "white-women";
+			mappingGroup: "white women";
+			sensitiveVariables: ("compas.sex.male","compas.race.white");
+			
+		};
+		
+		metric: {
+			Metric{
+				name: "EqualizedOdds";
+				toleranceValue: 0.2;
+				function: ExistingGroupFairnessMetric { 
+					metric: EQUALIZED_ODDS; 
+				};
+				optimalValue: {
+					operator: EQUAL;
+					value: 0.0;
+				};
+			};
+		};
+	};
+};
+
+}

@@ -3,7 +3,7 @@ Automatic-Module-Name: org.xtext.example.modness.ui
 Bundle-ManifestVersion: 2
 Bundle-Name: org.xtext.example.modness.ui
 Bundle-Vendor: My Company
-Bundle-Version: 1.0.0.202405141259
+Bundle-Version: 1.0.0.202405161640
 Bundle-SymbolicName: org.xtext.example.modness.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.xtext.example.modness,org.xtext.example.modness.ide,

@@ -1,0 +1,116 @@
+
+GroupBias "TPL"{
+	highLevelDefinition: {
+		domain: "recommender systems";
+		source: WRONG_SAMPLING;
+		sensitiveVariables: {
+			SensitiveVariable{
+				name: "popularity";
+				values: "popular","unpopular";
+			}
+		};
+		positiveOutcome: "recommendation";
+		unprivilegedGroup: {
+			SensitiveGroup{
+				name: "unpopular libraries";
+				sensitiveValue: "popularity.unpopular";
+			};
+		};
+		privilegedGroup: {
+			SensitiveGroup{
+				name: "popular libraries";
+				sensitiveValue: "popularity.popular";
+			};
+		};	
+	};
+	
+	analysis: {
+		GroupAnalysis{
+			scope: "relevant libraries must 
+					be recommended despite 
+					their popularity";
+			dataset: {
+				Dataset {
+					name: 'recommendations';
+					predictedLabelName: 'ranking';
+					filePath: 'recommendations.csv';
+					positiveOutcome: {
+						id: "recommendation";
+						mappingOutcome: recommendation;
+						value: {
+							operator: GREATER_EQUAL;
+							value: 0.8;	
+						};
+						relativeToDatasetSize;				
+					};
+				datasetSentiveVariable: {
+					DatasetSensitiveVariable{
+						name: "frequency";
+						mappingSensitiveVariable: popularity;
+						values: {
+							SensitiveVariableValue{
+								id: "unpopular";
+								mappingValue: "popularity.unpopular";
+								value: {
+									operator: MINOR_EQUAL;
+									value: 0.8;	
+								};
+								relativeToDatasetSize;
+							},
+							SensitiveVariableValue{
+								id: "popular";						
+								mappingValue: "popularity.unpopular";
+								value: {
+									operator: GREATER_EQUAL;
+									value: 0.8;
+								};
+								relativeToDatasetSize;
+							}
+						}
+					}
+				};	
+			}
+		};
+		datasetUnprivilegedGroup: {
+				id: 'unpopular libraries';
+				mappingGroup: "unpopular libraries";
+				sensitiveVariables: ("recommendations.frequency.unpopular");
+		};
+		datasetPrivilegedGroup: {
+			id: 'popular libraries';
+			mappingGroup: "popular libraries";
+			sensitiveVariables: ("recommendations.frequency.popular");
+		};
+		
+		metric:{
+			Metric{
+				name: "coverage";
+				toleranceValue: 0.2;
+				function: Operation{
+					arithmeticOperator: RATIO;
+					leftSide: {
+						function: GroupSize{
+							groupCondition: {
+								sensitiveGroup: "unpopular libraries" 
+								AND value:"recommendations.recommendation"
+							};
+						};
+					};
+					rightSide: {
+						function: GroupSize{
+							groupCondition: {
+								value: "recommendations.recommendation"
+							};
+						};
+					};
+				}
+				optimalValue: {
+					operator: EQUAL;
+					value: 1.0;
+				};	
+			};
+		};
+	
+	};
+	};	
+}

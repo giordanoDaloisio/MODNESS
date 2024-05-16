@@ -159,7 +159,7 @@ public class ModnessSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     DatasetPositiveOutcome returns DatasetPositiveOutcome
 	 *
 	 * Constraint:
-	 *     (relativeToDatasetSize?='relativeToDatasetSize'? mappingPositiveOutcome=[PositiveOutcome|EString] operator=EqualityOperator)
+	 *     (name=EString mappingPositiveOutcome=[PositiveOutcome|EString] operator=EqualityOperator relativeToDatasetSize?='relativeToDatasetSize'?)
 	 * </pre>
 	 */
 	protected void sequence_DatasetPositiveOutcome(ISerializationContext context, DatasetPositiveOutcome semanticObject) {
@@ -174,6 +174,7 @@ public class ModnessSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *
 	 * Constraint:
 	 *     (
+	 *         name=EString 
 	 *         mappingGroup=[SensitiveGroup|EString] 
 	 *         sensitiveVariables+=[DatasetSensitiveVariableValue|EString] 
 	 *         sensitiveVariables+=[DatasetSensitiveVariableValue|EString]*
@@ -226,17 +227,11 @@ public class ModnessSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     DatasetSize returns DatasetSize
 	 *
 	 * Constraint:
-	 *     name=EString
+	 *     {DatasetSize}
 	 * </pre>
 	 */
 	protected void sequence_DatasetSize(ISerializationContext context, DatasetSize semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, FairnessPackage.Literals.NAMED_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FairnessPackage.Literals.NAMED_ELEMENT__NAME));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getDatasetSizeAccess().getNameEStringParserRuleCall_2_0(), semanticObject.getName());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -331,14 +326,14 @@ public class ModnessSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 * Constraint:
 	 *     (
 	 *         scope=EString? 
-	 *         metric+=Metric 
-	 *         metric+=Metric* 
 	 *         dataset+=Dataset 
 	 *         dataset+=Dataset* 
 	 *         datasetUnprivilegedGroup+=DatasetSensitiveGroup 
 	 *         datasetUnprivilegedGroup+=DatasetSensitiveGroup* 
 	 *         datasetPrivilegedGroup+=DatasetSensitiveGroup 
-	 *         datasetPrivilegedGroup+=DatasetSensitiveGroup*
+	 *         datasetPrivilegedGroup+=DatasetSensitiveGroup* 
+	 *         metric+=Metric 
+	 *         metric+=Metric*
 	 *     )
 	 * </pre>
 	 */
@@ -382,7 +377,7 @@ public class ModnessSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     GroupSize returns GroupSize
 	 *
 	 * Constraint:
-	 *     (name=EString variable=[Variable|EString]? groupCondition=LogicalCondition?)
+	 *     (variable=[Variable|EString]? groupCondition=LogicalCondition?)
 	 * </pre>
 	 */
 	protected void sequence_GroupSize(ISerializationContext context, GroupSize semanticObject) {
@@ -420,7 +415,7 @@ public class ModnessSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     LogicalCondition returns LogicalCondition
 	 *
 	 * Constraint:
-	 *     (name=EString value=[VariableValue|EString]? sensitivegroup=[DatasetSensitiveGroup|EString]? sublogicalcondition=SubLogicalCondition?)
+	 *     (value=[VariableValue|EString]? sensitivegroup=[DatasetSensitiveGroup|EString]? sublogicalcondition=SubLogicalCondition?)
 	 * </pre>
 	 */
 	protected void sequence_LogicalCondition(ISerializationContext context, LogicalCondition semanticObject) {
@@ -434,7 +429,7 @@ public class ModnessSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     Metric returns Metric
 	 *
 	 * Constraint:
-	 *     (name=EString toleranceValue=EFloat operator=EqualityOperator function=Function)
+	 *     (name=EString toleranceValue=EFloat function=Function operator=EqualityOperator)
 	 * </pre>
 	 */
 	protected void sequence_Metric(ISerializationContext context, Metric semanticObject) {
@@ -443,16 +438,16 @@ public class ModnessSemanticSequencer extends AbstractDelegatingSemanticSequence
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FairnessPackage.Literals.NAMED_ELEMENT__NAME));
 			if (transientValues.isValueTransient(semanticObject, FairnessPackage.Literals.METRIC__TOLERANCE_VALUE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FairnessPackage.Literals.METRIC__TOLERANCE_VALUE));
-			if (transientValues.isValueTransient(semanticObject, FairnessPackage.Literals.METRIC__OPERATOR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FairnessPackage.Literals.METRIC__OPERATOR));
 			if (transientValues.isValueTransient(semanticObject, FairnessPackage.Literals.METRIC__FUNCTION) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FairnessPackage.Literals.METRIC__FUNCTION));
+			if (transientValues.isValueTransient(semanticObject, FairnessPackage.Literals.METRIC__OPERATOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FairnessPackage.Literals.METRIC__OPERATOR));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getMetricAccess().getNameEStringParserRuleCall_3_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getMetricAccess().getToleranceValueEFloatParserRuleCall_6_0(), semanticObject.getToleranceValue());
-		feeder.accept(grammarAccess.getMetricAccess().getOperatorEqualityOperatorParserRuleCall_9_0(), semanticObject.getOperator());
-		feeder.accept(grammarAccess.getMetricAccess().getFunctionFunctionParserRuleCall_11_0(), semanticObject.getFunction());
+		feeder.accept(grammarAccess.getMetricAccess().getFunctionFunctionParserRuleCall_9_0(), semanticObject.getFunction());
+		feeder.accept(grammarAccess.getMetricAccess().getOperatorEqualityOperatorParserRuleCall_11_0(), semanticObject.getOperator());
 		feeder.finish();
 	}
 	
@@ -484,13 +479,11 @@ public class ModnessSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     Operation returns Operation
 	 *
 	 * Constraint:
-	 *     (name=EString equalityOperator=ArithmeticOperator leftSide=OperatorComponent rightSide=OperatorComponent)
+	 *     (equalityOperator=ArithmeticOperator leftSide=OperatorComponent rightSide=OperatorComponent)
 	 * </pre>
 	 */
 	protected void sequence_Operation(ISerializationContext context, Operation semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, FairnessPackage.Literals.NAMED_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FairnessPackage.Literals.NAMED_ELEMENT__NAME));
 			if (transientValues.isValueTransient(semanticObject, FairnessPackage.Literals.OPERATION__EQUALITY_OPERATOR) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FairnessPackage.Literals.OPERATION__EQUALITY_OPERATOR));
 			if (transientValues.isValueTransient(semanticObject, FairnessPackage.Literals.OPERATION__LEFT_SIDE) == ValueTransient.YES)
@@ -499,8 +492,7 @@ public class ModnessSemanticSequencer extends AbstractDelegatingSemanticSequence
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FairnessPackage.Literals.OPERATION__RIGHT_SIDE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getOperationAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getOperationAccess().getEqualityOperatorArithmeticOperatorEnumRuleCall_4_0(), semanticObject.getEqualityOperator());
+		feeder.accept(grammarAccess.getOperationAccess().getEqualityOperatorArithmeticOperatorEnumRuleCall_3_0(), semanticObject.getEqualityOperator());
 		feeder.accept(grammarAccess.getOperationAccess().getLeftSideOperatorComponentParserRuleCall_6_0(), semanticObject.getLeftSide());
 		feeder.accept(grammarAccess.getOperationAccess().getRightSideOperatorComponentParserRuleCall_8_0(), semanticObject.getRightSide());
 		feeder.finish();
@@ -513,7 +505,7 @@ public class ModnessSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     OperatorComponent returns OperatorComponent
 	 *
 	 * Constraint:
-	 *     (name=EString function=Function? operationvalue=OperationValue?)
+	 *     (function=Function? operationvalue=OperationValue?)
 	 * </pre>
 	 */
 	protected void sequence_OperatorComponent(ISerializationContext context, OperatorComponent semanticObject) {
@@ -677,22 +669,19 @@ public class ModnessSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     SubLogicalCondition returns SubLogicalCondition
 	 *
 	 * Constraint:
-	 *     (name=EString logicalOperator=LogicalOperator logicalcondition=LogicalCondition)
+	 *     (logicalOperator=LogicalOperator logicalcondition=LogicalCondition)
 	 * </pre>
 	 */
 	protected void sequence_SubLogicalCondition(ISerializationContext context, SubLogicalCondition semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, FairnessPackage.Literals.NAMED_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FairnessPackage.Literals.NAMED_ELEMENT__NAME));
 			if (transientValues.isValueTransient(semanticObject, FairnessPackage.Literals.SUB_LOGICAL_CONDITION__LOGICAL_OPERATOR) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FairnessPackage.Literals.SUB_LOGICAL_CONDITION__LOGICAL_OPERATOR));
 			if (transientValues.isValueTransient(semanticObject, FairnessPackage.Literals.SUB_LOGICAL_CONDITION__LOGICALCONDITION) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FairnessPackage.Literals.SUB_LOGICAL_CONDITION__LOGICALCONDITION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getSubLogicalConditionAccess().getNameEStringParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getSubLogicalConditionAccess().getLogicalOperatorLogicalOperatorEnumRuleCall_4_0(), semanticObject.getLogicalOperator());
-		feeder.accept(grammarAccess.getSubLogicalConditionAccess().getLogicalconditionLogicalConditionParserRuleCall_6_0(), semanticObject.getLogicalcondition());
+		feeder.accept(grammarAccess.getSubLogicalConditionAccess().getLogicalOperatorLogicalOperatorEnumRuleCall_0_0(), semanticObject.getLogicalOperator());
+		feeder.accept(grammarAccess.getSubLogicalConditionAccess().getLogicalconditionLogicalConditionParserRuleCall_1_0(), semanticObject.getLogicalcondition());
 		feeder.finish();
 	}
 	
@@ -734,7 +723,7 @@ public class ModnessSemanticSequencer extends AbstractDelegatingSemanticSequence
 	 *     VariableValue_Impl returns VariableValue
 	 *
 	 * Constraint:
-	 *     (relativeToDatasetSize?='relativeToDatasetSize'? name=EString operator=EqualityOperator)
+	 *     (operator=EqualityOperator relativeToDatasetSize?='relativeToDatasetSize'?)
 	 * </pre>
 	 */
 	protected void sequence_VariableValue_Impl(ISerializationContext context, VariableValue semanticObject) {

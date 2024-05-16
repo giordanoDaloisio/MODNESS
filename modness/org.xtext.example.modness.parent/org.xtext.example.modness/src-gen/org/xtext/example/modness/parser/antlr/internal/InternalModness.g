@@ -104,16 +104,24 @@ ruleGroupBias returns [EObject current=null]
 		{
 			newLeafNode(otherlv_2, grammarAccess.getGroupBiasAccess().getLeftCurlyBracketKeyword_2());
 		}
-		otherlv_3='domain:'
+		otherlv_3='highLevelDefinition:'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getGroupBiasAccess().getDomainKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getGroupBiasAccess().getHighLevelDefinitionKeyword_3());
+		}
+		otherlv_4='{'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getGroupBiasAccess().getLeftCurlyBracketKeyword_4());
+		}
+		otherlv_5='domain:'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getGroupBiasAccess().getDomainKeyword_5());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGroupBiasAccess().getDomainEStringParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getGroupBiasAccess().getDomainEStringParserRuleCall_6_0());
 				}
-				lv_domain_4_0=ruleEString
+				lv_domain_6_0=ruleEString
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGroupBiasRule());
@@ -121,26 +129,26 @@ ruleGroupBias returns [EObject current=null]
 					set(
 						$current,
 						"domain",
-						lv_domain_4_0,
+						lv_domain_6_0,
 						"org.xtext.example.modness.Modness.EString");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_5=';'
+		otherlv_7=';'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getGroupBiasAccess().getSemicolonKeyword_5());
+			newLeafNode(otherlv_7, grammarAccess.getGroupBiasAccess().getSemicolonKeyword_7());
 		}
-		otherlv_6='source:'
+		otherlv_8='source:'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getGroupBiasAccess().getSourceKeyword_6());
+			newLeafNode(otherlv_8, grammarAccess.getGroupBiasAccess().getSourceKeyword_8());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGroupBiasAccess().getSourceBiasSourceEnumRuleCall_7_0());
+					newCompositeNode(grammarAccess.getGroupBiasAccess().getSourceBiasSourceEnumRuleCall_9_0());
 				}
-				lv_source_7_0=ruleBiasSource
+				lv_source_9_0=ruleBiasSource
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGroupBiasRule());
@@ -148,23 +156,23 @@ ruleGroupBias returns [EObject current=null]
 					add(
 						$current,
 						"source",
-						lv_source_7_0,
+						lv_source_9_0,
 						"org.xtext.example.modness.Modness.BiasSource");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_8=','
+			otherlv_10=','
 			{
-				newLeafNode(otherlv_8, grammarAccess.getGroupBiasAccess().getCommaKeyword_8_0());
+				newLeafNode(otherlv_10, grammarAccess.getGroupBiasAccess().getCommaKeyword_10_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGroupBiasAccess().getSourceBiasSourceEnumRuleCall_8_1_0());
+						newCompositeNode(grammarAccess.getGroupBiasAccess().getSourceBiasSourceEnumRuleCall_10_1_0());
 					}
-					lv_source_9_0=ruleBiasSource
+					lv_source_11_0=ruleBiasSource
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGroupBiasRule());
@@ -172,31 +180,31 @@ ruleGroupBias returns [EObject current=null]
 						add(
 							$current,
 							"source",
-							lv_source_9_0,
+							lv_source_11_0,
 							"org.xtext.example.modness.Modness.BiasSource");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)*
-		otherlv_10=';'
+		otherlv_12=';'
 		{
-			newLeafNode(otherlv_10, grammarAccess.getGroupBiasAccess().getSemicolonKeyword_9());
+			newLeafNode(otherlv_12, grammarAccess.getGroupBiasAccess().getSemicolonKeyword_11());
 		}
-		otherlv_11='sensitiveVariables:'
+		otherlv_13='sensitiveVariables:'
 		{
-			newLeafNode(otherlv_11, grammarAccess.getGroupBiasAccess().getSensitiveVariablesKeyword_10());
+			newLeafNode(otherlv_13, grammarAccess.getGroupBiasAccess().getSensitiveVariablesKeyword_12());
 		}
-		otherlv_12='{'
+		otherlv_14='{'
 		{
-			newLeafNode(otherlv_12, grammarAccess.getGroupBiasAccess().getLeftCurlyBracketKeyword_11());
+			newLeafNode(otherlv_14, grammarAccess.getGroupBiasAccess().getLeftCurlyBracketKeyword_13());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGroupBiasAccess().getSensitiveVariablesSensitiveVariableParserRuleCall_12_0());
+					newCompositeNode(grammarAccess.getGroupBiasAccess().getSensitiveVariablesSensitiveVariableParserRuleCall_14_0());
 				}
-				lv_sensitiveVariables_13_0=ruleSensitiveVariable
+				lv_sensitiveVariables_15_0=ruleSensitiveVariable
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGroupBiasRule());
@@ -204,23 +212,23 @@ ruleGroupBias returns [EObject current=null]
 					add(
 						$current,
 						"sensitiveVariables",
-						lv_sensitiveVariables_13_0,
+						lv_sensitiveVariables_15_0,
 						"org.xtext.example.modness.Modness.SensitiveVariable");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_14=','
+			otherlv_16=','
 			{
-				newLeafNode(otherlv_14, grammarAccess.getGroupBiasAccess().getCommaKeyword_13_0());
+				newLeafNode(otherlv_16, grammarAccess.getGroupBiasAccess().getCommaKeyword_15_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGroupBiasAccess().getSensitiveVariablesSensitiveVariableParserRuleCall_13_1_0());
+						newCompositeNode(grammarAccess.getGroupBiasAccess().getSensitiveVariablesSensitiveVariableParserRuleCall_15_1_0());
 					}
-					lv_sensitiveVariables_15_0=ruleSensitiveVariable
+					lv_sensitiveVariables_17_0=ruleSensitiveVariable
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGroupBiasRule());
@@ -228,27 +236,27 @@ ruleGroupBias returns [EObject current=null]
 						add(
 							$current,
 							"sensitiveVariables",
-							lv_sensitiveVariables_15_0,
+							lv_sensitiveVariables_17_0,
 							"org.xtext.example.modness.Modness.SensitiveVariable");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)*
-		otherlv_16='};'
+		otherlv_18='};'
 		{
-			newLeafNode(otherlv_16, grammarAccess.getGroupBiasAccess().getRightCurlyBracketSemicolonKeyword_14());
+			newLeafNode(otherlv_18, grammarAccess.getGroupBiasAccess().getRightCurlyBracketSemicolonKeyword_16());
 		}
-		otherlv_17='positiveOutcome:'
+		otherlv_19='positiveOutcome:'
 		{
-			newLeafNode(otherlv_17, grammarAccess.getGroupBiasAccess().getPositiveOutcomeKeyword_15());
+			newLeafNode(otherlv_19, grammarAccess.getGroupBiasAccess().getPositiveOutcomeKeyword_17());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGroupBiasAccess().getPositiveOutcomePositiveOutcomeParserRuleCall_16_0());
+					newCompositeNode(grammarAccess.getGroupBiasAccess().getPositiveOutcomePositiveOutcomeParserRuleCall_18_0());
 				}
-				lv_positiveOutcome_18_0=rulePositiveOutcome
+				lv_positiveOutcome_20_0=rulePositiveOutcome
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGroupBiasRule());
@@ -256,30 +264,30 @@ ruleGroupBias returns [EObject current=null]
 					set(
 						$current,
 						"positiveOutcome",
-						lv_positiveOutcome_18_0,
+						lv_positiveOutcome_20_0,
 						"org.xtext.example.modness.Modness.PositiveOutcome");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_19=';'
+		otherlv_21=';'
 		{
-			newLeafNode(otherlv_19, grammarAccess.getGroupBiasAccess().getSemicolonKeyword_17());
+			newLeafNode(otherlv_21, grammarAccess.getGroupBiasAccess().getSemicolonKeyword_19());
 		}
-		otherlv_20='unprivilegedGroup:'
+		otherlv_22='unprivilegedGroup:'
 		{
-			newLeafNode(otherlv_20, grammarAccess.getGroupBiasAccess().getUnprivilegedGroupKeyword_18());
+			newLeafNode(otherlv_22, grammarAccess.getGroupBiasAccess().getUnprivilegedGroupKeyword_20());
 		}
-		otherlv_21='{'
+		otherlv_23='{'
 		{
-			newLeafNode(otherlv_21, grammarAccess.getGroupBiasAccess().getLeftCurlyBracketKeyword_19());
+			newLeafNode(otherlv_23, grammarAccess.getGroupBiasAccess().getLeftCurlyBracketKeyword_21());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGroupBiasAccess().getUnprivilegedGroupSensitiveGroupParserRuleCall_20_0());
+					newCompositeNode(grammarAccess.getGroupBiasAccess().getUnprivilegedGroupSensitiveGroupParserRuleCall_22_0());
 				}
-				lv_unprivilegedGroup_22_0=ruleSensitiveGroup
+				lv_unprivilegedGroup_24_0=ruleSensitiveGroup
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGroupBiasRule());
@@ -287,23 +295,23 @@ ruleGroupBias returns [EObject current=null]
 					add(
 						$current,
 						"unprivilegedGroup",
-						lv_unprivilegedGroup_22_0,
+						lv_unprivilegedGroup_24_0,
 						"org.xtext.example.modness.Modness.SensitiveGroup");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_23=','
+			otherlv_25=','
 			{
-				newLeafNode(otherlv_23, grammarAccess.getGroupBiasAccess().getCommaKeyword_21_0());
+				newLeafNode(otherlv_25, grammarAccess.getGroupBiasAccess().getCommaKeyword_23_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGroupBiasAccess().getUnprivilegedGroupSensitiveGroupParserRuleCall_21_1_0());
+						newCompositeNode(grammarAccess.getGroupBiasAccess().getUnprivilegedGroupSensitiveGroupParserRuleCall_23_1_0());
 					}
-					lv_unprivilegedGroup_24_0=ruleSensitiveGroup
+					lv_unprivilegedGroup_26_0=ruleSensitiveGroup
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGroupBiasRule());
@@ -311,31 +319,31 @@ ruleGroupBias returns [EObject current=null]
 						add(
 							$current,
 							"unprivilegedGroup",
-							lv_unprivilegedGroup_24_0,
+							lv_unprivilegedGroup_26_0,
 							"org.xtext.example.modness.Modness.SensitiveGroup");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)*
-		otherlv_25='};'
+		otherlv_27='};'
 		{
-			newLeafNode(otherlv_25, grammarAccess.getGroupBiasAccess().getRightCurlyBracketSemicolonKeyword_22());
+			newLeafNode(otherlv_27, grammarAccess.getGroupBiasAccess().getRightCurlyBracketSemicolonKeyword_24());
 		}
-		otherlv_26='privilegedGroup:'
+		otherlv_28='privilegedGroup:'
 		{
-			newLeafNode(otherlv_26, grammarAccess.getGroupBiasAccess().getPrivilegedGroupKeyword_23());
+			newLeafNode(otherlv_28, grammarAccess.getGroupBiasAccess().getPrivilegedGroupKeyword_25());
 		}
-		otherlv_27='{'
+		otherlv_29='{'
 		{
-			newLeafNode(otherlv_27, grammarAccess.getGroupBiasAccess().getLeftCurlyBracketKeyword_24());
+			newLeafNode(otherlv_29, grammarAccess.getGroupBiasAccess().getLeftCurlyBracketKeyword_26());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGroupBiasAccess().getPrivilegedGroupSensitiveGroupParserRuleCall_25_0());
+					newCompositeNode(grammarAccess.getGroupBiasAccess().getPrivilegedGroupSensitiveGroupParserRuleCall_27_0());
 				}
-				lv_privilegedGroup_28_0=ruleSensitiveGroup
+				lv_privilegedGroup_30_0=ruleSensitiveGroup
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGroupBiasRule());
@@ -343,23 +351,23 @@ ruleGroupBias returns [EObject current=null]
 					add(
 						$current,
 						"privilegedGroup",
-						lv_privilegedGroup_28_0,
+						lv_privilegedGroup_30_0,
 						"org.xtext.example.modness.Modness.SensitiveGroup");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_29=','
+			otherlv_31=','
 			{
-				newLeafNode(otherlv_29, grammarAccess.getGroupBiasAccess().getCommaKeyword_26_0());
+				newLeafNode(otherlv_31, grammarAccess.getGroupBiasAccess().getCommaKeyword_28_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGroupBiasAccess().getPrivilegedGroupSensitiveGroupParserRuleCall_26_1_0());
+						newCompositeNode(grammarAccess.getGroupBiasAccess().getPrivilegedGroupSensitiveGroupParserRuleCall_28_1_0());
 					}
-					lv_privilegedGroup_30_0=ruleSensitiveGroup
+					lv_privilegedGroup_32_0=ruleSensitiveGroup
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGroupBiasRule());
@@ -367,31 +375,35 @@ ruleGroupBias returns [EObject current=null]
 						add(
 							$current,
 							"privilegedGroup",
-							lv_privilegedGroup_30_0,
+							lv_privilegedGroup_32_0,
 							"org.xtext.example.modness.Modness.SensitiveGroup");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)*
-		otherlv_31='};'
+		otherlv_33='};'
 		{
-			newLeafNode(otherlv_31, grammarAccess.getGroupBiasAccess().getRightCurlyBracketSemicolonKeyword_27());
+			newLeafNode(otherlv_33, grammarAccess.getGroupBiasAccess().getRightCurlyBracketSemicolonKeyword_29());
 		}
-		otherlv_32='analysis:'
+		otherlv_34='};'
 		{
-			newLeafNode(otherlv_32, grammarAccess.getGroupBiasAccess().getAnalysisKeyword_28());
+			newLeafNode(otherlv_34, grammarAccess.getGroupBiasAccess().getRightCurlyBracketSemicolonKeyword_30());
 		}
-		otherlv_33='{'
+		otherlv_35='analysis:'
 		{
-			newLeafNode(otherlv_33, grammarAccess.getGroupBiasAccess().getLeftCurlyBracketKeyword_29());
+			newLeafNode(otherlv_35, grammarAccess.getGroupBiasAccess().getAnalysisKeyword_31());
+		}
+		otherlv_36='{'
+		{
+			newLeafNode(otherlv_36, grammarAccess.getGroupBiasAccess().getLeftCurlyBracketKeyword_32());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGroupBiasAccess().getAnalysisGroupAnalysisParserRuleCall_30_0());
+					newCompositeNode(grammarAccess.getGroupBiasAccess().getAnalysisGroupAnalysisParserRuleCall_33_0());
 				}
-				lv_analysis_34_0=ruleGroupAnalysis
+				lv_analysis_37_0=ruleGroupAnalysis
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGroupBiasRule());
@@ -399,23 +411,23 @@ ruleGroupBias returns [EObject current=null]
 					add(
 						$current,
 						"analysis",
-						lv_analysis_34_0,
+						lv_analysis_37_0,
 						"org.xtext.example.modness.Modness.GroupAnalysis");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_35=','
+			otherlv_38=','
 			{
-				newLeafNode(otherlv_35, grammarAccess.getGroupBiasAccess().getCommaKeyword_31_0());
+				newLeafNode(otherlv_38, grammarAccess.getGroupBiasAccess().getCommaKeyword_34_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGroupBiasAccess().getAnalysisGroupAnalysisParserRuleCall_31_1_0());
+						newCompositeNode(grammarAccess.getGroupBiasAccess().getAnalysisGroupAnalysisParserRuleCall_34_1_0());
 					}
-					lv_analysis_36_0=ruleGroupAnalysis
+					lv_analysis_39_0=ruleGroupAnalysis
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGroupBiasRule());
@@ -423,20 +435,20 @@ ruleGroupBias returns [EObject current=null]
 						add(
 							$current,
 							"analysis",
-							lv_analysis_36_0,
+							lv_analysis_39_0,
 							"org.xtext.example.modness.Modness.GroupAnalysis");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)*
-		otherlv_37='};'
+		otherlv_40='};'
 		{
-			newLeafNode(otherlv_37, grammarAccess.getGroupBiasAccess().getRightCurlyBracketSemicolonKeyword_32());
+			newLeafNode(otherlv_40, grammarAccess.getGroupBiasAccess().getRightCurlyBracketSemicolonKeyword_35());
 		}
-		otherlv_38='}'
+		otherlv_41='}'
 		{
-			newLeafNode(otherlv_38, grammarAccess.getGroupBiasAccess().getRightCurlyBracketKeyword_33());
+			newLeafNode(otherlv_41, grammarAccess.getGroupBiasAccess().getRightCurlyBracketKeyword_36());
 		}
 	)
 ;
@@ -954,9 +966,9 @@ ruleGroupAnalysis returns [EObject current=null]
 		{
 			newLeafNode(otherlv_4, grammarAccess.getGroupAnalysisAccess().getSemicolonKeyword_3());
 		}
-		otherlv_5='metric:'
+		otherlv_5='dataset:'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getGroupAnalysisAccess().getMetricKeyword_4());
+			newLeafNode(otherlv_5, grammarAccess.getGroupAnalysisAccess().getDatasetKeyword_4());
 		}
 		otherlv_6='{'
 		{
@@ -965,18 +977,18 @@ ruleGroupAnalysis returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getMetricMetricParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetDatasetParserRuleCall_6_0());
 				}
-				lv_metric_7_0=ruleMetric
+				lv_dataset_7_0=ruleDataset
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGroupAnalysisRule());
 					}
 					add(
 						$current,
-						"metric",
-						lv_metric_7_0,
-						"org.xtext.example.modness.Modness.Metric");
+						"dataset",
+						lv_dataset_7_0,
+						"org.xtext.example.modness.Modness.Dataset");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -989,18 +1001,18 @@ ruleGroupAnalysis returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getMetricMetricParserRuleCall_7_1_0());
+						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetDatasetParserRuleCall_7_1_0());
 					}
-					lv_metric_9_0=ruleMetric
+					lv_dataset_9_0=ruleDataset
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGroupAnalysisRule());
 						}
 						add(
 							$current,
-							"metric",
-							lv_metric_9_0,
-							"org.xtext.example.modness.Modness.Metric");
+							"dataset",
+							lv_dataset_9_0,
+							"org.xtext.example.modness.Modness.Dataset");
 						afterParserOrEnumRuleCall();
 					}
 				)
@@ -1010,72 +1022,16 @@ ruleGroupAnalysis returns [EObject current=null]
 		{
 			newLeafNode(otherlv_10, grammarAccess.getGroupAnalysisAccess().getRightCurlyBracketSemicolonKeyword_8());
 		}
-		otherlv_11='dataset:'
+		otherlv_11='datasetUnprivilegedGroup:'
 		{
-			newLeafNode(otherlv_11, grammarAccess.getGroupAnalysisAccess().getDatasetKeyword_9());
-		}
-		otherlv_12='{'
-		{
-			newLeafNode(otherlv_12, grammarAccess.getGroupAnalysisAccess().getLeftCurlyBracketKeyword_10());
+			newLeafNode(otherlv_11, grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupKeyword_9());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetDatasetParserRuleCall_11_0());
+					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_10_0());
 				}
-				lv_dataset_13_0=ruleDataset
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGroupAnalysisRule());
-					}
-					add(
-						$current,
-						"dataset",
-						lv_dataset_13_0,
-						"org.xtext.example.modness.Modness.Dataset");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			otherlv_14=','
-			{
-				newLeafNode(otherlv_14, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_12_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetDatasetParserRuleCall_12_1_0());
-					}
-					lv_dataset_15_0=ruleDataset
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getGroupAnalysisRule());
-						}
-						add(
-							$current,
-							"dataset",
-							lv_dataset_15_0,
-							"org.xtext.example.modness.Modness.Dataset");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)*
-		otherlv_16='};'
-		{
-			newLeafNode(otherlv_16, grammarAccess.getGroupAnalysisAccess().getRightCurlyBracketSemicolonKeyword_13());
-		}
-		otherlv_17='datasetUnprivilegedGroup:'
-		{
-			newLeafNode(otherlv_17, grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupKeyword_14());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_15_0());
-				}
-				lv_datasetUnprivilegedGroup_18_0=ruleDatasetSensitiveGroup
+				lv_datasetUnprivilegedGroup_12_0=ruleDatasetSensitiveGroup
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGroupAnalysisRule());
@@ -1083,23 +1039,23 @@ ruleGroupAnalysis returns [EObject current=null]
 					add(
 						$current,
 						"datasetUnprivilegedGroup",
-						lv_datasetUnprivilegedGroup_18_0,
+						lv_datasetUnprivilegedGroup_12_0,
 						"org.xtext.example.modness.Modness.DatasetSensitiveGroup");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_19=','
+			otherlv_13=','
 			{
-				newLeafNode(otherlv_19, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_16_0());
+				newLeafNode(otherlv_13, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_11_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_16_1_0());
+						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_11_1_0());
 					}
-					lv_datasetUnprivilegedGroup_20_0=ruleDatasetSensitiveGroup
+					lv_datasetUnprivilegedGroup_14_0=ruleDatasetSensitiveGroup
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGroupAnalysisRule());
@@ -1107,23 +1063,23 @@ ruleGroupAnalysis returns [EObject current=null]
 						add(
 							$current,
 							"datasetUnprivilegedGroup",
-							lv_datasetUnprivilegedGroup_20_0,
+							lv_datasetUnprivilegedGroup_14_0,
 							"org.xtext.example.modness.Modness.DatasetSensitiveGroup");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)*
-		otherlv_21='datasetPrivilegedGroup:'
+		otherlv_15='datasetPrivilegedGroup:'
 		{
-			newLeafNode(otherlv_21, grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupKeyword_17());
+			newLeafNode(otherlv_15, grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupKeyword_12());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_18_0());
+					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_13_0());
 				}
-				lv_datasetPrivilegedGroup_22_0=ruleDatasetSensitiveGroup
+				lv_datasetPrivilegedGroup_16_0=ruleDatasetSensitiveGroup
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getGroupAnalysisRule());
@@ -1131,23 +1087,23 @@ ruleGroupAnalysis returns [EObject current=null]
 					add(
 						$current,
 						"datasetPrivilegedGroup",
-						lv_datasetPrivilegedGroup_22_0,
+						lv_datasetPrivilegedGroup_16_0,
 						"org.xtext.example.modness.Modness.DatasetSensitiveGroup");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_23=','
+			otherlv_17=','
 			{
-				newLeafNode(otherlv_23, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_19_0());
+				newLeafNode(otherlv_17, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_14_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_19_1_0());
+						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_14_1_0());
 					}
-					lv_datasetPrivilegedGroup_24_0=ruleDatasetSensitiveGroup
+					lv_datasetPrivilegedGroup_18_0=ruleDatasetSensitiveGroup
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getGroupAnalysisRule());
@@ -1155,13 +1111,69 @@ ruleGroupAnalysis returns [EObject current=null]
 						add(
 							$current,
 							"datasetPrivilegedGroup",
-							lv_datasetPrivilegedGroup_24_0,
+							lv_datasetPrivilegedGroup_18_0,
 							"org.xtext.example.modness.Modness.DatasetSensitiveGroup");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)*
+		otherlv_19='metric:'
+		{
+			newLeafNode(otherlv_19, grammarAccess.getGroupAnalysisAccess().getMetricKeyword_15());
+		}
+		otherlv_20='{'
+		{
+			newLeafNode(otherlv_20, grammarAccess.getGroupAnalysisAccess().getLeftCurlyBracketKeyword_16());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getMetricMetricParserRuleCall_17_0());
+				}
+				lv_metric_21_0=ruleMetric
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getGroupAnalysisRule());
+					}
+					add(
+						$current,
+						"metric",
+						lv_metric_21_0,
+						"org.xtext.example.modness.Modness.Metric");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_22=','
+			{
+				newLeafNode(otherlv_22, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_18_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getMetricMetricParserRuleCall_18_1_0());
+					}
+					lv_metric_23_0=ruleMetric
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getGroupAnalysisRule());
+						}
+						add(
+							$current,
+							"metric",
+							lv_metric_23_0,
+							"org.xtext.example.modness.Modness.Metric");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)*
+		otherlv_24='};'
+		{
+			newLeafNode(otherlv_24, grammarAccess.getGroupAnalysisAccess().getRightCurlyBracketSemicolonKeyword_19());
+		}
 		otherlv_25='};'
 		{
 			newLeafNode(otherlv_25, grammarAccess.getGroupAnalysisAccess().getRightCurlyBracketSemicolonKeyword_20());
@@ -1283,39 +1295,16 @@ ruleMetric returns [EObject current=null]
 		{
 			newLeafNode(otherlv_7, grammarAccess.getMetricAccess().getSemicolonKeyword_7());
 		}
-		otherlv_8='operator:'
+		otherlv_8='function:'
 		{
-			newLeafNode(otherlv_8, grammarAccess.getMetricAccess().getOperatorKeyword_8());
+			newLeafNode(otherlv_8, grammarAccess.getMetricAccess().getFunctionKeyword_8());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getMetricAccess().getOperatorEqualityOperatorParserRuleCall_9_0());
+					newCompositeNode(grammarAccess.getMetricAccess().getFunctionFunctionParserRuleCall_9_0());
 				}
-				lv_operator_9_0=ruleEqualityOperator
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getMetricRule());
-					}
-					set(
-						$current,
-						"operator",
-						lv_operator_9_0,
-						"org.xtext.example.modness.Modness.EqualityOperator");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_10='function:'
-		{
-			newLeafNode(otherlv_10, grammarAccess.getMetricAccess().getFunctionKeyword_10());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getMetricAccess().getFunctionFunctionParserRuleCall_11_0());
-				}
-				lv_function_11_0=ruleFunction
+				lv_function_9_0=ruleFunction
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getMetricRule());
@@ -1323,8 +1312,31 @@ ruleMetric returns [EObject current=null]
 					set(
 						$current,
 						"function",
-						lv_function_11_0,
+						lv_function_9_0,
 						"org.xtext.example.modness.Modness.Function");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_10='optimalValue:'
+		{
+			newLeafNode(otherlv_10, grammarAccess.getMetricAccess().getOptimalValueKeyword_10());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getMetricAccess().getOperatorEqualityOperatorParserRuleCall_11_0());
+				}
+				lv_operator_11_0=ruleEqualityOperator
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getMetricRule());
+					}
+					set(
+						$current,
+						"operator",
+						lv_operator_11_0,
+						"org.xtext.example.modness.Modness.EqualityOperator");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1636,22 +1648,25 @@ ruleDatasetSensitiveGroup returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getDatasetSensitiveGroupAccess().getLeftCurlyBracketKeyword_0());
 		}
-		otherlv_1='mappingGroup'
+		otherlv_1='id:'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getDatasetSensitiveGroupAccess().getMappingGroupKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getDatasetSensitiveGroupAccess().getIdKeyword_1());
 		}
 		(
 			(
 				{
+					newCompositeNode(grammarAccess.getDatasetSensitiveGroupAccess().getNameEStringParserRuleCall_2_0());
+				}
+				lv_name_2_0=ruleEString
+				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDatasetSensitiveGroupRule());
+						$current = createModelElementForParent(grammarAccess.getDatasetSensitiveGroupRule());
 					}
-				}
-				{
-					newCompositeNode(grammarAccess.getDatasetSensitiveGroupAccess().getMappingGroupSensitiveGroupCrossReference_2_0());
-				}
-				ruleEString
-				{
+					set(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.xtext.example.modness.Modness.EString");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -1660,13 +1675,9 @@ ruleDatasetSensitiveGroup returns [EObject current=null]
 		{
 			newLeafNode(otherlv_3, grammarAccess.getDatasetSensitiveGroupAccess().getSemicolonKeyword_3());
 		}
-		otherlv_4='sensitiveVariables:'
+		otherlv_4='mappingGroup:'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getDatasetSensitiveGroupAccess().getSensitiveVariablesKeyword_4());
-		}
-		otherlv_5='('
-		{
-			newLeafNode(otherlv_5, grammarAccess.getDatasetSensitiveGroupAccess().getLeftParenthesisKeyword_5());
+			newLeafNode(otherlv_4, grammarAccess.getDatasetSensitiveGroupAccess().getMappingGroupKeyword_4());
 		}
 		(
 			(
@@ -1676,7 +1687,35 @@ ruleDatasetSensitiveGroup returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getDatasetSensitiveGroupAccess().getSensitiveVariablesDatasetSensitiveVariableValueCrossReference_6_0());
+					newCompositeNode(grammarAccess.getDatasetSensitiveGroupAccess().getMappingGroupSensitiveGroupCrossReference_5_0());
+				}
+				ruleEString
+				{
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_6=';'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getDatasetSensitiveGroupAccess().getSemicolonKeyword_6());
+		}
+		otherlv_7='sensitiveVariables:'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getDatasetSensitiveGroupAccess().getSensitiveVariablesKeyword_7());
+		}
+		otherlv_8='('
+		{
+			newLeafNode(otherlv_8, grammarAccess.getDatasetSensitiveGroupAccess().getLeftParenthesisKeyword_8());
+		}
+		(
+			(
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getDatasetSensitiveGroupRule());
+					}
+				}
+				{
+					newCompositeNode(grammarAccess.getDatasetSensitiveGroupAccess().getSensitiveVariablesDatasetSensitiveVariableValueCrossReference_9_0());
 				}
 				ruleEString
 				{
@@ -1685,9 +1724,9 @@ ruleDatasetSensitiveGroup returns [EObject current=null]
 			)
 		)
 		(
-			otherlv_7=','
+			otherlv_10=','
 			{
-				newLeafNode(otherlv_7, grammarAccess.getDatasetSensitiveGroupAccess().getCommaKeyword_7_0());
+				newLeafNode(otherlv_10, grammarAccess.getDatasetSensitiveGroupAccess().getCommaKeyword_10_0());
 			}
 			(
 				(
@@ -1697,7 +1736,7 @@ ruleDatasetSensitiveGroup returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getDatasetSensitiveGroupAccess().getSensitiveVariablesDatasetSensitiveVariableValueCrossReference_7_1_0());
+						newCompositeNode(grammarAccess.getDatasetSensitiveGroupAccess().getSensitiveVariablesDatasetSensitiveVariableValueCrossReference_10_1_0());
 					}
 					ruleEString
 					{
@@ -1706,13 +1745,13 @@ ruleDatasetSensitiveGroup returns [EObject current=null]
 				)
 			)
 		)*
-		otherlv_9=');'
+		otherlv_12=');'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getDatasetSensitiveGroupAccess().getRightParenthesisSemicolonKeyword_8());
+			newLeafNode(otherlv_12, grammarAccess.getDatasetSensitiveGroupAccess().getRightParenthesisSemicolonKeyword_11());
 		}
-		otherlv_10='};'
+		otherlv_13='};'
 		{
-			newLeafNode(otherlv_10, grammarAccess.getDatasetSensitiveGroupAccess().getRightCurlyBracketSemicolonKeyword_9());
+			newLeafNode(otherlv_13, grammarAccess.getDatasetSensitiveGroupAccess().getRightCurlyBracketSemicolonKeyword_12());
 		}
 	)
 ;
@@ -1813,9 +1852,9 @@ ruleSingleOperator returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getSingleOperatorAccess().getLeftCurlyBracketKeyword_0());
 		}
-		otherlv_1='parameter:'
+		otherlv_1='operator:'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getSingleOperatorAccess().getParameterKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getSingleOperatorAccess().getOperatorKeyword_1());
 		}
 		(
 			(
@@ -1894,9 +1933,9 @@ ruleRangeOperator returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getRangeOperatorAccess().getLeftCurlyBracketKeyword_0());
 		}
-		otherlv_1='parameter:'
+		otherlv_1='operator:'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getRangeOperatorAccess().getParameterKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getRangeOperatorAccess().getOperatorKeyword_1());
 		}
 		(
 			(
@@ -2002,39 +2041,20 @@ ruleOperation returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getOperationAccess().getOperationKeyword_0());
 		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getOperationAccess().getNameEStringParserRuleCall_1_0());
-				}
-				lv_name_1_0=ruleEString
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getOperationRule());
-					}
-					set(
-						$current,
-						"name",
-						lv_name_1_0,
-						"org.xtext.example.modness.Modness.EString");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_2='{'
+		otherlv_1='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_1, grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_1());
 		}
-		otherlv_3='equalityOperator'
+		otherlv_2='arithmeticOperator:'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getOperationAccess().getEqualityOperatorKeyword_3());
+			newLeafNode(otherlv_2, grammarAccess.getOperationAccess().getArithmeticOperatorKeyword_2());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getOperationAccess().getEqualityOperatorArithmeticOperatorEnumRuleCall_4_0());
+					newCompositeNode(grammarAccess.getOperationAccess().getEqualityOperatorArithmeticOperatorEnumRuleCall_3_0());
 				}
-				lv_equalityOperator_4_0=ruleArithmeticOperator
+				lv_equalityOperator_3_0=ruleArithmeticOperator
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getOperationRule());
@@ -2042,13 +2062,17 @@ ruleOperation returns [EObject current=null]
 					set(
 						$current,
 						"equalityOperator",
-						lv_equalityOperator_4_0,
+						lv_equalityOperator_3_0,
 						"org.xtext.example.modness.Modness.ArithmeticOperator");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_5='leftSide'
+		otherlv_4=';'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getOperationAccess().getSemicolonKeyword_4());
+		}
+		otherlv_5='leftSide:'
 		{
 			newLeafNode(otherlv_5, grammarAccess.getOperationAccess().getLeftSideKeyword_5());
 		}
@@ -2071,7 +2095,7 @@ ruleOperation returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_7='rightSide'
+		otherlv_7='rightSide:'
 		{
 			newLeafNode(otherlv_7, grammarAccess.getOperationAccess().getRightSideKeyword_7());
 		}
@@ -2324,33 +2348,14 @@ ruleGroupSize returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getGroupSizeAccess().getGroupSizeKeyword_1());
 		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGroupSizeAccess().getNameEStringParserRuleCall_2_0());
-				}
-				lv_name_2_0=ruleEString
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGroupSizeRule());
-					}
-					set(
-						$current,
-						"name",
-						lv_name_2_0,
-						"org.xtext.example.modness.Modness.EString");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_3='{'
+		otherlv_2='{'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getGroupSizeAccess().getLeftCurlyBracketKeyword_3());
+			newLeafNode(otherlv_2, grammarAccess.getGroupSizeAccess().getLeftCurlyBracketKeyword_2());
 		}
 		(
-			otherlv_4='variable'
+			otherlv_3='variable:'
 			{
-				newLeafNode(otherlv_4, grammarAccess.getGroupSizeAccess().getVariableKeyword_4_0());
+				newLeafNode(otherlv_3, grammarAccess.getGroupSizeAccess().getVariableKeyword_3_0());
 			}
 			(
 				(
@@ -2360,7 +2365,7 @@ ruleGroupSize returns [EObject current=null]
 						}
 					}
 					{
-						newCompositeNode(grammarAccess.getGroupSizeAccess().getVariableVariableCrossReference_4_1_0());
+						newCompositeNode(grammarAccess.getGroupSizeAccess().getVariableVariableCrossReference_3_1_0());
 					}
 					ruleEString
 					{
@@ -2370,14 +2375,18 @@ ruleGroupSize returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_6='groupCondition'
+			otherlv_5='groupCondition:'
 			{
-				newLeafNode(otherlv_6, grammarAccess.getGroupSizeAccess().getGroupConditionKeyword_5_0());
+				newLeafNode(otherlv_5, grammarAccess.getGroupSizeAccess().getGroupConditionKeyword_4_0());
+			}
+			otherlv_6='{'
+			{
+				newLeafNode(otherlv_6, grammarAccess.getGroupSizeAccess().getLeftCurlyBracketKeyword_4_1());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGroupSizeAccess().getGroupConditionLogicalConditionParserRuleCall_5_1_0());
+						newCompositeNode(grammarAccess.getGroupSizeAccess().getGroupConditionLogicalConditionParserRuleCall_4_2_0());
 					}
 					lv_groupCondition_7_0=ruleLogicalCondition
 					{
@@ -2393,10 +2402,14 @@ ruleGroupSize returns [EObject current=null]
 					}
 				)
 			)
+			otherlv_8='};'
+			{
+				newLeafNode(otherlv_8, grammarAccess.getGroupSizeAccess().getRightCurlyBracketSemicolonKeyword_4_3());
+			}
 		)?
-		otherlv_8='}'
+		otherlv_9='};'
 		{
-			newLeafNode(otherlv_8, grammarAccess.getGroupSizeAccess().getRightCurlyBracketKeyword_6());
+			newLeafNode(otherlv_9, grammarAccess.getGroupSizeAccess().getRightCurlyBracketSemicolonKeyword_5());
 		}
 	)
 ;
@@ -2428,25 +2441,6 @@ ruleDatasetSize returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getDatasetSizeAccess().getDatasetSizeKeyword_1());
 		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getDatasetSizeAccess().getNameEStringParserRuleCall_2_0());
-				}
-				lv_name_2_0=ruleEString
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getDatasetSizeRule());
-					}
-					set(
-						$current,
-						"name",
-						lv_name_2_0,
-						"org.xtext.example.modness.Modness.EString");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
 	)
 ;
 
@@ -2800,44 +2794,21 @@ ruleOperatorComponent returns [EObject current=null]
 					$current);
 			}
 		)
-		otherlv_1='OperatorComponent'
+		otherlv_1='{'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getOperatorComponentAccess().getOperatorComponentKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getOperatorComponentAccess().getLeftCurlyBracketKeyword_1());
 		}
 		(
-			(
-				{
-					newCompositeNode(grammarAccess.getOperatorComponentAccess().getNameEStringParserRuleCall_2_0());
-				}
-				lv_name_2_0=ruleEString
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getOperatorComponentRule());
-					}
-					set(
-						$current,
-						"name",
-						lv_name_2_0,
-						"org.xtext.example.modness.Modness.EString");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_3='{'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getOperatorComponentAccess().getLeftCurlyBracketKeyword_3());
-		}
-		(
-			otherlv_4='function'
+			otherlv_2='function:'
 			{
-				newLeafNode(otherlv_4, grammarAccess.getOperatorComponentAccess().getFunctionKeyword_4_0());
+				newLeafNode(otherlv_2, grammarAccess.getOperatorComponentAccess().getFunctionKeyword_2_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getOperatorComponentAccess().getFunctionFunctionParserRuleCall_4_1_0());
+						newCompositeNode(grammarAccess.getOperatorComponentAccess().getFunctionFunctionParserRuleCall_2_1_0());
 					}
-					lv_function_5_0=ruleFunction
+					lv_function_3_0=ruleFunction
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getOperatorComponentRule());
@@ -2845,7 +2816,7 @@ ruleOperatorComponent returns [EObject current=null]
 						set(
 							$current,
 							"function",
-							lv_function_5_0,
+							lv_function_3_0,
 							"org.xtext.example.modness.Modness.Function");
 						afterParserOrEnumRuleCall();
 					}
@@ -2853,16 +2824,16 @@ ruleOperatorComponent returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_6='operationvalue'
+			otherlv_4='operationValue:'
 			{
-				newLeafNode(otherlv_6, grammarAccess.getOperatorComponentAccess().getOperationvalueKeyword_5_0());
+				newLeafNode(otherlv_4, grammarAccess.getOperatorComponentAccess().getOperationValueKeyword_3_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getOperatorComponentAccess().getOperationvalueOperationValueParserRuleCall_5_1_0());
+						newCompositeNode(grammarAccess.getOperatorComponentAccess().getOperationvalueOperationValueParserRuleCall_3_1_0());
 					}
-					lv_operationvalue_7_0=ruleOperationValue
+					lv_operationvalue_5_0=ruleOperationValue
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getOperatorComponentRule());
@@ -2870,16 +2841,16 @@ ruleOperatorComponent returns [EObject current=null]
 						set(
 							$current,
 							"operationvalue",
-							lv_operationvalue_7_0,
+							lv_operationvalue_5_0,
 							"org.xtext.example.modness.Modness.OperationValue");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_8='}'
+		otherlv_6='};'
 		{
-			newLeafNode(otherlv_8, grammarAccess.getOperatorComponentAccess().getRightCurlyBracketKeyword_6());
+			newLeafNode(otherlv_6, grammarAccess.getOperatorComponentAccess().getRightCurlyBracketSemicolonKeyword_4());
 		}
 	)
 ;
@@ -2908,7 +2879,7 @@ ruleOperationValue returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getOperationValueAccess().getLeftCurlyBracketKeyword_1());
 		}
-		otherlv_2='value'
+		otherlv_2='value:'
 		{
 			newLeafNode(otherlv_2, grammarAccess.getOperationValueAccess().getValueKeyword_2());
 		}
@@ -2931,9 +2902,13 @@ ruleOperationValue returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_4='}'
+		otherlv_4=';'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getOperationValueAccess().getRightCurlyBracketKeyword_4());
+			newLeafNode(otherlv_4, grammarAccess.getOperationValueAccess().getSemicolonKeyword_4());
+		}
+		otherlv_5='}'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getOperationValueAccess().getRightCurlyBracketKeyword_5());
 		}
 	)
 ;
@@ -2961,106 +2936,69 @@ ruleLogicalCondition returns [EObject current=null]
 					$current);
 			}
 		)
-		otherlv_1='LogicalCondition'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getLogicalConditionAccess().getLogicalConditionKeyword_1());
-		}
+		(
+			otherlv_1='value:'
+			{
+				newLeafNode(otherlv_1, grammarAccess.getLogicalConditionAccess().getValueKeyword_1_0());
+			}
+			(
+				(
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getLogicalConditionRule());
+						}
+					}
+					{
+						newCompositeNode(grammarAccess.getLogicalConditionAccess().getValueVariableValueCrossReference_1_1_0());
+					}
+					ruleEString
+					{
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_3='sensitiveGroup:'
+			{
+				newLeafNode(otherlv_3, grammarAccess.getLogicalConditionAccess().getSensitiveGroupKeyword_2_0());
+			}
+			(
+				(
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getLogicalConditionRule());
+						}
+					}
+					{
+						newCompositeNode(grammarAccess.getLogicalConditionAccess().getSensitivegroupDatasetSensitiveGroupCrossReference_2_1_0());
+					}
+					ruleEString
+					{
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getLogicalConditionAccess().getNameEStringParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getLogicalConditionAccess().getSublogicalconditionSubLogicalConditionParserRuleCall_3_0());
 				}
-				lv_name_2_0=ruleEString
+				lv_sublogicalcondition_5_0=ruleSubLogicalCondition
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getLogicalConditionRule());
 					}
 					set(
 						$current,
-						"name",
-						lv_name_2_0,
-						"org.xtext.example.modness.Modness.EString");
+						"sublogicalcondition",
+						lv_sublogicalcondition_5_0,
+						"org.xtext.example.modness.Modness.SubLogicalCondition");
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)
-		otherlv_3='{'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getLogicalConditionAccess().getLeftCurlyBracketKeyword_3());
-		}
-		(
-			otherlv_4='value'
-			{
-				newLeafNode(otherlv_4, grammarAccess.getLogicalConditionAccess().getValueKeyword_4_0());
-			}
-			(
-				(
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getLogicalConditionRule());
-						}
-					}
-					{
-						newCompositeNode(grammarAccess.getLogicalConditionAccess().getValueVariableValueCrossReference_4_1_0());
-					}
-					ruleEString
-					{
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
 		)?
-		(
-			otherlv_6='sensitivegroup'
-			{
-				newLeafNode(otherlv_6, grammarAccess.getLogicalConditionAccess().getSensitivegroupKeyword_5_0());
-			}
-			(
-				(
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getLogicalConditionRule());
-						}
-					}
-					{
-						newCompositeNode(grammarAccess.getLogicalConditionAccess().getSensitivegroupDatasetSensitiveGroupCrossReference_5_1_0());
-					}
-					ruleEString
-					{
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		(
-			otherlv_8='sublogicalcondition'
-			{
-				newLeafNode(otherlv_8, grammarAccess.getLogicalConditionAccess().getSublogicalconditionKeyword_6_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getLogicalConditionAccess().getSublogicalconditionSubLogicalConditionParserRuleCall_6_1_0());
-					}
-					lv_sublogicalcondition_9_0=ruleSubLogicalCondition
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getLogicalConditionRule());
-						}
-						set(
-							$current,
-							"sublogicalcondition",
-							lv_sublogicalcondition_9_0,
-							"org.xtext.example.modness.Modness.SubLogicalCondition");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		otherlv_10='}'
-		{
-			newLeafNode(otherlv_10, grammarAccess.getLogicalConditionAccess().getRightCurlyBracketKeyword_7());
-		}
 	)
 ;
 
@@ -3080,43 +3018,12 @@ ruleSubLogicalCondition returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='SubLogicalCondition'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getSubLogicalConditionAccess().getSubLogicalConditionKeyword_0());
-		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getSubLogicalConditionAccess().getNameEStringParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getSubLogicalConditionAccess().getLogicalOperatorLogicalOperatorEnumRuleCall_0_0());
 				}
-				lv_name_1_0=ruleEString
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getSubLogicalConditionRule());
-					}
-					set(
-						$current,
-						"name",
-						lv_name_1_0,
-						"org.xtext.example.modness.Modness.EString");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_2='{'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getSubLogicalConditionAccess().getLeftCurlyBracketKeyword_2());
-		}
-		otherlv_3='logicalOperator'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getSubLogicalConditionAccess().getLogicalOperatorKeyword_3());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getSubLogicalConditionAccess().getLogicalOperatorLogicalOperatorEnumRuleCall_4_0());
-				}
-				lv_logicalOperator_4_0=ruleLogicalOperator
+				lv_logicalOperator_0_0=ruleLogicalOperator
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getSubLogicalConditionRule());
@@ -3124,22 +3031,18 @@ ruleSubLogicalCondition returns [EObject current=null]
 					set(
 						$current,
 						"logicalOperator",
-						lv_logicalOperator_4_0,
+						lv_logicalOperator_0_0,
 						"org.xtext.example.modness.Modness.LogicalOperator");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_5='logicalcondition'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getSubLogicalConditionAccess().getLogicalconditionKeyword_5());
-		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getSubLogicalConditionAccess().getLogicalconditionLogicalConditionParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getSubLogicalConditionAccess().getLogicalconditionLogicalConditionParserRuleCall_1_0());
 				}
-				lv_logicalcondition_6_0=ruleLogicalCondition
+				lv_logicalcondition_1_0=ruleLogicalCondition
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getSubLogicalConditionRule());
@@ -3147,16 +3050,12 @@ ruleSubLogicalCondition returns [EObject current=null]
 					set(
 						$current,
 						"logicalcondition",
-						lv_logicalcondition_6_0,
+						lv_logicalcondition_1_0,
 						"org.xtext.example.modness.Modness.LogicalCondition");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_7='}'
-		{
-			newLeafNode(otherlv_7, grammarAccess.getSubLogicalConditionAccess().getRightCurlyBracketKeyword_7());
-		}
 	)
 ;
 
@@ -3176,57 +3075,20 @@ ruleVariableValue_Impl returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			(
-				lv_relativeToDatasetSize_0_0='relativeToDatasetSize'
-				{
-					newLeafNode(lv_relativeToDatasetSize_0_0, grammarAccess.getVariableValue_ImplAccess().getRelativeToDatasetSizeRelativeToDatasetSizeKeyword_0_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getVariableValue_ImplRule());
-					}
-					setWithLastConsumed($current, "relativeToDatasetSize", lv_relativeToDatasetSize_0_0 != null, "relativeToDatasetSize");
-				}
-			)
-		)?
-		otherlv_1='VariableValue'
+		otherlv_0='{'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getVariableValue_ImplAccess().getVariableValueKeyword_1());
+			newLeafNode(otherlv_0, grammarAccess.getVariableValue_ImplAccess().getLeftCurlyBracketKeyword_0());
+		}
+		otherlv_1='operator:'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVariableValue_ImplAccess().getOperatorKeyword_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVariableValue_ImplAccess().getNameEStringParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVariableValue_ImplAccess().getOperatorEqualityOperatorParserRuleCall_2_0());
 				}
-				lv_name_2_0=ruleEString
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVariableValue_ImplRule());
-					}
-					set(
-						$current,
-						"name",
-						lv_name_2_0,
-						"org.xtext.example.modness.Modness.EString");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_3='{'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getVariableValue_ImplAccess().getLeftCurlyBracketKeyword_3());
-		}
-		otherlv_4='operator'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getVariableValue_ImplAccess().getOperatorKeyword_4());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVariableValue_ImplAccess().getOperatorEqualityOperatorParserRuleCall_5_0());
-				}
-				lv_operator_5_0=ruleEqualityOperator
+				lv_operator_2_0=ruleEqualityOperator
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVariableValue_ImplRule());
@@ -3234,15 +3096,29 @@ ruleVariableValue_Impl returns [EObject current=null]
 					set(
 						$current,
 						"operator",
-						lv_operator_5_0,
+						lv_operator_2_0,
 						"org.xtext.example.modness.Modness.EqualityOperator");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_6='}'
+		(
+			(
+				lv_relativeToDatasetSize_3_0='relativeToDatasetSize'
+				{
+					newLeafNode(lv_relativeToDatasetSize_3_0, grammarAccess.getVariableValue_ImplAccess().getRelativeToDatasetSizeRelativeToDatasetSizeKeyword_3_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVariableValue_ImplRule());
+					}
+					setWithLastConsumed($current, "relativeToDatasetSize", lv_relativeToDatasetSize_3_0 != null, "relativeToDatasetSize");
+				}
+			)
+		)?
+		otherlv_4='}'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getVariableValue_ImplAccess().getRightCurlyBracketKeyword_6());
+			newLeafNode(otherlv_4, grammarAccess.getVariableValue_ImplAccess().getRightCurlyBracketKeyword_4());
 		}
 	)
 ;
@@ -3263,27 +3139,40 @@ ruleDatasetPositiveOutcome returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		otherlv_0='{'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getDatasetPositiveOutcomeAccess().getLeftCurlyBracketKeyword_0());
+		}
+		otherlv_1='id:'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getDatasetPositiveOutcomeAccess().getIdKeyword_1());
+		}
 		(
 			(
-				lv_relativeToDatasetSize_0_0='relativeToDatasetSize'
 				{
-					newLeafNode(lv_relativeToDatasetSize_0_0, grammarAccess.getDatasetPositiveOutcomeAccess().getRelativeToDatasetSizeRelativeToDatasetSizeKeyword_0_0());
+					newCompositeNode(grammarAccess.getDatasetPositiveOutcomeAccess().getNameEStringParserRuleCall_2_0());
 				}
+				lv_name_2_0=ruleEString
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDatasetPositiveOutcomeRule());
+						$current = createModelElementForParent(grammarAccess.getDatasetPositiveOutcomeRule());
 					}
-					setWithLastConsumed($current, "relativeToDatasetSize", lv_relativeToDatasetSize_0_0 != null, "relativeToDatasetSize");
+					set(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.xtext.example.modness.Modness.EString");
+					afterParserOrEnumRuleCall();
 				}
 			)
-		)?
-		otherlv_1='{'
+		)
+		otherlv_3=';'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getDatasetPositiveOutcomeAccess().getLeftCurlyBracketKeyword_1());
+			newLeafNode(otherlv_3, grammarAccess.getDatasetPositiveOutcomeAccess().getSemicolonKeyword_3());
 		}
-		otherlv_2='outcome:'
+		otherlv_4='mappingOutcome:'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getDatasetPositiveOutcomeAccess().getOutcomeKeyword_2());
+			newLeafNode(otherlv_4, grammarAccess.getDatasetPositiveOutcomeAccess().getMappingOutcomeKeyword_4());
 		}
 		(
 			(
@@ -3293,7 +3182,7 @@ ruleDatasetPositiveOutcome returns [EObject current=null]
 					}
 				}
 				{
-					newCompositeNode(grammarAccess.getDatasetPositiveOutcomeAccess().getMappingPositiveOutcomePositiveOutcomeCrossReference_3_0());
+					newCompositeNode(grammarAccess.getDatasetPositiveOutcomeAccess().getMappingPositiveOutcomePositiveOutcomeCrossReference_5_0());
 				}
 				ruleEString
 				{
@@ -3301,20 +3190,20 @@ ruleDatasetPositiveOutcome returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_4=';'
+		otherlv_6=';'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getDatasetPositiveOutcomeAccess().getSemicolonKeyword_4());
+			newLeafNode(otherlv_6, grammarAccess.getDatasetPositiveOutcomeAccess().getSemicolonKeyword_6());
 		}
-		otherlv_5='value:'
+		otherlv_7='value:'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getDatasetPositiveOutcomeAccess().getValueKeyword_5());
+			newLeafNode(otherlv_7, grammarAccess.getDatasetPositiveOutcomeAccess().getValueKeyword_7());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDatasetPositiveOutcomeAccess().getOperatorEqualityOperatorParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getDatasetPositiveOutcomeAccess().getOperatorEqualityOperatorParserRuleCall_8_0());
 				}
-				lv_operator_6_0=ruleEqualityOperator
+				lv_operator_8_0=ruleEqualityOperator
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDatasetPositiveOutcomeRule());
@@ -3322,15 +3211,35 @@ ruleDatasetPositiveOutcome returns [EObject current=null]
 					set(
 						$current,
 						"operator",
-						lv_operator_6_0,
+						lv_operator_8_0,
 						"org.xtext.example.modness.Modness.EqualityOperator");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_7='};'
+		(
+			(
+				(
+					lv_relativeToDatasetSize_9_0='relativeToDatasetSize'
+					{
+						newLeafNode(lv_relativeToDatasetSize_9_0, grammarAccess.getDatasetPositiveOutcomeAccess().getRelativeToDatasetSizeRelativeToDatasetSizeKeyword_9_0_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDatasetPositiveOutcomeRule());
+						}
+						setWithLastConsumed($current, "relativeToDatasetSize", lv_relativeToDatasetSize_9_0 != null, "relativeToDatasetSize");
+					}
+				)
+			)
+			otherlv_10=';'
+			{
+				newLeafNode(otherlv_10, grammarAccess.getDatasetPositiveOutcomeAccess().getSemicolonKeyword_9_1());
+			}
+		)?
+		otherlv_11='};'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getDatasetPositiveOutcomeAccess().getRightCurlyBracketSemicolonKeyword_7());
+			newLeafNode(otherlv_11, grammarAccess.getDatasetPositiveOutcomeAccess().getRightCurlyBracketSemicolonKeyword_10());
 		}
 	)
 ;

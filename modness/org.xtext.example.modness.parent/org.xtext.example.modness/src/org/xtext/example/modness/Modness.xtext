@@ -8,12 +8,14 @@ GroupBias returns GroupBias:
 	'GroupBias'
 	name=EString
 	'{'
-		'domain:' domain=EString ';'
-		'source:' source+=BiasSource ( "," source+=BiasSource)* ';'
-		'sensitiveVariables:' '{' sensitiveVariables+=SensitiveVariable ( "," sensitiveVariables+=SensitiveVariable)* '};' 
-		'positiveOutcome:' positiveOutcome=PositiveOutcome ';'
-		'unprivilegedGroup:' '{' unprivilegedGroup+=SensitiveGroup ( "," unprivilegedGroup+=SensitiveGroup)* '};' 
-		'privilegedGroup:' '{' privilegedGroup+=SensitiveGroup ( "," privilegedGroup+=SensitiveGroup)* '};' 
+		'highLevelDefinition:' '{'
+			'domain:' domain=EString ';'
+			'source:' source+=BiasSource ( "," source+=BiasSource)* ';'
+			'sensitiveVariables:' '{' sensitiveVariables+=SensitiveVariable ( "," sensitiveVariables+=SensitiveVariable)* '};' 
+			'positiveOutcome:' positiveOutcome=PositiveOutcome ';'
+			'unprivilegedGroup:' '{' unprivilegedGroup+=SensitiveGroup ( "," unprivilegedGroup+=SensitiveGroup)* '};' 
+			'privilegedGroup:' '{' privilegedGroup+=SensitiveGroup ( "," privilegedGroup+=SensitiveGroup)* '};' 
+		'};'
 		'analysis:' '{' analysis+=GroupAnalysis ( "," analysis+=GroupAnalysis)* '};' 
 	'}';
 
@@ -70,11 +72,11 @@ GroupAnalysis returns GroupAnalysis:
 	'GroupAnalysis'
 	//name=EString
 	'{'
-		('scope:' scope=EString)?';'
-		'metric:' '{' metric+=Metric ( "," metric+=Metric)* '};' 
+		('scope:' scope=EString';')?
 		'dataset:' '{' dataset+=Dataset ( "," dataset+=Dataset)* '};' 
 		'datasetUnprivilegedGroup:' datasetUnprivilegedGroup+=DatasetSensitiveGroup ( "," datasetUnprivilegedGroup+=DatasetSensitiveGroup)*  
 		'datasetPrivilegedGroup:' datasetPrivilegedGroup+=DatasetSensitiveGroup ( "," datasetPrivilegedGroup+=DatasetSensitiveGroup)* 
+		'metric:' '{' metric+=Metric ( "," metric+=Metric)* '};' 
 	'};';
 
 SensitiveVariableValue returns SensitiveVariableValue:
@@ -86,8 +88,8 @@ Metric returns Metric:
 	'{'
 		'name:' name=EString';'
 		'toleranceValue:' toleranceValue=EFloat';'
-		'operator:' operator=EqualityOperator
 		'function:' function=Function
+		'optimalValue:' operator=EqualityOperator
 	'};';
 
 Dataset returns Dataset:
@@ -104,7 +106,8 @@ Dataset returns Dataset:
 
 DatasetSensitiveGroup returns DatasetSensitiveGroup:
 	'{'
-		'mappingGroup' mappingGroup=[SensitiveGroup|EString]';'
+		'id:' name=EString';'
+		'mappingGroup:' mappingGroup=[SensitiveGroup|EString]';'
 		'sensitiveVariables:' '(' sensitiveVariables+=[DatasetSensitiveVariableValue|EString] ( "," sensitiveVariables+=[DatasetSensitiveVariableValue|EString])* ');' 
 	'};';
 
@@ -113,14 +116,14 @@ EFloat returns ecore::EFloat:
 
 SingleOperator returns SingleOperator:
 	'{'
- 		'parameter:' operator=SingleOperatorParameter';' 
+ 		'operator:' operator=SingleOperatorParameter';' 
 		'value:' value=EFloat';'
 	'};'
 ;
 
 RangeOperator returns RangeOperator:
 	'{'
-		'parameter:' operator=RangeOperatorParameter';'
+		'operator:' operator=RangeOperatorParameter';'
 		'lowerValue:' lowerValue=EFloat';' 
 		'greaterValue:' greaterValue=EFloat';'
 	'};'
@@ -134,11 +137,11 @@ enum RangeOperatorParameter returns RangeOperatorParameter:
 
 Operation returns Operation:
 	'Operation'
-	name=EString
+	//name=EString
 	'{'
-		'equalityOperator' equalityOperator=ArithmeticOperator
-		'leftSide' leftSide=OperatorComponent
-		'rightSide' rightSide=OperatorComponent
+		'arithmeticOperator:' equalityOperator=ArithmeticOperator';'
+		'leftSide:' leftSide=OperatorComponent
+		'rightSide:' rightSide=OperatorComponent
 	'}';
 
 Probability returns Probability:
@@ -160,16 +163,17 @@ ExpectedValue returns ExpectedValue:
 GroupSize returns GroupSize:
 	{GroupSize}
 	'GroupSize'
-	name=EString
+	//name=EString
 	'{'
-		('variable' variable=[Variable|EString])?
-		('groupCondition' groupCondition=LogicalCondition)?
-	'}';
+		('variable:' variable=[Variable|EString])?
+		('groupCondition:' '{' groupCondition=LogicalCondition '};')?
+	'};';
 
 DatasetSize returns DatasetSize:
 	{DatasetSize}
 	'DatasetSize'
-	name=EString;
+	//name=EString
+	;
 
 Logaritm returns Logaritm:
 	'Logaritm'
@@ -208,43 +212,37 @@ enum ArithmeticOperator returns ArithmeticOperator:
 
 OperatorComponent returns OperatorComponent:
 	{OperatorComponent}
-	'OperatorComponent'
-	name=EString
+//	name=EString
 	'{'
-		('function' function=Function)?
-		('operationvalue' operationvalue=OperationValue)?
-	'}';
+		('function:' function=Function)?
+		('operationValue:' operationvalue=OperationValue)?
+	'};';
 
 OperationValue returns OperationValue:
 	'OperationValue'
 	'{'
-		'value' value=EFloat
+		'value:' value=EFloat';'
 	'}';
 
 LogicalCondition returns LogicalCondition:
 	{LogicalCondition}
-	'LogicalCondition'
-	name=EString
-	'{'
-		('value' value=[VariableValue|EString])?
-		('sensitivegroup' sensitivegroup=[DatasetSensitiveGroup|EString])?
-		('sublogicalcondition' sublogicalcondition=SubLogicalCondition)?
-	'}';
+	//'LogicalCondition'
+	//name=EString
+		('value:' value=[VariableValue|EString])?
+		('sensitiveGroup:' sensitivegroup=[DatasetSensitiveGroup|EString])?
+		(sublogicalcondition=SubLogicalCondition)?
+;
 
 SubLogicalCondition returns SubLogicalCondition:
-	'SubLogicalCondition'
-	name=EString
-	'{'
-		'logicalOperator' logicalOperator=LogicalOperator
-		'logicalcondition' logicalcondition=LogicalCondition
-	'}';
+ 	logicalOperator=LogicalOperator
+	logicalcondition=LogicalCondition
+;
 
 VariableValue_Impl returns VariableValue:
-	(relativeToDatasetSize?='relativeToDatasetSize')?
-	'VariableValue'
-	name=EString
+//	name=EString
 	'{'
-		'operator' operator=EqualityOperator
+		'operator:' operator=EqualityOperator
+		(relativeToDatasetSize?='relativeToDatasetSize')?
 	'}';
 
 enum LogicalOperator returns LogicalOperator:
@@ -254,11 +252,11 @@ EBoolean returns ecore::EBoolean:
 	'true' | 'false';
 
 DatasetPositiveOutcome returns DatasetPositiveOutcome:
-	(relativeToDatasetSize?='relativeToDatasetSize')?
-	//name=EString
 	'{'
-		'outcome:' mappingPositiveOutcome=[PositiveOutcome|EString]';'
+		'id:' name=EString';'
+		'mappingOutcome:' mappingPositiveOutcome=[PositiveOutcome|EString]';'
 		'value:' operator=EqualityOperator
+		(relativeToDatasetSize?='relativeToDatasetSize' ';')?
 	'};';
 
 DatasetSensitiveVariableValue returns DatasetSensitiveVariableValue:

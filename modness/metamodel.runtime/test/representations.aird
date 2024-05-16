@@ -8,4 +8,6 @@
   <semanticResources>test.modness</semanticResources>
   <semanticResources>compas.modness</semanticResources>
   <semanticResources>University.modness</semanticResources>
+  <semanticResources>Compas.modness</semanticResources>
+  <semanticResources>TPL.modness</semanticResources>
 </viewpoint:DAnalysis>
