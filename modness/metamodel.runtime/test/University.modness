@@ -31,7 +31,7 @@ GroupBias "university"{
 					probability despite gender";
 			dataset: {
 				Dataset {
-					name: 'admissions';
+					id: 'admissions';
 					predictedLabelName: 'admitted';
 					filePath: 'admissions.csv';
 					positiveOutcome: {
@@ -39,7 +39,7 @@ GroupBias "university"{
 						mappingOutcome: "positive admission";
 						value: {
 							operator: EQUAL;
-							value: 0.0;
+							value: 1.0;
 						};
 					};
 				datasetSentiveVariable: {

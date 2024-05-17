@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalModnessParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'GroupBias'", "'{'", "'highLevelDefinition:'", "'domain:'", "';'", "'source:'", "','", "'sensitiveVariables:'", "'};'", "'positiveOutcome:'", "'unprivilegedGroup:'", "'privilegedGroup:'", "'analysis:'", "'}'", "'SensitiveVariable{'", "'name:'", "'values:'", "'SensitiveGroup'", "'sensitiveValue:'", "'GroupAnalysis'", "'scope:'", "'dataset:'", "'datasetUnprivilegedGroup:'", "'datasetPrivilegedGroup:'", "'metric:'", "'Metric'", "'toleranceValue:'", "'function:'", "'optimalValue:'", "'Dataset'", "'groundTruthLabelName:'", "'predictedLabelName:'", "'filePath:'", "'otherVariable:'", "'datasetSentiveVariable:'", "'id:'", "'mappingGroup:'", "'('", "');'", "'-'", "'.'", "'E'", "'e'", "'operator:'", "'value:'", "'lowerValue:'", "'greaterValue:'", "'Operation'", "'arithmeticOperator:'", "'leftSide:'", "'rightSide:'", "'Probability'", "'object'", "'condition'", "'ExpectedValue'", "'columnName'", "'GroupSize'", "'variable:'", "'groupCondition:'", "'DatasetSize'", "'Logaritm'", "'operatorcomponent'", "'Summation'", "'startRange'", "'endRange'", "'body'", "'ExistingGroupFairnessMetric'", "'ExistingIndividualFairnessMetric'", "'operationValue:'", "'OperationValue'", "'sensitiveGroup:'", "'relativeToDatasetSize'", "'mappingOutcome:'", "'SensitiveVariableValue'", "'mappingValue:'", "'OtherVariable'", "'othervariablevalue'", "'DatasetSensitiveVariable'", "'mappingSensitiveVariable:'", "'WRONG_ALGORITHM_BEHAVIOUR'", "'HUMAN_DISCRIMINATION'", "'WRONG_MEASUREMENT'", "'OMITTED_VARIABLE'", "'WRONG_SAMPLING'", "'WRONG_AGGREGATION'", "'WRONG_LINKING'", "'WRONG_PRESENTATION'", "'RESULT_RANKING'", "'WRONG_SYSTEM_EVALUATION'", "'WRONG_SYSTEM_TARGET_POPULATION'", "'CHANGE_IN_TARGET_POPULATION'", "'EQUAL'", "'GREATER'", "'MINOR'", "'GREATER_EQUAL'", "'MINOR_EQUAL'", "'NOT_EQUAL'", "'IN_INCLUDED'", "'IN_EXCLUDED'", "'IN_LOWER_INCLUDED'", "'IN_GREATER_INCLUDED'", "'SUM'", "'DIFFERENCE'", "'MULTIPLICATION'", "'RATIO'", "'AND'", "'OR'", "'STATISTICAL_PARITY'", "'DISPARATE_IMPACT'", "'EQUALIZED_ODDS'", "'EQUAL_ACCURACY'", "'FALSE_POSITIVE_DIFFERENCE'", "'TRUE_POSITIVE_DIFFERENCE'", "'MANHATTAN_DISTANCE'", "'EUCLIDEAN_DISTANCE'", "'MAHALANOBIS_DISTANCE'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'GroupBias'", "'{'", "'highLevelDefinition:'", "'domain:'", "';'", "'source:'", "','", "'sensitiveVariables:'", "'};'", "'positiveOutcome:'", "'unprivilegedGroup:'", "'privilegedGroup:'", "'analysis:'", "'}'", "'SensitiveVariable{'", "'name:'", "'values:'", "'SensitiveGroup'", "'sensitiveValue:'", "'GroupAnalysis'", "'scope:'", "'dataset:'", "'datasetUnprivilegedGroup:'", "'datasetPrivilegedGroup:'", "'metric:'", "'Metric'", "'toleranceValue:'", "'function:'", "'optimalValue:'", "'Dataset'", "'id:'", "'groundTruthLabelName:'", "'predictedLabelName:'", "'filePath:'", "'otherVariable:'", "'datasetSentiveVariable:'", "'mappingGroup:'", "'('", "');'", "'-'", "'.'", "'E'", "'e'", "'operator:'", "'value:'", "'lowerValue:'", "'greaterValue:'", "'Operation'", "'arithmeticOperator:'", "'leftSide:'", "'rightSide:'", "'Probability'", "'object'", "'condition'", "'ExpectedValue'", "'columnName'", "'GroupSize'", "'variable:'", "'groupCondition:'", "'DatasetSize'", "'Logaritm'", "'operatorcomponent'", "'Summation'", "'startRange'", "'endRange'", "'body'", "'ExistingGroupFairnessMetric'", "'ExistingIndividualFairnessMetric'", "'operationValue:'", "'OperationValue'", "'sensitiveGroup:'", "'relativeToDatasetSize'", "'mappingOutcome:'", "'SensitiveVariableValue'", "'mappingValue:'", "'OtherVariable'", "'othervariablevalue'", "'DatasetSensitiveVariable'", "'mappingSensitiveVariable:'", "'WRONG_ALGORITHM_BEHAVIOUR'", "'HUMAN_DISCRIMINATION'", "'WRONG_MEASUREMENT'", "'OMITTED_VARIABLE'", "'WRONG_SAMPLING'", "'WRONG_AGGREGATION'", "'WRONG_LINKING'", "'WRONG_PRESENTATION'", "'RESULT_RANKING'", "'WRONG_SYSTEM_EVALUATION'", "'WRONG_SYSTEM_TARGET_POPULATION'", "'CHANGE_IN_TARGET_POPULATION'", "'EQUAL'", "'GREATER'", "'MINOR'", "'GREATER_EQUAL'", "'MINOR_EQUAL'", "'NOT_EQUAL'", "'IN_INCLUDED'", "'IN_EXCLUDED'", "'IN_LOWER_INCLUDED'", "'IN_GREATER_INCLUDED'", "'SUM'", "'DIFFERENCE'", "'MULTIPLICATION'", "'RATIO'", "'AND'", "'OR'", "'STATISTICAL_PARITY'", "'DISPARATE_IMPACT'", "'EQUALIZED_ODDS'", "'EQUAL_ACCURACY'", "'FALSE_POSITIVE_DIFFERENCE'", "'TRUE_POSITIVE_DIFFERENCE'", "'MANHATTAN_DISTANCE'", "'EUCLIDEAN_DISTANCE'", "'MAHALANOBIS_DISTANCE'"
     };
     public static final int T__50=50;
     public static final int T__59=59;
@@ -1476,7 +1476,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                 if ( (LA8_1==54) ) {
                     alt8=1;
                 }
-                else if ( (LA8_1==46) ) {
+                else if ( (LA8_1==41) ) {
                     alt8=2;
                 }
                 else {
@@ -2285,7 +2285,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGroupAnalysis"
-    // InternalModness.g:924:1: ruleGroupAnalysis returns [EObject current=null] : (otherlv_0= 'GroupAnalysis' otherlv_1= '{' (otherlv_2= 'scope:' ( (lv_scope_3_0= ruleEString ) ) )? otherlv_4= ';' otherlv_5= 'dataset:' otherlv_6= '{' ( (lv_dataset_7_0= ruleDataset ) ) (otherlv_8= ',' ( (lv_dataset_9_0= ruleDataset ) ) )* otherlv_10= '};' otherlv_11= 'datasetUnprivilegedGroup:' ( (lv_datasetUnprivilegedGroup_12_0= ruleDatasetSensitiveGroup ) ) (otherlv_13= ',' ( (lv_datasetUnprivilegedGroup_14_0= ruleDatasetSensitiveGroup ) ) )* otherlv_15= 'datasetPrivilegedGroup:' ( (lv_datasetPrivilegedGroup_16_0= ruleDatasetSensitiveGroup ) ) (otherlv_17= ',' ( (lv_datasetPrivilegedGroup_18_0= ruleDatasetSensitiveGroup ) ) )* otherlv_19= 'metric:' otherlv_20= '{' ( (lv_metric_21_0= ruleMetric ) ) (otherlv_22= ',' ( (lv_metric_23_0= ruleMetric ) ) )* otherlv_24= '};' otherlv_25= '};' ) ;
+    // InternalModness.g:924:1: ruleGroupAnalysis returns [EObject current=null] : (otherlv_0= 'GroupAnalysis' otherlv_1= '{' (otherlv_2= 'scope:' ( (lv_scope_3_0= ruleEString ) ) otherlv_4= ';' )? otherlv_5= 'dataset:' otherlv_6= '{' ( (lv_dataset_7_0= ruleDataset ) ) (otherlv_8= ',' ( (lv_dataset_9_0= ruleDataset ) ) )* otherlv_10= '};' otherlv_11= 'datasetUnprivilegedGroup:' ( (lv_datasetUnprivilegedGroup_12_0= ruleDatasetSensitiveGroup ) ) (otherlv_13= ',' ( (lv_datasetUnprivilegedGroup_14_0= ruleDatasetSensitiveGroup ) ) )* otherlv_15= 'datasetPrivilegedGroup:' ( (lv_datasetPrivilegedGroup_16_0= ruleDatasetSensitiveGroup ) ) (otherlv_17= ',' ( (lv_datasetPrivilegedGroup_18_0= ruleDatasetSensitiveGroup ) ) )* otherlv_19= 'metric:' otherlv_20= '{' ( (lv_metric_21_0= ruleMetric ) ) (otherlv_22= ',' ( (lv_metric_23_0= ruleMetric ) ) )* otherlv_24= '};' otherlv_25= '};' ) ;
     public final EObject ruleGroupAnalysis() throws RecognitionException {
         EObject current = null;
 
@@ -2329,11 +2329,11 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModness.g:930:2: ( (otherlv_0= 'GroupAnalysis' otherlv_1= '{' (otherlv_2= 'scope:' ( (lv_scope_3_0= ruleEString ) ) )? otherlv_4= ';' otherlv_5= 'dataset:' otherlv_6= '{' ( (lv_dataset_7_0= ruleDataset ) ) (otherlv_8= ',' ( (lv_dataset_9_0= ruleDataset ) ) )* otherlv_10= '};' otherlv_11= 'datasetUnprivilegedGroup:' ( (lv_datasetUnprivilegedGroup_12_0= ruleDatasetSensitiveGroup ) ) (otherlv_13= ',' ( (lv_datasetUnprivilegedGroup_14_0= ruleDatasetSensitiveGroup ) ) )* otherlv_15= 'datasetPrivilegedGroup:' ( (lv_datasetPrivilegedGroup_16_0= ruleDatasetSensitiveGroup ) ) (otherlv_17= ',' ( (lv_datasetPrivilegedGroup_18_0= ruleDatasetSensitiveGroup ) ) )* otherlv_19= 'metric:' otherlv_20= '{' ( (lv_metric_21_0= ruleMetric ) ) (otherlv_22= ',' ( (lv_metric_23_0= ruleMetric ) ) )* otherlv_24= '};' otherlv_25= '};' ) )
-            // InternalModness.g:931:2: (otherlv_0= 'GroupAnalysis' otherlv_1= '{' (otherlv_2= 'scope:' ( (lv_scope_3_0= ruleEString ) ) )? otherlv_4= ';' otherlv_5= 'dataset:' otherlv_6= '{' ( (lv_dataset_7_0= ruleDataset ) ) (otherlv_8= ',' ( (lv_dataset_9_0= ruleDataset ) ) )* otherlv_10= '};' otherlv_11= 'datasetUnprivilegedGroup:' ( (lv_datasetUnprivilegedGroup_12_0= ruleDatasetSensitiveGroup ) ) (otherlv_13= ',' ( (lv_datasetUnprivilegedGroup_14_0= ruleDatasetSensitiveGroup ) ) )* otherlv_15= 'datasetPrivilegedGroup:' ( (lv_datasetPrivilegedGroup_16_0= ruleDatasetSensitiveGroup ) ) (otherlv_17= ',' ( (lv_datasetPrivilegedGroup_18_0= ruleDatasetSensitiveGroup ) ) )* otherlv_19= 'metric:' otherlv_20= '{' ( (lv_metric_21_0= ruleMetric ) ) (otherlv_22= ',' ( (lv_metric_23_0= ruleMetric ) ) )* otherlv_24= '};' otherlv_25= '};' )
+            // InternalModness.g:930:2: ( (otherlv_0= 'GroupAnalysis' otherlv_1= '{' (otherlv_2= 'scope:' ( (lv_scope_3_0= ruleEString ) ) otherlv_4= ';' )? otherlv_5= 'dataset:' otherlv_6= '{' ( (lv_dataset_7_0= ruleDataset ) ) (otherlv_8= ',' ( (lv_dataset_9_0= ruleDataset ) ) )* otherlv_10= '};' otherlv_11= 'datasetUnprivilegedGroup:' ( (lv_datasetUnprivilegedGroup_12_0= ruleDatasetSensitiveGroup ) ) (otherlv_13= ',' ( (lv_datasetUnprivilegedGroup_14_0= ruleDatasetSensitiveGroup ) ) )* otherlv_15= 'datasetPrivilegedGroup:' ( (lv_datasetPrivilegedGroup_16_0= ruleDatasetSensitiveGroup ) ) (otherlv_17= ',' ( (lv_datasetPrivilegedGroup_18_0= ruleDatasetSensitiveGroup ) ) )* otherlv_19= 'metric:' otherlv_20= '{' ( (lv_metric_21_0= ruleMetric ) ) (otherlv_22= ',' ( (lv_metric_23_0= ruleMetric ) ) )* otherlv_24= '};' otherlv_25= '};' ) )
+            // InternalModness.g:931:2: (otherlv_0= 'GroupAnalysis' otherlv_1= '{' (otherlv_2= 'scope:' ( (lv_scope_3_0= ruleEString ) ) otherlv_4= ';' )? otherlv_5= 'dataset:' otherlv_6= '{' ( (lv_dataset_7_0= ruleDataset ) ) (otherlv_8= ',' ( (lv_dataset_9_0= ruleDataset ) ) )* otherlv_10= '};' otherlv_11= 'datasetUnprivilegedGroup:' ( (lv_datasetUnprivilegedGroup_12_0= ruleDatasetSensitiveGroup ) ) (otherlv_13= ',' ( (lv_datasetUnprivilegedGroup_14_0= ruleDatasetSensitiveGroup ) ) )* otherlv_15= 'datasetPrivilegedGroup:' ( (lv_datasetPrivilegedGroup_16_0= ruleDatasetSensitiveGroup ) ) (otherlv_17= ',' ( (lv_datasetPrivilegedGroup_18_0= ruleDatasetSensitiveGroup ) ) )* otherlv_19= 'metric:' otherlv_20= '{' ( (lv_metric_21_0= ruleMetric ) ) (otherlv_22= ',' ( (lv_metric_23_0= ruleMetric ) ) )* otherlv_24= '};' otherlv_25= '};' )
             {
-            // InternalModness.g:931:2: (otherlv_0= 'GroupAnalysis' otherlv_1= '{' (otherlv_2= 'scope:' ( (lv_scope_3_0= ruleEString ) ) )? otherlv_4= ';' otherlv_5= 'dataset:' otherlv_6= '{' ( (lv_dataset_7_0= ruleDataset ) ) (otherlv_8= ',' ( (lv_dataset_9_0= ruleDataset ) ) )* otherlv_10= '};' otherlv_11= 'datasetUnprivilegedGroup:' ( (lv_datasetUnprivilegedGroup_12_0= ruleDatasetSensitiveGroup ) ) (otherlv_13= ',' ( (lv_datasetUnprivilegedGroup_14_0= ruleDatasetSensitiveGroup ) ) )* otherlv_15= 'datasetPrivilegedGroup:' ( (lv_datasetPrivilegedGroup_16_0= ruleDatasetSensitiveGroup ) ) (otherlv_17= ',' ( (lv_datasetPrivilegedGroup_18_0= ruleDatasetSensitiveGroup ) ) )* otherlv_19= 'metric:' otherlv_20= '{' ( (lv_metric_21_0= ruleMetric ) ) (otherlv_22= ',' ( (lv_metric_23_0= ruleMetric ) ) )* otherlv_24= '};' otherlv_25= '};' )
-            // InternalModness.g:932:3: otherlv_0= 'GroupAnalysis' otherlv_1= '{' (otherlv_2= 'scope:' ( (lv_scope_3_0= ruleEString ) ) )? otherlv_4= ';' otherlv_5= 'dataset:' otherlv_6= '{' ( (lv_dataset_7_0= ruleDataset ) ) (otherlv_8= ',' ( (lv_dataset_9_0= ruleDataset ) ) )* otherlv_10= '};' otherlv_11= 'datasetUnprivilegedGroup:' ( (lv_datasetUnprivilegedGroup_12_0= ruleDatasetSensitiveGroup ) ) (otherlv_13= ',' ( (lv_datasetUnprivilegedGroup_14_0= ruleDatasetSensitiveGroup ) ) )* otherlv_15= 'datasetPrivilegedGroup:' ( (lv_datasetPrivilegedGroup_16_0= ruleDatasetSensitiveGroup ) ) (otherlv_17= ',' ( (lv_datasetPrivilegedGroup_18_0= ruleDatasetSensitiveGroup ) ) )* otherlv_19= 'metric:' otherlv_20= '{' ( (lv_metric_21_0= ruleMetric ) ) (otherlv_22= ',' ( (lv_metric_23_0= ruleMetric ) ) )* otherlv_24= '};' otherlv_25= '};'
+            // InternalModness.g:931:2: (otherlv_0= 'GroupAnalysis' otherlv_1= '{' (otherlv_2= 'scope:' ( (lv_scope_3_0= ruleEString ) ) otherlv_4= ';' )? otherlv_5= 'dataset:' otherlv_6= '{' ( (lv_dataset_7_0= ruleDataset ) ) (otherlv_8= ',' ( (lv_dataset_9_0= ruleDataset ) ) )* otherlv_10= '};' otherlv_11= 'datasetUnprivilegedGroup:' ( (lv_datasetUnprivilegedGroup_12_0= ruleDatasetSensitiveGroup ) ) (otherlv_13= ',' ( (lv_datasetUnprivilegedGroup_14_0= ruleDatasetSensitiveGroup ) ) )* otherlv_15= 'datasetPrivilegedGroup:' ( (lv_datasetPrivilegedGroup_16_0= ruleDatasetSensitiveGroup ) ) (otherlv_17= ',' ( (lv_datasetPrivilegedGroup_18_0= ruleDatasetSensitiveGroup ) ) )* otherlv_19= 'metric:' otherlv_20= '{' ( (lv_metric_21_0= ruleMetric ) ) (otherlv_22= ',' ( (lv_metric_23_0= ruleMetric ) ) )* otherlv_24= '};' otherlv_25= '};' )
+            // InternalModness.g:932:3: otherlv_0= 'GroupAnalysis' otherlv_1= '{' (otherlv_2= 'scope:' ( (lv_scope_3_0= ruleEString ) ) otherlv_4= ';' )? otherlv_5= 'dataset:' otherlv_6= '{' ( (lv_dataset_7_0= ruleDataset ) ) (otherlv_8= ',' ( (lv_dataset_9_0= ruleDataset ) ) )* otherlv_10= '};' otherlv_11= 'datasetUnprivilegedGroup:' ( (lv_datasetUnprivilegedGroup_12_0= ruleDatasetSensitiveGroup ) ) (otherlv_13= ',' ( (lv_datasetUnprivilegedGroup_14_0= ruleDatasetSensitiveGroup ) ) )* otherlv_15= 'datasetPrivilegedGroup:' ( (lv_datasetPrivilegedGroup_16_0= ruleDatasetSensitiveGroup ) ) (otherlv_17= ',' ( (lv_datasetPrivilegedGroup_18_0= ruleDatasetSensitiveGroup ) ) )* otherlv_19= 'metric:' otherlv_20= '{' ( (lv_metric_21_0= ruleMetric ) ) (otherlv_22= ',' ( (lv_metric_23_0= ruleMetric ) ) )* otherlv_24= '};' otherlv_25= '};'
             {
             otherlv_0=(Token)match(input,30,FOLLOW_4); 
 
@@ -2343,7 +2343,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getGroupAnalysisAccess().getLeftCurlyBracketKeyword_1());
             		
-            // InternalModness.g:940:3: (otherlv_2= 'scope:' ( (lv_scope_3_0= ruleEString ) ) )?
+            // InternalModness.g:940:3: (otherlv_2= 'scope:' ( (lv_scope_3_0= ruleEString ) ) otherlv_4= ';' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -2352,7 +2352,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             }
             switch (alt12) {
                 case 1 :
-                    // InternalModness.g:941:4: otherlv_2= 'scope:' ( (lv_scope_3_0= ruleEString ) )
+                    // InternalModness.g:941:4: otherlv_2= 'scope:' ( (lv_scope_3_0= ruleEString ) ) otherlv_4= ';'
                     {
                     otherlv_2=(Token)match(input,31,FOLLOW_3); 
 
@@ -2389,23 +2389,23 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
                     }
 
+                    otherlv_4=(Token)match(input,15,FOLLOW_26); 
+
+                    				newLeafNode(otherlv_4, grammarAccess.getGroupAnalysisAccess().getSemicolonKeyword_2_2());
+                    			
 
                     }
                     break;
 
             }
 
-            otherlv_4=(Token)match(input,15,FOLLOW_26); 
-
-            			newLeafNode(otherlv_4, grammarAccess.getGroupAnalysisAccess().getSemicolonKeyword_3());
-            		
             otherlv_5=(Token)match(input,32,FOLLOW_4); 
 
-            			newLeafNode(otherlv_5, grammarAccess.getGroupAnalysisAccess().getDatasetKeyword_4());
+            			newLeafNode(otherlv_5, grammarAccess.getGroupAnalysisAccess().getDatasetKeyword_3());
             		
             otherlv_6=(Token)match(input,12,FOLLOW_27); 
 
-            			newLeafNode(otherlv_6, grammarAccess.getGroupAnalysisAccess().getLeftCurlyBracketKeyword_5());
+            			newLeafNode(otherlv_6, grammarAccess.getGroupAnalysisAccess().getLeftCurlyBracketKeyword_4());
             		
             // InternalModness.g:977:3: ( (lv_dataset_7_0= ruleDataset ) )
             // InternalModness.g:978:4: (lv_dataset_7_0= ruleDataset )
@@ -2414,7 +2414,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             // InternalModness.g:979:5: lv_dataset_7_0= ruleDataset
             {
 
-            					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetDatasetParserRuleCall_6_0());
+            					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetDatasetParserRuleCall_5_0());
             				
             pushFollow(FOLLOW_13);
             lv_dataset_7_0=ruleDataset();
@@ -2455,7 +2455,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             	    {
             	    otherlv_8=(Token)match(input,17,FOLLOW_27); 
 
-            	    				newLeafNode(otherlv_8, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_7_0());
+            	    				newLeafNode(otherlv_8, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_6_0());
             	    			
             	    // InternalModness.g:1001:4: ( (lv_dataset_9_0= ruleDataset ) )
             	    // InternalModness.g:1002:5: (lv_dataset_9_0= ruleDataset )
@@ -2464,7 +2464,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             	    // InternalModness.g:1003:6: lv_dataset_9_0= ruleDataset
             	    {
 
-            	    						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetDatasetParserRuleCall_7_1_0());
+            	    						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetDatasetParserRuleCall_6_1_0());
             	    					
             	    pushFollow(FOLLOW_13);
             	    lv_dataset_9_0=ruleDataset();
@@ -2499,11 +2499,11 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             otherlv_10=(Token)match(input,19,FOLLOW_28); 
 
-            			newLeafNode(otherlv_10, grammarAccess.getGroupAnalysisAccess().getRightCurlyBracketSemicolonKeyword_8());
+            			newLeafNode(otherlv_10, grammarAccess.getGroupAnalysisAccess().getRightCurlyBracketSemicolonKeyword_7());
             		
             otherlv_11=(Token)match(input,33,FOLLOW_4); 
 
-            			newLeafNode(otherlv_11, grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupKeyword_9());
+            			newLeafNode(otherlv_11, grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupKeyword_8());
             		
             // InternalModness.g:1029:3: ( (lv_datasetUnprivilegedGroup_12_0= ruleDatasetSensitiveGroup ) )
             // InternalModness.g:1030:4: (lv_datasetUnprivilegedGroup_12_0= ruleDatasetSensitiveGroup )
@@ -2512,7 +2512,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             // InternalModness.g:1031:5: lv_datasetUnprivilegedGroup_12_0= ruleDatasetSensitiveGroup
             {
 
-            					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_10_0());
+            					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_9_0());
             				
             pushFollow(FOLLOW_29);
             lv_datasetUnprivilegedGroup_12_0=ruleDatasetSensitiveGroup();
@@ -2553,7 +2553,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             	    {
             	    otherlv_13=(Token)match(input,17,FOLLOW_4); 
 
-            	    				newLeafNode(otherlv_13, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_11_0());
+            	    				newLeafNode(otherlv_13, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_10_0());
             	    			
             	    // InternalModness.g:1053:4: ( (lv_datasetUnprivilegedGroup_14_0= ruleDatasetSensitiveGroup ) )
             	    // InternalModness.g:1054:5: (lv_datasetUnprivilegedGroup_14_0= ruleDatasetSensitiveGroup )
@@ -2562,7 +2562,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             	    // InternalModness.g:1055:6: lv_datasetUnprivilegedGroup_14_0= ruleDatasetSensitiveGroup
             	    {
 
-            	    						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_11_1_0());
+            	    						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_10_1_0());
             	    					
             	    pushFollow(FOLLOW_29);
             	    lv_datasetUnprivilegedGroup_14_0=ruleDatasetSensitiveGroup();
@@ -2597,7 +2597,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             otherlv_15=(Token)match(input,34,FOLLOW_4); 
 
-            			newLeafNode(otherlv_15, grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupKeyword_12());
+            			newLeafNode(otherlv_15, grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupKeyword_11());
             		
             // InternalModness.g:1077:3: ( (lv_datasetPrivilegedGroup_16_0= ruleDatasetSensitiveGroup ) )
             // InternalModness.g:1078:4: (lv_datasetPrivilegedGroup_16_0= ruleDatasetSensitiveGroup )
@@ -2606,7 +2606,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             // InternalModness.g:1079:5: lv_datasetPrivilegedGroup_16_0= ruleDatasetSensitiveGroup
             {
 
-            					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_13_0());
+            					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_12_0());
             				
             pushFollow(FOLLOW_30);
             lv_datasetPrivilegedGroup_16_0=ruleDatasetSensitiveGroup();
@@ -2647,7 +2647,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             	    {
             	    otherlv_17=(Token)match(input,17,FOLLOW_4); 
 
-            	    				newLeafNode(otherlv_17, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_14_0());
+            	    				newLeafNode(otherlv_17, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_13_0());
             	    			
             	    // InternalModness.g:1101:4: ( (lv_datasetPrivilegedGroup_18_0= ruleDatasetSensitiveGroup ) )
             	    // InternalModness.g:1102:5: (lv_datasetPrivilegedGroup_18_0= ruleDatasetSensitiveGroup )
@@ -2656,7 +2656,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             	    // InternalModness.g:1103:6: lv_datasetPrivilegedGroup_18_0= ruleDatasetSensitiveGroup
             	    {
 
-            	    						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_14_1_0());
+            	    						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_13_1_0());
             	    					
             	    pushFollow(FOLLOW_30);
             	    lv_datasetPrivilegedGroup_18_0=ruleDatasetSensitiveGroup();
@@ -2691,11 +2691,11 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             otherlv_19=(Token)match(input,35,FOLLOW_4); 
 
-            			newLeafNode(otherlv_19, grammarAccess.getGroupAnalysisAccess().getMetricKeyword_15());
+            			newLeafNode(otherlv_19, grammarAccess.getGroupAnalysisAccess().getMetricKeyword_14());
             		
             otherlv_20=(Token)match(input,12,FOLLOW_31); 
 
-            			newLeafNode(otherlv_20, grammarAccess.getGroupAnalysisAccess().getLeftCurlyBracketKeyword_16());
+            			newLeafNode(otherlv_20, grammarAccess.getGroupAnalysisAccess().getLeftCurlyBracketKeyword_15());
             		
             // InternalModness.g:1129:3: ( (lv_metric_21_0= ruleMetric ) )
             // InternalModness.g:1130:4: (lv_metric_21_0= ruleMetric )
@@ -2704,7 +2704,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             // InternalModness.g:1131:5: lv_metric_21_0= ruleMetric
             {
 
-            					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getMetricMetricParserRuleCall_17_0());
+            					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getMetricMetricParserRuleCall_16_0());
             				
             pushFollow(FOLLOW_13);
             lv_metric_21_0=ruleMetric();
@@ -2745,7 +2745,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             	    {
             	    otherlv_22=(Token)match(input,17,FOLLOW_31); 
 
-            	    				newLeafNode(otherlv_22, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_18_0());
+            	    				newLeafNode(otherlv_22, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_17_0());
             	    			
             	    // InternalModness.g:1153:4: ( (lv_metric_23_0= ruleMetric ) )
             	    // InternalModness.g:1154:5: (lv_metric_23_0= ruleMetric )
@@ -2754,7 +2754,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             	    // InternalModness.g:1155:6: lv_metric_23_0= ruleMetric
             	    {
 
-            	    						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getMetricMetricParserRuleCall_18_1_0());
+            	    						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getMetricMetricParserRuleCall_17_1_0());
             	    					
             	    pushFollow(FOLLOW_13);
             	    lv_metric_23_0=ruleMetric();
@@ -2789,11 +2789,11 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             otherlv_24=(Token)match(input,19,FOLLOW_18); 
 
-            			newLeafNode(otherlv_24, grammarAccess.getGroupAnalysisAccess().getRightCurlyBracketSemicolonKeyword_19());
+            			newLeafNode(otherlv_24, grammarAccess.getGroupAnalysisAccess().getRightCurlyBracketSemicolonKeyword_18());
             		
             otherlv_25=(Token)match(input,19,FOLLOW_2); 
 
-            			newLeafNode(otherlv_25, grammarAccess.getGroupAnalysisAccess().getRightCurlyBracketSemicolonKeyword_20());
+            			newLeafNode(otherlv_25, grammarAccess.getGroupAnalysisAccess().getRightCurlyBracketSemicolonKeyword_19());
             		
 
             }
@@ -3206,7 +3206,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDataset"
-    // InternalModness.g:1359:1: ruleDataset returns [EObject current=null] : (otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'name:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSentiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}' ) ;
+    // InternalModness.g:1359:1: ruleDataset returns [EObject current=null] : (otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSentiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}' ) ;
     public final EObject ruleDataset() throws RecognitionException {
         EObject current = null;
 
@@ -3253,23 +3253,23 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModness.g:1365:2: ( (otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'name:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSentiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}' ) )
-            // InternalModness.g:1366:2: (otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'name:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSentiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}' )
+            // InternalModness.g:1365:2: ( (otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSentiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}' ) )
+            // InternalModness.g:1366:2: (otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSentiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}' )
             {
-            // InternalModness.g:1366:2: (otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'name:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSentiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}' )
-            // InternalModness.g:1367:3: otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'name:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSentiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}'
+            // InternalModness.g:1366:2: (otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSentiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}' )
+            // InternalModness.g:1367:3: otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSentiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}'
             {
             otherlv_0=(Token)match(input,40,FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getDatasetAccess().getDatasetKeyword_0());
             		
-            otherlv_1=(Token)match(input,12,FOLLOW_22); 
+            otherlv_1=(Token)match(input,12,FOLLOW_37); 
 
             			newLeafNode(otherlv_1, grammarAccess.getDatasetAccess().getLeftCurlyBracketKeyword_1());
             		
-            otherlv_2=(Token)match(input,26,FOLLOW_3); 
+            otherlv_2=(Token)match(input,41,FOLLOW_3); 
 
-            			newLeafNode(otherlv_2, grammarAccess.getDatasetAccess().getNameKeyword_2());
+            			newLeafNode(otherlv_2, grammarAccess.getDatasetAccess().getIdKeyword_2());
             		
             // InternalModness.g:1379:3: ( (lv_name_3_0= ruleEString ) )
             // InternalModness.g:1380:4: (lv_name_3_0= ruleEString )
@@ -3302,7 +3302,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,15,FOLLOW_37); 
+            otherlv_4=(Token)match(input,15,FOLLOW_38); 
 
             			newLeafNode(otherlv_4, grammarAccess.getDatasetAccess().getSemicolonKeyword_4());
             		
@@ -3310,14 +3310,14 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             int alt17=2;
             int LA17_0 = input.LA(1);
 
-            if ( (LA17_0==41) ) {
+            if ( (LA17_0==42) ) {
                 alt17=1;
             }
             switch (alt17) {
                 case 1 :
                     // InternalModness.g:1403:4: otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';'
                     {
-                    otherlv_5=(Token)match(input,41,FOLLOW_3); 
+                    otherlv_5=(Token)match(input,42,FOLLOW_3); 
 
                     				newLeafNode(otherlv_5, grammarAccess.getDatasetAccess().getGroundTruthLabelNameKeyword_5_0());
                     			
@@ -3352,7 +3352,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_7=(Token)match(input,15,FOLLOW_38); 
+                    otherlv_7=(Token)match(input,15,FOLLOW_39); 
 
                     				newLeafNode(otherlv_7, grammarAccess.getDatasetAccess().getSemicolonKeyword_5_2());
                     			
@@ -3366,14 +3366,14 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             int alt18=2;
             int LA18_0 = input.LA(1);
 
-            if ( (LA18_0==42) ) {
+            if ( (LA18_0==43) ) {
                 alt18=1;
             }
             switch (alt18) {
                 case 1 :
                     // InternalModness.g:1432:4: otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';'
                     {
-                    otherlv_8=(Token)match(input,42,FOLLOW_3); 
+                    otherlv_8=(Token)match(input,43,FOLLOW_3); 
 
                     				newLeafNode(otherlv_8, grammarAccess.getDatasetAccess().getPredictedLabelNameKeyword_6_0());
                     			
@@ -3408,7 +3408,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_10=(Token)match(input,15,FOLLOW_39); 
+                    otherlv_10=(Token)match(input,15,FOLLOW_40); 
 
                     				newLeafNode(otherlv_10, grammarAccess.getDatasetAccess().getSemicolonKeyword_6_2());
                     			
@@ -3418,7 +3418,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_11=(Token)match(input,43,FOLLOW_3); 
+            otherlv_11=(Token)match(input,44,FOLLOW_3); 
 
             			newLeafNode(otherlv_11, grammarAccess.getDatasetAccess().getFilePathKeyword_7());
             		
@@ -3453,7 +3453,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,15,FOLLOW_40); 
+            otherlv_13=(Token)match(input,15,FOLLOW_41); 
 
             			newLeafNode(otherlv_13, grammarAccess.getDatasetAccess().getSemicolonKeyword_9());
             		
@@ -3461,18 +3461,18 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             int alt20=2;
             int LA20_0 = input.LA(1);
 
-            if ( (LA20_0==44) ) {
+            if ( (LA20_0==45) ) {
                 alt20=1;
             }
             switch (alt20) {
                 case 1 :
                     // InternalModness.g:1488:4: otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};'
                     {
-                    otherlv_14=(Token)match(input,44,FOLLOW_4); 
+                    otherlv_14=(Token)match(input,45,FOLLOW_4); 
 
                     				newLeafNode(otherlv_14, grammarAccess.getDatasetAccess().getOtherVariableKeyword_10_0());
                     			
-                    otherlv_15=(Token)match(input,12,FOLLOW_41); 
+                    otherlv_15=(Token)match(input,12,FOLLOW_42); 
 
                     				newLeafNode(otherlv_15, grammarAccess.getDatasetAccess().getLeftCurlyBracketKeyword_10_1());
                     			
@@ -3522,7 +3522,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // InternalModness.g:1516:5: otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) )
                     	    {
-                    	    otherlv_17=(Token)match(input,17,FOLLOW_41); 
+                    	    otherlv_17=(Token)match(input,17,FOLLOW_42); 
 
                     	    					newLeafNode(otherlv_17, grammarAccess.getDatasetAccess().getCommaKeyword_10_3_0());
                     	    				
@@ -3589,7 +3589,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             					newCompositeNode(grammarAccess.getDatasetAccess().getPositiveOutcomeDatasetPositiveOutcomeParserRuleCall_12_0());
             				
-            pushFollow(FOLLOW_42);
+            pushFollow(FOLLOW_43);
             lv_positiveOutcome_21_0=ruleDatasetPositiveOutcome();
 
             state._fsp--;
@@ -3611,11 +3611,11 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_22=(Token)match(input,45,FOLLOW_4); 
+            otherlv_22=(Token)match(input,46,FOLLOW_4); 
 
             			newLeafNode(otherlv_22, grammarAccess.getDatasetAccess().getDatasetSentiveVariableKeyword_13());
             		
-            otherlv_23=(Token)match(input,12,FOLLOW_43); 
+            otherlv_23=(Token)match(input,12,FOLLOW_44); 
 
             			newLeafNode(otherlv_23, grammarAccess.getDatasetAccess().getLeftCurlyBracketKeyword_14());
             		
@@ -3665,7 +3665,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // InternalModness.g:1596:4: otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) )
             	    {
-            	    otherlv_25=(Token)match(input,17,FOLLOW_43); 
+            	    otherlv_25=(Token)match(input,17,FOLLOW_44); 
 
             	    				newLeafNode(otherlv_25, grammarAccess.getDatasetAccess().getCommaKeyword_16_0());
             	    			
@@ -3803,11 +3803,11 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             // InternalModness.g:1646:2: (otherlv_0= '{' otherlv_1= 'id:' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ';' otherlv_4= 'mappingGroup:' ( ( ruleEString ) ) otherlv_6= ';' otherlv_7= 'sensitiveVariables:' otherlv_8= '(' ( ( ruleEString ) ) (otherlv_10= ',' ( ( ruleEString ) ) )* otherlv_12= ');' otherlv_13= '};' )
             // InternalModness.g:1647:3: otherlv_0= '{' otherlv_1= 'id:' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ';' otherlv_4= 'mappingGroup:' ( ( ruleEString ) ) otherlv_6= ';' otherlv_7= 'sensitiveVariables:' otherlv_8= '(' ( ( ruleEString ) ) (otherlv_10= ',' ( ( ruleEString ) ) )* otherlv_12= ');' otherlv_13= '};'
             {
-            otherlv_0=(Token)match(input,12,FOLLOW_44); 
+            otherlv_0=(Token)match(input,12,FOLLOW_37); 
 
             			newLeafNode(otherlv_0, grammarAccess.getDatasetSensitiveGroupAccess().getLeftCurlyBracketKeyword_0());
             		
-            otherlv_1=(Token)match(input,46,FOLLOW_3); 
+            otherlv_1=(Token)match(input,41,FOLLOW_3); 
 
             			newLeafNode(otherlv_1, grammarAccess.getDatasetSensitiveGroupAccess().getIdKeyword_1());
             		
@@ -7174,11 +7174,11 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             // InternalModness.g:3141:2: (otherlv_0= '{' otherlv_1= 'id:' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ';' otherlv_4= 'mappingOutcome:' ( ( ruleEString ) ) otherlv_6= ';' otherlv_7= 'value:' ( (lv_operator_8_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) ) otherlv_10= ';' )? otherlv_11= '};' )
             // InternalModness.g:3142:3: otherlv_0= '{' otherlv_1= 'id:' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ';' otherlv_4= 'mappingOutcome:' ( ( ruleEString ) ) otherlv_6= ';' otherlv_7= 'value:' ( (lv_operator_8_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) ) otherlv_10= ';' )? otherlv_11= '};'
             {
-            otherlv_0=(Token)match(input,12,FOLLOW_44); 
+            otherlv_0=(Token)match(input,12,FOLLOW_37); 
 
             			newLeafNode(otherlv_0, grammarAccess.getDatasetPositiveOutcomeAccess().getLeftCurlyBracketKeyword_0());
             		
-            otherlv_1=(Token)match(input,46,FOLLOW_3); 
+            otherlv_1=(Token)match(input,41,FOLLOW_3); 
 
             			newLeafNode(otherlv_1, grammarAccess.getDatasetPositiveOutcomeAccess().getIdKeyword_1());
             		
@@ -7427,11 +7427,11 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_0, grammarAccess.getDatasetSensitiveVariableValueAccess().getSensitiveVariableValueKeyword_0());
             		
-            otherlv_1=(Token)match(input,12,FOLLOW_44); 
+            otherlv_1=(Token)match(input,12,FOLLOW_37); 
 
             			newLeafNode(otherlv_1, grammarAccess.getDatasetSensitiveVariableValueAccess().getLeftCurlyBracketKeyword_1());
             		
-            otherlv_2=(Token)match(input,46,FOLLOW_3); 
+            otherlv_2=(Token)match(input,41,FOLLOW_3); 
 
             			newLeafNode(otherlv_2, grammarAccess.getDatasetSensitiveVariableValueAccess().getIdKeyword_2());
             		
@@ -9347,7 +9347,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000008000000L});
     public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000080008000L});
+    public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000180000000L});
     public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000100000000L});
     public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000010000000000L});
     public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000000200000000L});
@@ -9359,14 +9359,14 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_34 = new BitSet(new long[]{0x0000004000000000L});
     public static final BitSet FOLLOW_35 = new BitSet(new long[]{0x4400000000000000L,0x00000000000062CAL});
     public static final BitSet FOLLOW_36 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x00000E0000000000L});
-    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x00000C0000000000L});
-    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000100000100000L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000000000000000L,0x0000000001000000L});
-    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x00001C0000000000L});
+    public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000180000000000L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000200000100000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000000000000000L,0x0000000001000000L});
     public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000800000000000L});
     public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0001000000000000L});
     public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0002000000020000L});

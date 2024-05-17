@@ -1,28 +1,28 @@
 
-GroupBias "TPL"{
-	highLevelDefinition: {
-		domain: "recommender systems";
-		source: WRONG_SAMPLING;
-		sensitiveVariables: {
-			SensitiveVariable{
-				name: "popularity";
-				values: "popular","unpopular";
-			}
-		};
-		positiveOutcome: "recommendation";
-		unprivilegedGroup: {
-			SensitiveGroup{
-				name: "unpopular libraries";
-				sensitiveValue: "popularity.unpopular";
+		GroupBias "TPL"{
+			highLevelDefinition: {
+				domain: "recommender systems";
+				source: WRONG_ALGORITHM_BEHAVIOUR;
+				sensitiveVariables: {
+					SensitiveVariable{
+						name: "popularity";
+						values: "popular","unpopular";
+					}
+				};
+				positiveOutcome: "recommendation";
+				unprivilegedGroup: {
+					SensitiveGroup{
+						name: "unpopular libraries";
+						sensitiveValue: "popularity.unpopular";
+					};
+				};
+				privilegedGroup: {
+					SensitiveGroup{
+						name: "popular libraries";
+						sensitiveValue: "popularity.popular";
+					};
+				};	
 			};
-		};
-		privilegedGroup: {
-			SensitiveGroup{
-				name: "popular libraries";
-				sensitiveValue: "popularity.popular";
-			};
-		};	
-	};
 	
 	analysis: {
 		GroupAnalysis{
@@ -31,11 +31,11 @@ GroupBias "TPL"{
 					their popularity";
 			dataset: {
 				Dataset {
-					name: 'recommendations';
+					id: 'recommendations';
 					predictedLabelName: 'ranking';
 					filePath: 'recommendations.csv';
 					positiveOutcome: {
-						id: "recommendation";
+						id: "high-ranking";
 						mappingOutcome: recommendation;
 						value: {
 							operator: GREATER_EQUAL;
@@ -49,7 +49,7 @@ GroupBias "TPL"{
 						mappingSensitiveVariable: popularity;
 						values: {
 							SensitiveVariableValue{
-								id: "unpopular";
+								id: "frequent";
 								mappingValue: "popularity.unpopular";
 								value: {
 									operator: MINOR_EQUAL;
@@ -58,10 +58,10 @@ GroupBias "TPL"{
 								relativeToDatasetSize;
 							},
 							SensitiveVariableValue{
-								id: "popular";						
+								id: "non-frequent";						
 								mappingValue: "popularity.unpopular";
 								value: {
-									operator: GREATER_EQUAL;
+									operator: GREATER;
 									value: 0.8;
 								};
 								relativeToDatasetSize;
@@ -72,14 +72,14 @@ GroupBias "TPL"{
 			}
 		};
 		datasetUnprivilegedGroup: {
-				id: 'unpopular libraries';
+				id: 'frequent libraries';
 				mappingGroup: "unpopular libraries";
-				sensitiveVariables: ("recommendations.frequency.unpopular");
+				sensitiveVariables: ("recommendations.frequency.non-frequent");
 		};
 		datasetPrivilegedGroup: {
-			id: 'popular libraries';
+			id: 'non-frequent libraries';
 			mappingGroup: "popular libraries";
-			sensitiveVariables: ("recommendations.frequency.popular");
+			sensitiveVariables: ("recommendations.frequency.frequent");
 		};
 		
 		metric:{
@@ -91,15 +91,15 @@ GroupBias "TPL"{
 					leftSide: {
 						function: GroupSize{
 							groupCondition: {
-								sensitiveGroup: "unpopular libraries" 
-								AND value:"recommendations.recommendation"
+								sensitiveGroup: "non-frequent libraries"
+								AND value:"recommendations.high-ranking"
 							};
 						};
 					};
 					rightSide: {
 						function: GroupSize{
 							groupCondition: {
-								value: "recommendations.recommendation"
+								value: "recommendations.high-ranking"
 							};
 						};
 					};

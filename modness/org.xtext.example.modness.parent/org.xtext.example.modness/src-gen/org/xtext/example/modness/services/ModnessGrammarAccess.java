@@ -613,46 +613,46 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Keyword cScopeKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cScopeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
 		private final RuleCall cScopeEStringParserRuleCall_2_1_0 = (RuleCall)cScopeAssignment_2_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cDatasetKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Keyword cLeftCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cDatasetAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cDatasetDatasetParserRuleCall_6_0 = (RuleCall)cDatasetAssignment_6.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cCommaKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cDatasetAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cDatasetDatasetParserRuleCall_7_1_0 = (RuleCall)cDatasetAssignment_7_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketSemicolonKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Keyword cDatasetUnprivilegedGroupKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Assignment cDatasetUnprivilegedGroupAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_10_0 = (RuleCall)cDatasetUnprivilegedGroupAssignment_10.eContents().get(0);
-		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
-		private final Keyword cCommaKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
-		private final Assignment cDatasetUnprivilegedGroupAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
-		private final RuleCall cDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_11_1_0 = (RuleCall)cDatasetUnprivilegedGroupAssignment_11_1.eContents().get(0);
-		private final Keyword cDatasetPrivilegedGroupKeyword_12 = (Keyword)cGroup.eContents().get(12);
-		private final Assignment cDatasetPrivilegedGroupAssignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final RuleCall cDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_13_0 = (RuleCall)cDatasetPrivilegedGroupAssignment_13.eContents().get(0);
-		private final Group cGroup_14 = (Group)cGroup.eContents().get(14);
-		private final Keyword cCommaKeyword_14_0 = (Keyword)cGroup_14.eContents().get(0);
-		private final Assignment cDatasetPrivilegedGroupAssignment_14_1 = (Assignment)cGroup_14.eContents().get(1);
-		private final RuleCall cDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_14_1_0 = (RuleCall)cDatasetPrivilegedGroupAssignment_14_1.eContents().get(0);
-		private final Keyword cMetricKeyword_15 = (Keyword)cGroup.eContents().get(15);
-		private final Keyword cLeftCurlyBracketKeyword_16 = (Keyword)cGroup.eContents().get(16);
-		private final Assignment cMetricAssignment_17 = (Assignment)cGroup.eContents().get(17);
-		private final RuleCall cMetricMetricParserRuleCall_17_0 = (RuleCall)cMetricAssignment_17.eContents().get(0);
-		private final Group cGroup_18 = (Group)cGroup.eContents().get(18);
-		private final Keyword cCommaKeyword_18_0 = (Keyword)cGroup_18.eContents().get(0);
-		private final Assignment cMetricAssignment_18_1 = (Assignment)cGroup_18.eContents().get(1);
-		private final RuleCall cMetricMetricParserRuleCall_18_1_0 = (RuleCall)cMetricAssignment_18_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		private final Keyword cDatasetKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cDatasetAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cDatasetDatasetParserRuleCall_5_0 = (RuleCall)cDatasetAssignment_5.eContents().get(0);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cCommaKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cDatasetAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cDatasetDatasetParserRuleCall_6_1_0 = (RuleCall)cDatasetAssignment_6_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketSemicolonKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cDatasetUnprivilegedGroupKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Assignment cDatasetUnprivilegedGroupAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_9_0 = (RuleCall)cDatasetUnprivilegedGroupAssignment_9.eContents().get(0);
+		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
+		private final Keyword cCommaKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
+		private final Assignment cDatasetUnprivilegedGroupAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
+		private final RuleCall cDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_10_1_0 = (RuleCall)cDatasetUnprivilegedGroupAssignment_10_1.eContents().get(0);
+		private final Keyword cDatasetPrivilegedGroupKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Assignment cDatasetPrivilegedGroupAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_12_0 = (RuleCall)cDatasetPrivilegedGroupAssignment_12.eContents().get(0);
+		private final Group cGroup_13 = (Group)cGroup.eContents().get(13);
+		private final Keyword cCommaKeyword_13_0 = (Keyword)cGroup_13.eContents().get(0);
+		private final Assignment cDatasetPrivilegedGroupAssignment_13_1 = (Assignment)cGroup_13.eContents().get(1);
+		private final RuleCall cDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_13_1_0 = (RuleCall)cDatasetPrivilegedGroupAssignment_13_1.eContents().get(0);
+		private final Keyword cMetricKeyword_14 = (Keyword)cGroup.eContents().get(14);
+		private final Keyword cLeftCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
+		private final Assignment cMetricAssignment_16 = (Assignment)cGroup.eContents().get(16);
+		private final RuleCall cMetricMetricParserRuleCall_16_0 = (RuleCall)cMetricAssignment_16.eContents().get(0);
+		private final Group cGroup_17 = (Group)cGroup.eContents().get(17);
+		private final Keyword cCommaKeyword_17_0 = (Keyword)cGroup_17.eContents().get(0);
+		private final Assignment cMetricAssignment_17_1 = (Assignment)cGroup_17.eContents().get(1);
+		private final RuleCall cMetricMetricParserRuleCall_17_1_0 = (RuleCall)cMetricAssignment_17_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketSemicolonKeyword_18 = (Keyword)cGroup.eContents().get(18);
 		private final Keyword cRightCurlyBracketSemicolonKeyword_19 = (Keyword)cGroup.eContents().get(19);
-		private final Keyword cRightCurlyBracketSemicolonKeyword_20 = (Keyword)cGroup.eContents().get(20);
 		
 		//GroupAnalysis returns GroupAnalysis:
 		//    'GroupAnalysis'
 		//    //name=EString
 		//    '{'
-		//        ('scope:' scope=EString)?';'
+		//        ('scope:' scope=EString';')?
 		//        'dataset:' '{' dataset+=Dataset ( "," dataset+=Dataset)* '};'
 		//        'datasetUnprivilegedGroup:' datasetUnprivilegedGroup+=DatasetSensitiveGroup ( "," datasetUnprivilegedGroup+=DatasetSensitiveGroup)*
 		//        'datasetPrivilegedGroup:' datasetPrivilegedGroup+=DatasetSensitiveGroup ( "," datasetPrivilegedGroup+=DatasetSensitiveGroup)*
@@ -663,7 +663,7 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//'GroupAnalysis'
 		////name=EString
 		//'{'
-		//    ('scope:' scope=EString)?';'
+		//    ('scope:' scope=EString';')?
 		//    'dataset:' '{' dataset+=Dataset ( "," dataset+=Dataset)* '};'
 		//    'datasetUnprivilegedGroup:' datasetUnprivilegedGroup+=DatasetSensitiveGroup ( "," datasetUnprivilegedGroup+=DatasetSensitiveGroup)*
 		//    'datasetPrivilegedGroup:' datasetPrivilegedGroup+=DatasetSensitiveGroup ( "," datasetPrivilegedGroup+=DatasetSensitiveGroup)*
@@ -678,7 +678,7 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//('scope:' scope=EString)?
+		//('scope:' scope=EString';')?
 		public Group getGroup_2() { return cGroup_2; }
 		
 		//'scope:'
@@ -691,106 +691,106 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		public RuleCall getScopeEStringParserRuleCall_2_1_0() { return cScopeEStringParserRuleCall_2_1_0; }
 		
 		//';'
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+		public Keyword getSemicolonKeyword_2_2() { return cSemicolonKeyword_2_2; }
 		
 		//'dataset:'
-		public Keyword getDatasetKeyword_4() { return cDatasetKeyword_4; }
+		public Keyword getDatasetKeyword_3() { return cDatasetKeyword_3; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_5() { return cLeftCurlyBracketKeyword_5; }
+		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 		
 		//dataset+=Dataset
-		public Assignment getDatasetAssignment_6() { return cDatasetAssignment_6; }
+		public Assignment getDatasetAssignment_5() { return cDatasetAssignment_5; }
 		
 		//Dataset
-		public RuleCall getDatasetDatasetParserRuleCall_6_0() { return cDatasetDatasetParserRuleCall_6_0; }
+		public RuleCall getDatasetDatasetParserRuleCall_5_0() { return cDatasetDatasetParserRuleCall_5_0; }
 		
 		//( "," dataset+=Dataset)*
-		public Group getGroup_7() { return cGroup_7; }
+		public Group getGroup_6() { return cGroup_6; }
 		
 		//","
-		public Keyword getCommaKeyword_7_0() { return cCommaKeyword_7_0; }
+		public Keyword getCommaKeyword_6_0() { return cCommaKeyword_6_0; }
 		
 		//dataset+=Dataset
-		public Assignment getDatasetAssignment_7_1() { return cDatasetAssignment_7_1; }
+		public Assignment getDatasetAssignment_6_1() { return cDatasetAssignment_6_1; }
 		
 		//Dataset
-		public RuleCall getDatasetDatasetParserRuleCall_7_1_0() { return cDatasetDatasetParserRuleCall_7_1_0; }
+		public RuleCall getDatasetDatasetParserRuleCall_6_1_0() { return cDatasetDatasetParserRuleCall_6_1_0; }
 		
 		//'};'
-		public Keyword getRightCurlyBracketSemicolonKeyword_8() { return cRightCurlyBracketSemicolonKeyword_8; }
+		public Keyword getRightCurlyBracketSemicolonKeyword_7() { return cRightCurlyBracketSemicolonKeyword_7; }
 		
 		//'datasetUnprivilegedGroup:'
-		public Keyword getDatasetUnprivilegedGroupKeyword_9() { return cDatasetUnprivilegedGroupKeyword_9; }
+		public Keyword getDatasetUnprivilegedGroupKeyword_8() { return cDatasetUnprivilegedGroupKeyword_8; }
 		
 		//datasetUnprivilegedGroup+=DatasetSensitiveGroup
-		public Assignment getDatasetUnprivilegedGroupAssignment_10() { return cDatasetUnprivilegedGroupAssignment_10; }
+		public Assignment getDatasetUnprivilegedGroupAssignment_9() { return cDatasetUnprivilegedGroupAssignment_9; }
 		
 		//DatasetSensitiveGroup
-		public RuleCall getDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_10_0() { return cDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_10_0; }
+		public RuleCall getDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_9_0() { return cDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_9_0; }
 		
 		//( "," datasetUnprivilegedGroup+=DatasetSensitiveGroup)*
-		public Group getGroup_11() { return cGroup_11; }
+		public Group getGroup_10() { return cGroup_10; }
 		
 		//","
-		public Keyword getCommaKeyword_11_0() { return cCommaKeyword_11_0; }
+		public Keyword getCommaKeyword_10_0() { return cCommaKeyword_10_0; }
 		
 		//datasetUnprivilegedGroup+=DatasetSensitiveGroup
-		public Assignment getDatasetUnprivilegedGroupAssignment_11_1() { return cDatasetUnprivilegedGroupAssignment_11_1; }
+		public Assignment getDatasetUnprivilegedGroupAssignment_10_1() { return cDatasetUnprivilegedGroupAssignment_10_1; }
 		
 		//DatasetSensitiveGroup
-		public RuleCall getDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_11_1_0() { return cDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_11_1_0; }
+		public RuleCall getDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_10_1_0() { return cDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_10_1_0; }
 		
 		//'datasetPrivilegedGroup:'
-		public Keyword getDatasetPrivilegedGroupKeyword_12() { return cDatasetPrivilegedGroupKeyword_12; }
+		public Keyword getDatasetPrivilegedGroupKeyword_11() { return cDatasetPrivilegedGroupKeyword_11; }
 		
 		//datasetPrivilegedGroup+=DatasetSensitiveGroup
-		public Assignment getDatasetPrivilegedGroupAssignment_13() { return cDatasetPrivilegedGroupAssignment_13; }
+		public Assignment getDatasetPrivilegedGroupAssignment_12() { return cDatasetPrivilegedGroupAssignment_12; }
 		
 		//DatasetSensitiveGroup
-		public RuleCall getDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_13_0() { return cDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_13_0; }
+		public RuleCall getDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_12_0() { return cDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_12_0; }
 		
 		//( "," datasetPrivilegedGroup+=DatasetSensitiveGroup)*
-		public Group getGroup_14() { return cGroup_14; }
+		public Group getGroup_13() { return cGroup_13; }
 		
 		//","
-		public Keyword getCommaKeyword_14_0() { return cCommaKeyword_14_0; }
+		public Keyword getCommaKeyword_13_0() { return cCommaKeyword_13_0; }
 		
 		//datasetPrivilegedGroup+=DatasetSensitiveGroup
-		public Assignment getDatasetPrivilegedGroupAssignment_14_1() { return cDatasetPrivilegedGroupAssignment_14_1; }
+		public Assignment getDatasetPrivilegedGroupAssignment_13_1() { return cDatasetPrivilegedGroupAssignment_13_1; }
 		
 		//DatasetSensitiveGroup
-		public RuleCall getDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_14_1_0() { return cDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_14_1_0; }
+		public RuleCall getDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_13_1_0() { return cDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_13_1_0; }
 		
 		//'metric:'
-		public Keyword getMetricKeyword_15() { return cMetricKeyword_15; }
+		public Keyword getMetricKeyword_14() { return cMetricKeyword_14; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_16() { return cLeftCurlyBracketKeyword_16; }
+		public Keyword getLeftCurlyBracketKeyword_15() { return cLeftCurlyBracketKeyword_15; }
 		
 		//metric+=Metric
-		public Assignment getMetricAssignment_17() { return cMetricAssignment_17; }
+		public Assignment getMetricAssignment_16() { return cMetricAssignment_16; }
 		
 		//Metric
-		public RuleCall getMetricMetricParserRuleCall_17_0() { return cMetricMetricParserRuleCall_17_0; }
+		public RuleCall getMetricMetricParserRuleCall_16_0() { return cMetricMetricParserRuleCall_16_0; }
 		
 		//( "," metric+=Metric)*
-		public Group getGroup_18() { return cGroup_18; }
+		public Group getGroup_17() { return cGroup_17; }
 		
 		//","
-		public Keyword getCommaKeyword_18_0() { return cCommaKeyword_18_0; }
+		public Keyword getCommaKeyword_17_0() { return cCommaKeyword_17_0; }
 		
 		//metric+=Metric
-		public Assignment getMetricAssignment_18_1() { return cMetricAssignment_18_1; }
+		public Assignment getMetricAssignment_17_1() { return cMetricAssignment_17_1; }
 		
 		//Metric
-		public RuleCall getMetricMetricParserRuleCall_18_1_0() { return cMetricMetricParserRuleCall_18_1_0; }
+		public RuleCall getMetricMetricParserRuleCall_17_1_0() { return cMetricMetricParserRuleCall_17_1_0; }
+		
+		//'};'
+		public Keyword getRightCurlyBracketSemicolonKeyword_18() { return cRightCurlyBracketSemicolonKeyword_18; }
 		
 		//'};'
 		public Keyword getRightCurlyBracketSemicolonKeyword_19() { return cRightCurlyBracketSemicolonKeyword_19; }
-		
-		//'};'
-		public Keyword getRightCurlyBracketSemicolonKeyword_20() { return cRightCurlyBracketSemicolonKeyword_20; }
 	}
 	public class SensitiveVariableValueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.modness.Modness.SensitiveVariableValue");
@@ -904,7 +904,7 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDatasetKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cNameKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cIdKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cNameEStringParserRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
@@ -949,7 +949,7 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//Dataset returns Dataset:
 		//    'Dataset'
 		//    '{'
-		//        'name:' name=EString';'
+		//        'id:' name=EString';'
 		//        ('groundTruthLabelName:' groundTruthLabelName=EString';')?
 		//        ('predictedLabelName:' predictedLabelName=EString';')?
 		//        'filePath:' filePath=EString';'
@@ -961,7 +961,7 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		
 		//'Dataset'
 		//'{'
-		//    'name:' name=EString';'
+		//    'id:' name=EString';'
 		//    ('groundTruthLabelName:' groundTruthLabelName=EString';')?
 		//    ('predictedLabelName:' predictedLabelName=EString';')?
 		//    'filePath:' filePath=EString';'
@@ -977,8 +977,8 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
-		//'name:'
-		public Keyword getNameKeyword_2() { return cNameKeyword_2; }
+		//'id:'
+		public Keyword getIdKeyword_2() { return cIdKeyword_2; }
 		
 		//name=EString
 		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
@@ -3238,7 +3238,7 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	//    'GroupAnalysis'
 	//    //name=EString
 	//    '{'
-	//        ('scope:' scope=EString)?';'
+	//        ('scope:' scope=EString';')?
 	//        'dataset:' '{' dataset+=Dataset ( "," dataset+=Dataset)* '};'
 	//        'datasetUnprivilegedGroup:' datasetUnprivilegedGroup+=DatasetSensitiveGroup ( "," datasetUnprivilegedGroup+=DatasetSensitiveGroup)*
 	//        'datasetPrivilegedGroup:' datasetPrivilegedGroup+=DatasetSensitiveGroup ( "," datasetPrivilegedGroup+=DatasetSensitiveGroup)*
@@ -3282,7 +3282,7 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	//Dataset returns Dataset:
 	//    'Dataset'
 	//    '{'
-	//        'name:' name=EString';'
+	//        'id:' name=EString';'
 	//        ('groundTruthLabelName:' groundTruthLabelName=EString';')?
 	//        ('predictedLabelName:' predictedLabelName=EString';')?
 	//        'filePath:' filePath=EString';'

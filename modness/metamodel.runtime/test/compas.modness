@@ -35,7 +35,7 @@ GroupBias "compas"{
 					only if relevant features say that";
 			dataset: {
 				Dataset {
-					name: 'compas';
+					id: 'compas';
 					groundTruthLabelName: 'two-year-recid';
 					predictedLabelName: 'prediction';
 					filePath: 'compas.csv';
@@ -44,6 +44,7 @@ GroupBias "compas"{
 						mappingOutcome: "Non Recidiv";
 						value: { operator: EQUAL; value: 0.0; };
 					};
+					
 				datasetSentiveVariable: {
 					DatasetSensitiveVariable{
 						name: "sex";
@@ -85,13 +86,14 @@ GroupBias "compas"{
 		datasetUnprivilegedGroup: {
 				id: "non-white-men";
 				mappingGroup: "non-white men";
-				sensitiveVariables: ("compas.sex.female", "compas.sex.male");
+				sensitiveVariables: ("compas.sex.female", 
+									 "compas.sex.male");
 		};
 		datasetPrivilegedGroup: {
 			id: "white-women";
 			mappingGroup: "white women";
-			sensitiveVariables: ("compas.sex.male","compas.race.white");
-			
+			sensitiveVariables: ("compas.sex.male",
+								 "compas.race.white");	
 		};
 		
 		metric: {

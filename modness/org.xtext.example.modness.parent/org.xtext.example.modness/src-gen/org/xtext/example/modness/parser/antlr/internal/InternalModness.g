@@ -961,23 +961,23 @@ ruleGroupAnalysis returns [EObject current=null]
 					}
 				)
 			)
+			otherlv_4=';'
+			{
+				newLeafNode(otherlv_4, grammarAccess.getGroupAnalysisAccess().getSemicolonKeyword_2_2());
+			}
 		)?
-		otherlv_4=';'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getGroupAnalysisAccess().getSemicolonKeyword_3());
-		}
 		otherlv_5='dataset:'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getGroupAnalysisAccess().getDatasetKeyword_4());
+			newLeafNode(otherlv_5, grammarAccess.getGroupAnalysisAccess().getDatasetKeyword_3());
 		}
 		otherlv_6='{'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getGroupAnalysisAccess().getLeftCurlyBracketKeyword_5());
+			newLeafNode(otherlv_6, grammarAccess.getGroupAnalysisAccess().getLeftCurlyBracketKeyword_4());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetDatasetParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetDatasetParserRuleCall_5_0());
 				}
 				lv_dataset_7_0=ruleDataset
 				{
@@ -996,12 +996,12 @@ ruleGroupAnalysis returns [EObject current=null]
 		(
 			otherlv_8=','
 			{
-				newLeafNode(otherlv_8, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_7_0());
+				newLeafNode(otherlv_8, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_6_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetDatasetParserRuleCall_7_1_0());
+						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetDatasetParserRuleCall_6_1_0());
 					}
 					lv_dataset_9_0=ruleDataset
 					{
@@ -1020,16 +1020,16 @@ ruleGroupAnalysis returns [EObject current=null]
 		)*
 		otherlv_10='};'
 		{
-			newLeafNode(otherlv_10, grammarAccess.getGroupAnalysisAccess().getRightCurlyBracketSemicolonKeyword_8());
+			newLeafNode(otherlv_10, grammarAccess.getGroupAnalysisAccess().getRightCurlyBracketSemicolonKeyword_7());
 		}
 		otherlv_11='datasetUnprivilegedGroup:'
 		{
-			newLeafNode(otherlv_11, grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupKeyword_9());
+			newLeafNode(otherlv_11, grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupKeyword_8());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_10_0());
+					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_9_0());
 				}
 				lv_datasetUnprivilegedGroup_12_0=ruleDatasetSensitiveGroup
 				{
@@ -1048,12 +1048,12 @@ ruleGroupAnalysis returns [EObject current=null]
 		(
 			otherlv_13=','
 			{
-				newLeafNode(otherlv_13, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_11_0());
+				newLeafNode(otherlv_13, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_10_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_11_1_0());
+						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetUnprivilegedGroupDatasetSensitiveGroupParserRuleCall_10_1_0());
 					}
 					lv_datasetUnprivilegedGroup_14_0=ruleDatasetSensitiveGroup
 					{
@@ -1072,12 +1072,12 @@ ruleGroupAnalysis returns [EObject current=null]
 		)*
 		otherlv_15='datasetPrivilegedGroup:'
 		{
-			newLeafNode(otherlv_15, grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupKeyword_12());
+			newLeafNode(otherlv_15, grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupKeyword_11());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_13_0());
+					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_12_0());
 				}
 				lv_datasetPrivilegedGroup_16_0=ruleDatasetSensitiveGroup
 				{
@@ -1096,12 +1096,12 @@ ruleGroupAnalysis returns [EObject current=null]
 		(
 			otherlv_17=','
 			{
-				newLeafNode(otherlv_17, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_14_0());
+				newLeafNode(otherlv_17, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_13_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_14_1_0());
+						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getDatasetPrivilegedGroupDatasetSensitiveGroupParserRuleCall_13_1_0());
 					}
 					lv_datasetPrivilegedGroup_18_0=ruleDatasetSensitiveGroup
 					{
@@ -1120,16 +1120,16 @@ ruleGroupAnalysis returns [EObject current=null]
 		)*
 		otherlv_19='metric:'
 		{
-			newLeafNode(otherlv_19, grammarAccess.getGroupAnalysisAccess().getMetricKeyword_15());
+			newLeafNode(otherlv_19, grammarAccess.getGroupAnalysisAccess().getMetricKeyword_14());
 		}
 		otherlv_20='{'
 		{
-			newLeafNode(otherlv_20, grammarAccess.getGroupAnalysisAccess().getLeftCurlyBracketKeyword_16());
+			newLeafNode(otherlv_20, grammarAccess.getGroupAnalysisAccess().getLeftCurlyBracketKeyword_15());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getMetricMetricParserRuleCall_17_0());
+					newCompositeNode(grammarAccess.getGroupAnalysisAccess().getMetricMetricParserRuleCall_16_0());
 				}
 				lv_metric_21_0=ruleMetric
 				{
@@ -1148,12 +1148,12 @@ ruleGroupAnalysis returns [EObject current=null]
 		(
 			otherlv_22=','
 			{
-				newLeafNode(otherlv_22, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_18_0());
+				newLeafNode(otherlv_22, grammarAccess.getGroupAnalysisAccess().getCommaKeyword_17_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getMetricMetricParserRuleCall_18_1_0());
+						newCompositeNode(grammarAccess.getGroupAnalysisAccess().getMetricMetricParserRuleCall_17_1_0());
 					}
 					lv_metric_23_0=ruleMetric
 					{
@@ -1172,11 +1172,11 @@ ruleGroupAnalysis returns [EObject current=null]
 		)*
 		otherlv_24='};'
 		{
-			newLeafNode(otherlv_24, grammarAccess.getGroupAnalysisAccess().getRightCurlyBracketSemicolonKeyword_19());
+			newLeafNode(otherlv_24, grammarAccess.getGroupAnalysisAccess().getRightCurlyBracketSemicolonKeyword_18());
 		}
 		otherlv_25='};'
 		{
-			newLeafNode(otherlv_25, grammarAccess.getGroupAnalysisAccess().getRightCurlyBracketSemicolonKeyword_20());
+			newLeafNode(otherlv_25, grammarAccess.getGroupAnalysisAccess().getRightCurlyBracketSemicolonKeyword_19());
 		}
 	)
 ;
@@ -1372,9 +1372,9 @@ ruleDataset returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getDatasetAccess().getLeftCurlyBracketKeyword_1());
 		}
-		otherlv_2='name:'
+		otherlv_2='id:'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getDatasetAccess().getNameKeyword_2());
+			newLeafNode(otherlv_2, grammarAccess.getDatasetAccess().getIdKeyword_2());
 		}
 		(
 			(

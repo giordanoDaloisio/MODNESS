@@ -95,7 +95,7 @@ Metric returns Metric:
 Dataset returns Dataset:
 	'Dataset'
 	'{'
-		'name:' name=EString';'
+		'id:' name=EString';'
 		('groundTruthLabelName:' groundTruthLabelName=EString';')?
 		('predictedLabelName:' predictedLabelName=EString';')?
 		'filePath:' filePath=EString';'
