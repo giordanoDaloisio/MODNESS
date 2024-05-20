@@ -85,16 +85,16 @@ metrics = FairnessMetric(data, dataset_unprivileged_group, dataset_privileged_gr
 
 [for (metric: Metric | biasModel.metric)]
 
-[if (metric.function.oclIsTypeOf(ExistingFairnessMetric))]
+[if (metric.function.oclIsTypeOf(ExistingGroupFairnessMetric))]
 
-[if (metric.function.oclAsType(ExistingFairnessMetric).metric = FairnessMetric :: STATISTICAL_PARITY )]
+[if (metric.function.oclAsType(ExistingGroupFairnessMetric).metric = GroupFairnessMetric :: STATISTICAL_PARITY )]
 print(metrics.statistical_parity_difference())
 if abs((metrics.statistical_parity_difference()) > threshold + tolerance_value):
     print("Biased")
 else:
     print("Fair")
 [/if]
-[if (metric.function.oclAsType(ExistingFairnessMetric).metric = FairnessMetric :: EQUALIZED_ODDS )]
+[if (metric.function.oclAsType(ExistingGroupFairnessMetric).metric = GroupFairnessMetric :: EQUALIZED_ODDS )]
 print(metrics.equal_opportunity_difference())
 if abs(metrics.equal_opportunity_difference()) > threshold + tolerance_value:
     print("Biased")
@@ -102,7 +102,7 @@ else:
     print("Fair")
 [/if]
 [/if]
-[if (metric.function.oclIsTypeOf(ExistingFairnessMetric)= false)]
+[if (metric.function.oclIsTypeOf(ExistingGroupFairnessMetric)= false)]
 [metric.name/] = metrics.group_size(
     'frequency == 0 and ranking == 1')/metrics.group_size('ranking == 1')
 

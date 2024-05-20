@@ -1,0 +1,2 @@
+,fairness_method,model,stat_par,acc,hmean
+0,NO_ONE,logreg,0.291,0.673,0.688

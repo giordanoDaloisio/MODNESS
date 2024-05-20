@@ -3,14 +3,14 @@
   <source>HUMAN_DISCRIMINATION</source>
   <source>WRONG_SAMPLING</source>
   <sensitiveVariables name="gender">
-    <sensitiveVariableValue value="male"/>
-    <sensitiveVariableValue value="female"/>
+    <sensitiveVariableValue name="male"/>
+    <sensitiveVariableValue name="female"/>
   </sensitiveVariables>
   <sensitiveVariables name="race">
-    <sensitiveVariableValue value="white"/>
-    <sensitiveVariableValue value="non-white"/>
+    <sensitiveVariableValue name="white"/>
+    <sensitiveVariableValue name="non-white"/>
   </sensitiveVariables>
-  <positiveOutcome value="non recidiv"/>
+  <positiveOutcome name="non-recidiv"/>
   <unprivilegedGroup name="non-white men" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.0 //@sensitiveVariables.1/@sensitiveVariableValue.1"/>
   <privilegedGroup name="white female" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.1 //@sensitiveVariables.1/@sensitiveVariableValue.0"/>
   <analysis name="compas" scope="all people must be predicted as recidiv only if the attributes different from the sensitive variables say that">

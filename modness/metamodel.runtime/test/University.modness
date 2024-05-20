@@ -1,0 +1,101 @@
+
+GroupBias "university"{
+	highLevelDefinition: {
+		domain: "education";
+		source: WRONG_SAMPLING;
+		sensitiveVariables: {
+			SensitiveVariable{
+				name: "gender";
+				values: "male","female";
+			}
+		};
+		positiveOutcome: "positive admission";
+		unprivilegedGroup: {
+			SensitiveGroup{
+				name: "women";
+				sensitiveValue: "gender.female";
+			};
+		};
+		privilegedGroup: {
+			SensitiveGroup{
+				name: "men";
+				sensitiveValue: "gender.male";
+			};
+		};	
+	};
+	
+	analysis: {
+		GroupAnalysis{
+			scope: "all people must have 
+					same admission 
+					probability despite gender";
+			dataset: {
+				Dataset {
+					id: 'admissions';
+					predictedLabelName: 'admitted';
+					filePath: 'admissions.csv';
+					positiveOutcome: {
+						id: "admission";
+						mappingOutcome: "positive admission";
+						value: {
+							operator: EQUAL;
+							value: 1.0;
+						};
+					};
+				datasetSentiveVariable: {
+					DatasetSensitiveVariable{
+						name: "sex";
+						mappingSensitiveVariable: gender;
+						values: {
+							SensitiveVariableValue{
+								id: "female";
+								mappingValue: "gender.female";
+								value: {
+									operator: EQUAL;
+									value: 0.0;	
+								};
+							},
+							SensitiveVariableValue{
+								id: "male";						
+								mappingValue: "gender.male";
+								value: {
+									operator: EQUAL;
+									value: 1.0;
+								};
+							}
+						}
+					}
+				};
+				
+			}
+		};
+		datasetUnprivilegedGroup: {
+				id: 'women';
+				mappingGroup: women;
+				sensitiveVariables: ("admissions.sex.female");
+		};
+		datasetPrivilegedGroup: {
+			id: 'men';
+			mappingGroup: men;
+			sensitiveVariables: ("admissions.sex.male");
+			
+		};
+		
+		metric: {
+				Metric{
+					name: "StatisticalParity";
+					toleranceValue: 0.2;
+					function: ExistingGroupFairnessMetric { 
+						metric: STATISTICAL_PARITY; 
+					};
+					optimalValue: {
+						operator: EQUAL;
+						value: 0.0;
+					};
+				};
+			};
+		};
+	
+	};
+
+}

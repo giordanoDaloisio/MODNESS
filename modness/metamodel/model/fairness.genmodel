@@ -119,7 +119,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//Bias/privilegedGroup"/>
     </genClasses>
     <genClasses ecoreClass="Fairness.ecore#//PositiveOutcome">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//PositiveOutcome/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//PositiveOutcome/name"/>
     </genClasses>
     <genClasses ecoreClass="Fairness.ecore#//GroupBias">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//GroupBias/analysis"/>
@@ -135,7 +135,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fairness.ecore#//VariableValue/operator"/>
     </genClasses>
     <genClasses ecoreClass="Fairness.ecore#//SensitiveVariableValue">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//SensitiveVariableValue/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fairness.ecore#//SensitiveVariableValue/name"/>
     </genClasses>
     <genClasses ecoreClass="Fairness.ecore#//DatasetSize"/>
     <genClasses ecoreClass="Fairness.ecore#//Logaritm">

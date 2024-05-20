@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fairness.SensitiveVariableValue#getValue <em>Value</em>}</li>
+ *   <li>{@link fairness.SensitiveVariableValue#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see fairness.FairnessPackage#getSensitiveVariableValue()
@@ -24,24 +24,24 @@ import org.eclipse.emf.ecore.EObject;
 public interface SensitiveVariableValue extends EObject {
 
 	/**
-	 * Returns the value of the '<em><b>Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(String)
-	 * @see fairness.FairnessPackage#getSensitiveVariableValue_Value()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see fairness.FairnessPackage#getSensitiveVariableValue_Name()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getValue();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link fairness.SensitiveVariableValue#getValue <em>Value</em>}' attribute.
+	 * Sets the value of the '{@link fairness.SensitiveVariableValue#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value</em>' attribute.
-	 * @see #getValue()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setValue(String value);
+	void setName(String value);
 } // SensitiveVariableValue
