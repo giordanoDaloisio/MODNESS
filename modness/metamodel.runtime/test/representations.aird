@@ -10,4 +10,5 @@
   <semanticResources>University.modness</semanticResources>
   <semanticResources>Compas.modness</semanticResources>
   <semanticResources>TPL.modness</semanticResources>
+  <semanticResources>Test.modness</semanticResources>
 </viewpoint:DAnalysis>

@@ -1,28 +1,27 @@
-
-		GroupBias "TPL"{
-			highLevelDefinition: {
-				domain: "recommender systems";
-				source: WRONG_ALGORITHM_BEHAVIOUR;
-				sensitiveVariables: {
-					SensitiveVariable{
-						name: "popularity";
-						values: "popular","unpopular";
-					}
-				};
-				positiveOutcome: "recommendation";
-				unprivilegedGroup: {
-					SensitiveGroup{
-						name: "unpopular libraries";
-						sensitiveValue: "popularity.unpopular";
-					};
-				};
-				privilegedGroup: {
-					SensitiveGroup{
-						name: "popular libraries";
-						sensitiveValue: "popularity.popular";
-					};
-				};	
+GroupBias "TPL"{
+	highLevelDefinition: {
+		domain: "recommender systems";
+		source: WRONG_ALGORITHM_BEHAVIOUR;
+		sensitiveVariables: {
+			SensitiveVariable{
+				name: "popularity";
+				values: "popular","unpopular";
+			}
+		};
+		positiveOutcome: "recommendation";
+		unprivilegedGroup: {
+			SensitiveGroup{
+				name: "unpopular libraries";
+				sensitiveValue: "popularity.unpopular";
 			};
+		};
+		privilegedGroup: {
+			SensitiveGroup{
+				name: "popular libraries";
+				sensitiveValue: "popularity.popular";
+			};
+		};	
+	};
 	
 	analysis: {
 		GroupAnalysis{
@@ -110,7 +109,6 @@
 				};	
 			};
 		};
-	
-	};
+		};
 	};	
 }
