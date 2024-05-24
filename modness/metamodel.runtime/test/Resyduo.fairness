@@ -3,14 +3,14 @@
   <source>RESULT_RANKING</source>
   <source>WRONG_ALGORITHM_BEHAVIOUR</source>
   <sensitiveVariables name="views">
-    <sensitiveVariableValue value="high viewed projects"/>
-    <sensitiveVariableValue value="low viewed projects"/>
+    <sensitiveVariableValue name="high-views"/>
+    <sensitiveVariableValue name="low-views"/>
   </sensitiveVariables>
   <sensitiveVariables name="respects">
-    <sensitiveVariableValue value="high respected projects"/>
-    <sensitiveVariableValue value="low respected projects"/>
+    <sensitiveVariableValue name="high-respect"/>
+    <sensitiveVariableValue name="low-respect"/>
   </sensitiveVariables>
-  <positiveOutcome value="high ranking"/>
+  <positiveOutcome name="high ranking"/>
   <unprivilegedGroup name="low viewed projects" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.1"/>
   <unprivilegedGroup name="low respected projects" sensitiveValue="//@sensitiveVariables.1/@sensitiveVariableValue.1"/>
   <privilegedGroup name="high viewed projects" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.0"/>

@@ -41,7 +41,7 @@ GroupBias "university"{
 							value: 1.0;
 						};
 					};
-				datasetSentiveVariable: {
+				datasetSensitiveVariable: {
 					DatasetSensitiveVariable{
 						name: "sex";
 						mappingSensitiveVariable: gender;

@@ -1,5 +1,3 @@
-
-
 GroupBias "compas"{
 	highLevelDefinition: {
 		domain: "justice";
@@ -45,7 +43,7 @@ GroupBias "compas"{
 						value: { operator: EQUAL; value: 0.0; };
 					};
 					
-				datasetSentiveVariable: {
+				datasetSensitiveVariable: {
 					DatasetSensitiveVariable{
 						name: "sex";
 						mappingSensitiveVariable: gender;

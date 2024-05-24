@@ -2,10 +2,10 @@
 <fairness:GroupBias xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fairness="http://www.example.org/fairness" name="University" domain="education">
   <source>WRONG_SAMPLING</source>
   <sensitiveVariables name="gender">
-    <sensitiveVariableValue value="female"/>
-    <sensitiveVariableValue value="male"/>
+    <sensitiveVariableValue name="female"/>
+    <sensitiveVariableValue name="male"/>
   </sensitiveVariables>
-  <positiveOutcome value="admitted"/>
+  <positiveOutcome name="admitted"/>
   <unprivilegedGroup name="female" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.0"/>
   <privilegedGroup name="male" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.1"/>
   <analysis name="statistical parity" scope="male and female must have the same probability of behing admitted">

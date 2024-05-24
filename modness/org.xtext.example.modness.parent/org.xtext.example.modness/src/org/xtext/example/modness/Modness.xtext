@@ -101,7 +101,7 @@ Dataset returns Dataset:
 		'filePath:' filePath=EString';'
 		('otherVariable:' '{' otherVariable+=OtherVariable ( "," otherVariable+=OtherVariable)* '};' )?
 		'positiveOutcome:' positiveOutcome=DatasetPositiveOutcome
-		'datasetSentiveVariable:' '{' datasetSentiveVariable+=DatasetSensitiveVariable ( "," datasetSentiveVariable+=DatasetSensitiveVariable)* '};' 
+		'datasetSensitiveVariable:' '{' datasetSentiveVariable+=DatasetSensitiveVariable ( "," datasetSentiveVariable+=DatasetSensitiveVariable)* '};' 
 	'}';
 
 DatasetSensitiveGroup returns DatasetSensitiveGroup:
@@ -219,10 +219,8 @@ OperatorComponent returns OperatorComponent:
 	'};';
 
 OperationValue returns OperationValue:
-	'OperationValue'
-	'{'
-		'value:' value=EFloat';'
-	'}';
+	value=EFloat
+;
 
 LogicalCondition returns LogicalCondition:
 	{LogicalCondition}
