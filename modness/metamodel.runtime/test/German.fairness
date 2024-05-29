@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fairness:GroupBias xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fairness="http://www.example.org/fairness">
   <sensitiveVariables name="gender">
-    <sensitiveVariableValue value="woman"/>
-    <sensitiveVariableValue value="man"/>
+    <sensitiveVariableValue name="man"/>
+    <sensitiveVariableValue name="women"/>
   </sensitiveVariables>
-  <positiveOutcome value="credit granted"/>
+  <positiveOutcome name="granted"/>
   <unprivilegedGroup name="women" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.0"/>
   <privilegedGroup name="men" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.1"/>
   <analysis name="german_biased" scope="A person should have a credit granted regardless their gender">

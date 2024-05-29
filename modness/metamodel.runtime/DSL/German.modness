@@ -1,0 +1,146 @@
+GroupBias "german"{
+	highLevelDefinition: {
+		domain: "financial";
+		source:HUMAN_DISCRIMINATION;
+		sensitiveVariables: {
+			SensitiveVariable{
+				name: "gender";
+				values: "male","female";
+			}
+		};
+		positiveOutcome: "Credit Granted";
+		unprivilegedGroup: {
+			SensitiveGroup{
+				name: "women";
+				sensitiveValue:"gender.female";
+			};
+		};
+		privilegedGroup: {
+			SensitiveGroup{
+				name: "men";
+				sensitiveValue: "gender.male";
+			};
+		};	
+	};
+	
+	analysis: {
+		GroupAnalysis{
+			dataset: {
+				Dataset {
+					id: 'german';
+					groundTruthLabelName: 'credit';
+					predictedLabelName: 'prediction';
+					filePath: 'german.csv';
+					positiveOutcome: {
+						id: "granted";
+						mappingOutcome: "Credit Granted";
+						value: { operator: EQUAL; value: 1.0; };
+					};
+					
+				datasetSensitiveVariable: {
+					DatasetSensitiveVariable{
+						name: "sex";
+						mappingSensitiveVariable: gender;
+						values: {
+							SensitiveVariableValue{
+								id: "female";
+								mappingValue: "gender.female";
+								value: { operator: EQUAL; value: 0.0; };
+							},
+							SensitiveVariableValue{
+								id: "male";						
+								mappingValue: "gender.male";
+								value: { operator: EQUAL; value: 1.0; };
+							}
+						}
+					}
+				};	
+			}
+		};
+		datasetUnprivilegedGroup: {
+				id: "women";
+				mappingGroup: women;
+				sensitiveVariables: ("german.sex.female");
+		};
+		datasetPrivilegedGroup: {
+			id: "men";
+			mappingGroup: men;
+			sensitiveVariables: ("german.sex.male");
+		};
+		
+		metric: {
+			Metric{
+				name: "EqualizedOdds";
+				toleranceValue: 0.2;
+				function: ExistingGroupFairnessMetric { 
+					metric: EQUALIZED_ODDS; 
+				};
+				optimalValue: {
+					operator: EQUAL;
+					value: 0.0;
+				};
+			};
+		};
+	};
+	,
+	GroupAnalysis{
+			dataset: {
+				Dataset {
+					id: 'german_fair';
+					groundTruthLabelName: 'credit';
+					predictedLabelName: 'prediction';
+					filePath: 'german_fair.csv';
+					positiveOutcome: {
+						id: "granted";
+						mappingOutcome: "Credit Granted";
+						value: { operator: EQUAL; value: 1.0; };
+					};
+					
+				datasetSensitiveVariable: {
+					DatasetSensitiveVariable{
+						name: "sex";
+						mappingSensitiveVariable: gender;
+						values: {
+							SensitiveVariableValue{
+								id: "female";
+								mappingValue: "gender.female";
+								value: { operator: EQUAL; value: 0.0; };
+							},
+							SensitiveVariableValue{
+								id: "male";						
+								mappingValue: "gender.male";
+								value: { operator: EQUAL; value: 1.0; };
+							}
+						}
+					}
+				};	
+			}
+		};
+		datasetUnprivilegedGroup: {
+				id: "women";
+				mappingGroup: women;
+				sensitiveVariables: ("german.sex.female");
+		};
+		datasetPrivilegedGroup: {
+			id: "men";
+			mappingGroup: men;
+			sensitiveVariables: ("german.sex.male");
+		};
+		
+		metric: {
+			Metric{
+				name: "EqualizedOdds";
+				toleranceValue: 0.2;
+				function: ExistingGroupFairnessMetric { 
+					metric: EQUALIZED_ODDS; 
+				};
+				optimalValue: {
+					operator: EQUAL;
+					value: 0.0;
+				};
+			};
+		};
+	};
+};
+
+}

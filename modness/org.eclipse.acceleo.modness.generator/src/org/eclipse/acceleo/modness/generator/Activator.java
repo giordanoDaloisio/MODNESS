@@ -8,7 +8,7 @@
  * Contributors:
  *     Obeo - initial API and implementation
  *******************************************************************************/
-package org.eclipse.acceleo.fairness.generator;
+package org.eclipse.acceleo.modness.generator;
 
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;
@@ -21,7 +21,7 @@ public class Activator extends Plugin {
     /**
      * The plug-in ID.
      */
-    public static final String PLUGIN_ID = "org.eclipse.acceleo.fairness.generator";
+    public static final String PLUGIN_ID = "org.eclipse.acceleo.modness.generator";
 
     /**
      * The shared instance.

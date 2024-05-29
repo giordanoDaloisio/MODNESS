@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Acceleo Generator Module Runtime Plug-in
-Bundle-SymbolicName: org.eclipse.acceleo.fairness.generator
+Bundle-SymbolicName: org.eclipse.acceleo.modness.generator
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: org.eclipse.acceleo.fairness.generator.Activator
+Bundle-Activator: org.eclipse.acceleo.modness.generator.Activator
 Bundle-Vendor: Eclipse Modeling Project
 Require-Bundle: org.eclipse.core.runtime, 
  org.eclipse.emf.ecore, 
@@ -16,7 +16,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.acceleo.profiler;bundle-version="3.3.0",
  org.eclipse.acceleo.engine;bundle-version="3.3.0",
  com.google.guava
+Bundle-RequiredExecutionEnvironment: JavaSE-21
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
-Export-Package: org.eclipse.acceleo.fairness.generator.main
+Export-Package: org.eclipse.acceleo.modness.generator.common
 

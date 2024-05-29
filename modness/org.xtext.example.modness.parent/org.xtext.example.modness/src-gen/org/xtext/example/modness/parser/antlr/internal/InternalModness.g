@@ -1565,9 +1565,9 @@ ruleDataset returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_22='datasetSentiveVariable:'
+		otherlv_22='datasetSensitiveVariable:'
 		{
-			newLeafNode(otherlv_22, grammarAccess.getDatasetAccess().getDatasetSentiveVariableKeyword_13());
+			newLeafNode(otherlv_22, grammarAccess.getDatasetAccess().getDatasetSensitiveVariableKeyword_13());
 		}
 		otherlv_23='{'
 		{
@@ -2871,45 +2871,23 @@ ruleOperationValue returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='OperationValue'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getOperationValueAccess().getOperationValueKeyword_0());
-		}
-		otherlv_1='{'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getOperationValueAccess().getLeftCurlyBracketKeyword_1());
-		}
-		otherlv_2='value:'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getOperationValueAccess().getValueKeyword_2());
-		}
 		(
-			(
-				{
-					newCompositeNode(grammarAccess.getOperationValueAccess().getValueEFloatParserRuleCall_3_0());
+			{
+				newCompositeNode(grammarAccess.getOperationValueAccess().getValueEFloatParserRuleCall_0());
+			}
+			lv_value_0_0=ruleEFloat
+			{
+				if ($current==null) {
+					$current = createModelElementForParent(grammarAccess.getOperationValueRule());
 				}
-				lv_value_3_0=ruleEFloat
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getOperationValueRule());
-					}
-					set(
-						$current,
-						"value",
-						lv_value_3_0,
-						"org.xtext.example.modness.Modness.EFloat");
-					afterParserOrEnumRuleCall();
-				}
-			)
+				set(
+					$current,
+					"value",
+					lv_value_0_0,
+					"org.xtext.example.modness.Modness.EFloat");
+				afterParserOrEnumRuleCall();
+			}
 		)
-		otherlv_4=';'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getOperationValueAccess().getSemicolonKeyword_4());
-		}
-		otherlv_5='}'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getOperationValueAccess().getRightCurlyBracketKeyword_5());
-		}
 	)
 ;
 

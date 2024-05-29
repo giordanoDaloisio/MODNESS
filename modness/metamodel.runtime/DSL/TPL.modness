@@ -42,16 +42,16 @@ GroupBias "TPL"{
 						};
 						relativeToDatasetSize;				
 					};
-				datasetSentiveVariable: {
+				datasetSensitiveVariable: {
 					DatasetSensitiveVariable{
 						name: "frequency";
 						mappingSensitiveVariable: popularity;
 						values: {
 							SensitiveVariableValue{
 								id: "frequent";
-								mappingValue: "popularity.unpopular";
+								mappingValue: "popularity.popular";
 								value: {
-									operator: MINOR_EQUAL;
+									operator: GREATER;
 									value: 0.8;	
 								};
 								relativeToDatasetSize;
@@ -60,7 +60,7 @@ GroupBias "TPL"{
 								id: "non-frequent";						
 								mappingValue: "popularity.unpopular";
 								value: {
-									operator: GREATER;
+									operator: MINOR_EQUAL;
 									value: 0.8;
 								};
 								relativeToDatasetSize;

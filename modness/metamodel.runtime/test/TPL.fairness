@@ -4,10 +4,10 @@
   <source>WRONG_SAMPLING</source>
   <source>RESULT_RANKING</source>
   <sensitiveVariables name="frequency">
-    <sensitiveVariableValue value="frequent items"/>
-    <sensitiveVariableValue value="non frequent items"/>
+    <sensitiveVariableValue name="frequent"/>
+    <sensitiveVariableValue name="non-frequent"/>
   </sensitiveVariables>
-  <positiveOutcome value="high ranking"/>
+  <positiveOutcome name="recommented"/>
   <unprivilegedGroup name="non frequent items" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.1"/>
   <privilegedGroup name="frequent items" sensitiveValue="//@sensitiveVariables.0/@sensitiveVariableValue.0"/>
   <analysis name="pop_bias" scope="the proportion of recommended items must be equal for all groups">

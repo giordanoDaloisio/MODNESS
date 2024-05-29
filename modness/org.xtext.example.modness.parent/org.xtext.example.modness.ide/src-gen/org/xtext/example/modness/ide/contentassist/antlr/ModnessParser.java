@@ -90,7 +90,6 @@ public class ModnessParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getOperatorComponentAccess().getGroup(), "rule__OperatorComponent__Group__0");
 			builder.put(grammarAccess.getOperatorComponentAccess().getGroup_2(), "rule__OperatorComponent__Group_2__0");
 			builder.put(grammarAccess.getOperatorComponentAccess().getGroup_3(), "rule__OperatorComponent__Group_3__0");
-			builder.put(grammarAccess.getOperationValueAccess().getGroup(), "rule__OperationValue__Group__0");
 			builder.put(grammarAccess.getLogicalConditionAccess().getGroup(), "rule__LogicalCondition__Group__0");
 			builder.put(grammarAccess.getLogicalConditionAccess().getGroup_1(), "rule__LogicalCondition__Group_1__0");
 			builder.put(grammarAccess.getLogicalConditionAccess().getGroup_2(), "rule__LogicalCondition__Group_2__0");
@@ -179,7 +178,7 @@ public class ModnessParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getExistingIndividualFairnessMetricAccess().getMetricAssignment_4(), "rule__ExistingIndividualFairnessMetric__MetricAssignment_4");
 			builder.put(grammarAccess.getOperatorComponentAccess().getFunctionAssignment_2_1(), "rule__OperatorComponent__FunctionAssignment_2_1");
 			builder.put(grammarAccess.getOperatorComponentAccess().getOperationvalueAssignment_3_1(), "rule__OperatorComponent__OperationvalueAssignment_3_1");
-			builder.put(grammarAccess.getOperationValueAccess().getValueAssignment_3(), "rule__OperationValue__ValueAssignment_3");
+			builder.put(grammarAccess.getOperationValueAccess().getValueAssignment(), "rule__OperationValue__ValueAssignment");
 			builder.put(grammarAccess.getLogicalConditionAccess().getValueAssignment_1_1(), "rule__LogicalCondition__ValueAssignment_1_1");
 			builder.put(grammarAccess.getLogicalConditionAccess().getSensitivegroupAssignment_2_1(), "rule__LogicalCondition__SensitivegroupAssignment_2_1");
 			builder.put(grammarAccess.getLogicalConditionAccess().getSublogicalconditionAssignment_3(), "rule__LogicalCondition__SublogicalconditionAssignment_3");

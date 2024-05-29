@@ -467,7 +467,7 @@ public class ModnessSemanticSequencer extends AbstractDelegatingSemanticSequence
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FairnessPackage.Literals.OPERATION_VALUE__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getOperationValueAccess().getValueEFloatParserRuleCall_3_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getOperationValueAccess().getValueEFloatParserRuleCall_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
