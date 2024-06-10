@@ -8,13 +8,14 @@ This repository contains the implementation of the MODNESS framework described i
   - [Table of contents](#table-of-contents)
   - [Project structure](#project-structure)
   - [Evaluation reproduction](#evaluation-reproduction)
-    - [How to import the models and generate the code](#how-to-import-the-metamodel-the-models-and-generate-the-code)
-      - [Requirements](#requirements)
-      - [Import the metamodel and models](#import-the-metamodel-and-models)
-      - [Generate the code](#generate-the-code)
-    - [Run the generated code](#run-the-generated-code)
-      - [Requirements](#requirements-1)
-      - [Run the code](#run-the-code)
+    - [1. How to import the metamodel, the models and generate the code](#1-how-to-import-the-metamodel-the-models-and-generate-the-code)
+      - [1.1 Requirements](#11-requirements)
+      - [1.2 Import the metamodel and models](#12-import-the-metamodel-and-models)
+    - [2. Generate the code](#2-generate-the-code)
+      - [2.1 Run the generated code](#21-run-the-generated-code)
+        - [2.1.1 Requirements](#211-requirements)
+        - [2.1.2 Run the code](#212-run-the-code)
+    - [3. Run the Xtext editor](#3-run-the-xtext-editor)
   - [License](#license)
 
 ## Project structure
@@ -32,7 +33,7 @@ Follow these instructions to reproduce the evaluation performed to answer the **
 
 ### 1. How to import the metamodel, the models and generate the code
 
-In the following we report the steps to import the metamodel and the models, and to generate the code.
+In the following, we report the steps to import the metamodel and the models, and to generate the code.
 
 #### 1.1 Requirements
 
@@ -51,7 +52,7 @@ To open the EMF editor and generate the code and the DSL, you have to download:
 ![import](modness/assets/import_metamodel.png)
 
 3. After the import, you should see the projects in the sidebar
-4. Right click the `metamodel` project and click _Run as...-> Run configuration_
+4. Right-click the `metamodel` project and click _Run as...-> Run configuration_
 5. In the opened window, create a new _Eclipse Application_ and specify the following _Location_:
 
 ![img](modness/assets/launcher.png)
@@ -72,11 +73,26 @@ To open the EMF editor and generate the code and the DSL, you have to download:
 
 where the **Model** is the one produced with the EMF editor and the **Target** is the folder that contains the generated code.
 
+
 3. The generated code should appear in the `generated` folder
+
+
+**Troubleshooting:** It might be necessary to programmatically register the metamodel and link the metamodel project with the Acceleo one (please note that we already added the needed lines of code in the repository). 
+
+ 1. Right-click on the Acceleo project and select _Build path -> Configure Build Path..._, then add the modeling project to the Classpath;
+ 2. Modify the method public void   ```registerResourceFactories(ResourceSet resourceSet)``` in the ```Generate.java``` file by adding: 
+   
+``` 
+resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(FairnessPackage.eINSTANCE.getNsURI(), FairnessPackage.eINSTANCE); 
+```
+In addition, you need to modify the method's annotation from @generated to @generated NOT. 
 
 #### 2.1 Run the generated code
 
-In the following we report the steps to run the generated code.
+In the following, we report the steps to run the generated code.
+
+
+
 
 ##### 2.1.1 Requirements
 
