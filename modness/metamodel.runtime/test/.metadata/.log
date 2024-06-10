@@ -1,0 +1,213 @@
+!SESSION 2024-05-23 23:09:46.077 -----------------------------------------------
+eclipse.buildId=4.31.0.20240307-1200
+java.version=21.0.3
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=it_IT
+Framework arguments:  -product org.eclipse.epp.package.modeling.product
+Command-line arguments:  -product org.eclipse.epp.package.modeling.product -data /Users/giord/Progetti/modeling/modness/modness/metamodel.runtime/test -dev file:/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os macosx -ws cocoa -arch x86_64 -consoleLog
+
+!ENTRY org.eclipse.osgi 4 0 2024-05-23 23:09:47.756
+!MESSAGE Application error
+!STACK 1
+java.lang.UnsatisfiedLinkError: Could not load SWT library. Reasons: 
+	/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib: dlopen(/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib, 0x0001): tried: '/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib' (no such file), '/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible arch
+	no swt-cocoa in java.library.path: /Users/giord/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+	no swt in java.library.path: /Users/giord/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+	/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib: dlopen(/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib, 0x0001): tried: '/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (no such file), '/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))
+	Can't load library: /Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa.jnilib
+	Can't load library: /Users/giord/.swt/lib/macosx/aarch64/libswt.jnilib
+	/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib: dlopen(/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib, 0x0001): tried: '/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (no such file), '/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))
+
+	at org.eclipse.swt.internal.Library.loadLibrary(Library.java:345)
+	at org.eclipse.swt.internal.Library.loadLibrary(Library.java:254)
+	at org.eclipse.swt.internal.C.<clinit>(C.java:19)
+	at org.eclipse.swt.widgets.Display.<clinit>(Display.java:110)
+	at org.eclipse.ui.internal.Workbench.createDisplay(Workbench.java:721)
+	at org.eclipse.ui.PlatformUI.createDisplay(PlatformUI.java:185)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.createDisplay(IDEApplication.java:182)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1432)
+!SESSION 2024-05-23 23:11:13.680 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=it_IT
+Framework arguments:  -product org.eclipse.platform.ide
+Command-line arguments:  -product org.eclipse.platform.ide -data /Users/giord/Progetti/modeling/modness/modness/metamodel.runtime/test -dev file:/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.acceleo.modness.generator 4 0 2024-05-23 23:11:14.603
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.acceleo.modness.generator [125]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=21))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:493)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:2073)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:143)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2064)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2004)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1967)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1883)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:341)
+
+!ENTRY org.eclipse.osgi 4 0 2024-05-23 23:11:15.373
+!MESSAGE Application error
+!STACK 1
+java.lang.UnsatisfiedLinkError: Could not load SWT library. Reasons: 
+	/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib: dlopen(/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib, 0x0001): tried: '/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib' (no such file), '/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an in
+	no swt-cocoa in java.library.path: /Users/giord/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+	no swt in java.library.path: /Users/giord/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+	/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib: dlopen(/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib, 0x0001): tried: '/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (no such file), '/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))
+	Can't load library: /Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa.jnilib
+	Can't load library: /Users/giord/.swt/lib/macosx/aarch64/libswt.jnilib
+	/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib: dlopen(/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib, 0x0001): tried: '/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (no such file), '/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))
+
+	at org.eclipse.swt.internal.Library.loadLibrary(Library.java:345)
+	at org.eclipse.swt.internal.Library.loadLibrary(Library.java:254)
+	at org.eclipse.swt.internal.C.<clinit>(C.java:19)
+	at org.eclipse.swt.widgets.Display.<clinit>(Display.java:110)
+	at org.eclipse.ui.internal.Workbench.createDisplay(Workbench.java:721)
+	at org.eclipse.ui.PlatformUI.createDisplay(PlatformUI.java:185)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.createDisplay(IDEApplication.java:182)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1432)
+!SESSION 2024-05-23 23:14:23.462 -----------------------------------------------
+eclipse.buildId=4.31.0.20240307-1200
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=it_IT
+Framework arguments:  -application org.eclipse.ui.ide.workbench
+Command-line arguments:  -application org.eclipse.ui.ide.workbench -data /Users/giord/Progetti/modeling/modness/modness/metamodel.runtime/test -dev file:/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.acceleo.modness.generator 4 0 2024-05-23 23:14:24.605
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.acceleo.modness.generator [127]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=21))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:493)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:2073)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:143)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2064)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2004)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1967)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1883)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:341)
+
+!ENTRY org.eclipse.osgi 4 0 2024-05-23 23:14:25.144
+!MESSAGE Application error
+!STACK 1
+java.lang.UnsatisfiedLinkError: Could not load SWT library. Reasons: 
+	/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib: dlopen(/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib, 0x0001): tried: '/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib' (no such file), '/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an in
+	no swt-cocoa in java.library.path: /Users/giord/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+	no swt in java.library.path: /Users/giord/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+	/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib: dlopen(/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib, 0x0001): tried: '/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (no such file), '/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))
+	Can't load library: /Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa.jnilib
+	Can't load library: /Users/giord/.swt/lib/macosx/aarch64/libswt.jnilib
+	/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib: dlopen(/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib, 0x0001): tried: '/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (no such file), '/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))
+
+	at org.eclipse.swt.internal.Library.loadLibrary(Library.java:345)
+	at org.eclipse.swt.internal.Library.loadLibrary(Library.java:254)
+	at org.eclipse.swt.internal.C.<clinit>(C.java:19)
+	at org.eclipse.swt.widgets.Display.<clinit>(Display.java:110)
+	at org.eclipse.ui.internal.Workbench.createDisplay(Workbench.java:721)
+	at org.eclipse.ui.PlatformUI.createDisplay(PlatformUI.java:185)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.createDisplay(IDEApplication.java:182)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1432)
+!SESSION 2024-05-23 23:18:31.324 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.11
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=it_IT
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /Users/giord/Progetti/modeling/modness/modness/metamodel.runtime/test -dev file:/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/dev.properties -os macosx -ws cocoa -arch x86_64
+
+!ENTRY org.eclipse.acceleo.modness.generator 4 0 2024-05-23 23:18:32.563
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.acceleo.modness.generator [125]
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=21))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:493)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:2073)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:143)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2064)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:2004)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1967)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1883)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:341)
+
+!ENTRY org.eclipse.osgi 4 0 2024-05-23 23:18:33.286
+!MESSAGE Application error
+!STACK 1
+java.lang.UnsatisfiedLinkError: Could not load SWT library. Reasons: 
+	/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib: dlopen(/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib, 0x0001): tried: '/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib' (no such file), '/Users/giord/Progetti/modeling/modness/modness/.metadata/.plugins/org.eclipse.pde.core/Launch Runtime Eclipse/org.eclipse.osgi/950/0/.cp/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an in
+	no swt-cocoa in java.library.path: /Users/giord/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+	no swt in java.library.path: /Users/giord/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+	/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib: dlopen(/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib, 0x0001): tried: '/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (no such file), '/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))
+	Can't load library: /Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa.jnilib
+	Can't load library: /Users/giord/.swt/lib/macosx/aarch64/libswt.jnilib
+	/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib: dlopen(/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib, 0x0001): tried: '/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64')), '/System/Volumes/Preboot/Cryptexes/OS/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (no such file), '/Users/giord/.swt/lib/macosx/aarch64/libswt-cocoa-4964r8.jnilib' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e' or 'arm64'))
+
+	at org.eclipse.swt.internal.Library.loadLibrary(Library.java:345)
+	at org.eclipse.swt.internal.Library.loadLibrary(Library.java:254)
+	at org.eclipse.swt.internal.C.<clinit>(C.java:19)
+	at org.eclipse.swt.widgets.Display.<clinit>(Display.java:110)
+	at org.eclipse.ui.internal.Workbench.createDisplay(Workbench.java:721)
+	at org.eclipse.ui.PlatformUI.createDisplay(PlatformUI.java:185)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.createDisplay(IDEApplication.java:182)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1432)

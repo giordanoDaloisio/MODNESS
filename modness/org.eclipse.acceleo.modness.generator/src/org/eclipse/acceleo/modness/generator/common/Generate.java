@@ -383,7 +383,7 @@ public class Generate extends AbstractAcceleoGenerator {
      */
     @Override
     public void registerResourceFactories(ResourceSet resourceSet) {
-        super.registerResourceFactories(resourceSet);
+        //super.registerResourceFactories(resourceSet);
         /*
          * If you want to change the content of this method, do NOT forget to change the "@generated"
          * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation
@@ -407,6 +407,7 @@ public class Generate extends AbstractAcceleoGenerator {
          * targetting UML models in standalone, you NEED to use the following:
          */ 
         // UMLResourcesUtil.init(resourceSet)
+        resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(FairnessPackage.eINSTANCE.getNsURI(), FairnessPackage.eINSTANCE);
     }
     
 }

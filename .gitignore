@@ -5,3 +5,4 @@ __pycache__
 Dataset_PopBias
 scripts
 data_true
+.DS_STORE
