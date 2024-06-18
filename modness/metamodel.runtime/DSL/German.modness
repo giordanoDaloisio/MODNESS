@@ -1,5 +1,5 @@
 GroupBias "german"{
-	highLevelDefinition: {
+	definition: {
 		domain: "financial";
 		source:HUMAN_DISCRIMINATION;
 		sensitiveVariables: {

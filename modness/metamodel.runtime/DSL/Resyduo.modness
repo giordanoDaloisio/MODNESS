@@ -1,5 +1,5 @@
 GroupBias "Resyduo"{
-	highLevelDefinition: {
+	definition: {
 		domain: "IoT";
 		source: WRONG_ALGORITHM_BEHAVIOUR;
 		sensitiveVariables: {

@@ -8,7 +8,7 @@ GroupBias returns GroupBias:
 	'GroupBias'
 	name=EString
 	'{'
-		'highLevelDefinition:' '{'
+		'definition:' '{'
 			'domain:' domain=EString ';'
 			'source:' source+=BiasSource ( "," source+=BiasSource)* ';'
 			'sensitiveVariables:' '{' sensitiveVariables+=SensitiveVariable ( "," sensitiveVariables+=SensitiveVariable)* '};' 

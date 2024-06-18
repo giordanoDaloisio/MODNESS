@@ -1,5 +1,5 @@
 GroupBias "TPL"{
-	highLevelDefinition: {
+	definition: {
 		domain: "recommender systems";
 		source: WRONG_ALGORITHM_BEHAVIOUR;
 		sensitiveVariables: {

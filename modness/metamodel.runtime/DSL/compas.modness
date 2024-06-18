@@ -1,5 +1,5 @@
 GroupBias "compas"{
-	highLevelDefinition: {
+	definition: {
 		domain: "justice";
 		source:HUMAN_DISCRIMINATION;
 		sensitiveVariables: {

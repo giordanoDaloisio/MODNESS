@@ -1,5 +1,5 @@
 GroupBias "university"{
-	highLevelDefinition: {
+	definition: {
 		domain: "education";
 		source: WRONG_SAMPLING;
 		sensitiveVariables: {
