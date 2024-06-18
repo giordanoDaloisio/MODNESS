@@ -24,7 +24,6 @@
 		<module>org.xtext.example.modness</module>
 		<module>org.xtext.example.modness.ide</module>
 		<module>org.xtext.example.modness.ui</module>
-		<module>org.xtext.example.modness.web</module>
 		<module>org.xtext.example.modness.target</module>
 	</modules>
 	<dependencyManagement>

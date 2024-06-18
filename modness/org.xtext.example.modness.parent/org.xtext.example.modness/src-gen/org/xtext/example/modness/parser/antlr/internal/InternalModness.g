@@ -104,9 +104,9 @@ ruleGroupBias returns [EObject current=null]
 		{
 			newLeafNode(otherlv_2, grammarAccess.getGroupBiasAccess().getLeftCurlyBracketKeyword_2());
 		}
-		otherlv_3='highLevelDefinition:'
+		otherlv_3='definition:'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getGroupBiasAccess().getHighLevelDefinitionKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getGroupBiasAccess().getDefinitionKeyword_3());
 		}
 		otherlv_4='{'
 		{
@@ -1565,9 +1565,9 @@ ruleDataset returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_22='datasetSensitiveVariable:'
+		otherlv_22='datasetSentiveVariable:'
 		{
-			newLeafNode(otherlv_22, grammarAccess.getDatasetAccess().getDatasetSensitiveVariableKeyword_13());
+			newLeafNode(otherlv_22, grammarAccess.getDatasetAccess().getDatasetSentiveVariableKeyword_13());
 		}
 		otherlv_23='{'
 		{
@@ -2871,23 +2871,45 @@ ruleOperationValue returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		otherlv_0='OperationValue'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getOperationValueAccess().getOperationValueKeyword_0());
+		}
+		otherlv_1='{'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getOperationValueAccess().getLeftCurlyBracketKeyword_1());
+		}
+		otherlv_2='value:'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getOperationValueAccess().getValueKeyword_2());
+		}
 		(
-			{
-				newCompositeNode(grammarAccess.getOperationValueAccess().getValueEFloatParserRuleCall_0());
-			}
-			lv_value_0_0=ruleEFloat
-			{
-				if ($current==null) {
-					$current = createModelElementForParent(grammarAccess.getOperationValueRule());
+			(
+				{
+					newCompositeNode(grammarAccess.getOperationValueAccess().getValueEFloatParserRuleCall_3_0());
 				}
-				set(
-					$current,
-					"value",
-					lv_value_0_0,
-					"org.xtext.example.modness.Modness.EFloat");
-				afterParserOrEnumRuleCall();
-			}
+				lv_value_3_0=ruleEFloat
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getOperationValueRule());
+					}
+					set(
+						$current,
+						"value",
+						lv_value_3_0,
+						"org.xtext.example.modness.Modness.EFloat");
+					afterParserOrEnumRuleCall();
+				}
+			)
 		)
+		otherlv_4=';'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getOperationValueAccess().getSemicolonKeyword_4());
+		}
+		otherlv_5='}'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getOperationValueAccess().getRightCurlyBracketKeyword_5());
+		}
 	)
 ;
 

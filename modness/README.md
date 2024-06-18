@@ -12,7 +12,7 @@ The project is structured as follows:
 
 - `metamodel.tests`: it contains test classes for the generated editor
 
-- `metamodel.runtime`: this folder contains the models produced using the editor. The models are stored in two folders:  `classic` contains the XML models generated using the traditional EMF visual editor, `DSL` contains the DSL models generated from the Xtext-based editor
+- `metamodel.runtime`: this folder contains the models produced using the editor. The models are stored in two folders: `models` contains the XML models generated using the traditional EMF visual editor, `DSL` contains the DSL models generated from the Xtext-based editor
 
 - `org.eclipse.acceleo.fairness.generator`: this project contains the Acceleo template used to generate the fairness assessment code
 

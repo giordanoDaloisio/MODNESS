@@ -12,6 +12,7 @@ Require-Bundle: metamodel,
  org.eclipse.equinox.common;bundle-version="3.16.0",
  org.eclipse.xtext.xbase.lib;bundle-version="2.35.0",
  org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.xtext.example.modness.parser.antlr.internal,
  org.xtext.example.modness.validation,
  org.xtext.example.modness,

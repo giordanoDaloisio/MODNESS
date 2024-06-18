@@ -72,12 +72,6 @@
 							</includes>
 						</fileset>
 						<fileset>
-							<directory>${basedir}/../org.xtext.example.modness.web/src-gen/</directory>
-							<includes>
-								<include>**/*</include>
-							</includes>
-						</fileset>
-						<fileset>
 							<directory>${basedir}/model/generated/</directory>
 						</fileset>
 					</filesets>
