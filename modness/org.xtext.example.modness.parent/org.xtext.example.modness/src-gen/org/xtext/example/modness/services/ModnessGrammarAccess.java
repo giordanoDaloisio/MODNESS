@@ -33,7 +33,7 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameEStringParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cHighLevelDefinitionKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cDefinitionKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cDomainKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cDomainAssignment_6 = (Assignment)cGroup.eContents().get(6);
@@ -94,7 +94,7 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//    'GroupBias'
 		//    name=EString
 		//    '{'
-		//        'highLevelDefinition:' '{'
+		//        'definition:' '{'
 		//            'domain:' domain=EString ';'
 		//            'source:' source+=BiasSource ( "," source+=BiasSource)* ';'
 		//            'sensitiveVariables:' '{' sensitiveVariables+=SensitiveVariable ( "," sensitiveVariables+=SensitiveVariable)* '};'
@@ -109,7 +109,7 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//'GroupBias'
 		//name=EString
 		//'{'
-		//    'highLevelDefinition:' '{'
+		//    'definition:' '{'
 		//        'domain:' domain=EString ';'
 		//        'source:' source+=BiasSource ( "," source+=BiasSource)* ';'
 		//        'sensitiveVariables:' '{' sensitiveVariables+=SensitiveVariable ( "," sensitiveVariables+=SensitiveVariable)* '};'
@@ -133,8 +133,8 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
-		//'highLevelDefinition:'
-		public Keyword getHighLevelDefinitionKeyword_3() { return cHighLevelDefinitionKeyword_3; }
+		//'definition:'
+		public Keyword getDefinitionKeyword_3() { return cDefinitionKeyword_3; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
@@ -935,7 +935,7 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		private final Keyword cPositiveOutcomeKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Assignment cPositiveOutcomeAssignment_12 = (Assignment)cGroup.eContents().get(12);
 		private final RuleCall cPositiveOutcomeDatasetPositiveOutcomeParserRuleCall_12_0 = (RuleCall)cPositiveOutcomeAssignment_12.eContents().get(0);
-		private final Keyword cDatasetSensitiveVariableKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Keyword cDatasetSentiveVariableKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Keyword cLeftCurlyBracketKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		private final Assignment cDatasetSentiveVariableAssignment_15 = (Assignment)cGroup.eContents().get(15);
 		private final RuleCall cDatasetSentiveVariableDatasetSensitiveVariableParserRuleCall_15_0 = (RuleCall)cDatasetSentiveVariableAssignment_15.eContents().get(0);
@@ -955,7 +955,7 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//        'filePath:' filePath=EString';'
 		//        ('otherVariable:' '{' otherVariable+=OtherVariable ( "," otherVariable+=OtherVariable)* '};' )?
 		//        'positiveOutcome:' positiveOutcome=DatasetPositiveOutcome
-		//        'datasetSensitiveVariable:' '{' datasetSentiveVariable+=DatasetSensitiveVariable ( "," datasetSentiveVariable+=DatasetSensitiveVariable)* '};'
+		//        'datasetSentiveVariable:' '{' datasetSentiveVariable+=DatasetSensitiveVariable ( "," datasetSentiveVariable+=DatasetSensitiveVariable)* '};'
 		//    '}';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -967,7 +967,7 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//    'filePath:' filePath=EString';'
 		//    ('otherVariable:' '{' otherVariable+=OtherVariable ( "," otherVariable+=OtherVariable)* '};' )?
 		//    'positiveOutcome:' positiveOutcome=DatasetPositiveOutcome
-		//    'datasetSensitiveVariable:' '{' datasetSentiveVariable+=DatasetSensitiveVariable ( "," datasetSentiveVariable+=DatasetSensitiveVariable)* '};'
+		//    'datasetSentiveVariable:' '{' datasetSentiveVariable+=DatasetSensitiveVariable ( "," datasetSentiveVariable+=DatasetSensitiveVariable)* '};'
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
@@ -1070,8 +1070,8 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 		//DatasetPositiveOutcome
 		public RuleCall getPositiveOutcomeDatasetPositiveOutcomeParserRuleCall_12_0() { return cPositiveOutcomeDatasetPositiveOutcomeParserRuleCall_12_0; }
 		
-		//'datasetSensitiveVariable:'
-		public Keyword getDatasetSensitiveVariableKeyword_13() { return cDatasetSensitiveVariableKeyword_13; }
+		//'datasetSentiveVariable:'
+		public Keyword getDatasetSentiveVariableKeyword_13() { return cDatasetSentiveVariableKeyword_13; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_14() { return cLeftCurlyBracketKeyword_14; }
@@ -2016,19 +2016,48 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	}
 	public class OperationValueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.modness.Modness.OperationValue");
-		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cValueEFloatParserRuleCall_0 = (RuleCall)cValueAssignment.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cOperationValueKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cValueKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cValueAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cValueEFloatParserRuleCall_3_0 = (RuleCall)cValueAssignment_3.eContents().get(0);
+		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//OperationValue returns OperationValue:
-		//    value=EFloat
-		//;
+		//    'OperationValue'
+		//    '{'
+		//        'value:' value=EFloat';'
+		//    '}';
 		@Override public ParserRule getRule() { return rule; }
 		
+		//'OperationValue'
+		//'{'
+		//    'value:' value=EFloat';'
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//'OperationValue'
+		public Keyword getOperationValueKeyword_0() { return cOperationValueKeyword_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		
+		//'value:'
+		public Keyword getValueKeyword_2() { return cValueKeyword_2; }
+		
 		//value=EFloat
-		public Assignment getValueAssignment() { return cValueAssignment; }
+		public Assignment getValueAssignment_3() { return cValueAssignment_3; }
 		
 		//EFloat
-		public RuleCall getValueEFloatParserRuleCall_0() { return cValueEFloatParserRuleCall_0; }
+		public RuleCall getValueEFloatParserRuleCall_3_0() { return cValueEFloatParserRuleCall_3_0; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 	public class LogicalConditionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.modness.Modness.LogicalCondition");
@@ -3089,7 +3118,7 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	//    'GroupBias'
 	//    name=EString
 	//    '{'
-	//        'highLevelDefinition:' '{'
+	//        'definition:' '{'
 	//            'domain:' domain=EString ';'
 	//            'source:' source+=BiasSource ( "," source+=BiasSource)* ';'
 	//            'sensitiveVariables:' '{' sensitiveVariables+=SensitiveVariable ( "," sensitiveVariables+=SensitiveVariable)* '};'
@@ -3259,7 +3288,7 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	//        'filePath:' filePath=EString';'
 	//        ('otherVariable:' '{' otherVariable+=OtherVariable ( "," otherVariable+=OtherVariable)* '};' )?
 	//        'positiveOutcome:' positiveOutcome=DatasetPositiveOutcome
-	//        'datasetSensitiveVariable:' '{' datasetSentiveVariable+=DatasetSensitiveVariable ( "," datasetSentiveVariable+=DatasetSensitiveVariable)* '};'
+	//        'datasetSentiveVariable:' '{' datasetSentiveVariable+=DatasetSensitiveVariable ( "," datasetSentiveVariable+=DatasetSensitiveVariable)* '};'
 	//    '}';
 	public DatasetElements getDatasetAccess() {
 		return pDataset;
@@ -3503,8 +3532,10 @@ public class ModnessGrammarAccess extends AbstractElementFinder.AbstractGrammarE
 	}
 	
 	//OperationValue returns OperationValue:
-	//    value=EFloat
-	//;
+	//    'OperationValue'
+	//    '{'
+	//        'value:' value=EFloat';'
+	//    '}';
 	public OperationValueElements getOperationValueAccess() {
 		return pOperationValue;
 	}

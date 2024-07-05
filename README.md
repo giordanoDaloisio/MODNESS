@@ -47,7 +47,7 @@ To open the EMF editor and generate the code and the DSL, you have to download:
 #### 1.2 Import the metamodel and models
 
 1. Open Eclipse and select `modness` as workspace
-2. Import the projects by clicking on _New -> Import -> Existing projects into workspace_ and select `modness` as _root directory_. The following projects should be listed (you can avoid to select the `test` folder):
+2. Import the projects by clicking on _New -> Import -> Existing projects into workspace_ and select `modness` as _root directory_. The following projects should be listed (you can avoid to select the `models` and `DSL` folders):
 
 ![import](modness/assets/import_metamodel.png)
 
@@ -58,7 +58,7 @@ To open the EMF editor and generate the code and the DSL, you have to download:
 ![img](modness/assets/launcher.png)
 
 6. Click _Run_ and wait for the new Eclipse instance to open
-7. In the new Eclipse instance, click _File -> Import -> Existing projects into workspace_ and select the `metamodel.runtime` folder as _root directory_. Then, the `test` folder should be listed:
+7. In the new Eclipse instance, click _File -> Import -> Existing projects into workspace_ and select the `metamodel.runtime` folder as _root directory_. Then, the `models` and `DSL` folders should be listed:
 
 ![import](modness/assets/import_projects.png)
 
@@ -73,26 +73,22 @@ To open the EMF editor and generate the code and the DSL, you have to download:
 
 where the **Model** is the one produced with the EMF editor and the **Target** is the folder that contains the generated code.
 
-
 3. The generated code should appear in the `generated` folder
 
+**Troubleshooting:** It might be necessary to programmatically register the metamodel and link the metamodel project with the Acceleo one (please note that we already added the needed lines of code in the repository).
 
-**Troubleshooting:** It might be necessary to programmatically register the metamodel and link the metamodel project with the Acceleo one (please note that we already added the needed lines of code in the repository). 
+1.  Right-click on the Acceleo project and select _Build path -> Configure Build Path..._, then add the modeling project to the Classpath;
+2.  Modify the method public void `registerResourceFactories(ResourceSet resourceSet)` in the `Generate.java` file by adding:
 
- 1. Right-click on the Acceleo project and select _Build path -> Configure Build Path..._, then add the modeling project to the Classpath;
- 2. Modify the method public void   ```registerResourceFactories(ResourceSet resourceSet)``` in the ```Generate.java``` file by adding: 
-   
-``` 
-resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(FairnessPackage.eINSTANCE.getNsURI(), FairnessPackage.eINSTANCE); 
 ```
-In addition, you need to modify the method's annotation from @generated to @generated NOT. 
+resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(FairnessPackage.eINSTANCE.getNsURI(), FairnessPackage.eINSTANCE);
+```
+
+In addition, you need to modify the method's annotation from @generated to @generated NOT.
 
 #### 2.1 Run the generated code
 
 In the following, we report the steps to run the generated code.
-
-
-
 
 ##### 2.1.1 Requirements
 
@@ -120,15 +116,15 @@ Where `<PYTHON FILE>` is the name of one of the generated Python files (i.e., `c
 
 ![xtext launch](assets/xtext_launch.png)
 
-2. In the new Eclipse instance, the `test` folder should appear in the sidebar. If not, click on _File -> Import -> Existing projects into workspace_ and select the `metamodel.runtime` folder as _root directory_. Then, the `test` folder should be listed:
+2. In the new Eclipse instance, the `DSL` folder should appear in the sidebar. If not, click on _File -> Import -> Existing projects into workspace_ and select the `metamodel.runtime` folder as _root directory_. Then, the `DSL` folder should be listed.
 
-![import](/assets/project_importer.png)
+3. Right click on the `DSL` folder and select _New -> File_ and create a new file with the `.modness` extension. The editor should open and you can start writing the code. By clicking on Ctrl + Space (Cmd + Space on Mac) you can see the available keywords.
 
-3. Right click on the `test` folder and select _New -> File_ and create a new file with the `.modness` extension. The editor should open and you can start writing the code. By clicking on Ctrl + Space (Cmd + Space on Mac) you can see the available keywords.
-
-4. The `test` contains all the use cases described in the paper, which can be used as a reference to write new models:
+4. The `DSL` folder contains all the use cases described in the paper, which can be used as a reference to write new models:
 
 ![dsl example](/assets/dsl_example.png)
+
+**Troubleshooting:** If you see an error in the Xtext grammar file such as _Couldn't resolve reference to EPackage 'http://www.example.org/fairness'_, you should convert the Ecore project to an Xtext project. To do so, right-click on the `metamodel` project and select _Configure -> Convert to Xtext project_.
 
 ## License
 
