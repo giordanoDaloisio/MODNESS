@@ -94,7 +94,9 @@ where the **Model** is the one produced with the EMF editor and located in the `
 
 2. The generated code should appear in the `generated` folder
 
-### Troubleshooting
+![alt text](assets/generated_files.png)
+
+**Troubleshooting:**
 
 It might be necessary to programmatically register the metamodel and link the metamodel project with the Acceleo one (please note that we already added the needed lines of code in the repository).
 
@@ -145,7 +147,9 @@ Where `<PYTHON FILE>` is the name of one of the generated Python files (i.e., `c
 
 ![dsl example](/assets/dsl_example.png)
 
-**Troubleshooting:** If you see an error in the Xtext grammar file such as _Couldn't resolve reference to EPackage 'http://www.example.org/fairness'_, you should convert the Ecore project to an Xtext project. To do so, right-click on the `metamodel` project and select _Configure -> Convert to Xtext project_.
+**Troubleshooting:**
+
+If you see an error in the Xtext grammar file such as _Couldn't resolve reference to EPackage 'http://www.example.org/fairness'_, you should convert the Ecore project to an Xtext project. To do so, right-click on the `metamodel` project and select _Configure -> Convert to Xtext project_.
 
 ## License
 
