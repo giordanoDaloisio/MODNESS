@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalModnessParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'GroupBias'", "'{'", "'definition:'", "'domain:'", "';'", "'source:'", "','", "'sensitiveVariables:'", "'};'", "'positiveOutcome:'", "'unprivilegedGroup:'", "'privilegedGroup:'", "'analysis:'", "'}'", "'SensitiveVariable{'", "'name:'", "'values:'", "'SensitiveGroup'", "'sensitiveValue:'", "'GroupAnalysis'", "'scope:'", "'dataset:'", "'datasetUnprivilegedGroup:'", "'datasetPrivilegedGroup:'", "'metric:'", "'Metric'", "'toleranceValue:'", "'function:'", "'optimalValue:'", "'Dataset'", "'id:'", "'groundTruthLabelName:'", "'predictedLabelName:'", "'filePath:'", "'otherVariable:'", "'datasetSentiveVariable:'", "'mappingGroup:'", "'('", "');'", "'-'", "'.'", "'E'", "'e'", "'operator:'", "'value:'", "'lowerValue:'", "'greaterValue:'", "'Operation'", "'arithmeticOperator:'", "'leftSide:'", "'rightSide:'", "'Probability'", "'object'", "'condition'", "'ExpectedValue'", "'columnName'", "'GroupSize'", "'variable:'", "'groupCondition:'", "'DatasetSize'", "'Logaritm'", "'operatorcomponent'", "'Summation'", "'startRange'", "'endRange'", "'body'", "'ExistingGroupFairnessMetric'", "'ExistingIndividualFairnessMetric'", "'operationValue:'", "'OperationValue'", "'sensitiveGroup:'", "'relativeToDatasetSize'", "'mappingOutcome:'", "'SensitiveVariableValue'", "'mappingValue:'", "'OtherVariable'", "'othervariablevalue'", "'DatasetSensitiveVariable'", "'mappingSensitiveVariable:'", "'WRONG_ALGORITHM_BEHAVIOUR'", "'HUMAN_DISCRIMINATION'", "'WRONG_MEASUREMENT'", "'OMITTED_VARIABLE'", "'WRONG_SAMPLING'", "'WRONG_AGGREGATION'", "'WRONG_LINKING'", "'WRONG_PRESENTATION'", "'RESULT_RANKING'", "'WRONG_SYSTEM_EVALUATION'", "'WRONG_SYSTEM_TARGET_POPULATION'", "'CHANGE_IN_TARGET_POPULATION'", "'EQUAL'", "'GREATER'", "'MINOR'", "'GREATER_EQUAL'", "'MINOR_EQUAL'", "'NOT_EQUAL'", "'IN_INCLUDED'", "'IN_EXCLUDED'", "'IN_LOWER_INCLUDED'", "'IN_GREATER_INCLUDED'", "'SUM'", "'DIFFERENCE'", "'MULTIPLICATION'", "'RATIO'", "'AND'", "'OR'", "'STATISTICAL_PARITY'", "'DISPARATE_IMPACT'", "'EQUALIZED_ODDS'", "'EQUAL_ACCURACY'", "'FALSE_POSITIVE_DIFFERENCE'", "'TRUE_POSITIVE_DIFFERENCE'", "'MANHATTAN_DISTANCE'", "'EUCLIDEAN_DISTANCE'", "'MAHALANOBIS_DISTANCE'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'GroupBias'", "'{'", "'definition:'", "'domain:'", "';'", "'source:'", "','", "'sensitiveVariables:'", "'};'", "'positiveOutcome:'", "'unprivilegedGroup:'", "'privilegedGroup:'", "'analysis:'", "'}'", "'SensitiveVariable{'", "'name:'", "'values:'", "'SensitiveGroup'", "'sensitiveValue:'", "'GroupAnalysis'", "'scope:'", "'dataset:'", "'datasetUnprivilegedGroup:'", "'datasetPrivilegedGroup:'", "'metric:'", "'Metric'", "'toleranceValue:'", "'function:'", "'optimalValue:'", "'Dataset'", "'id:'", "'groundTruthLabelName:'", "'predictedLabelName:'", "'filePath:'", "'otherVariable:'", "'datasetSensitiveVariable:'", "'mappingGroup:'", "'('", "');'", "'-'", "'.'", "'E'", "'e'", "'operator:'", "'value:'", "'lowerValue:'", "'greaterValue:'", "'Operation'", "'arithmeticOperator:'", "'leftSide:'", "'rightSide:'", "'Probability'", "'object'", "'condition'", "'ExpectedValue'", "'columnName'", "'GroupSize'", "'variable:'", "'groupCondition:'", "'DatasetSize'", "'Logaritm'", "'operatorcomponent'", "'Summation'", "'startRange'", "'endRange'", "'body'", "'ExistingGroupFairnessMetric'", "'ExistingIndividualFairnessMetric'", "'operationValue:'", "'sensitiveGroup:'", "'relativeToDatasetSize'", "'mappingOutcome:'", "'SensitiveVariableValue'", "'mappingValue:'", "'OtherVariable'", "'othervariablevalue'", "'DatasetSensitiveVariable'", "'mappingSensitiveVariable:'", "'WRONG_ALGORITHM_BEHAVIOUR'", "'HUMAN_DISCRIMINATION'", "'WRONG_MEASUREMENT'", "'OMITTED_VARIABLE'", "'WRONG_SAMPLING'", "'WRONG_AGGREGATION'", "'WRONG_LINKING'", "'WRONG_PRESENTATION'", "'RESULT_RANKING'", "'WRONG_SYSTEM_EVALUATION'", "'WRONG_SYSTEM_TARGET_POPULATION'", "'CHANGE_IN_TARGET_POPULATION'", "'EQUAL'", "'GREATER'", "'MINOR'", "'GREATER_EQUAL'", "'MINOR_EQUAL'", "'NOT_EQUAL'", "'IN_INCLUDED'", "'IN_EXCLUDED'", "'IN_LOWER_INCLUDED'", "'IN_GREATER_INCLUDED'", "'SUM'", "'DIFFERENCE'", "'MULTIPLICATION'", "'RATIO'", "'AND'", "'OR'", "'STATISTICAL_PARITY'", "'DISPARATE_IMPACT'", "'EQUALIZED_ODDS'", "'EQUAL_ACCURACY'", "'FALSE_POSITIVE_DIFFERENCE'", "'TRUE_POSITIVE_DIFFERENCE'", "'MANHATTAN_DISTANCE'", "'EUCLIDEAN_DISTANCE'", "'MAHALANOBIS_DISTANCE'"
     };
     public static final int T__50=50;
     public static final int T__59=59;
@@ -44,7 +44,6 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
     public static final int T__68=68;
     public static final int T__69=69;
     public static final int T__62=62;
-    public static final int T__126=126;
     public static final int T__63=63;
     public static final int T__125=125;
     public static final int T__64=64;
@@ -1019,10 +1018,10 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                 if ( (LA6_1==54) ) {
                     int LA6_2 = input.LA(3);
 
-                    if ( ((LA6_2>=108 && LA6_2<=111)) ) {
+                    if ( ((LA6_2>=107 && LA6_2<=110)) ) {
                         alt6=2;
                     }
-                    else if ( ((LA6_2>=102 && LA6_2<=107)) ) {
+                    else if ( ((LA6_2>=101 && LA6_2<=106)) ) {
                         alt6=1;
                     }
                     else {
@@ -1486,7 +1485,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     throw nvae;
                 }
             }
-            else if ( (LA8_0==84) ) {
+            else if ( (LA8_0==83) ) {
                 alt8=3;
             }
             else {
@@ -3206,7 +3205,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDataset"
-    // InternalModness.g:1359:1: ruleDataset returns [EObject current=null] : (otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSentiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}' ) ;
+    // InternalModness.g:1359:1: ruleDataset returns [EObject current=null] : (otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSensitiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}' ) ;
     public final EObject ruleDataset() throws RecognitionException {
         EObject current = null;
 
@@ -3253,11 +3252,11 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModness.g:1365:2: ( (otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSentiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}' ) )
-            // InternalModness.g:1366:2: (otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSentiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}' )
+            // InternalModness.g:1365:2: ( (otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSensitiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}' ) )
+            // InternalModness.g:1366:2: (otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSensitiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}' )
             {
-            // InternalModness.g:1366:2: (otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSentiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}' )
-            // InternalModness.g:1367:3: otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSentiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}'
+            // InternalModness.g:1366:2: (otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSensitiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}' )
+            // InternalModness.g:1367:3: otherlv_0= 'Dataset' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' (otherlv_5= 'groundTruthLabelName:' ( (lv_groundTruthLabelName_6_0= ruleEString ) ) otherlv_7= ';' )? (otherlv_8= 'predictedLabelName:' ( (lv_predictedLabelName_9_0= ruleEString ) ) otherlv_10= ';' )? otherlv_11= 'filePath:' ( (lv_filePath_12_0= ruleEString ) ) otherlv_13= ';' (otherlv_14= 'otherVariable:' otherlv_15= '{' ( (lv_otherVariable_16_0= ruleOtherVariable ) ) (otherlv_17= ',' ( (lv_otherVariable_18_0= ruleOtherVariable ) ) )* otherlv_19= '};' )? otherlv_20= 'positiveOutcome:' ( (lv_positiveOutcome_21_0= ruleDatasetPositiveOutcome ) ) otherlv_22= 'datasetSensitiveVariable:' otherlv_23= '{' ( (lv_datasetSentiveVariable_24_0= ruleDatasetSensitiveVariable ) ) (otherlv_25= ',' ( (lv_datasetSentiveVariable_26_0= ruleDatasetSensitiveVariable ) ) )* otherlv_27= '};' otherlv_28= '}'
             {
             otherlv_0=(Token)match(input,40,FOLLOW_4); 
 
@@ -3613,7 +3612,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             otherlv_22=(Token)match(input,46,FOLLOW_4); 
 
-            			newLeafNode(otherlv_22, grammarAccess.getDatasetAccess().getDatasetSentiveVariableKeyword_13());
+            			newLeafNode(otherlv_22, grammarAccess.getDatasetAccess().getDatasetSensitiveVariableKeyword_13());
             		
             otherlv_23=(Token)match(input,12,FOLLOW_44); 
 
@@ -6385,7 +6384,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // InternalModness.g:2827:4: otherlv_4= 'operationValue:' ( (lv_operationvalue_5_0= ruleOperationValue ) )
                     {
-                    otherlv_4=(Token)match(input,79,FOLLOW_80); 
+                    otherlv_4=(Token)match(input,79,FOLLOW_33); 
 
                     				newLeafNode(otherlv_4, grammarAccess.getOperatorComponentAccess().getOperationValueKeyword_3_0());
                     			
@@ -6489,51 +6488,35 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOperationValue"
-    // InternalModness.g:2866:1: ruleOperationValue returns [EObject current=null] : (otherlv_0= 'OperationValue' otherlv_1= '{' otherlv_2= 'value:' ( (lv_value_3_0= ruleEFloat ) ) otherlv_4= ';' otherlv_5= '}' ) ;
+    // InternalModness.g:2866:1: ruleOperationValue returns [EObject current=null] : ( ( (lv_value_0_0= ruleEFloat ) ) otherlv_1= ';' ) ;
     public final EObject ruleOperationValue() throws RecognitionException {
         EObject current = null;
 
-        Token otherlv_0=null;
         Token otherlv_1=null;
-        Token otherlv_2=null;
-        Token otherlv_4=null;
-        Token otherlv_5=null;
-        AntlrDatatypeRuleToken lv_value_3_0 = null;
+        AntlrDatatypeRuleToken lv_value_0_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalModness.g:2872:2: ( (otherlv_0= 'OperationValue' otherlv_1= '{' otherlv_2= 'value:' ( (lv_value_3_0= ruleEFloat ) ) otherlv_4= ';' otherlv_5= '}' ) )
-            // InternalModness.g:2873:2: (otherlv_0= 'OperationValue' otherlv_1= '{' otherlv_2= 'value:' ( (lv_value_3_0= ruleEFloat ) ) otherlv_4= ';' otherlv_5= '}' )
+            // InternalModness.g:2872:2: ( ( ( (lv_value_0_0= ruleEFloat ) ) otherlv_1= ';' ) )
+            // InternalModness.g:2873:2: ( ( (lv_value_0_0= ruleEFloat ) ) otherlv_1= ';' )
             {
-            // InternalModness.g:2873:2: (otherlv_0= 'OperationValue' otherlv_1= '{' otherlv_2= 'value:' ( (lv_value_3_0= ruleEFloat ) ) otherlv_4= ';' otherlv_5= '}' )
-            // InternalModness.g:2874:3: otherlv_0= 'OperationValue' otherlv_1= '{' otherlv_2= 'value:' ( (lv_value_3_0= ruleEFloat ) ) otherlv_4= ';' otherlv_5= '}'
+            // InternalModness.g:2873:2: ( ( (lv_value_0_0= ruleEFloat ) ) otherlv_1= ';' )
+            // InternalModness.g:2874:3: ( (lv_value_0_0= ruleEFloat ) ) otherlv_1= ';'
             {
-            otherlv_0=(Token)match(input,80,FOLLOW_4); 
-
-            			newLeafNode(otherlv_0, grammarAccess.getOperationValueAccess().getOperationValueKeyword_0());
-            		
-            otherlv_1=(Token)match(input,12,FOLLOW_55); 
-
-            			newLeafNode(otherlv_1, grammarAccess.getOperationValueAccess().getLeftCurlyBracketKeyword_1());
-            		
-            otherlv_2=(Token)match(input,55,FOLLOW_33); 
-
-            			newLeafNode(otherlv_2, grammarAccess.getOperationValueAccess().getValueKeyword_2());
-            		
-            // InternalModness.g:2886:3: ( (lv_value_3_0= ruleEFloat ) )
-            // InternalModness.g:2887:4: (lv_value_3_0= ruleEFloat )
+            // InternalModness.g:2874:3: ( (lv_value_0_0= ruleEFloat ) )
+            // InternalModness.g:2875:4: (lv_value_0_0= ruleEFloat )
             {
-            // InternalModness.g:2887:4: (lv_value_3_0= ruleEFloat )
-            // InternalModness.g:2888:5: lv_value_3_0= ruleEFloat
+            // InternalModness.g:2875:4: (lv_value_0_0= ruleEFloat )
+            // InternalModness.g:2876:5: lv_value_0_0= ruleEFloat
             {
 
-            					newCompositeNode(grammarAccess.getOperationValueAccess().getValueEFloatParserRuleCall_3_0());
+            					newCompositeNode(grammarAccess.getOperationValueAccess().getValueEFloatParserRuleCall_0_0());
             				
             pushFollow(FOLLOW_7);
-            lv_value_3_0=ruleEFloat();
+            lv_value_0_0=ruleEFloat();
 
             state._fsp--;
 
@@ -6544,7 +6527,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             					set(
             						current,
             						"value",
-            						lv_value_3_0,
+            						lv_value_0_0,
             						"org.xtext.example.modness.Modness.EFloat");
             					afterParserOrEnumRuleCall();
             				
@@ -6554,13 +6537,9 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,15,FOLLOW_21); 
+            otherlv_1=(Token)match(input,15,FOLLOW_2); 
 
-            			newLeafNode(otherlv_4, grammarAccess.getOperationValueAccess().getSemicolonKeyword_4());
-            		
-            otherlv_5=(Token)match(input,24,FOLLOW_2); 
-
-            			newLeafNode(otherlv_5, grammarAccess.getOperationValueAccess().getRightCurlyBracketKeyword_5());
+            			newLeafNode(otherlv_1, grammarAccess.getOperationValueAccess().getSemicolonKeyword_1());
             		
 
             }
@@ -6585,7 +6564,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleLogicalCondition"
-    // InternalModness.g:2917:1: entryRuleLogicalCondition returns [EObject current=null] : iv_ruleLogicalCondition= ruleLogicalCondition EOF ;
+    // InternalModness.g:2901:1: entryRuleLogicalCondition returns [EObject current=null] : iv_ruleLogicalCondition= ruleLogicalCondition EOF ;
     public final EObject entryRuleLogicalCondition() throws RecognitionException {
         EObject current = null;
 
@@ -6593,8 +6572,8 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalModness.g:2917:57: (iv_ruleLogicalCondition= ruleLogicalCondition EOF )
-            // InternalModness.g:2918:2: iv_ruleLogicalCondition= ruleLogicalCondition EOF
+            // InternalModness.g:2901:57: (iv_ruleLogicalCondition= ruleLogicalCondition EOF )
+            // InternalModness.g:2902:2: iv_ruleLogicalCondition= ruleLogicalCondition EOF
             {
              newCompositeNode(grammarAccess.getLogicalConditionRule()); 
             pushFollow(FOLLOW_1);
@@ -6621,7 +6600,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLogicalCondition"
-    // InternalModness.g:2924:1: ruleLogicalCondition returns [EObject current=null] : ( () (otherlv_1= 'value:' ( ( ruleEString ) ) )? (otherlv_3= 'sensitiveGroup:' ( ( ruleEString ) ) )? ( (lv_sublogicalcondition_5_0= ruleSubLogicalCondition ) )? ) ;
+    // InternalModness.g:2908:1: ruleLogicalCondition returns [EObject current=null] : ( () (otherlv_1= 'value:' ( ( ruleEString ) ) )? (otherlv_3= 'sensitiveGroup:' ( ( ruleEString ) ) )? ( (lv_sublogicalcondition_5_0= ruleSubLogicalCondition ) )? ) ;
     public final EObject ruleLogicalCondition() throws RecognitionException {
         EObject current = null;
 
@@ -6634,14 +6613,14 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModness.g:2930:2: ( ( () (otherlv_1= 'value:' ( ( ruleEString ) ) )? (otherlv_3= 'sensitiveGroup:' ( ( ruleEString ) ) )? ( (lv_sublogicalcondition_5_0= ruleSubLogicalCondition ) )? ) )
-            // InternalModness.g:2931:2: ( () (otherlv_1= 'value:' ( ( ruleEString ) ) )? (otherlv_3= 'sensitiveGroup:' ( ( ruleEString ) ) )? ( (lv_sublogicalcondition_5_0= ruleSubLogicalCondition ) )? )
+            // InternalModness.g:2914:2: ( ( () (otherlv_1= 'value:' ( ( ruleEString ) ) )? (otherlv_3= 'sensitiveGroup:' ( ( ruleEString ) ) )? ( (lv_sublogicalcondition_5_0= ruleSubLogicalCondition ) )? ) )
+            // InternalModness.g:2915:2: ( () (otherlv_1= 'value:' ( ( ruleEString ) ) )? (otherlv_3= 'sensitiveGroup:' ( ( ruleEString ) ) )? ( (lv_sublogicalcondition_5_0= ruleSubLogicalCondition ) )? )
             {
-            // InternalModness.g:2931:2: ( () (otherlv_1= 'value:' ( ( ruleEString ) ) )? (otherlv_3= 'sensitiveGroup:' ( ( ruleEString ) ) )? ( (lv_sublogicalcondition_5_0= ruleSubLogicalCondition ) )? )
-            // InternalModness.g:2932:3: () (otherlv_1= 'value:' ( ( ruleEString ) ) )? (otherlv_3= 'sensitiveGroup:' ( ( ruleEString ) ) )? ( (lv_sublogicalcondition_5_0= ruleSubLogicalCondition ) )?
+            // InternalModness.g:2915:2: ( () (otherlv_1= 'value:' ( ( ruleEString ) ) )? (otherlv_3= 'sensitiveGroup:' ( ( ruleEString ) ) )? ( (lv_sublogicalcondition_5_0= ruleSubLogicalCondition ) )? )
+            // InternalModness.g:2916:3: () (otherlv_1= 'value:' ( ( ruleEString ) ) )? (otherlv_3= 'sensitiveGroup:' ( ( ruleEString ) ) )? ( (lv_sublogicalcondition_5_0= ruleSubLogicalCondition ) )?
             {
-            // InternalModness.g:2932:3: ()
-            // InternalModness.g:2933:4: 
+            // InternalModness.g:2916:3: ()
+            // InternalModness.g:2917:4: 
             {
 
             				current = forceCreateModelElement(
@@ -6651,7 +6630,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModness.g:2939:3: (otherlv_1= 'value:' ( ( ruleEString ) ) )?
+            // InternalModness.g:2923:3: (otherlv_1= 'value:' ( ( ruleEString ) ) )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -6660,17 +6639,17 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             }
             switch (alt34) {
                 case 1 :
-                    // InternalModness.g:2940:4: otherlv_1= 'value:' ( ( ruleEString ) )
+                    // InternalModness.g:2924:4: otherlv_1= 'value:' ( ( ruleEString ) )
                     {
                     otherlv_1=(Token)match(input,55,FOLLOW_3); 
 
                     				newLeafNode(otherlv_1, grammarAccess.getLogicalConditionAccess().getValueKeyword_1_0());
                     			
-                    // InternalModness.g:2944:4: ( ( ruleEString ) )
-                    // InternalModness.g:2945:5: ( ruleEString )
+                    // InternalModness.g:2928:4: ( ( ruleEString ) )
+                    // InternalModness.g:2929:5: ( ruleEString )
                     {
-                    // InternalModness.g:2945:5: ( ruleEString )
-                    // InternalModness.g:2946:6: ruleEString
+                    // InternalModness.g:2929:5: ( ruleEString )
+                    // InternalModness.g:2930:6: ruleEString
                     {
 
                     						if (current==null) {
@@ -6679,6 +6658,55 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     					
 
                     						newCompositeNode(grammarAccess.getLogicalConditionAccess().getValueVariableValueCrossReference_1_1_0());
+                    					
+                    pushFollow(FOLLOW_80);
+                    ruleEString();
+
+                    state._fsp--;
+
+
+                    						afterParserOrEnumRuleCall();
+                    					
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+            // InternalModness.g:2945:3: (otherlv_3= 'sensitiveGroup:' ( ( ruleEString ) ) )?
+            int alt35=2;
+            int LA35_0 = input.LA(1);
+
+            if ( (LA35_0==80) ) {
+                alt35=1;
+            }
+            switch (alt35) {
+                case 1 :
+                    // InternalModness.g:2946:4: otherlv_3= 'sensitiveGroup:' ( ( ruleEString ) )
+                    {
+                    otherlv_3=(Token)match(input,80,FOLLOW_3); 
+
+                    				newLeafNode(otherlv_3, grammarAccess.getLogicalConditionAccess().getSensitiveGroupKeyword_2_0());
+                    			
+                    // InternalModness.g:2950:4: ( ( ruleEString ) )
+                    // InternalModness.g:2951:5: ( ruleEString )
+                    {
+                    // InternalModness.g:2951:5: ( ruleEString )
+                    // InternalModness.g:2952:6: ruleEString
+                    {
+
+                    						if (current==null) {
+                    							current = createModelElement(grammarAccess.getLogicalConditionRule());
+                    						}
+                    					
+
+                    						newCompositeNode(grammarAccess.getLogicalConditionAccess().getSensitivegroupDatasetSensitiveGroupCrossReference_2_1_0());
                     					
                     pushFollow(FOLLOW_81);
                     ruleEString();
@@ -6700,68 +6728,19 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModness.g:2961:3: (otherlv_3= 'sensitiveGroup:' ( ( ruleEString ) ) )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
-
-            if ( (LA35_0==81) ) {
-                alt35=1;
-            }
-            switch (alt35) {
-                case 1 :
-                    // InternalModness.g:2962:4: otherlv_3= 'sensitiveGroup:' ( ( ruleEString ) )
-                    {
-                    otherlv_3=(Token)match(input,81,FOLLOW_3); 
-
-                    				newLeafNode(otherlv_3, grammarAccess.getLogicalConditionAccess().getSensitiveGroupKeyword_2_0());
-                    			
-                    // InternalModness.g:2966:4: ( ( ruleEString ) )
-                    // InternalModness.g:2967:5: ( ruleEString )
-                    {
-                    // InternalModness.g:2967:5: ( ruleEString )
-                    // InternalModness.g:2968:6: ruleEString
-                    {
-
-                    						if (current==null) {
-                    							current = createModelElement(grammarAccess.getLogicalConditionRule());
-                    						}
-                    					
-
-                    						newCompositeNode(grammarAccess.getLogicalConditionAccess().getSensitivegroupDatasetSensitiveGroupCrossReference_2_1_0());
-                    					
-                    pushFollow(FOLLOW_82);
-                    ruleEString();
-
-                    state._fsp--;
-
-
-                    						afterParserOrEnumRuleCall();
-                    					
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-            // InternalModness.g:2983:3: ( (lv_sublogicalcondition_5_0= ruleSubLogicalCondition ) )?
+            // InternalModness.g:2967:3: ( (lv_sublogicalcondition_5_0= ruleSubLogicalCondition ) )?
             int alt36=2;
             int LA36_0 = input.LA(1);
 
-            if ( ((LA36_0>=116 && LA36_0<=117)) ) {
+            if ( ((LA36_0>=115 && LA36_0<=116)) ) {
                 alt36=1;
             }
             switch (alt36) {
                 case 1 :
-                    // InternalModness.g:2984:4: (lv_sublogicalcondition_5_0= ruleSubLogicalCondition )
+                    // InternalModness.g:2968:4: (lv_sublogicalcondition_5_0= ruleSubLogicalCondition )
                     {
-                    // InternalModness.g:2984:4: (lv_sublogicalcondition_5_0= ruleSubLogicalCondition )
-                    // InternalModness.g:2985:5: lv_sublogicalcondition_5_0= ruleSubLogicalCondition
+                    // InternalModness.g:2968:4: (lv_sublogicalcondition_5_0= ruleSubLogicalCondition )
+                    // InternalModness.g:2969:5: lv_sublogicalcondition_5_0= ruleSubLogicalCondition
                     {
 
                     					newCompositeNode(grammarAccess.getLogicalConditionAccess().getSublogicalconditionSubLogicalConditionParserRuleCall_3_0());
@@ -6814,7 +6793,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSubLogicalCondition"
-    // InternalModness.g:3006:1: entryRuleSubLogicalCondition returns [EObject current=null] : iv_ruleSubLogicalCondition= ruleSubLogicalCondition EOF ;
+    // InternalModness.g:2990:1: entryRuleSubLogicalCondition returns [EObject current=null] : iv_ruleSubLogicalCondition= ruleSubLogicalCondition EOF ;
     public final EObject entryRuleSubLogicalCondition() throws RecognitionException {
         EObject current = null;
 
@@ -6822,8 +6801,8 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalModness.g:3006:60: (iv_ruleSubLogicalCondition= ruleSubLogicalCondition EOF )
-            // InternalModness.g:3007:2: iv_ruleSubLogicalCondition= ruleSubLogicalCondition EOF
+            // InternalModness.g:2990:60: (iv_ruleSubLogicalCondition= ruleSubLogicalCondition EOF )
+            // InternalModness.g:2991:2: iv_ruleSubLogicalCondition= ruleSubLogicalCondition EOF
             {
              newCompositeNode(grammarAccess.getSubLogicalConditionRule()); 
             pushFollow(FOLLOW_1);
@@ -6850,7 +6829,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSubLogicalCondition"
-    // InternalModness.g:3013:1: ruleSubLogicalCondition returns [EObject current=null] : ( ( (lv_logicalOperator_0_0= ruleLogicalOperator ) ) ( (lv_logicalcondition_1_0= ruleLogicalCondition ) ) ) ;
+    // InternalModness.g:2997:1: ruleSubLogicalCondition returns [EObject current=null] : ( ( (lv_logicalOperator_0_0= ruleLogicalOperator ) ) ( (lv_logicalcondition_1_0= ruleLogicalCondition ) ) ) ;
     public final EObject ruleSubLogicalCondition() throws RecognitionException {
         EObject current = null;
 
@@ -6863,22 +6842,22 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModness.g:3019:2: ( ( ( (lv_logicalOperator_0_0= ruleLogicalOperator ) ) ( (lv_logicalcondition_1_0= ruleLogicalCondition ) ) ) )
-            // InternalModness.g:3020:2: ( ( (lv_logicalOperator_0_0= ruleLogicalOperator ) ) ( (lv_logicalcondition_1_0= ruleLogicalCondition ) ) )
+            // InternalModness.g:3003:2: ( ( ( (lv_logicalOperator_0_0= ruleLogicalOperator ) ) ( (lv_logicalcondition_1_0= ruleLogicalCondition ) ) ) )
+            // InternalModness.g:3004:2: ( ( (lv_logicalOperator_0_0= ruleLogicalOperator ) ) ( (lv_logicalcondition_1_0= ruleLogicalCondition ) ) )
             {
-            // InternalModness.g:3020:2: ( ( (lv_logicalOperator_0_0= ruleLogicalOperator ) ) ( (lv_logicalcondition_1_0= ruleLogicalCondition ) ) )
-            // InternalModness.g:3021:3: ( (lv_logicalOperator_0_0= ruleLogicalOperator ) ) ( (lv_logicalcondition_1_0= ruleLogicalCondition ) )
+            // InternalModness.g:3004:2: ( ( (lv_logicalOperator_0_0= ruleLogicalOperator ) ) ( (lv_logicalcondition_1_0= ruleLogicalCondition ) ) )
+            // InternalModness.g:3005:3: ( (lv_logicalOperator_0_0= ruleLogicalOperator ) ) ( (lv_logicalcondition_1_0= ruleLogicalCondition ) )
             {
-            // InternalModness.g:3021:3: ( (lv_logicalOperator_0_0= ruleLogicalOperator ) )
-            // InternalModness.g:3022:4: (lv_logicalOperator_0_0= ruleLogicalOperator )
+            // InternalModness.g:3005:3: ( (lv_logicalOperator_0_0= ruleLogicalOperator ) )
+            // InternalModness.g:3006:4: (lv_logicalOperator_0_0= ruleLogicalOperator )
             {
-            // InternalModness.g:3022:4: (lv_logicalOperator_0_0= ruleLogicalOperator )
-            // InternalModness.g:3023:5: lv_logicalOperator_0_0= ruleLogicalOperator
+            // InternalModness.g:3006:4: (lv_logicalOperator_0_0= ruleLogicalOperator )
+            // InternalModness.g:3007:5: lv_logicalOperator_0_0= ruleLogicalOperator
             {
 
             					newCompositeNode(grammarAccess.getSubLogicalConditionAccess().getLogicalOperatorLogicalOperatorEnumRuleCall_0_0());
             				
-            pushFollow(FOLLOW_83);
+            pushFollow(FOLLOW_82);
             lv_logicalOperator_0_0=ruleLogicalOperator();
 
             state._fsp--;
@@ -6900,11 +6879,11 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModness.g:3040:3: ( (lv_logicalcondition_1_0= ruleLogicalCondition ) )
-            // InternalModness.g:3041:4: (lv_logicalcondition_1_0= ruleLogicalCondition )
+            // InternalModness.g:3024:3: ( (lv_logicalcondition_1_0= ruleLogicalCondition ) )
+            // InternalModness.g:3025:4: (lv_logicalcondition_1_0= ruleLogicalCondition )
             {
-            // InternalModness.g:3041:4: (lv_logicalcondition_1_0= ruleLogicalCondition )
-            // InternalModness.g:3042:5: lv_logicalcondition_1_0= ruleLogicalCondition
+            // InternalModness.g:3025:4: (lv_logicalcondition_1_0= ruleLogicalCondition )
+            // InternalModness.g:3026:5: lv_logicalcondition_1_0= ruleLogicalCondition
             {
 
             					newCompositeNode(grammarAccess.getSubLogicalConditionAccess().getLogicalconditionLogicalConditionParserRuleCall_1_0());
@@ -6954,7 +6933,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVariableValue_Impl"
-    // InternalModness.g:3063:1: entryRuleVariableValue_Impl returns [EObject current=null] : iv_ruleVariableValue_Impl= ruleVariableValue_Impl EOF ;
+    // InternalModness.g:3047:1: entryRuleVariableValue_Impl returns [EObject current=null] : iv_ruleVariableValue_Impl= ruleVariableValue_Impl EOF ;
     public final EObject entryRuleVariableValue_Impl() throws RecognitionException {
         EObject current = null;
 
@@ -6962,8 +6941,8 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalModness.g:3063:59: (iv_ruleVariableValue_Impl= ruleVariableValue_Impl EOF )
-            // InternalModness.g:3064:2: iv_ruleVariableValue_Impl= ruleVariableValue_Impl EOF
+            // InternalModness.g:3047:59: (iv_ruleVariableValue_Impl= ruleVariableValue_Impl EOF )
+            // InternalModness.g:3048:2: iv_ruleVariableValue_Impl= ruleVariableValue_Impl EOF
             {
              newCompositeNode(grammarAccess.getVariableValue_ImplRule()); 
             pushFollow(FOLLOW_1);
@@ -6990,7 +6969,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVariableValue_Impl"
-    // InternalModness.g:3070:1: ruleVariableValue_Impl returns [EObject current=null] : (otherlv_0= '{' otherlv_1= 'operator:' ( (lv_operator_2_0= ruleEqualityOperator ) ) ( (lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize' ) )? otherlv_4= '}' ) ;
+    // InternalModness.g:3054:1: ruleVariableValue_Impl returns [EObject current=null] : (otherlv_0= '{' otherlv_1= 'operator:' ( (lv_operator_2_0= ruleEqualityOperator ) ) ( (lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize' ) )? otherlv_4= '}' ) ;
     public final EObject ruleVariableValue_Impl() throws RecognitionException {
         EObject current = null;
 
@@ -7005,11 +6984,11 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModness.g:3076:2: ( (otherlv_0= '{' otherlv_1= 'operator:' ( (lv_operator_2_0= ruleEqualityOperator ) ) ( (lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize' ) )? otherlv_4= '}' ) )
-            // InternalModness.g:3077:2: (otherlv_0= '{' otherlv_1= 'operator:' ( (lv_operator_2_0= ruleEqualityOperator ) ) ( (lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize' ) )? otherlv_4= '}' )
+            // InternalModness.g:3060:2: ( (otherlv_0= '{' otherlv_1= 'operator:' ( (lv_operator_2_0= ruleEqualityOperator ) ) ( (lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize' ) )? otherlv_4= '}' ) )
+            // InternalModness.g:3061:2: (otherlv_0= '{' otherlv_1= 'operator:' ( (lv_operator_2_0= ruleEqualityOperator ) ) ( (lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize' ) )? otherlv_4= '}' )
             {
-            // InternalModness.g:3077:2: (otherlv_0= '{' otherlv_1= 'operator:' ( (lv_operator_2_0= ruleEqualityOperator ) ) ( (lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize' ) )? otherlv_4= '}' )
-            // InternalModness.g:3078:3: otherlv_0= '{' otherlv_1= 'operator:' ( (lv_operator_2_0= ruleEqualityOperator ) ) ( (lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize' ) )? otherlv_4= '}'
+            // InternalModness.g:3061:2: (otherlv_0= '{' otherlv_1= 'operator:' ( (lv_operator_2_0= ruleEqualityOperator ) ) ( (lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize' ) )? otherlv_4= '}' )
+            // InternalModness.g:3062:3: otherlv_0= '{' otherlv_1= 'operator:' ( (lv_operator_2_0= ruleEqualityOperator ) ) ( (lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize' ) )? otherlv_4= '}'
             {
             otherlv_0=(Token)match(input,12,FOLLOW_53); 
 
@@ -7019,16 +6998,16 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getVariableValue_ImplAccess().getOperatorKeyword_1());
             		
-            // InternalModness.g:3086:3: ( (lv_operator_2_0= ruleEqualityOperator ) )
-            // InternalModness.g:3087:4: (lv_operator_2_0= ruleEqualityOperator )
+            // InternalModness.g:3070:3: ( (lv_operator_2_0= ruleEqualityOperator ) )
+            // InternalModness.g:3071:4: (lv_operator_2_0= ruleEqualityOperator )
             {
-            // InternalModness.g:3087:4: (lv_operator_2_0= ruleEqualityOperator )
-            // InternalModness.g:3088:5: lv_operator_2_0= ruleEqualityOperator
+            // InternalModness.g:3071:4: (lv_operator_2_0= ruleEqualityOperator )
+            // InternalModness.g:3072:5: lv_operator_2_0= ruleEqualityOperator
             {
 
             					newCompositeNode(grammarAccess.getVariableValue_ImplAccess().getOperatorEqualityOperatorParserRuleCall_2_0());
             				
-            pushFollow(FOLLOW_84);
+            pushFollow(FOLLOW_83);
             lv_operator_2_0=ruleEqualityOperator();
 
             state._fsp--;
@@ -7050,21 +7029,21 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModness.g:3105:3: ( (lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize' ) )?
+            // InternalModness.g:3089:3: ( (lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize' ) )?
             int alt37=2;
             int LA37_0 = input.LA(1);
 
-            if ( (LA37_0==82) ) {
+            if ( (LA37_0==81) ) {
                 alt37=1;
             }
             switch (alt37) {
                 case 1 :
-                    // InternalModness.g:3106:4: (lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize' )
+                    // InternalModness.g:3090:4: (lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize' )
                     {
-                    // InternalModness.g:3106:4: (lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize' )
-                    // InternalModness.g:3107:5: lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize'
+                    // InternalModness.g:3090:4: (lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize' )
+                    // InternalModness.g:3091:5: lv_relativeToDatasetSize_3_0= 'relativeToDatasetSize'
                     {
-                    lv_relativeToDatasetSize_3_0=(Token)match(input,82,FOLLOW_21); 
+                    lv_relativeToDatasetSize_3_0=(Token)match(input,81,FOLLOW_21); 
 
                     					newLeafNode(lv_relativeToDatasetSize_3_0, grammarAccess.getVariableValue_ImplAccess().getRelativeToDatasetSizeRelativeToDatasetSizeKeyword_3_0());
                     				
@@ -7110,7 +7089,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDatasetPositiveOutcome"
-    // InternalModness.g:3127:1: entryRuleDatasetPositiveOutcome returns [EObject current=null] : iv_ruleDatasetPositiveOutcome= ruleDatasetPositiveOutcome EOF ;
+    // InternalModness.g:3111:1: entryRuleDatasetPositiveOutcome returns [EObject current=null] : iv_ruleDatasetPositiveOutcome= ruleDatasetPositiveOutcome EOF ;
     public final EObject entryRuleDatasetPositiveOutcome() throws RecognitionException {
         EObject current = null;
 
@@ -7118,8 +7097,8 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalModness.g:3127:63: (iv_ruleDatasetPositiveOutcome= ruleDatasetPositiveOutcome EOF )
-            // InternalModness.g:3128:2: iv_ruleDatasetPositiveOutcome= ruleDatasetPositiveOutcome EOF
+            // InternalModness.g:3111:63: (iv_ruleDatasetPositiveOutcome= ruleDatasetPositiveOutcome EOF )
+            // InternalModness.g:3112:2: iv_ruleDatasetPositiveOutcome= ruleDatasetPositiveOutcome EOF
             {
              newCompositeNode(grammarAccess.getDatasetPositiveOutcomeRule()); 
             pushFollow(FOLLOW_1);
@@ -7146,7 +7125,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDatasetPositiveOutcome"
-    // InternalModness.g:3134:1: ruleDatasetPositiveOutcome returns [EObject current=null] : (otherlv_0= '{' otherlv_1= 'id:' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ';' otherlv_4= 'mappingOutcome:' ( ( ruleEString ) ) otherlv_6= ';' otherlv_7= 'value:' ( (lv_operator_8_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) ) otherlv_10= ';' )? otherlv_11= '};' ) ;
+    // InternalModness.g:3118:1: ruleDatasetPositiveOutcome returns [EObject current=null] : (otherlv_0= '{' otherlv_1= 'id:' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ';' otherlv_4= 'mappingOutcome:' ( ( ruleEString ) ) otherlv_6= ';' otherlv_7= 'value:' ( (lv_operator_8_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) ) otherlv_10= ';' )? otherlv_11= '};' ) ;
     public final EObject ruleDatasetPositiveOutcome() throws RecognitionException {
         EObject current = null;
 
@@ -7168,11 +7147,11 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModness.g:3140:2: ( (otherlv_0= '{' otherlv_1= 'id:' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ';' otherlv_4= 'mappingOutcome:' ( ( ruleEString ) ) otherlv_6= ';' otherlv_7= 'value:' ( (lv_operator_8_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) ) otherlv_10= ';' )? otherlv_11= '};' ) )
-            // InternalModness.g:3141:2: (otherlv_0= '{' otherlv_1= 'id:' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ';' otherlv_4= 'mappingOutcome:' ( ( ruleEString ) ) otherlv_6= ';' otherlv_7= 'value:' ( (lv_operator_8_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) ) otherlv_10= ';' )? otherlv_11= '};' )
+            // InternalModness.g:3124:2: ( (otherlv_0= '{' otherlv_1= 'id:' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ';' otherlv_4= 'mappingOutcome:' ( ( ruleEString ) ) otherlv_6= ';' otherlv_7= 'value:' ( (lv_operator_8_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) ) otherlv_10= ';' )? otherlv_11= '};' ) )
+            // InternalModness.g:3125:2: (otherlv_0= '{' otherlv_1= 'id:' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ';' otherlv_4= 'mappingOutcome:' ( ( ruleEString ) ) otherlv_6= ';' otherlv_7= 'value:' ( (lv_operator_8_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) ) otherlv_10= ';' )? otherlv_11= '};' )
             {
-            // InternalModness.g:3141:2: (otherlv_0= '{' otherlv_1= 'id:' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ';' otherlv_4= 'mappingOutcome:' ( ( ruleEString ) ) otherlv_6= ';' otherlv_7= 'value:' ( (lv_operator_8_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) ) otherlv_10= ';' )? otherlv_11= '};' )
-            // InternalModness.g:3142:3: otherlv_0= '{' otherlv_1= 'id:' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ';' otherlv_4= 'mappingOutcome:' ( ( ruleEString ) ) otherlv_6= ';' otherlv_7= 'value:' ( (lv_operator_8_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) ) otherlv_10= ';' )? otherlv_11= '};'
+            // InternalModness.g:3125:2: (otherlv_0= '{' otherlv_1= 'id:' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ';' otherlv_4= 'mappingOutcome:' ( ( ruleEString ) ) otherlv_6= ';' otherlv_7= 'value:' ( (lv_operator_8_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) ) otherlv_10= ';' )? otherlv_11= '};' )
+            // InternalModness.g:3126:3: otherlv_0= '{' otherlv_1= 'id:' ( (lv_name_2_0= ruleEString ) ) otherlv_3= ';' otherlv_4= 'mappingOutcome:' ( ( ruleEString ) ) otherlv_6= ';' otherlv_7= 'value:' ( (lv_operator_8_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) ) otherlv_10= ';' )? otherlv_11= '};'
             {
             otherlv_0=(Token)match(input,12,FOLLOW_37); 
 
@@ -7182,11 +7161,11 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getDatasetPositiveOutcomeAccess().getIdKeyword_1());
             		
-            // InternalModness.g:3150:3: ( (lv_name_2_0= ruleEString ) )
-            // InternalModness.g:3151:4: (lv_name_2_0= ruleEString )
+            // InternalModness.g:3134:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalModness.g:3135:4: (lv_name_2_0= ruleEString )
             {
-            // InternalModness.g:3151:4: (lv_name_2_0= ruleEString )
-            // InternalModness.g:3152:5: lv_name_2_0= ruleEString
+            // InternalModness.g:3135:4: (lv_name_2_0= ruleEString )
+            // InternalModness.g:3136:5: lv_name_2_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getDatasetPositiveOutcomeAccess().getNameEStringParserRuleCall_2_0());
@@ -7213,19 +7192,19 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,15,FOLLOW_85); 
+            otherlv_3=(Token)match(input,15,FOLLOW_84); 
 
             			newLeafNode(otherlv_3, grammarAccess.getDatasetPositiveOutcomeAccess().getSemicolonKeyword_3());
             		
-            otherlv_4=(Token)match(input,83,FOLLOW_3); 
+            otherlv_4=(Token)match(input,82,FOLLOW_3); 
 
             			newLeafNode(otherlv_4, grammarAccess.getDatasetPositiveOutcomeAccess().getMappingOutcomeKeyword_4());
             		
-            // InternalModness.g:3177:3: ( ( ruleEString ) )
-            // InternalModness.g:3178:4: ( ruleEString )
+            // InternalModness.g:3161:3: ( ( ruleEString ) )
+            // InternalModness.g:3162:4: ( ruleEString )
             {
-            // InternalModness.g:3178:4: ( ruleEString )
-            // InternalModness.g:3179:5: ruleEString
+            // InternalModness.g:3162:4: ( ruleEString )
+            // InternalModness.g:3163:5: ruleEString
             {
 
             					if (current==null) {
@@ -7257,16 +7236,16 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_7, grammarAccess.getDatasetPositiveOutcomeAccess().getValueKeyword_7());
             		
-            // InternalModness.g:3201:3: ( (lv_operator_8_0= ruleEqualityOperator ) )
-            // InternalModness.g:3202:4: (lv_operator_8_0= ruleEqualityOperator )
+            // InternalModness.g:3185:3: ( (lv_operator_8_0= ruleEqualityOperator ) )
+            // InternalModness.g:3186:4: (lv_operator_8_0= ruleEqualityOperator )
             {
-            // InternalModness.g:3202:4: (lv_operator_8_0= ruleEqualityOperator )
-            // InternalModness.g:3203:5: lv_operator_8_0= ruleEqualityOperator
+            // InternalModness.g:3186:4: (lv_operator_8_0= ruleEqualityOperator )
+            // InternalModness.g:3187:5: lv_operator_8_0= ruleEqualityOperator
             {
 
             					newCompositeNode(grammarAccess.getDatasetPositiveOutcomeAccess().getOperatorEqualityOperatorParserRuleCall_8_0());
             				
-            pushFollow(FOLLOW_86);
+            pushFollow(FOLLOW_85);
             lv_operator_8_0=ruleEqualityOperator();
 
             state._fsp--;
@@ -7288,24 +7267,24 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModness.g:3220:3: ( ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) ) otherlv_10= ';' )?
+            // InternalModness.g:3204:3: ( ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) ) otherlv_10= ';' )?
             int alt38=2;
             int LA38_0 = input.LA(1);
 
-            if ( (LA38_0==82) ) {
+            if ( (LA38_0==81) ) {
                 alt38=1;
             }
             switch (alt38) {
                 case 1 :
-                    // InternalModness.g:3221:4: ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) ) otherlv_10= ';'
+                    // InternalModness.g:3205:4: ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) ) otherlv_10= ';'
                     {
-                    // InternalModness.g:3221:4: ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) )
-                    // InternalModness.g:3222:5: (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' )
+                    // InternalModness.g:3205:4: ( (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' ) )
+                    // InternalModness.g:3206:5: (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' )
                     {
-                    // InternalModness.g:3222:5: (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' )
-                    // InternalModness.g:3223:6: lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize'
+                    // InternalModness.g:3206:5: (lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize' )
+                    // InternalModness.g:3207:6: lv_relativeToDatasetSize_9_0= 'relativeToDatasetSize'
                     {
-                    lv_relativeToDatasetSize_9_0=(Token)match(input,82,FOLLOW_7); 
+                    lv_relativeToDatasetSize_9_0=(Token)match(input,81,FOLLOW_7); 
 
                     						newLeafNode(lv_relativeToDatasetSize_9_0, grammarAccess.getDatasetPositiveOutcomeAccess().getRelativeToDatasetSizeRelativeToDatasetSizeKeyword_9_0_0());
                     					
@@ -7358,7 +7337,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDatasetSensitiveVariableValue"
-    // InternalModness.g:3248:1: entryRuleDatasetSensitiveVariableValue returns [EObject current=null] : iv_ruleDatasetSensitiveVariableValue= ruleDatasetSensitiveVariableValue EOF ;
+    // InternalModness.g:3232:1: entryRuleDatasetSensitiveVariableValue returns [EObject current=null] : iv_ruleDatasetSensitiveVariableValue= ruleDatasetSensitiveVariableValue EOF ;
     public final EObject entryRuleDatasetSensitiveVariableValue() throws RecognitionException {
         EObject current = null;
 
@@ -7366,8 +7345,8 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalModness.g:3248:70: (iv_ruleDatasetSensitiveVariableValue= ruleDatasetSensitiveVariableValue EOF )
-            // InternalModness.g:3249:2: iv_ruleDatasetSensitiveVariableValue= ruleDatasetSensitiveVariableValue EOF
+            // InternalModness.g:3232:70: (iv_ruleDatasetSensitiveVariableValue= ruleDatasetSensitiveVariableValue EOF )
+            // InternalModness.g:3233:2: iv_ruleDatasetSensitiveVariableValue= ruleDatasetSensitiveVariableValue EOF
             {
              newCompositeNode(grammarAccess.getDatasetSensitiveVariableValueRule()); 
             pushFollow(FOLLOW_1);
@@ -7394,7 +7373,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDatasetSensitiveVariableValue"
-    // InternalModness.g:3255:1: ruleDatasetSensitiveVariableValue returns [EObject current=null] : (otherlv_0= 'SensitiveVariableValue' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingValue:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'value:' ( (lv_operator_9_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' ) ) otherlv_11= ';' )? otherlv_12= '}' ) ;
+    // InternalModness.g:3239:1: ruleDatasetSensitiveVariableValue returns [EObject current=null] : (otherlv_0= 'SensitiveVariableValue' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingValue:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'value:' ( (lv_operator_9_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' ) ) otherlv_11= ';' )? otherlv_12= '}' ) ;
     public final EObject ruleDatasetSensitiveVariableValue() throws RecognitionException {
         EObject current = null;
 
@@ -7417,13 +7396,13 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModness.g:3261:2: ( (otherlv_0= 'SensitiveVariableValue' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingValue:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'value:' ( (lv_operator_9_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' ) ) otherlv_11= ';' )? otherlv_12= '}' ) )
-            // InternalModness.g:3262:2: (otherlv_0= 'SensitiveVariableValue' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingValue:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'value:' ( (lv_operator_9_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' ) ) otherlv_11= ';' )? otherlv_12= '}' )
+            // InternalModness.g:3245:2: ( (otherlv_0= 'SensitiveVariableValue' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingValue:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'value:' ( (lv_operator_9_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' ) ) otherlv_11= ';' )? otherlv_12= '}' ) )
+            // InternalModness.g:3246:2: (otherlv_0= 'SensitiveVariableValue' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingValue:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'value:' ( (lv_operator_9_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' ) ) otherlv_11= ';' )? otherlv_12= '}' )
             {
-            // InternalModness.g:3262:2: (otherlv_0= 'SensitiveVariableValue' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingValue:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'value:' ( (lv_operator_9_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' ) ) otherlv_11= ';' )? otherlv_12= '}' )
-            // InternalModness.g:3263:3: otherlv_0= 'SensitiveVariableValue' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingValue:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'value:' ( (lv_operator_9_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' ) ) otherlv_11= ';' )? otherlv_12= '}'
+            // InternalModness.g:3246:2: (otherlv_0= 'SensitiveVariableValue' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingValue:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'value:' ( (lv_operator_9_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' ) ) otherlv_11= ';' )? otherlv_12= '}' )
+            // InternalModness.g:3247:3: otherlv_0= 'SensitiveVariableValue' otherlv_1= '{' otherlv_2= 'id:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingValue:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'value:' ( (lv_operator_9_0= ruleEqualityOperator ) ) ( ( (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' ) ) otherlv_11= ';' )? otherlv_12= '}'
             {
-            otherlv_0=(Token)match(input,84,FOLLOW_4); 
+            otherlv_0=(Token)match(input,83,FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getDatasetSensitiveVariableValueAccess().getSensitiveVariableValueKeyword_0());
             		
@@ -7435,11 +7414,11 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getDatasetSensitiveVariableValueAccess().getIdKeyword_2());
             		
-            // InternalModness.g:3275:3: ( (lv_name_3_0= ruleEString ) )
-            // InternalModness.g:3276:4: (lv_name_3_0= ruleEString )
+            // InternalModness.g:3259:3: ( (lv_name_3_0= ruleEString ) )
+            // InternalModness.g:3260:4: (lv_name_3_0= ruleEString )
             {
-            // InternalModness.g:3276:4: (lv_name_3_0= ruleEString )
-            // InternalModness.g:3277:5: lv_name_3_0= ruleEString
+            // InternalModness.g:3260:4: (lv_name_3_0= ruleEString )
+            // InternalModness.g:3261:5: lv_name_3_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getDatasetSensitiveVariableValueAccess().getNameEStringParserRuleCall_3_0());
@@ -7466,19 +7445,19 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,15,FOLLOW_87); 
+            otherlv_4=(Token)match(input,15,FOLLOW_86); 
 
             			newLeafNode(otherlv_4, grammarAccess.getDatasetSensitiveVariableValueAccess().getSemicolonKeyword_4());
             		
-            otherlv_5=(Token)match(input,85,FOLLOW_3); 
+            otherlv_5=(Token)match(input,84,FOLLOW_3); 
 
             			newLeafNode(otherlv_5, grammarAccess.getDatasetSensitiveVariableValueAccess().getMappingValueKeyword_5());
             		
-            // InternalModness.g:3302:3: ( ( ruleEString ) )
-            // InternalModness.g:3303:4: ( ruleEString )
+            // InternalModness.g:3286:3: ( ( ruleEString ) )
+            // InternalModness.g:3287:4: ( ruleEString )
             {
-            // InternalModness.g:3303:4: ( ruleEString )
-            // InternalModness.g:3304:5: ruleEString
+            // InternalModness.g:3287:4: ( ruleEString )
+            // InternalModness.g:3288:5: ruleEString
             {
 
             					if (current==null) {
@@ -7510,16 +7489,16 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_8, grammarAccess.getDatasetSensitiveVariableValueAccess().getValueKeyword_8());
             		
-            // InternalModness.g:3326:3: ( (lv_operator_9_0= ruleEqualityOperator ) )
-            // InternalModness.g:3327:4: (lv_operator_9_0= ruleEqualityOperator )
+            // InternalModness.g:3310:3: ( (lv_operator_9_0= ruleEqualityOperator ) )
+            // InternalModness.g:3311:4: (lv_operator_9_0= ruleEqualityOperator )
             {
-            // InternalModness.g:3327:4: (lv_operator_9_0= ruleEqualityOperator )
-            // InternalModness.g:3328:5: lv_operator_9_0= ruleEqualityOperator
+            // InternalModness.g:3311:4: (lv_operator_9_0= ruleEqualityOperator )
+            // InternalModness.g:3312:5: lv_operator_9_0= ruleEqualityOperator
             {
 
             					newCompositeNode(grammarAccess.getDatasetSensitiveVariableValueAccess().getOperatorEqualityOperatorParserRuleCall_9_0());
             				
-            pushFollow(FOLLOW_84);
+            pushFollow(FOLLOW_83);
             lv_operator_9_0=ruleEqualityOperator();
 
             state._fsp--;
@@ -7541,24 +7520,24 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModness.g:3345:3: ( ( (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' ) ) otherlv_11= ';' )?
+            // InternalModness.g:3329:3: ( ( (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' ) ) otherlv_11= ';' )?
             int alt39=2;
             int LA39_0 = input.LA(1);
 
-            if ( (LA39_0==82) ) {
+            if ( (LA39_0==81) ) {
                 alt39=1;
             }
             switch (alt39) {
                 case 1 :
-                    // InternalModness.g:3346:4: ( (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' ) ) otherlv_11= ';'
+                    // InternalModness.g:3330:4: ( (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' ) ) otherlv_11= ';'
                     {
-                    // InternalModness.g:3346:4: ( (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' ) )
-                    // InternalModness.g:3347:5: (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' )
+                    // InternalModness.g:3330:4: ( (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' ) )
+                    // InternalModness.g:3331:5: (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' )
                     {
-                    // InternalModness.g:3347:5: (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' )
-                    // InternalModness.g:3348:6: lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize'
+                    // InternalModness.g:3331:5: (lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize' )
+                    // InternalModness.g:3332:6: lv_relativeToDatasetSize_10_0= 'relativeToDatasetSize'
                     {
-                    lv_relativeToDatasetSize_10_0=(Token)match(input,82,FOLLOW_7); 
+                    lv_relativeToDatasetSize_10_0=(Token)match(input,81,FOLLOW_7); 
 
                     						newLeafNode(lv_relativeToDatasetSize_10_0, grammarAccess.getDatasetSensitiveVariableValueAccess().getRelativeToDatasetSizeRelativeToDatasetSizeKeyword_10_0_0());
                     					
@@ -7611,7 +7590,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOtherVariable"
-    // InternalModness.g:3373:1: entryRuleOtherVariable returns [EObject current=null] : iv_ruleOtherVariable= ruleOtherVariable EOF ;
+    // InternalModness.g:3357:1: entryRuleOtherVariable returns [EObject current=null] : iv_ruleOtherVariable= ruleOtherVariable EOF ;
     public final EObject entryRuleOtherVariable() throws RecognitionException {
         EObject current = null;
 
@@ -7619,8 +7598,8 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalModness.g:3373:54: (iv_ruleOtherVariable= ruleOtherVariable EOF )
-            // InternalModness.g:3374:2: iv_ruleOtherVariable= ruleOtherVariable EOF
+            // InternalModness.g:3357:54: (iv_ruleOtherVariable= ruleOtherVariable EOF )
+            // InternalModness.g:3358:2: iv_ruleOtherVariable= ruleOtherVariable EOF
             {
              newCompositeNode(grammarAccess.getOtherVariableRule()); 
             pushFollow(FOLLOW_1);
@@ -7647,7 +7626,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOtherVariable"
-    // InternalModness.g:3380:1: ruleOtherVariable returns [EObject current=null] : ( () otherlv_1= 'OtherVariable' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'othervariablevalue' otherlv_5= '{' ( (lv_othervariablevalue_6_0= ruleVariableValue ) ) (otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) ) )* otherlv_9= '}' )? otherlv_10= '}' ) ;
+    // InternalModness.g:3364:1: ruleOtherVariable returns [EObject current=null] : ( () otherlv_1= 'OtherVariable' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'othervariablevalue' otherlv_5= '{' ( (lv_othervariablevalue_6_0= ruleVariableValue ) ) (otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) ) )* otherlv_9= '}' )? otherlv_10= '}' ) ;
     public final EObject ruleOtherVariable() throws RecognitionException {
         EObject current = null;
 
@@ -7669,14 +7648,14 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModness.g:3386:2: ( ( () otherlv_1= 'OtherVariable' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'othervariablevalue' otherlv_5= '{' ( (lv_othervariablevalue_6_0= ruleVariableValue ) ) (otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) ) )* otherlv_9= '}' )? otherlv_10= '}' ) )
-            // InternalModness.g:3387:2: ( () otherlv_1= 'OtherVariable' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'othervariablevalue' otherlv_5= '{' ( (lv_othervariablevalue_6_0= ruleVariableValue ) ) (otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) ) )* otherlv_9= '}' )? otherlv_10= '}' )
+            // InternalModness.g:3370:2: ( ( () otherlv_1= 'OtherVariable' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'othervariablevalue' otherlv_5= '{' ( (lv_othervariablevalue_6_0= ruleVariableValue ) ) (otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) ) )* otherlv_9= '}' )? otherlv_10= '}' ) )
+            // InternalModness.g:3371:2: ( () otherlv_1= 'OtherVariable' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'othervariablevalue' otherlv_5= '{' ( (lv_othervariablevalue_6_0= ruleVariableValue ) ) (otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) ) )* otherlv_9= '}' )? otherlv_10= '}' )
             {
-            // InternalModness.g:3387:2: ( () otherlv_1= 'OtherVariable' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'othervariablevalue' otherlv_5= '{' ( (lv_othervariablevalue_6_0= ruleVariableValue ) ) (otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) ) )* otherlv_9= '}' )? otherlv_10= '}' )
-            // InternalModness.g:3388:3: () otherlv_1= 'OtherVariable' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'othervariablevalue' otherlv_5= '{' ( (lv_othervariablevalue_6_0= ruleVariableValue ) ) (otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) ) )* otherlv_9= '}' )? otherlv_10= '}'
+            // InternalModness.g:3371:2: ( () otherlv_1= 'OtherVariable' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'othervariablevalue' otherlv_5= '{' ( (lv_othervariablevalue_6_0= ruleVariableValue ) ) (otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) ) )* otherlv_9= '}' )? otherlv_10= '}' )
+            // InternalModness.g:3372:3: () otherlv_1= 'OtherVariable' ( (lv_name_2_0= ruleEString ) ) otherlv_3= '{' (otherlv_4= 'othervariablevalue' otherlv_5= '{' ( (lv_othervariablevalue_6_0= ruleVariableValue ) ) (otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) ) )* otherlv_9= '}' )? otherlv_10= '}'
             {
-            // InternalModness.g:3388:3: ()
-            // InternalModness.g:3389:4: 
+            // InternalModness.g:3372:3: ()
+            // InternalModness.g:3373:4: 
             {
 
             				current = forceCreateModelElement(
@@ -7686,15 +7665,15 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,86,FOLLOW_3); 
+            otherlv_1=(Token)match(input,85,FOLLOW_3); 
 
             			newLeafNode(otherlv_1, grammarAccess.getOtherVariableAccess().getOtherVariableKeyword_1());
             		
-            // InternalModness.g:3399:3: ( (lv_name_2_0= ruleEString ) )
-            // InternalModness.g:3400:4: (lv_name_2_0= ruleEString )
+            // InternalModness.g:3383:3: ( (lv_name_2_0= ruleEString ) )
+            // InternalModness.g:3384:4: (lv_name_2_0= ruleEString )
             {
-            // InternalModness.g:3400:4: (lv_name_2_0= ruleEString )
-            // InternalModness.g:3401:5: lv_name_2_0= ruleEString
+            // InternalModness.g:3384:4: (lv_name_2_0= ruleEString )
+            // InternalModness.g:3385:5: lv_name_2_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getOtherVariableAccess().getNameEStringParserRuleCall_2_0());
@@ -7721,39 +7700,39 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,12,FOLLOW_88); 
+            otherlv_3=(Token)match(input,12,FOLLOW_87); 
 
             			newLeafNode(otherlv_3, grammarAccess.getOtherVariableAccess().getLeftCurlyBracketKeyword_3());
             		
-            // InternalModness.g:3422:3: (otherlv_4= 'othervariablevalue' otherlv_5= '{' ( (lv_othervariablevalue_6_0= ruleVariableValue ) ) (otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) ) )* otherlv_9= '}' )?
+            // InternalModness.g:3406:3: (otherlv_4= 'othervariablevalue' otherlv_5= '{' ( (lv_othervariablevalue_6_0= ruleVariableValue ) ) (otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) ) )* otherlv_9= '}' )?
             int alt41=2;
             int LA41_0 = input.LA(1);
 
-            if ( (LA41_0==87) ) {
+            if ( (LA41_0==86) ) {
                 alt41=1;
             }
             switch (alt41) {
                 case 1 :
-                    // InternalModness.g:3423:4: otherlv_4= 'othervariablevalue' otherlv_5= '{' ( (lv_othervariablevalue_6_0= ruleVariableValue ) ) (otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) ) )* otherlv_9= '}'
+                    // InternalModness.g:3407:4: otherlv_4= 'othervariablevalue' otherlv_5= '{' ( (lv_othervariablevalue_6_0= ruleVariableValue ) ) (otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) ) )* otherlv_9= '}'
                     {
-                    otherlv_4=(Token)match(input,87,FOLLOW_4); 
+                    otherlv_4=(Token)match(input,86,FOLLOW_4); 
 
                     				newLeafNode(otherlv_4, grammarAccess.getOtherVariableAccess().getOthervariablevalueKeyword_4_0());
                     			
-                    otherlv_5=(Token)match(input,12,FOLLOW_89); 
+                    otherlv_5=(Token)match(input,12,FOLLOW_88); 
 
                     				newLeafNode(otherlv_5, grammarAccess.getOtherVariableAccess().getLeftCurlyBracketKeyword_4_1());
                     			
-                    // InternalModness.g:3431:4: ( (lv_othervariablevalue_6_0= ruleVariableValue ) )
-                    // InternalModness.g:3432:5: (lv_othervariablevalue_6_0= ruleVariableValue )
+                    // InternalModness.g:3415:4: ( (lv_othervariablevalue_6_0= ruleVariableValue ) )
+                    // InternalModness.g:3416:5: (lv_othervariablevalue_6_0= ruleVariableValue )
                     {
-                    // InternalModness.g:3432:5: (lv_othervariablevalue_6_0= ruleVariableValue )
-                    // InternalModness.g:3433:6: lv_othervariablevalue_6_0= ruleVariableValue
+                    // InternalModness.g:3416:5: (lv_othervariablevalue_6_0= ruleVariableValue )
+                    // InternalModness.g:3417:6: lv_othervariablevalue_6_0= ruleVariableValue
                     {
 
                     						newCompositeNode(grammarAccess.getOtherVariableAccess().getOthervariablevalueVariableValueParserRuleCall_4_2_0());
                     					
-                    pushFollow(FOLLOW_90);
+                    pushFollow(FOLLOW_89);
                     lv_othervariablevalue_6_0=ruleVariableValue();
 
                     state._fsp--;
@@ -7775,7 +7754,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // InternalModness.g:3450:4: (otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) ) )*
+                    // InternalModness.g:3434:4: (otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) ) )*
                     loop40:
                     do {
                         int alt40=2;
@@ -7788,22 +7767,22 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
                         switch (alt40) {
                     	case 1 :
-                    	    // InternalModness.g:3451:5: otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) )
+                    	    // InternalModness.g:3435:5: otherlv_7= ',' ( (lv_othervariablevalue_8_0= ruleVariableValue ) )
                     	    {
-                    	    otherlv_7=(Token)match(input,17,FOLLOW_89); 
+                    	    otherlv_7=(Token)match(input,17,FOLLOW_88); 
 
                     	    					newLeafNode(otherlv_7, grammarAccess.getOtherVariableAccess().getCommaKeyword_4_3_0());
                     	    				
-                    	    // InternalModness.g:3455:5: ( (lv_othervariablevalue_8_0= ruleVariableValue ) )
-                    	    // InternalModness.g:3456:6: (lv_othervariablevalue_8_0= ruleVariableValue )
+                    	    // InternalModness.g:3439:5: ( (lv_othervariablevalue_8_0= ruleVariableValue ) )
+                    	    // InternalModness.g:3440:6: (lv_othervariablevalue_8_0= ruleVariableValue )
                     	    {
-                    	    // InternalModness.g:3456:6: (lv_othervariablevalue_8_0= ruleVariableValue )
-                    	    // InternalModness.g:3457:7: lv_othervariablevalue_8_0= ruleVariableValue
+                    	    // InternalModness.g:3440:6: (lv_othervariablevalue_8_0= ruleVariableValue )
+                    	    // InternalModness.g:3441:7: lv_othervariablevalue_8_0= ruleVariableValue
                     	    {
 
                     	    							newCompositeNode(grammarAccess.getOtherVariableAccess().getOthervariablevalueVariableValueParserRuleCall_4_3_1_0());
                     	    						
-                    	    pushFollow(FOLLOW_90);
+                    	    pushFollow(FOLLOW_89);
                     	    lv_othervariablevalue_8_0=ruleVariableValue();
 
                     	    state._fsp--;
@@ -7871,7 +7850,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDatasetSensitiveVariable"
-    // InternalModness.g:3488:1: entryRuleDatasetSensitiveVariable returns [EObject current=null] : iv_ruleDatasetSensitiveVariable= ruleDatasetSensitiveVariable EOF ;
+    // InternalModness.g:3472:1: entryRuleDatasetSensitiveVariable returns [EObject current=null] : iv_ruleDatasetSensitiveVariable= ruleDatasetSensitiveVariable EOF ;
     public final EObject entryRuleDatasetSensitiveVariable() throws RecognitionException {
         EObject current = null;
 
@@ -7879,8 +7858,8 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalModness.g:3488:65: (iv_ruleDatasetSensitiveVariable= ruleDatasetSensitiveVariable EOF )
-            // InternalModness.g:3489:2: iv_ruleDatasetSensitiveVariable= ruleDatasetSensitiveVariable EOF
+            // InternalModness.g:3472:65: (iv_ruleDatasetSensitiveVariable= ruleDatasetSensitiveVariable EOF )
+            // InternalModness.g:3473:2: iv_ruleDatasetSensitiveVariable= ruleDatasetSensitiveVariable EOF
             {
              newCompositeNode(grammarAccess.getDatasetSensitiveVariableRule()); 
             pushFollow(FOLLOW_1);
@@ -7907,7 +7886,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDatasetSensitiveVariable"
-    // InternalModness.g:3495:1: ruleDatasetSensitiveVariable returns [EObject current=null] : (otherlv_0= 'DatasetSensitiveVariable' otherlv_1= '{' otherlv_2= 'name:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingSensitiveVariable:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'values:' otherlv_9= '{' ( (lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue ) ) (otherlv_11= ',' ( (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue ) ) )* otherlv_13= '}' otherlv_14= '}' ) ;
+    // InternalModness.g:3479:1: ruleDatasetSensitiveVariable returns [EObject current=null] : (otherlv_0= 'DatasetSensitiveVariable' otherlv_1= '{' otherlv_2= 'name:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingSensitiveVariable:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'values:' otherlv_9= '{' ( (lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue ) ) (otherlv_11= ',' ( (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue ) ) )* otherlv_13= '}' otherlv_14= '}' ) ;
     public final EObject ruleDatasetSensitiveVariable() throws RecognitionException {
         EObject current = null;
 
@@ -7933,13 +7912,13 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModness.g:3501:2: ( (otherlv_0= 'DatasetSensitiveVariable' otherlv_1= '{' otherlv_2= 'name:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingSensitiveVariable:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'values:' otherlv_9= '{' ( (lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue ) ) (otherlv_11= ',' ( (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue ) ) )* otherlv_13= '}' otherlv_14= '}' ) )
-            // InternalModness.g:3502:2: (otherlv_0= 'DatasetSensitiveVariable' otherlv_1= '{' otherlv_2= 'name:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingSensitiveVariable:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'values:' otherlv_9= '{' ( (lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue ) ) (otherlv_11= ',' ( (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue ) ) )* otherlv_13= '}' otherlv_14= '}' )
+            // InternalModness.g:3485:2: ( (otherlv_0= 'DatasetSensitiveVariable' otherlv_1= '{' otherlv_2= 'name:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingSensitiveVariable:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'values:' otherlv_9= '{' ( (lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue ) ) (otherlv_11= ',' ( (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue ) ) )* otherlv_13= '}' otherlv_14= '}' ) )
+            // InternalModness.g:3486:2: (otherlv_0= 'DatasetSensitiveVariable' otherlv_1= '{' otherlv_2= 'name:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingSensitiveVariable:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'values:' otherlv_9= '{' ( (lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue ) ) (otherlv_11= ',' ( (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue ) ) )* otherlv_13= '}' otherlv_14= '}' )
             {
-            // InternalModness.g:3502:2: (otherlv_0= 'DatasetSensitiveVariable' otherlv_1= '{' otherlv_2= 'name:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingSensitiveVariable:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'values:' otherlv_9= '{' ( (lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue ) ) (otherlv_11= ',' ( (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue ) ) )* otherlv_13= '}' otherlv_14= '}' )
-            // InternalModness.g:3503:3: otherlv_0= 'DatasetSensitiveVariable' otherlv_1= '{' otherlv_2= 'name:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingSensitiveVariable:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'values:' otherlv_9= '{' ( (lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue ) ) (otherlv_11= ',' ( (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue ) ) )* otherlv_13= '}' otherlv_14= '}'
+            // InternalModness.g:3486:2: (otherlv_0= 'DatasetSensitiveVariable' otherlv_1= '{' otherlv_2= 'name:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingSensitiveVariable:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'values:' otherlv_9= '{' ( (lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue ) ) (otherlv_11= ',' ( (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue ) ) )* otherlv_13= '}' otherlv_14= '}' )
+            // InternalModness.g:3487:3: otherlv_0= 'DatasetSensitiveVariable' otherlv_1= '{' otherlv_2= 'name:' ( (lv_name_3_0= ruleEString ) ) otherlv_4= ';' otherlv_5= 'mappingSensitiveVariable:' ( ( ruleEString ) ) otherlv_7= ';' otherlv_8= 'values:' otherlv_9= '{' ( (lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue ) ) (otherlv_11= ',' ( (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue ) ) )* otherlv_13= '}' otherlv_14= '}'
             {
-            otherlv_0=(Token)match(input,88,FOLLOW_4); 
+            otherlv_0=(Token)match(input,87,FOLLOW_4); 
 
             			newLeafNode(otherlv_0, grammarAccess.getDatasetSensitiveVariableAccess().getDatasetSensitiveVariableKeyword_0());
             		
@@ -7951,11 +7930,11 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getDatasetSensitiveVariableAccess().getNameKeyword_2());
             		
-            // InternalModness.g:3515:3: ( (lv_name_3_0= ruleEString ) )
-            // InternalModness.g:3516:4: (lv_name_3_0= ruleEString )
+            // InternalModness.g:3499:3: ( (lv_name_3_0= ruleEString ) )
+            // InternalModness.g:3500:4: (lv_name_3_0= ruleEString )
             {
-            // InternalModness.g:3516:4: (lv_name_3_0= ruleEString )
-            // InternalModness.g:3517:5: lv_name_3_0= ruleEString
+            // InternalModness.g:3500:4: (lv_name_3_0= ruleEString )
+            // InternalModness.g:3501:5: lv_name_3_0= ruleEString
             {
 
             					newCompositeNode(grammarAccess.getDatasetSensitiveVariableAccess().getNameEStringParserRuleCall_3_0());
@@ -7982,19 +7961,19 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,15,FOLLOW_91); 
+            otherlv_4=(Token)match(input,15,FOLLOW_90); 
 
             			newLeafNode(otherlv_4, grammarAccess.getDatasetSensitiveVariableAccess().getSemicolonKeyword_4());
             		
-            otherlv_5=(Token)match(input,89,FOLLOW_3); 
+            otherlv_5=(Token)match(input,88,FOLLOW_3); 
 
             			newLeafNode(otherlv_5, grammarAccess.getDatasetSensitiveVariableAccess().getMappingSensitiveVariableKeyword_5());
             		
-            // InternalModness.g:3542:3: ( ( ruleEString ) )
-            // InternalModness.g:3543:4: ( ruleEString )
+            // InternalModness.g:3526:3: ( ( ruleEString ) )
+            // InternalModness.g:3527:4: ( ruleEString )
             {
-            // InternalModness.g:3543:4: ( ruleEString )
-            // InternalModness.g:3544:5: ruleEString
+            // InternalModness.g:3527:4: ( ruleEString )
+            // InternalModness.g:3528:5: ruleEString
             {
 
             					if (current==null) {
@@ -8026,20 +8005,20 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_8, grammarAccess.getDatasetSensitiveVariableAccess().getValuesKeyword_8());
             		
-            otherlv_9=(Token)match(input,12,FOLLOW_89); 
+            otherlv_9=(Token)match(input,12,FOLLOW_88); 
 
             			newLeafNode(otherlv_9, grammarAccess.getDatasetSensitiveVariableAccess().getLeftCurlyBracketKeyword_9());
             		
-            // InternalModness.g:3570:3: ( (lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue ) )
-            // InternalModness.g:3571:4: (lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue )
+            // InternalModness.g:3554:3: ( (lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue ) )
+            // InternalModness.g:3555:4: (lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue )
             {
-            // InternalModness.g:3571:4: (lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue )
-            // InternalModness.g:3572:5: lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue
+            // InternalModness.g:3555:4: (lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue )
+            // InternalModness.g:3556:5: lv_datasetsensitivevariablevalue_10_0= ruleDatasetSensitiveVariableValue
             {
 
             					newCompositeNode(grammarAccess.getDatasetSensitiveVariableAccess().getDatasetsensitivevariablevalueDatasetSensitiveVariableValueParserRuleCall_10_0());
             				
-            pushFollow(FOLLOW_90);
+            pushFollow(FOLLOW_89);
             lv_datasetsensitivevariablevalue_10_0=ruleDatasetSensitiveVariableValue();
 
             state._fsp--;
@@ -8061,7 +8040,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalModness.g:3589:3: (otherlv_11= ',' ( (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue ) ) )*
+            // InternalModness.g:3573:3: (otherlv_11= ',' ( (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue ) ) )*
             loop42:
             do {
                 int alt42=2;
@@ -8074,22 +8053,22 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
                 switch (alt42) {
             	case 1 :
-            	    // InternalModness.g:3590:4: otherlv_11= ',' ( (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue ) )
+            	    // InternalModness.g:3574:4: otherlv_11= ',' ( (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue ) )
             	    {
-            	    otherlv_11=(Token)match(input,17,FOLLOW_89); 
+            	    otherlv_11=(Token)match(input,17,FOLLOW_88); 
 
             	    				newLeafNode(otherlv_11, grammarAccess.getDatasetSensitiveVariableAccess().getCommaKeyword_11_0());
             	    			
-            	    // InternalModness.g:3594:4: ( (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue ) )
-            	    // InternalModness.g:3595:5: (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue )
+            	    // InternalModness.g:3578:4: ( (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue ) )
+            	    // InternalModness.g:3579:5: (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue )
             	    {
-            	    // InternalModness.g:3595:5: (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue )
-            	    // InternalModness.g:3596:6: lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue
+            	    // InternalModness.g:3579:5: (lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue )
+            	    // InternalModness.g:3580:6: lv_datasetsensitivevariablevalue_12_0= ruleDatasetSensitiveVariableValue
             	    {
 
             	    						newCompositeNode(grammarAccess.getDatasetSensitiveVariableAccess().getDatasetsensitivevariablevalueDatasetSensitiveVariableValueParserRuleCall_11_1_0());
             	    					
-            	    pushFollow(FOLLOW_90);
+            	    pushFollow(FOLLOW_89);
             	    lv_datasetsensitivevariablevalue_12_0=ruleDatasetSensitiveVariableValue();
 
             	    state._fsp--;
@@ -8151,7 +8130,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBiasSource"
-    // InternalModness.g:3626:1: ruleBiasSource returns [Enumerator current=null] : ( (enumLiteral_0= 'WRONG_ALGORITHM_BEHAVIOUR' ) | (enumLiteral_1= 'HUMAN_DISCRIMINATION' ) | (enumLiteral_2= 'WRONG_MEASUREMENT' ) | (enumLiteral_3= 'OMITTED_VARIABLE' ) | (enumLiteral_4= 'WRONG_SAMPLING' ) | (enumLiteral_5= 'WRONG_AGGREGATION' ) | (enumLiteral_6= 'WRONG_LINKING' ) | (enumLiteral_7= 'WRONG_PRESENTATION' ) | (enumLiteral_8= 'RESULT_RANKING' ) | (enumLiteral_9= 'WRONG_SYSTEM_EVALUATION' ) | (enumLiteral_10= 'WRONG_SYSTEM_TARGET_POPULATION' ) | (enumLiteral_11= 'CHANGE_IN_TARGET_POPULATION' ) ) ;
+    // InternalModness.g:3610:1: ruleBiasSource returns [Enumerator current=null] : ( (enumLiteral_0= 'WRONG_ALGORITHM_BEHAVIOUR' ) | (enumLiteral_1= 'HUMAN_DISCRIMINATION' ) | (enumLiteral_2= 'WRONG_MEASUREMENT' ) | (enumLiteral_3= 'OMITTED_VARIABLE' ) | (enumLiteral_4= 'WRONG_SAMPLING' ) | (enumLiteral_5= 'WRONG_AGGREGATION' ) | (enumLiteral_6= 'WRONG_LINKING' ) | (enumLiteral_7= 'WRONG_PRESENTATION' ) | (enumLiteral_8= 'RESULT_RANKING' ) | (enumLiteral_9= 'WRONG_SYSTEM_EVALUATION' ) | (enumLiteral_10= 'WRONG_SYSTEM_TARGET_POPULATION' ) | (enumLiteral_11= 'CHANGE_IN_TARGET_POPULATION' ) ) ;
     public final Enumerator ruleBiasSource() throws RecognitionException {
         Enumerator current = null;
 
@@ -8172,68 +8151,68 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModness.g:3632:2: ( ( (enumLiteral_0= 'WRONG_ALGORITHM_BEHAVIOUR' ) | (enumLiteral_1= 'HUMAN_DISCRIMINATION' ) | (enumLiteral_2= 'WRONG_MEASUREMENT' ) | (enumLiteral_3= 'OMITTED_VARIABLE' ) | (enumLiteral_4= 'WRONG_SAMPLING' ) | (enumLiteral_5= 'WRONG_AGGREGATION' ) | (enumLiteral_6= 'WRONG_LINKING' ) | (enumLiteral_7= 'WRONG_PRESENTATION' ) | (enumLiteral_8= 'RESULT_RANKING' ) | (enumLiteral_9= 'WRONG_SYSTEM_EVALUATION' ) | (enumLiteral_10= 'WRONG_SYSTEM_TARGET_POPULATION' ) | (enumLiteral_11= 'CHANGE_IN_TARGET_POPULATION' ) ) )
-            // InternalModness.g:3633:2: ( (enumLiteral_0= 'WRONG_ALGORITHM_BEHAVIOUR' ) | (enumLiteral_1= 'HUMAN_DISCRIMINATION' ) | (enumLiteral_2= 'WRONG_MEASUREMENT' ) | (enumLiteral_3= 'OMITTED_VARIABLE' ) | (enumLiteral_4= 'WRONG_SAMPLING' ) | (enumLiteral_5= 'WRONG_AGGREGATION' ) | (enumLiteral_6= 'WRONG_LINKING' ) | (enumLiteral_7= 'WRONG_PRESENTATION' ) | (enumLiteral_8= 'RESULT_RANKING' ) | (enumLiteral_9= 'WRONG_SYSTEM_EVALUATION' ) | (enumLiteral_10= 'WRONG_SYSTEM_TARGET_POPULATION' ) | (enumLiteral_11= 'CHANGE_IN_TARGET_POPULATION' ) )
+            // InternalModness.g:3616:2: ( ( (enumLiteral_0= 'WRONG_ALGORITHM_BEHAVIOUR' ) | (enumLiteral_1= 'HUMAN_DISCRIMINATION' ) | (enumLiteral_2= 'WRONG_MEASUREMENT' ) | (enumLiteral_3= 'OMITTED_VARIABLE' ) | (enumLiteral_4= 'WRONG_SAMPLING' ) | (enumLiteral_5= 'WRONG_AGGREGATION' ) | (enumLiteral_6= 'WRONG_LINKING' ) | (enumLiteral_7= 'WRONG_PRESENTATION' ) | (enumLiteral_8= 'RESULT_RANKING' ) | (enumLiteral_9= 'WRONG_SYSTEM_EVALUATION' ) | (enumLiteral_10= 'WRONG_SYSTEM_TARGET_POPULATION' ) | (enumLiteral_11= 'CHANGE_IN_TARGET_POPULATION' ) ) )
+            // InternalModness.g:3617:2: ( (enumLiteral_0= 'WRONG_ALGORITHM_BEHAVIOUR' ) | (enumLiteral_1= 'HUMAN_DISCRIMINATION' ) | (enumLiteral_2= 'WRONG_MEASUREMENT' ) | (enumLiteral_3= 'OMITTED_VARIABLE' ) | (enumLiteral_4= 'WRONG_SAMPLING' ) | (enumLiteral_5= 'WRONG_AGGREGATION' ) | (enumLiteral_6= 'WRONG_LINKING' ) | (enumLiteral_7= 'WRONG_PRESENTATION' ) | (enumLiteral_8= 'RESULT_RANKING' ) | (enumLiteral_9= 'WRONG_SYSTEM_EVALUATION' ) | (enumLiteral_10= 'WRONG_SYSTEM_TARGET_POPULATION' ) | (enumLiteral_11= 'CHANGE_IN_TARGET_POPULATION' ) )
             {
-            // InternalModness.g:3633:2: ( (enumLiteral_0= 'WRONG_ALGORITHM_BEHAVIOUR' ) | (enumLiteral_1= 'HUMAN_DISCRIMINATION' ) | (enumLiteral_2= 'WRONG_MEASUREMENT' ) | (enumLiteral_3= 'OMITTED_VARIABLE' ) | (enumLiteral_4= 'WRONG_SAMPLING' ) | (enumLiteral_5= 'WRONG_AGGREGATION' ) | (enumLiteral_6= 'WRONG_LINKING' ) | (enumLiteral_7= 'WRONG_PRESENTATION' ) | (enumLiteral_8= 'RESULT_RANKING' ) | (enumLiteral_9= 'WRONG_SYSTEM_EVALUATION' ) | (enumLiteral_10= 'WRONG_SYSTEM_TARGET_POPULATION' ) | (enumLiteral_11= 'CHANGE_IN_TARGET_POPULATION' ) )
+            // InternalModness.g:3617:2: ( (enumLiteral_0= 'WRONG_ALGORITHM_BEHAVIOUR' ) | (enumLiteral_1= 'HUMAN_DISCRIMINATION' ) | (enumLiteral_2= 'WRONG_MEASUREMENT' ) | (enumLiteral_3= 'OMITTED_VARIABLE' ) | (enumLiteral_4= 'WRONG_SAMPLING' ) | (enumLiteral_5= 'WRONG_AGGREGATION' ) | (enumLiteral_6= 'WRONG_LINKING' ) | (enumLiteral_7= 'WRONG_PRESENTATION' ) | (enumLiteral_8= 'RESULT_RANKING' ) | (enumLiteral_9= 'WRONG_SYSTEM_EVALUATION' ) | (enumLiteral_10= 'WRONG_SYSTEM_TARGET_POPULATION' ) | (enumLiteral_11= 'CHANGE_IN_TARGET_POPULATION' ) )
             int alt43=12;
             switch ( input.LA(1) ) {
-            case 90:
+            case 89:
                 {
                 alt43=1;
                 }
                 break;
-            case 91:
+            case 90:
                 {
                 alt43=2;
                 }
                 break;
-            case 92:
+            case 91:
                 {
                 alt43=3;
                 }
                 break;
-            case 93:
+            case 92:
                 {
                 alt43=4;
                 }
                 break;
-            case 94:
+            case 93:
                 {
                 alt43=5;
                 }
                 break;
-            case 95:
+            case 94:
                 {
                 alt43=6;
                 }
                 break;
-            case 96:
+            case 95:
                 {
                 alt43=7;
                 }
                 break;
-            case 97:
+            case 96:
                 {
                 alt43=8;
                 }
                 break;
-            case 98:
+            case 97:
                 {
                 alt43=9;
                 }
                 break;
-            case 99:
+            case 98:
                 {
                 alt43=10;
                 }
                 break;
-            case 100:
+            case 99:
                 {
                 alt43=11;
                 }
                 break;
-            case 101:
+            case 100:
                 {
                 alt43=12;
                 }
@@ -8247,12 +8226,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             switch (alt43) {
                 case 1 :
-                    // InternalModness.g:3634:3: (enumLiteral_0= 'WRONG_ALGORITHM_BEHAVIOUR' )
+                    // InternalModness.g:3618:3: (enumLiteral_0= 'WRONG_ALGORITHM_BEHAVIOUR' )
                     {
-                    // InternalModness.g:3634:3: (enumLiteral_0= 'WRONG_ALGORITHM_BEHAVIOUR' )
-                    // InternalModness.g:3635:4: enumLiteral_0= 'WRONG_ALGORITHM_BEHAVIOUR'
+                    // InternalModness.g:3618:3: (enumLiteral_0= 'WRONG_ALGORITHM_BEHAVIOUR' )
+                    // InternalModness.g:3619:4: enumLiteral_0= 'WRONG_ALGORITHM_BEHAVIOUR'
                     {
-                    enumLiteral_0=(Token)match(input,90,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,89,FOLLOW_2); 
 
                     				current = grammarAccess.getBiasSourceAccess().getWRONG_ALGORITHM_BEHAVIOUREnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getBiasSourceAccess().getWRONG_ALGORITHM_BEHAVIOUREnumLiteralDeclaration_0());
@@ -8264,12 +8243,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalModness.g:3642:3: (enumLiteral_1= 'HUMAN_DISCRIMINATION' )
+                    // InternalModness.g:3626:3: (enumLiteral_1= 'HUMAN_DISCRIMINATION' )
                     {
-                    // InternalModness.g:3642:3: (enumLiteral_1= 'HUMAN_DISCRIMINATION' )
-                    // InternalModness.g:3643:4: enumLiteral_1= 'HUMAN_DISCRIMINATION'
+                    // InternalModness.g:3626:3: (enumLiteral_1= 'HUMAN_DISCRIMINATION' )
+                    // InternalModness.g:3627:4: enumLiteral_1= 'HUMAN_DISCRIMINATION'
                     {
-                    enumLiteral_1=(Token)match(input,91,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,90,FOLLOW_2); 
 
                     				current = grammarAccess.getBiasSourceAccess().getHUMAN_DISCRIMINATIONEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getBiasSourceAccess().getHUMAN_DISCRIMINATIONEnumLiteralDeclaration_1());
@@ -8281,12 +8260,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalModness.g:3650:3: (enumLiteral_2= 'WRONG_MEASUREMENT' )
+                    // InternalModness.g:3634:3: (enumLiteral_2= 'WRONG_MEASUREMENT' )
                     {
-                    // InternalModness.g:3650:3: (enumLiteral_2= 'WRONG_MEASUREMENT' )
-                    // InternalModness.g:3651:4: enumLiteral_2= 'WRONG_MEASUREMENT'
+                    // InternalModness.g:3634:3: (enumLiteral_2= 'WRONG_MEASUREMENT' )
+                    // InternalModness.g:3635:4: enumLiteral_2= 'WRONG_MEASUREMENT'
                     {
-                    enumLiteral_2=(Token)match(input,92,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,91,FOLLOW_2); 
 
                     				current = grammarAccess.getBiasSourceAccess().getWRONG_MEASUREMENTEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getBiasSourceAccess().getWRONG_MEASUREMENTEnumLiteralDeclaration_2());
@@ -8298,12 +8277,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalModness.g:3658:3: (enumLiteral_3= 'OMITTED_VARIABLE' )
+                    // InternalModness.g:3642:3: (enumLiteral_3= 'OMITTED_VARIABLE' )
                     {
-                    // InternalModness.g:3658:3: (enumLiteral_3= 'OMITTED_VARIABLE' )
-                    // InternalModness.g:3659:4: enumLiteral_3= 'OMITTED_VARIABLE'
+                    // InternalModness.g:3642:3: (enumLiteral_3= 'OMITTED_VARIABLE' )
+                    // InternalModness.g:3643:4: enumLiteral_3= 'OMITTED_VARIABLE'
                     {
-                    enumLiteral_3=(Token)match(input,93,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,92,FOLLOW_2); 
 
                     				current = grammarAccess.getBiasSourceAccess().getOMITTED_VARIABLEEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getBiasSourceAccess().getOMITTED_VARIABLEEnumLiteralDeclaration_3());
@@ -8315,12 +8294,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalModness.g:3666:3: (enumLiteral_4= 'WRONG_SAMPLING' )
+                    // InternalModness.g:3650:3: (enumLiteral_4= 'WRONG_SAMPLING' )
                     {
-                    // InternalModness.g:3666:3: (enumLiteral_4= 'WRONG_SAMPLING' )
-                    // InternalModness.g:3667:4: enumLiteral_4= 'WRONG_SAMPLING'
+                    // InternalModness.g:3650:3: (enumLiteral_4= 'WRONG_SAMPLING' )
+                    // InternalModness.g:3651:4: enumLiteral_4= 'WRONG_SAMPLING'
                     {
-                    enumLiteral_4=(Token)match(input,94,FOLLOW_2); 
+                    enumLiteral_4=(Token)match(input,93,FOLLOW_2); 
 
                     				current = grammarAccess.getBiasSourceAccess().getWRONG_SAMPLINGEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_4, grammarAccess.getBiasSourceAccess().getWRONG_SAMPLINGEnumLiteralDeclaration_4());
@@ -8332,12 +8311,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalModness.g:3674:3: (enumLiteral_5= 'WRONG_AGGREGATION' )
+                    // InternalModness.g:3658:3: (enumLiteral_5= 'WRONG_AGGREGATION' )
                     {
-                    // InternalModness.g:3674:3: (enumLiteral_5= 'WRONG_AGGREGATION' )
-                    // InternalModness.g:3675:4: enumLiteral_5= 'WRONG_AGGREGATION'
+                    // InternalModness.g:3658:3: (enumLiteral_5= 'WRONG_AGGREGATION' )
+                    // InternalModness.g:3659:4: enumLiteral_5= 'WRONG_AGGREGATION'
                     {
-                    enumLiteral_5=(Token)match(input,95,FOLLOW_2); 
+                    enumLiteral_5=(Token)match(input,94,FOLLOW_2); 
 
                     				current = grammarAccess.getBiasSourceAccess().getWRONG_AGGREGATIONEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_5, grammarAccess.getBiasSourceAccess().getWRONG_AGGREGATIONEnumLiteralDeclaration_5());
@@ -8349,12 +8328,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalModness.g:3682:3: (enumLiteral_6= 'WRONG_LINKING' )
+                    // InternalModness.g:3666:3: (enumLiteral_6= 'WRONG_LINKING' )
                     {
-                    // InternalModness.g:3682:3: (enumLiteral_6= 'WRONG_LINKING' )
-                    // InternalModness.g:3683:4: enumLiteral_6= 'WRONG_LINKING'
+                    // InternalModness.g:3666:3: (enumLiteral_6= 'WRONG_LINKING' )
+                    // InternalModness.g:3667:4: enumLiteral_6= 'WRONG_LINKING'
                     {
-                    enumLiteral_6=(Token)match(input,96,FOLLOW_2); 
+                    enumLiteral_6=(Token)match(input,95,FOLLOW_2); 
 
                     				current = grammarAccess.getBiasSourceAccess().getWRONG_LINKINGEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_6, grammarAccess.getBiasSourceAccess().getWRONG_LINKINGEnumLiteralDeclaration_6());
@@ -8366,12 +8345,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalModness.g:3690:3: (enumLiteral_7= 'WRONG_PRESENTATION' )
+                    // InternalModness.g:3674:3: (enumLiteral_7= 'WRONG_PRESENTATION' )
                     {
-                    // InternalModness.g:3690:3: (enumLiteral_7= 'WRONG_PRESENTATION' )
-                    // InternalModness.g:3691:4: enumLiteral_7= 'WRONG_PRESENTATION'
+                    // InternalModness.g:3674:3: (enumLiteral_7= 'WRONG_PRESENTATION' )
+                    // InternalModness.g:3675:4: enumLiteral_7= 'WRONG_PRESENTATION'
                     {
-                    enumLiteral_7=(Token)match(input,97,FOLLOW_2); 
+                    enumLiteral_7=(Token)match(input,96,FOLLOW_2); 
 
                     				current = grammarAccess.getBiasSourceAccess().getWRONG_PRESENTATIONEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_7, grammarAccess.getBiasSourceAccess().getWRONG_PRESENTATIONEnumLiteralDeclaration_7());
@@ -8383,12 +8362,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalModness.g:3698:3: (enumLiteral_8= 'RESULT_RANKING' )
+                    // InternalModness.g:3682:3: (enumLiteral_8= 'RESULT_RANKING' )
                     {
-                    // InternalModness.g:3698:3: (enumLiteral_8= 'RESULT_RANKING' )
-                    // InternalModness.g:3699:4: enumLiteral_8= 'RESULT_RANKING'
+                    // InternalModness.g:3682:3: (enumLiteral_8= 'RESULT_RANKING' )
+                    // InternalModness.g:3683:4: enumLiteral_8= 'RESULT_RANKING'
                     {
-                    enumLiteral_8=(Token)match(input,98,FOLLOW_2); 
+                    enumLiteral_8=(Token)match(input,97,FOLLOW_2); 
 
                     				current = grammarAccess.getBiasSourceAccess().getRESULT_RANKINGEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_8, grammarAccess.getBiasSourceAccess().getRESULT_RANKINGEnumLiteralDeclaration_8());
@@ -8400,12 +8379,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // InternalModness.g:3706:3: (enumLiteral_9= 'WRONG_SYSTEM_EVALUATION' )
+                    // InternalModness.g:3690:3: (enumLiteral_9= 'WRONG_SYSTEM_EVALUATION' )
                     {
-                    // InternalModness.g:3706:3: (enumLiteral_9= 'WRONG_SYSTEM_EVALUATION' )
-                    // InternalModness.g:3707:4: enumLiteral_9= 'WRONG_SYSTEM_EVALUATION'
+                    // InternalModness.g:3690:3: (enumLiteral_9= 'WRONG_SYSTEM_EVALUATION' )
+                    // InternalModness.g:3691:4: enumLiteral_9= 'WRONG_SYSTEM_EVALUATION'
                     {
-                    enumLiteral_9=(Token)match(input,99,FOLLOW_2); 
+                    enumLiteral_9=(Token)match(input,98,FOLLOW_2); 
 
                     				current = grammarAccess.getBiasSourceAccess().getWRONG_SYSTEM_EVALUATIONEnumLiteralDeclaration_9().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_9, grammarAccess.getBiasSourceAccess().getWRONG_SYSTEM_EVALUATIONEnumLiteralDeclaration_9());
@@ -8417,12 +8396,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // InternalModness.g:3714:3: (enumLiteral_10= 'WRONG_SYSTEM_TARGET_POPULATION' )
+                    // InternalModness.g:3698:3: (enumLiteral_10= 'WRONG_SYSTEM_TARGET_POPULATION' )
                     {
-                    // InternalModness.g:3714:3: (enumLiteral_10= 'WRONG_SYSTEM_TARGET_POPULATION' )
-                    // InternalModness.g:3715:4: enumLiteral_10= 'WRONG_SYSTEM_TARGET_POPULATION'
+                    // InternalModness.g:3698:3: (enumLiteral_10= 'WRONG_SYSTEM_TARGET_POPULATION' )
+                    // InternalModness.g:3699:4: enumLiteral_10= 'WRONG_SYSTEM_TARGET_POPULATION'
                     {
-                    enumLiteral_10=(Token)match(input,100,FOLLOW_2); 
+                    enumLiteral_10=(Token)match(input,99,FOLLOW_2); 
 
                     				current = grammarAccess.getBiasSourceAccess().getWRONG_SYSTEM_TARGET_POPULATIONEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_10, grammarAccess.getBiasSourceAccess().getWRONG_SYSTEM_TARGET_POPULATIONEnumLiteralDeclaration_10());
@@ -8434,12 +8413,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // InternalModness.g:3722:3: (enumLiteral_11= 'CHANGE_IN_TARGET_POPULATION' )
+                    // InternalModness.g:3706:3: (enumLiteral_11= 'CHANGE_IN_TARGET_POPULATION' )
                     {
-                    // InternalModness.g:3722:3: (enumLiteral_11= 'CHANGE_IN_TARGET_POPULATION' )
-                    // InternalModness.g:3723:4: enumLiteral_11= 'CHANGE_IN_TARGET_POPULATION'
+                    // InternalModness.g:3706:3: (enumLiteral_11= 'CHANGE_IN_TARGET_POPULATION' )
+                    // InternalModness.g:3707:4: enumLiteral_11= 'CHANGE_IN_TARGET_POPULATION'
                     {
-                    enumLiteral_11=(Token)match(input,101,FOLLOW_2); 
+                    enumLiteral_11=(Token)match(input,100,FOLLOW_2); 
 
                     				current = grammarAccess.getBiasSourceAccess().getCHANGE_IN_TARGET_POPULATIONEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_11, grammarAccess.getBiasSourceAccess().getCHANGE_IN_TARGET_POPULATIONEnumLiteralDeclaration_11());
@@ -8473,7 +8452,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSingleOperatorParameter"
-    // InternalModness.g:3733:1: ruleSingleOperatorParameter returns [Enumerator current=null] : ( (enumLiteral_0= 'EQUAL' ) | (enumLiteral_1= 'GREATER' ) | (enumLiteral_2= 'MINOR' ) | (enumLiteral_3= 'GREATER_EQUAL' ) | (enumLiteral_4= 'MINOR_EQUAL' ) | (enumLiteral_5= 'NOT_EQUAL' ) ) ;
+    // InternalModness.g:3717:1: ruleSingleOperatorParameter returns [Enumerator current=null] : ( (enumLiteral_0= 'EQUAL' ) | (enumLiteral_1= 'GREATER' ) | (enumLiteral_2= 'MINOR' ) | (enumLiteral_3= 'GREATER_EQUAL' ) | (enumLiteral_4= 'MINOR_EQUAL' ) | (enumLiteral_5= 'NOT_EQUAL' ) ) ;
     public final Enumerator ruleSingleOperatorParameter() throws RecognitionException {
         Enumerator current = null;
 
@@ -8488,38 +8467,38 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModness.g:3739:2: ( ( (enumLiteral_0= 'EQUAL' ) | (enumLiteral_1= 'GREATER' ) | (enumLiteral_2= 'MINOR' ) | (enumLiteral_3= 'GREATER_EQUAL' ) | (enumLiteral_4= 'MINOR_EQUAL' ) | (enumLiteral_5= 'NOT_EQUAL' ) ) )
-            // InternalModness.g:3740:2: ( (enumLiteral_0= 'EQUAL' ) | (enumLiteral_1= 'GREATER' ) | (enumLiteral_2= 'MINOR' ) | (enumLiteral_3= 'GREATER_EQUAL' ) | (enumLiteral_4= 'MINOR_EQUAL' ) | (enumLiteral_5= 'NOT_EQUAL' ) )
+            // InternalModness.g:3723:2: ( ( (enumLiteral_0= 'EQUAL' ) | (enumLiteral_1= 'GREATER' ) | (enumLiteral_2= 'MINOR' ) | (enumLiteral_3= 'GREATER_EQUAL' ) | (enumLiteral_4= 'MINOR_EQUAL' ) | (enumLiteral_5= 'NOT_EQUAL' ) ) )
+            // InternalModness.g:3724:2: ( (enumLiteral_0= 'EQUAL' ) | (enumLiteral_1= 'GREATER' ) | (enumLiteral_2= 'MINOR' ) | (enumLiteral_3= 'GREATER_EQUAL' ) | (enumLiteral_4= 'MINOR_EQUAL' ) | (enumLiteral_5= 'NOT_EQUAL' ) )
             {
-            // InternalModness.g:3740:2: ( (enumLiteral_0= 'EQUAL' ) | (enumLiteral_1= 'GREATER' ) | (enumLiteral_2= 'MINOR' ) | (enumLiteral_3= 'GREATER_EQUAL' ) | (enumLiteral_4= 'MINOR_EQUAL' ) | (enumLiteral_5= 'NOT_EQUAL' ) )
+            // InternalModness.g:3724:2: ( (enumLiteral_0= 'EQUAL' ) | (enumLiteral_1= 'GREATER' ) | (enumLiteral_2= 'MINOR' ) | (enumLiteral_3= 'GREATER_EQUAL' ) | (enumLiteral_4= 'MINOR_EQUAL' ) | (enumLiteral_5= 'NOT_EQUAL' ) )
             int alt44=6;
             switch ( input.LA(1) ) {
-            case 102:
+            case 101:
                 {
                 alt44=1;
                 }
                 break;
-            case 103:
+            case 102:
                 {
                 alt44=2;
                 }
                 break;
-            case 104:
+            case 103:
                 {
                 alt44=3;
                 }
                 break;
-            case 105:
+            case 104:
                 {
                 alt44=4;
                 }
                 break;
-            case 106:
+            case 105:
                 {
                 alt44=5;
                 }
                 break;
-            case 107:
+            case 106:
                 {
                 alt44=6;
                 }
@@ -8533,12 +8512,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             switch (alt44) {
                 case 1 :
-                    // InternalModness.g:3741:3: (enumLiteral_0= 'EQUAL' )
+                    // InternalModness.g:3725:3: (enumLiteral_0= 'EQUAL' )
                     {
-                    // InternalModness.g:3741:3: (enumLiteral_0= 'EQUAL' )
-                    // InternalModness.g:3742:4: enumLiteral_0= 'EQUAL'
+                    // InternalModness.g:3725:3: (enumLiteral_0= 'EQUAL' )
+                    // InternalModness.g:3726:4: enumLiteral_0= 'EQUAL'
                     {
-                    enumLiteral_0=(Token)match(input,102,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,101,FOLLOW_2); 
 
                     				current = grammarAccess.getSingleOperatorParameterAccess().getEQUALEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getSingleOperatorParameterAccess().getEQUALEnumLiteralDeclaration_0());
@@ -8550,12 +8529,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalModness.g:3749:3: (enumLiteral_1= 'GREATER' )
+                    // InternalModness.g:3733:3: (enumLiteral_1= 'GREATER' )
                     {
-                    // InternalModness.g:3749:3: (enumLiteral_1= 'GREATER' )
-                    // InternalModness.g:3750:4: enumLiteral_1= 'GREATER'
+                    // InternalModness.g:3733:3: (enumLiteral_1= 'GREATER' )
+                    // InternalModness.g:3734:4: enumLiteral_1= 'GREATER'
                     {
-                    enumLiteral_1=(Token)match(input,103,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,102,FOLLOW_2); 
 
                     				current = grammarAccess.getSingleOperatorParameterAccess().getGREATEREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getSingleOperatorParameterAccess().getGREATEREnumLiteralDeclaration_1());
@@ -8567,12 +8546,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalModness.g:3757:3: (enumLiteral_2= 'MINOR' )
+                    // InternalModness.g:3741:3: (enumLiteral_2= 'MINOR' )
                     {
-                    // InternalModness.g:3757:3: (enumLiteral_2= 'MINOR' )
-                    // InternalModness.g:3758:4: enumLiteral_2= 'MINOR'
+                    // InternalModness.g:3741:3: (enumLiteral_2= 'MINOR' )
+                    // InternalModness.g:3742:4: enumLiteral_2= 'MINOR'
                     {
-                    enumLiteral_2=(Token)match(input,104,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,103,FOLLOW_2); 
 
                     				current = grammarAccess.getSingleOperatorParameterAccess().getMINOREnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getSingleOperatorParameterAccess().getMINOREnumLiteralDeclaration_2());
@@ -8584,12 +8563,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalModness.g:3765:3: (enumLiteral_3= 'GREATER_EQUAL' )
+                    // InternalModness.g:3749:3: (enumLiteral_3= 'GREATER_EQUAL' )
                     {
-                    // InternalModness.g:3765:3: (enumLiteral_3= 'GREATER_EQUAL' )
-                    // InternalModness.g:3766:4: enumLiteral_3= 'GREATER_EQUAL'
+                    // InternalModness.g:3749:3: (enumLiteral_3= 'GREATER_EQUAL' )
+                    // InternalModness.g:3750:4: enumLiteral_3= 'GREATER_EQUAL'
                     {
-                    enumLiteral_3=(Token)match(input,105,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,104,FOLLOW_2); 
 
                     				current = grammarAccess.getSingleOperatorParameterAccess().getGREATER_EQUALEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getSingleOperatorParameterAccess().getGREATER_EQUALEnumLiteralDeclaration_3());
@@ -8601,12 +8580,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalModness.g:3773:3: (enumLiteral_4= 'MINOR_EQUAL' )
+                    // InternalModness.g:3757:3: (enumLiteral_4= 'MINOR_EQUAL' )
                     {
-                    // InternalModness.g:3773:3: (enumLiteral_4= 'MINOR_EQUAL' )
-                    // InternalModness.g:3774:4: enumLiteral_4= 'MINOR_EQUAL'
+                    // InternalModness.g:3757:3: (enumLiteral_4= 'MINOR_EQUAL' )
+                    // InternalModness.g:3758:4: enumLiteral_4= 'MINOR_EQUAL'
                     {
-                    enumLiteral_4=(Token)match(input,106,FOLLOW_2); 
+                    enumLiteral_4=(Token)match(input,105,FOLLOW_2); 
 
                     				current = grammarAccess.getSingleOperatorParameterAccess().getMINOR_EQUALEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_4, grammarAccess.getSingleOperatorParameterAccess().getMINOR_EQUALEnumLiteralDeclaration_4());
@@ -8618,12 +8597,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalModness.g:3781:3: (enumLiteral_5= 'NOT_EQUAL' )
+                    // InternalModness.g:3765:3: (enumLiteral_5= 'NOT_EQUAL' )
                     {
-                    // InternalModness.g:3781:3: (enumLiteral_5= 'NOT_EQUAL' )
-                    // InternalModness.g:3782:4: enumLiteral_5= 'NOT_EQUAL'
+                    // InternalModness.g:3765:3: (enumLiteral_5= 'NOT_EQUAL' )
+                    // InternalModness.g:3766:4: enumLiteral_5= 'NOT_EQUAL'
                     {
-                    enumLiteral_5=(Token)match(input,107,FOLLOW_2); 
+                    enumLiteral_5=(Token)match(input,106,FOLLOW_2); 
 
                     				current = grammarAccess.getSingleOperatorParameterAccess().getNOT_EQUALEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_5, grammarAccess.getSingleOperatorParameterAccess().getNOT_EQUALEnumLiteralDeclaration_5());
@@ -8657,7 +8636,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRangeOperatorParameter"
-    // InternalModness.g:3792:1: ruleRangeOperatorParameter returns [Enumerator current=null] : ( (enumLiteral_0= 'IN_INCLUDED' ) | (enumLiteral_1= 'IN_EXCLUDED' ) | (enumLiteral_2= 'IN_LOWER_INCLUDED' ) | (enumLiteral_3= 'IN_GREATER_INCLUDED' ) ) ;
+    // InternalModness.g:3776:1: ruleRangeOperatorParameter returns [Enumerator current=null] : ( (enumLiteral_0= 'IN_INCLUDED' ) | (enumLiteral_1= 'IN_EXCLUDED' ) | (enumLiteral_2= 'IN_LOWER_INCLUDED' ) | (enumLiteral_3= 'IN_GREATER_INCLUDED' ) ) ;
     public final Enumerator ruleRangeOperatorParameter() throws RecognitionException {
         Enumerator current = null;
 
@@ -8670,28 +8649,28 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModness.g:3798:2: ( ( (enumLiteral_0= 'IN_INCLUDED' ) | (enumLiteral_1= 'IN_EXCLUDED' ) | (enumLiteral_2= 'IN_LOWER_INCLUDED' ) | (enumLiteral_3= 'IN_GREATER_INCLUDED' ) ) )
-            // InternalModness.g:3799:2: ( (enumLiteral_0= 'IN_INCLUDED' ) | (enumLiteral_1= 'IN_EXCLUDED' ) | (enumLiteral_2= 'IN_LOWER_INCLUDED' ) | (enumLiteral_3= 'IN_GREATER_INCLUDED' ) )
+            // InternalModness.g:3782:2: ( ( (enumLiteral_0= 'IN_INCLUDED' ) | (enumLiteral_1= 'IN_EXCLUDED' ) | (enumLiteral_2= 'IN_LOWER_INCLUDED' ) | (enumLiteral_3= 'IN_GREATER_INCLUDED' ) ) )
+            // InternalModness.g:3783:2: ( (enumLiteral_0= 'IN_INCLUDED' ) | (enumLiteral_1= 'IN_EXCLUDED' ) | (enumLiteral_2= 'IN_LOWER_INCLUDED' ) | (enumLiteral_3= 'IN_GREATER_INCLUDED' ) )
             {
-            // InternalModness.g:3799:2: ( (enumLiteral_0= 'IN_INCLUDED' ) | (enumLiteral_1= 'IN_EXCLUDED' ) | (enumLiteral_2= 'IN_LOWER_INCLUDED' ) | (enumLiteral_3= 'IN_GREATER_INCLUDED' ) )
+            // InternalModness.g:3783:2: ( (enumLiteral_0= 'IN_INCLUDED' ) | (enumLiteral_1= 'IN_EXCLUDED' ) | (enumLiteral_2= 'IN_LOWER_INCLUDED' ) | (enumLiteral_3= 'IN_GREATER_INCLUDED' ) )
             int alt45=4;
             switch ( input.LA(1) ) {
-            case 108:
+            case 107:
                 {
                 alt45=1;
                 }
                 break;
-            case 109:
+            case 108:
                 {
                 alt45=2;
                 }
                 break;
-            case 110:
+            case 109:
                 {
                 alt45=3;
                 }
                 break;
-            case 111:
+            case 110:
                 {
                 alt45=4;
                 }
@@ -8705,12 +8684,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             switch (alt45) {
                 case 1 :
-                    // InternalModness.g:3800:3: (enumLiteral_0= 'IN_INCLUDED' )
+                    // InternalModness.g:3784:3: (enumLiteral_0= 'IN_INCLUDED' )
                     {
-                    // InternalModness.g:3800:3: (enumLiteral_0= 'IN_INCLUDED' )
-                    // InternalModness.g:3801:4: enumLiteral_0= 'IN_INCLUDED'
+                    // InternalModness.g:3784:3: (enumLiteral_0= 'IN_INCLUDED' )
+                    // InternalModness.g:3785:4: enumLiteral_0= 'IN_INCLUDED'
                     {
-                    enumLiteral_0=(Token)match(input,108,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,107,FOLLOW_2); 
 
                     				current = grammarAccess.getRangeOperatorParameterAccess().getIN_INCLUDEDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getRangeOperatorParameterAccess().getIN_INCLUDEDEnumLiteralDeclaration_0());
@@ -8722,12 +8701,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalModness.g:3808:3: (enumLiteral_1= 'IN_EXCLUDED' )
+                    // InternalModness.g:3792:3: (enumLiteral_1= 'IN_EXCLUDED' )
                     {
-                    // InternalModness.g:3808:3: (enumLiteral_1= 'IN_EXCLUDED' )
-                    // InternalModness.g:3809:4: enumLiteral_1= 'IN_EXCLUDED'
+                    // InternalModness.g:3792:3: (enumLiteral_1= 'IN_EXCLUDED' )
+                    // InternalModness.g:3793:4: enumLiteral_1= 'IN_EXCLUDED'
                     {
-                    enumLiteral_1=(Token)match(input,109,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,108,FOLLOW_2); 
 
                     				current = grammarAccess.getRangeOperatorParameterAccess().getIN_EXCLUDEDEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getRangeOperatorParameterAccess().getIN_EXCLUDEDEnumLiteralDeclaration_1());
@@ -8739,12 +8718,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalModness.g:3816:3: (enumLiteral_2= 'IN_LOWER_INCLUDED' )
+                    // InternalModness.g:3800:3: (enumLiteral_2= 'IN_LOWER_INCLUDED' )
                     {
-                    // InternalModness.g:3816:3: (enumLiteral_2= 'IN_LOWER_INCLUDED' )
-                    // InternalModness.g:3817:4: enumLiteral_2= 'IN_LOWER_INCLUDED'
+                    // InternalModness.g:3800:3: (enumLiteral_2= 'IN_LOWER_INCLUDED' )
+                    // InternalModness.g:3801:4: enumLiteral_2= 'IN_LOWER_INCLUDED'
                     {
-                    enumLiteral_2=(Token)match(input,110,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,109,FOLLOW_2); 
 
                     				current = grammarAccess.getRangeOperatorParameterAccess().getIN_LOWER_INCLUDEDEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getRangeOperatorParameterAccess().getIN_LOWER_INCLUDEDEnumLiteralDeclaration_2());
@@ -8756,12 +8735,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalModness.g:3824:3: (enumLiteral_3= 'IN_GREATER_INCLUDED' )
+                    // InternalModness.g:3808:3: (enumLiteral_3= 'IN_GREATER_INCLUDED' )
                     {
-                    // InternalModness.g:3824:3: (enumLiteral_3= 'IN_GREATER_INCLUDED' )
-                    // InternalModness.g:3825:4: enumLiteral_3= 'IN_GREATER_INCLUDED'
+                    // InternalModness.g:3808:3: (enumLiteral_3= 'IN_GREATER_INCLUDED' )
+                    // InternalModness.g:3809:4: enumLiteral_3= 'IN_GREATER_INCLUDED'
                     {
-                    enumLiteral_3=(Token)match(input,111,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,110,FOLLOW_2); 
 
                     				current = grammarAccess.getRangeOperatorParameterAccess().getIN_GREATER_INCLUDEDEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getRangeOperatorParameterAccess().getIN_GREATER_INCLUDEDEnumLiteralDeclaration_3());
@@ -8795,7 +8774,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleArithmeticOperator"
-    // InternalModness.g:3835:1: ruleArithmeticOperator returns [Enumerator current=null] : ( (enumLiteral_0= 'SUM' ) | (enumLiteral_1= 'DIFFERENCE' ) | (enumLiteral_2= 'MULTIPLICATION' ) | (enumLiteral_3= 'RATIO' ) ) ;
+    // InternalModness.g:3819:1: ruleArithmeticOperator returns [Enumerator current=null] : ( (enumLiteral_0= 'SUM' ) | (enumLiteral_1= 'DIFFERENCE' ) | (enumLiteral_2= 'MULTIPLICATION' ) | (enumLiteral_3= 'RATIO' ) ) ;
     public final Enumerator ruleArithmeticOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -8808,28 +8787,28 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModness.g:3841:2: ( ( (enumLiteral_0= 'SUM' ) | (enumLiteral_1= 'DIFFERENCE' ) | (enumLiteral_2= 'MULTIPLICATION' ) | (enumLiteral_3= 'RATIO' ) ) )
-            // InternalModness.g:3842:2: ( (enumLiteral_0= 'SUM' ) | (enumLiteral_1= 'DIFFERENCE' ) | (enumLiteral_2= 'MULTIPLICATION' ) | (enumLiteral_3= 'RATIO' ) )
+            // InternalModness.g:3825:2: ( ( (enumLiteral_0= 'SUM' ) | (enumLiteral_1= 'DIFFERENCE' ) | (enumLiteral_2= 'MULTIPLICATION' ) | (enumLiteral_3= 'RATIO' ) ) )
+            // InternalModness.g:3826:2: ( (enumLiteral_0= 'SUM' ) | (enumLiteral_1= 'DIFFERENCE' ) | (enumLiteral_2= 'MULTIPLICATION' ) | (enumLiteral_3= 'RATIO' ) )
             {
-            // InternalModness.g:3842:2: ( (enumLiteral_0= 'SUM' ) | (enumLiteral_1= 'DIFFERENCE' ) | (enumLiteral_2= 'MULTIPLICATION' ) | (enumLiteral_3= 'RATIO' ) )
+            // InternalModness.g:3826:2: ( (enumLiteral_0= 'SUM' ) | (enumLiteral_1= 'DIFFERENCE' ) | (enumLiteral_2= 'MULTIPLICATION' ) | (enumLiteral_3= 'RATIO' ) )
             int alt46=4;
             switch ( input.LA(1) ) {
-            case 112:
+            case 111:
                 {
                 alt46=1;
                 }
                 break;
-            case 113:
+            case 112:
                 {
                 alt46=2;
                 }
                 break;
-            case 114:
+            case 113:
                 {
                 alt46=3;
                 }
                 break;
-            case 115:
+            case 114:
                 {
                 alt46=4;
                 }
@@ -8843,12 +8822,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             switch (alt46) {
                 case 1 :
-                    // InternalModness.g:3843:3: (enumLiteral_0= 'SUM' )
+                    // InternalModness.g:3827:3: (enumLiteral_0= 'SUM' )
                     {
-                    // InternalModness.g:3843:3: (enumLiteral_0= 'SUM' )
-                    // InternalModness.g:3844:4: enumLiteral_0= 'SUM'
+                    // InternalModness.g:3827:3: (enumLiteral_0= 'SUM' )
+                    // InternalModness.g:3828:4: enumLiteral_0= 'SUM'
                     {
-                    enumLiteral_0=(Token)match(input,112,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,111,FOLLOW_2); 
 
                     				current = grammarAccess.getArithmeticOperatorAccess().getSUMEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getArithmeticOperatorAccess().getSUMEnumLiteralDeclaration_0());
@@ -8860,12 +8839,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalModness.g:3851:3: (enumLiteral_1= 'DIFFERENCE' )
+                    // InternalModness.g:3835:3: (enumLiteral_1= 'DIFFERENCE' )
                     {
-                    // InternalModness.g:3851:3: (enumLiteral_1= 'DIFFERENCE' )
-                    // InternalModness.g:3852:4: enumLiteral_1= 'DIFFERENCE'
+                    // InternalModness.g:3835:3: (enumLiteral_1= 'DIFFERENCE' )
+                    // InternalModness.g:3836:4: enumLiteral_1= 'DIFFERENCE'
                     {
-                    enumLiteral_1=(Token)match(input,113,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,112,FOLLOW_2); 
 
                     				current = grammarAccess.getArithmeticOperatorAccess().getDIFFERENCEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getArithmeticOperatorAccess().getDIFFERENCEEnumLiteralDeclaration_1());
@@ -8877,12 +8856,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalModness.g:3859:3: (enumLiteral_2= 'MULTIPLICATION' )
+                    // InternalModness.g:3843:3: (enumLiteral_2= 'MULTIPLICATION' )
                     {
-                    // InternalModness.g:3859:3: (enumLiteral_2= 'MULTIPLICATION' )
-                    // InternalModness.g:3860:4: enumLiteral_2= 'MULTIPLICATION'
+                    // InternalModness.g:3843:3: (enumLiteral_2= 'MULTIPLICATION' )
+                    // InternalModness.g:3844:4: enumLiteral_2= 'MULTIPLICATION'
                     {
-                    enumLiteral_2=(Token)match(input,114,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,113,FOLLOW_2); 
 
                     				current = grammarAccess.getArithmeticOperatorAccess().getMULTIPLICATIONEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getArithmeticOperatorAccess().getMULTIPLICATIONEnumLiteralDeclaration_2());
@@ -8894,12 +8873,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalModness.g:3867:3: (enumLiteral_3= 'RATIO' )
+                    // InternalModness.g:3851:3: (enumLiteral_3= 'RATIO' )
                     {
-                    // InternalModness.g:3867:3: (enumLiteral_3= 'RATIO' )
-                    // InternalModness.g:3868:4: enumLiteral_3= 'RATIO'
+                    // InternalModness.g:3851:3: (enumLiteral_3= 'RATIO' )
+                    // InternalModness.g:3852:4: enumLiteral_3= 'RATIO'
                     {
-                    enumLiteral_3=(Token)match(input,115,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,114,FOLLOW_2); 
 
                     				current = grammarAccess.getArithmeticOperatorAccess().getRATIOEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getArithmeticOperatorAccess().getRATIOEnumLiteralDeclaration_3());
@@ -8933,7 +8912,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleLogicalOperator"
-    // InternalModness.g:3878:1: ruleLogicalOperator returns [Enumerator current=null] : ( (enumLiteral_0= 'AND' ) | (enumLiteral_1= 'OR' ) ) ;
+    // InternalModness.g:3862:1: ruleLogicalOperator returns [Enumerator current=null] : ( (enumLiteral_0= 'AND' ) | (enumLiteral_1= 'OR' ) ) ;
     public final Enumerator ruleLogicalOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -8944,17 +8923,17 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModness.g:3884:2: ( ( (enumLiteral_0= 'AND' ) | (enumLiteral_1= 'OR' ) ) )
-            // InternalModness.g:3885:2: ( (enumLiteral_0= 'AND' ) | (enumLiteral_1= 'OR' ) )
+            // InternalModness.g:3868:2: ( ( (enumLiteral_0= 'AND' ) | (enumLiteral_1= 'OR' ) ) )
+            // InternalModness.g:3869:2: ( (enumLiteral_0= 'AND' ) | (enumLiteral_1= 'OR' ) )
             {
-            // InternalModness.g:3885:2: ( (enumLiteral_0= 'AND' ) | (enumLiteral_1= 'OR' ) )
+            // InternalModness.g:3869:2: ( (enumLiteral_0= 'AND' ) | (enumLiteral_1= 'OR' ) )
             int alt47=2;
             int LA47_0 = input.LA(1);
 
-            if ( (LA47_0==116) ) {
+            if ( (LA47_0==115) ) {
                 alt47=1;
             }
-            else if ( (LA47_0==117) ) {
+            else if ( (LA47_0==116) ) {
                 alt47=2;
             }
             else {
@@ -8965,12 +8944,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
             }
             switch (alt47) {
                 case 1 :
-                    // InternalModness.g:3886:3: (enumLiteral_0= 'AND' )
+                    // InternalModness.g:3870:3: (enumLiteral_0= 'AND' )
                     {
-                    // InternalModness.g:3886:3: (enumLiteral_0= 'AND' )
-                    // InternalModness.g:3887:4: enumLiteral_0= 'AND'
+                    // InternalModness.g:3870:3: (enumLiteral_0= 'AND' )
+                    // InternalModness.g:3871:4: enumLiteral_0= 'AND'
                     {
-                    enumLiteral_0=(Token)match(input,116,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,115,FOLLOW_2); 
 
                     				current = grammarAccess.getLogicalOperatorAccess().getANDEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getLogicalOperatorAccess().getANDEnumLiteralDeclaration_0());
@@ -8982,12 +8961,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalModness.g:3894:3: (enumLiteral_1= 'OR' )
+                    // InternalModness.g:3878:3: (enumLiteral_1= 'OR' )
                     {
-                    // InternalModness.g:3894:3: (enumLiteral_1= 'OR' )
-                    // InternalModness.g:3895:4: enumLiteral_1= 'OR'
+                    // InternalModness.g:3878:3: (enumLiteral_1= 'OR' )
+                    // InternalModness.g:3879:4: enumLiteral_1= 'OR'
                     {
-                    enumLiteral_1=(Token)match(input,117,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,116,FOLLOW_2); 
 
                     				current = grammarAccess.getLogicalOperatorAccess().getOREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getLogicalOperatorAccess().getOREnumLiteralDeclaration_1());
@@ -9021,7 +9000,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleGroupFairnessMetric"
-    // InternalModness.g:3905:1: ruleGroupFairnessMetric returns [Enumerator current=null] : ( (enumLiteral_0= 'STATISTICAL_PARITY' ) | (enumLiteral_1= 'DISPARATE_IMPACT' ) | (enumLiteral_2= 'EQUALIZED_ODDS' ) | (enumLiteral_3= 'EQUAL_ACCURACY' ) | (enumLiteral_4= 'FALSE_POSITIVE_DIFFERENCE' ) | (enumLiteral_5= 'TRUE_POSITIVE_DIFFERENCE' ) ) ;
+    // InternalModness.g:3889:1: ruleGroupFairnessMetric returns [Enumerator current=null] : ( (enumLiteral_0= 'STATISTICAL_PARITY' ) | (enumLiteral_1= 'DISPARATE_IMPACT' ) | (enumLiteral_2= 'EQUALIZED_ODDS' ) | (enumLiteral_3= 'EQUAL_ACCURACY' ) | (enumLiteral_4= 'FALSE_POSITIVE_DIFFERENCE' ) | (enumLiteral_5= 'TRUE_POSITIVE_DIFFERENCE' ) ) ;
     public final Enumerator ruleGroupFairnessMetric() throws RecognitionException {
         Enumerator current = null;
 
@@ -9036,38 +9015,38 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModness.g:3911:2: ( ( (enumLiteral_0= 'STATISTICAL_PARITY' ) | (enumLiteral_1= 'DISPARATE_IMPACT' ) | (enumLiteral_2= 'EQUALIZED_ODDS' ) | (enumLiteral_3= 'EQUAL_ACCURACY' ) | (enumLiteral_4= 'FALSE_POSITIVE_DIFFERENCE' ) | (enumLiteral_5= 'TRUE_POSITIVE_DIFFERENCE' ) ) )
-            // InternalModness.g:3912:2: ( (enumLiteral_0= 'STATISTICAL_PARITY' ) | (enumLiteral_1= 'DISPARATE_IMPACT' ) | (enumLiteral_2= 'EQUALIZED_ODDS' ) | (enumLiteral_3= 'EQUAL_ACCURACY' ) | (enumLiteral_4= 'FALSE_POSITIVE_DIFFERENCE' ) | (enumLiteral_5= 'TRUE_POSITIVE_DIFFERENCE' ) )
+            // InternalModness.g:3895:2: ( ( (enumLiteral_0= 'STATISTICAL_PARITY' ) | (enumLiteral_1= 'DISPARATE_IMPACT' ) | (enumLiteral_2= 'EQUALIZED_ODDS' ) | (enumLiteral_3= 'EQUAL_ACCURACY' ) | (enumLiteral_4= 'FALSE_POSITIVE_DIFFERENCE' ) | (enumLiteral_5= 'TRUE_POSITIVE_DIFFERENCE' ) ) )
+            // InternalModness.g:3896:2: ( (enumLiteral_0= 'STATISTICAL_PARITY' ) | (enumLiteral_1= 'DISPARATE_IMPACT' ) | (enumLiteral_2= 'EQUALIZED_ODDS' ) | (enumLiteral_3= 'EQUAL_ACCURACY' ) | (enumLiteral_4= 'FALSE_POSITIVE_DIFFERENCE' ) | (enumLiteral_5= 'TRUE_POSITIVE_DIFFERENCE' ) )
             {
-            // InternalModness.g:3912:2: ( (enumLiteral_0= 'STATISTICAL_PARITY' ) | (enumLiteral_1= 'DISPARATE_IMPACT' ) | (enumLiteral_2= 'EQUALIZED_ODDS' ) | (enumLiteral_3= 'EQUAL_ACCURACY' ) | (enumLiteral_4= 'FALSE_POSITIVE_DIFFERENCE' ) | (enumLiteral_5= 'TRUE_POSITIVE_DIFFERENCE' ) )
+            // InternalModness.g:3896:2: ( (enumLiteral_0= 'STATISTICAL_PARITY' ) | (enumLiteral_1= 'DISPARATE_IMPACT' ) | (enumLiteral_2= 'EQUALIZED_ODDS' ) | (enumLiteral_3= 'EQUAL_ACCURACY' ) | (enumLiteral_4= 'FALSE_POSITIVE_DIFFERENCE' ) | (enumLiteral_5= 'TRUE_POSITIVE_DIFFERENCE' ) )
             int alt48=6;
             switch ( input.LA(1) ) {
-            case 118:
+            case 117:
                 {
                 alt48=1;
                 }
                 break;
-            case 119:
+            case 118:
                 {
                 alt48=2;
                 }
                 break;
-            case 120:
+            case 119:
                 {
                 alt48=3;
                 }
                 break;
-            case 121:
+            case 120:
                 {
                 alt48=4;
                 }
                 break;
-            case 122:
+            case 121:
                 {
                 alt48=5;
                 }
                 break;
-            case 123:
+            case 122:
                 {
                 alt48=6;
                 }
@@ -9081,12 +9060,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             switch (alt48) {
                 case 1 :
-                    // InternalModness.g:3913:3: (enumLiteral_0= 'STATISTICAL_PARITY' )
+                    // InternalModness.g:3897:3: (enumLiteral_0= 'STATISTICAL_PARITY' )
                     {
-                    // InternalModness.g:3913:3: (enumLiteral_0= 'STATISTICAL_PARITY' )
-                    // InternalModness.g:3914:4: enumLiteral_0= 'STATISTICAL_PARITY'
+                    // InternalModness.g:3897:3: (enumLiteral_0= 'STATISTICAL_PARITY' )
+                    // InternalModness.g:3898:4: enumLiteral_0= 'STATISTICAL_PARITY'
                     {
-                    enumLiteral_0=(Token)match(input,118,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,117,FOLLOW_2); 
 
                     				current = grammarAccess.getGroupFairnessMetricAccess().getSTATISTICAL_PARITYEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getGroupFairnessMetricAccess().getSTATISTICAL_PARITYEnumLiteralDeclaration_0());
@@ -9098,12 +9077,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalModness.g:3921:3: (enumLiteral_1= 'DISPARATE_IMPACT' )
+                    // InternalModness.g:3905:3: (enumLiteral_1= 'DISPARATE_IMPACT' )
                     {
-                    // InternalModness.g:3921:3: (enumLiteral_1= 'DISPARATE_IMPACT' )
-                    // InternalModness.g:3922:4: enumLiteral_1= 'DISPARATE_IMPACT'
+                    // InternalModness.g:3905:3: (enumLiteral_1= 'DISPARATE_IMPACT' )
+                    // InternalModness.g:3906:4: enumLiteral_1= 'DISPARATE_IMPACT'
                     {
-                    enumLiteral_1=(Token)match(input,119,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,118,FOLLOW_2); 
 
                     				current = grammarAccess.getGroupFairnessMetricAccess().getDISPARATE_IMPACTEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getGroupFairnessMetricAccess().getDISPARATE_IMPACTEnumLiteralDeclaration_1());
@@ -9115,12 +9094,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalModness.g:3929:3: (enumLiteral_2= 'EQUALIZED_ODDS' )
+                    // InternalModness.g:3913:3: (enumLiteral_2= 'EQUALIZED_ODDS' )
                     {
-                    // InternalModness.g:3929:3: (enumLiteral_2= 'EQUALIZED_ODDS' )
-                    // InternalModness.g:3930:4: enumLiteral_2= 'EQUALIZED_ODDS'
+                    // InternalModness.g:3913:3: (enumLiteral_2= 'EQUALIZED_ODDS' )
+                    // InternalModness.g:3914:4: enumLiteral_2= 'EQUALIZED_ODDS'
                     {
-                    enumLiteral_2=(Token)match(input,120,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,119,FOLLOW_2); 
 
                     				current = grammarAccess.getGroupFairnessMetricAccess().getEQUALIZED_ODDSEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getGroupFairnessMetricAccess().getEQUALIZED_ODDSEnumLiteralDeclaration_2());
@@ -9132,12 +9111,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalModness.g:3937:3: (enumLiteral_3= 'EQUAL_ACCURACY' )
+                    // InternalModness.g:3921:3: (enumLiteral_3= 'EQUAL_ACCURACY' )
                     {
-                    // InternalModness.g:3937:3: (enumLiteral_3= 'EQUAL_ACCURACY' )
-                    // InternalModness.g:3938:4: enumLiteral_3= 'EQUAL_ACCURACY'
+                    // InternalModness.g:3921:3: (enumLiteral_3= 'EQUAL_ACCURACY' )
+                    // InternalModness.g:3922:4: enumLiteral_3= 'EQUAL_ACCURACY'
                     {
-                    enumLiteral_3=(Token)match(input,121,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,120,FOLLOW_2); 
 
                     				current = grammarAccess.getGroupFairnessMetricAccess().getEQUAL_ACCURACYEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getGroupFairnessMetricAccess().getEQUAL_ACCURACYEnumLiteralDeclaration_3());
@@ -9149,12 +9128,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalModness.g:3945:3: (enumLiteral_4= 'FALSE_POSITIVE_DIFFERENCE' )
+                    // InternalModness.g:3929:3: (enumLiteral_4= 'FALSE_POSITIVE_DIFFERENCE' )
                     {
-                    // InternalModness.g:3945:3: (enumLiteral_4= 'FALSE_POSITIVE_DIFFERENCE' )
-                    // InternalModness.g:3946:4: enumLiteral_4= 'FALSE_POSITIVE_DIFFERENCE'
+                    // InternalModness.g:3929:3: (enumLiteral_4= 'FALSE_POSITIVE_DIFFERENCE' )
+                    // InternalModness.g:3930:4: enumLiteral_4= 'FALSE_POSITIVE_DIFFERENCE'
                     {
-                    enumLiteral_4=(Token)match(input,122,FOLLOW_2); 
+                    enumLiteral_4=(Token)match(input,121,FOLLOW_2); 
 
                     				current = grammarAccess.getGroupFairnessMetricAccess().getFALSE_POSITIVE_DIFFERENCEEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_4, grammarAccess.getGroupFairnessMetricAccess().getFALSE_POSITIVE_DIFFERENCEEnumLiteralDeclaration_4());
@@ -9166,12 +9145,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalModness.g:3953:3: (enumLiteral_5= 'TRUE_POSITIVE_DIFFERENCE' )
+                    // InternalModness.g:3937:3: (enumLiteral_5= 'TRUE_POSITIVE_DIFFERENCE' )
                     {
-                    // InternalModness.g:3953:3: (enumLiteral_5= 'TRUE_POSITIVE_DIFFERENCE' )
-                    // InternalModness.g:3954:4: enumLiteral_5= 'TRUE_POSITIVE_DIFFERENCE'
+                    // InternalModness.g:3937:3: (enumLiteral_5= 'TRUE_POSITIVE_DIFFERENCE' )
+                    // InternalModness.g:3938:4: enumLiteral_5= 'TRUE_POSITIVE_DIFFERENCE'
                     {
-                    enumLiteral_5=(Token)match(input,123,FOLLOW_2); 
+                    enumLiteral_5=(Token)match(input,122,FOLLOW_2); 
 
                     				current = grammarAccess.getGroupFairnessMetricAccess().getTRUE_POSITIVE_DIFFERENCEEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_5, grammarAccess.getGroupFairnessMetricAccess().getTRUE_POSITIVE_DIFFERENCEEnumLiteralDeclaration_5());
@@ -9205,7 +9184,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIndividualFairnessMetric"
-    // InternalModness.g:3964:1: ruleIndividualFairnessMetric returns [Enumerator current=null] : ( (enumLiteral_0= 'MANHATTAN_DISTANCE' ) | (enumLiteral_1= 'EUCLIDEAN_DISTANCE' ) | (enumLiteral_2= 'MAHALANOBIS_DISTANCE' ) ) ;
+    // InternalModness.g:3948:1: ruleIndividualFairnessMetric returns [Enumerator current=null] : ( (enumLiteral_0= 'MANHATTAN_DISTANCE' ) | (enumLiteral_1= 'EUCLIDEAN_DISTANCE' ) | (enumLiteral_2= 'MAHALANOBIS_DISTANCE' ) ) ;
     public final Enumerator ruleIndividualFairnessMetric() throws RecognitionException {
         Enumerator current = null;
 
@@ -9217,23 +9196,23 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalModness.g:3970:2: ( ( (enumLiteral_0= 'MANHATTAN_DISTANCE' ) | (enumLiteral_1= 'EUCLIDEAN_DISTANCE' ) | (enumLiteral_2= 'MAHALANOBIS_DISTANCE' ) ) )
-            // InternalModness.g:3971:2: ( (enumLiteral_0= 'MANHATTAN_DISTANCE' ) | (enumLiteral_1= 'EUCLIDEAN_DISTANCE' ) | (enumLiteral_2= 'MAHALANOBIS_DISTANCE' ) )
+            // InternalModness.g:3954:2: ( ( (enumLiteral_0= 'MANHATTAN_DISTANCE' ) | (enumLiteral_1= 'EUCLIDEAN_DISTANCE' ) | (enumLiteral_2= 'MAHALANOBIS_DISTANCE' ) ) )
+            // InternalModness.g:3955:2: ( (enumLiteral_0= 'MANHATTAN_DISTANCE' ) | (enumLiteral_1= 'EUCLIDEAN_DISTANCE' ) | (enumLiteral_2= 'MAHALANOBIS_DISTANCE' ) )
             {
-            // InternalModness.g:3971:2: ( (enumLiteral_0= 'MANHATTAN_DISTANCE' ) | (enumLiteral_1= 'EUCLIDEAN_DISTANCE' ) | (enumLiteral_2= 'MAHALANOBIS_DISTANCE' ) )
+            // InternalModness.g:3955:2: ( (enumLiteral_0= 'MANHATTAN_DISTANCE' ) | (enumLiteral_1= 'EUCLIDEAN_DISTANCE' ) | (enumLiteral_2= 'MAHALANOBIS_DISTANCE' ) )
             int alt49=3;
             switch ( input.LA(1) ) {
-            case 124:
+            case 123:
                 {
                 alt49=1;
                 }
                 break;
-            case 125:
+            case 124:
                 {
                 alt49=2;
                 }
                 break;
-            case 126:
+            case 125:
                 {
                 alt49=3;
                 }
@@ -9247,12 +9226,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
 
             switch (alt49) {
                 case 1 :
-                    // InternalModness.g:3972:3: (enumLiteral_0= 'MANHATTAN_DISTANCE' )
+                    // InternalModness.g:3956:3: (enumLiteral_0= 'MANHATTAN_DISTANCE' )
                     {
-                    // InternalModness.g:3972:3: (enumLiteral_0= 'MANHATTAN_DISTANCE' )
-                    // InternalModness.g:3973:4: enumLiteral_0= 'MANHATTAN_DISTANCE'
+                    // InternalModness.g:3956:3: (enumLiteral_0= 'MANHATTAN_DISTANCE' )
+                    // InternalModness.g:3957:4: enumLiteral_0= 'MANHATTAN_DISTANCE'
                     {
-                    enumLiteral_0=(Token)match(input,124,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,123,FOLLOW_2); 
 
                     				current = grammarAccess.getIndividualFairnessMetricAccess().getMANHATTAN_DISTANCEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getIndividualFairnessMetricAccess().getMANHATTAN_DISTANCEEnumLiteralDeclaration_0());
@@ -9264,12 +9243,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalModness.g:3980:3: (enumLiteral_1= 'EUCLIDEAN_DISTANCE' )
+                    // InternalModness.g:3964:3: (enumLiteral_1= 'EUCLIDEAN_DISTANCE' )
                     {
-                    // InternalModness.g:3980:3: (enumLiteral_1= 'EUCLIDEAN_DISTANCE' )
-                    // InternalModness.g:3981:4: enumLiteral_1= 'EUCLIDEAN_DISTANCE'
+                    // InternalModness.g:3964:3: (enumLiteral_1= 'EUCLIDEAN_DISTANCE' )
+                    // InternalModness.g:3965:4: enumLiteral_1= 'EUCLIDEAN_DISTANCE'
                     {
-                    enumLiteral_1=(Token)match(input,125,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,124,FOLLOW_2); 
 
                     				current = grammarAccess.getIndividualFairnessMetricAccess().getEUCLIDEAN_DISTANCEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getIndividualFairnessMetricAccess().getEUCLIDEAN_DISTANCEEnumLiteralDeclaration_1());
@@ -9281,12 +9260,12 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalModness.g:3988:3: (enumLiteral_2= 'MAHALANOBIS_DISTANCE' )
+                    // InternalModness.g:3972:3: (enumLiteral_2= 'MAHALANOBIS_DISTANCE' )
                     {
-                    // InternalModness.g:3988:3: (enumLiteral_2= 'MAHALANOBIS_DISTANCE' )
-                    // InternalModness.g:3989:4: enumLiteral_2= 'MAHALANOBIS_DISTANCE'
+                    // InternalModness.g:3972:3: (enumLiteral_2= 'MAHALANOBIS_DISTANCE' )
+                    // InternalModness.g:3973:4: enumLiteral_2= 'MAHALANOBIS_DISTANCE'
                     {
-                    enumLiteral_2=(Token)match(input,126,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,125,FOLLOW_2); 
 
                     				current = grammarAccess.getIndividualFairnessMetricAccess().getMAHALANOBIS_DISTANCEEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getIndividualFairnessMetricAccess().getMAHALANOBIS_DISTANCEEnumLiteralDeclaration_2());
@@ -9331,7 +9310,7 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000008000L});
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000000L,0x0000003FFC000000L});
+    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000000000L,0x0000001FFE000000L});
     public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000028000L});
     public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000040000L});
     public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000002000000L});
@@ -9364,9 +9343,9 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000180000000000L});
     public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000100000000000L});
     public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000200000100000L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
     public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000000000000000L,0x0000000001000000L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000000000000000L,0x0000000000800000L});
     public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000800000000000L});
     public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0001000000000000L});
     public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0002000000020000L});
@@ -9376,43 +9355,42 @@ public class InternalModnessParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0030000000000002L});
     public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0004000000000040L});
     public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0040000000000000L});
-    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000000000000L,0x00000FC000000000L});
+    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000000000000L,0x000007E000000000L});
     public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0080000000000000L});
-    public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000000000000L,0x0000F00000000000L});
+    public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000000000000L,0x0000780000000000L});
     public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0100000000000000L});
     public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0200000000000000L});
     public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0800000000000000L});
-    public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0000000000000000L,0x000F000000000000L});
+    public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0000000000000000L,0x0007800000000000L});
     public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x1000000000000000L});
     public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x2000000000000000L});
     public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x8000000000000000L});
-    public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x0080000001000000L,0x0030000000020001L});
+    public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x0080000001000000L,0x0018000000010001L});
     public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x0000000001000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x0080000001000000L,0x0030000000020000L});
+    public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x0080000001000000L,0x0018000000010000L});
     public static final BitSet FOLLOW_67 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
     public static final BitSet FOLLOW_68 = new BitSet(new long[]{0x0000000000080000L,0x0000000000000030L});
     public static final BitSet FOLLOW_69 = new BitSet(new long[]{0x0000000000080000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0080000000080000L,0x0030000000020000L});
+    public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0080000000080000L,0x0018000000010000L});
     public static final BitSet FOLLOW_71 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
     public static final BitSet FOLLOW_72 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
     public static final BitSet FOLLOW_73 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000800L});
     public static final BitSet FOLLOW_74 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001000L});
     public static final BitSet FOLLOW_75 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_76 = new BitSet(new long[]{0x0000000000000000L,0x0FC0000000000000L});
-    public static final BitSet FOLLOW_77 = new BitSet(new long[]{0x0000000000000000L,0x7000000000000000L});
+    public static final BitSet FOLLOW_76 = new BitSet(new long[]{0x0000000000000000L,0x07E0000000000000L});
+    public static final BitSet FOLLOW_77 = new BitSet(new long[]{0x0000000000000000L,0x3800000000000000L});
     public static final BitSet FOLLOW_78 = new BitSet(new long[]{0x0000004000080000L,0x0000000000008000L});
     public static final BitSet FOLLOW_79 = new BitSet(new long[]{0x0000000000080000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_80 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-    public static final BitSet FOLLOW_81 = new BitSet(new long[]{0x0000000000000002L,0x0030000000020000L});
-    public static final BitSet FOLLOW_82 = new BitSet(new long[]{0x0000000000000002L,0x0030000000000000L});
-    public static final BitSet FOLLOW_83 = new BitSet(new long[]{0x0080000000000000L,0x0030000000020000L});
-    public static final BitSet FOLLOW_84 = new BitSet(new long[]{0x0000000001000000L,0x0000000000040000L});
-    public static final BitSet FOLLOW_85 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
-    public static final BitSet FOLLOW_86 = new BitSet(new long[]{0x0000000000080000L,0x0000000000040000L});
-    public static final BitSet FOLLOW_87 = new BitSet(new long[]{0x0000000000000000L,0x0000000000200000L});
-    public static final BitSet FOLLOW_88 = new BitSet(new long[]{0x0000000001000000L,0x0000000000800000L});
-    public static final BitSet FOLLOW_89 = new BitSet(new long[]{0x0000000000001000L,0x0000000000100000L});
-    public static final BitSet FOLLOW_90 = new BitSet(new long[]{0x0000000001020000L});
-    public static final BitSet FOLLOW_91 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
+    public static final BitSet FOLLOW_80 = new BitSet(new long[]{0x0000000000000002L,0x0018000000010000L});
+    public static final BitSet FOLLOW_81 = new BitSet(new long[]{0x0000000000000002L,0x0018000000000000L});
+    public static final BitSet FOLLOW_82 = new BitSet(new long[]{0x0080000000000000L,0x0018000000010000L});
+    public static final BitSet FOLLOW_83 = new BitSet(new long[]{0x0000000001000000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_84 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
+    public static final BitSet FOLLOW_85 = new BitSet(new long[]{0x0000000000080000L,0x0000000000020000L});
+    public static final BitSet FOLLOW_86 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
+    public static final BitSet FOLLOW_87 = new BitSet(new long[]{0x0000000001000000L,0x0000000000400000L});
+    public static final BitSet FOLLOW_88 = new BitSet(new long[]{0x0000000000001000L,0x0000000000080000L});
+    public static final BitSet FOLLOW_89 = new BitSet(new long[]{0x0000000001020000L});
+    public static final BitSet FOLLOW_90 = new BitSet(new long[]{0x0000000000000000L,0x0000000001000000L});
 
 }

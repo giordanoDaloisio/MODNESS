@@ -17,6 +17,7 @@ import org.eclipse.xtext.formatting2.AbstractFormatter2;
 import org.eclipse.xtext.formatting2.IFormattableDocument;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.xbase.lib.Extension;
+import org.eclipse.xtext.xbase.lib.XbaseGenerated;
 import org.xtext.example.modness.services.ModnessGrammarAccess;
 
 @SuppressWarnings("all")
@@ -52,6 +53,7 @@ public class ModnessFormatter extends AbstractFormatter2 {
     }
   }
 
+  @XbaseGenerated
   public void format(final Object groupBias, final IFormattableDocument document) {
     if (groupBias instanceof GroupBias) {
       _format((GroupBias)groupBias, document);

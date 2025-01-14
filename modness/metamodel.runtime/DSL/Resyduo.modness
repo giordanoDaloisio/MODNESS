@@ -126,22 +126,22 @@ GroupBias "Resyduo"{
 						function: Operation{
 							arithmeticOperator: RATIO;
 							leftSide: {
-								operationValue: 1.0
+								operationValue: 1.0;
 							};
 							rightSide: {
 								function: Operation{
 									arithmeticOperator: MULTIPLICATION;
 									leftSide: {
-										operationValue: 0.8
+										operationValue: 0.8;
 									};
 									rightSide: {
 										function: Operation{
 											arithmeticOperator: DIFFERENCE;
 											leftSide: {
-												operationValue: 1.0
+												operationValue: 1.0;
 											};
 											rightSide: {
-												operationValue: 0.8
+												operationValue: 0.8;
 											};
 										}
 									};

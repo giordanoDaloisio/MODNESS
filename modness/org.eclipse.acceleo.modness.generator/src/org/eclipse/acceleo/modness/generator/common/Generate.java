@@ -22,7 +22,10 @@ import org.eclipse.emf.common.util.BasicMonitor;
 import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+
+import fairness.FairnessPackage;
 
 /**
  * Entry point of the 'Generate' generation module.
@@ -335,11 +338,15 @@ public class Generate extends AbstractAcceleoGenerator {
      * 
      * @param resourceSet
      *            The resource set which registry has to be updated.
-     * @generated
+     * @generated NOT
      */
     @Override
     public void registerPackages(ResourceSet resourceSet) {
         super.registerPackages(resourceSet);
+        if (!isInWorkspace(FairnessPackage.class)) {
+                // The normal package registration if your metamodel is in a plugin.
+                 resourceSet.getPackageRegistry().put(FairnessPackage.eNS_URI, FairnessPackage.eINSTANCE);
+        }
         
         /*
          * If you want to change the content of this method, do NOT forget to change the "@generated"
@@ -383,7 +390,7 @@ public class Generate extends AbstractAcceleoGenerator {
      */
     @Override
     public void registerResourceFactories(ResourceSet resourceSet) {
-        //super.registerResourceFactories(resourceSet);
+        super.registerResourceFactories(resourceSet);
         /*
          * If you want to change the content of this method, do NOT forget to change the "@generated"
          * tag in the Javadoc of this method to "@generated NOT". Without this new tag, any compilation
@@ -407,7 +414,6 @@ public class Generate extends AbstractAcceleoGenerator {
          * targetting UML models in standalone, you NEED to use the following:
          */ 
         // UMLResourcesUtil.init(resourceSet)
-        resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put(FairnessPackage.eINSTANCE.getNsURI(), FairnessPackage.eINSTANCE);
     }
     
 }
