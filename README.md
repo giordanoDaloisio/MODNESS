@@ -26,16 +26,19 @@ The project is structured as follows:
 - `assets`: contains pictures of the MODNESS metamodel and of the models implemented for the considered use cases
 - `baselines`: contains the MANILA and FairML implementations of the use cases used in the evaluation
 - `data`: contains the datasets used in the evaluation
+- `eclipse.zip`: contains an Eclipse bundle with all the required plugins to run the metamodel and generate the code
 
 ## Evaluation reproduction
 
-Follow these instructions to reproduce the evaluation performed to answer the **RQ2** of the paper
+Follow these instructions to reproduce the evaluation performed to answer the **RQ2** of the paper.
 
 ### 1. How to import the metamodel, the models and generate the code
 
 In the following, we report the steps to import the metamodel and the models, and to generate the code.
 
 #### 1.1 Requirements
+
+##### Manual installation
 
 To open the EMF editor and generate the code and the DSL, you have to download:
 
@@ -50,8 +53,14 @@ To open the EMF editor and generate the code and the DSL, you have to download:
   - Ignore all the other windows and click _Finish_
   - Eventually, the Eclipse application should start.
 
-- **Acceleo 3.7** from the Eclipse Marketplace (inside the editor go to Help -> Eclipse Marketplace -> Type Acceleo)
+- **Acceleo 3.7:** from the Eclipse Marketplace (inside the editor go to Help -> Eclipse Marketplace -> Type Acceleo)
 - **Xtext 2.34.0:** follow the download and installation instructions at <https://eclipse.dev/Xtext/download.html>
+
+##### Eclipse Bundle
+
+Unzip the `eclipse.zip` file and run the `eclipse` executable. The bundle already contains the required plugins.
+
+**Note:** The bundle has been created on a Windows operating system and may not work in other environments. In this case, please follow the manual installation.
 
 #### 1.2 Import the metamodel and models
 
@@ -75,16 +84,19 @@ To open the EMF editor and generate the code and the DSL, you have to download:
 
 ### 2. Generate the code
 
-1. Save the model with the .xmi extension
-2. Run the generate.mtl file with right click -> Run as -> Launch Acceleo application by setting the following parameters:
+1. Run the `generate.mtl` file located inside `org.eclipse.acceleo.modness.generator.common` with right click -> Run as -> Launch Acceleo application by setting the following parameters:
+
+![alt text](image.png)
 
 ![To do](modness/assets/acceleo_screen.png)
 
-where the **Model** is the one produced with the EMF editor and the **Target** is the folder that contains the generated code.
+where the **Model** is the one produced with the EMF editor and located in the `metamodel.runtime` folder (i.e., `test`) and **Target** is the folder that contains the generated code.
 
-3. The generated code should appear in the `generated` folder
+2. The generated code should appear in the `generated` folder
 
-**Troubleshooting:** It might be necessary to programmatically register the metamodel and link the metamodel project with the Acceleo one (please note that we already added the needed lines of code in the repository).
+### Troubleshooting
+
+It might be necessary to programmatically register the metamodel and link the metamodel project with the Acceleo one (please note that we already added the needed lines of code in the repository).
 
 1.  Right-click on the Acceleo project and select _Build path -> Configure Build Path..._, then add the modeling project to the Classpath;
 2.  Modify the method public void `registerResourceFactories(ResourceSet resourceSet)` in the `Generate.java` file by adding:
@@ -108,7 +120,7 @@ In the following, we report the steps to run the generated code.
 
 ##### 2.1.2 Run the code
 
-1. Open a terminal in the `ase2023-modeness` folder
+1. Open a terminal in the `modeness` folder
 2. Run the following command:
 
 ```bash
