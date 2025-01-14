@@ -86,7 +86,7 @@ Unzip the `eclipse.zip` file and run the `eclipse` executable. The bundle alread
 
 1. Run the `generate.mtl` file located inside `org.eclipse.acceleo.modness.generator.common` with right click -> Run as -> Launch Acceleo application by setting the following parameters:
 
-![alt text](image.png)
+![alt text](modness/assets/image.png)
 
 ![To do](modness/assets/acceleo_screen.png)
 
