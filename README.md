@@ -38,11 +38,12 @@ In the following, we report the steps to import the metamodel and the models, an
 
 #### 1.1 Requirements
 
+**Java version 17:** [https://adoptium.net/](https://adoptium.net/)
+
 ##### Manual installation
 
 To open the EMF editor and generate the code and the DSL, you have to download:
 
-- **Java version 17:** [https://adoptium.net/](https://adoptium.net/)
 - **Eclipse Modeling Tools 2024-03:**
 
   - Download the installer from <https://www.eclipse.org/downloads/>
