@@ -32,6 +32,10 @@ The project is structured as follows:
 
 Follow these instructions to reproduce the evaluation performed to answer the **RQ2** of the paper.
 
+### Screencast
+
+A screencast of the evaluation reproduction is available at the following link: [https://youtu.be/\_cNsGT5KUms](https://youtu.be/_cNsGT5KUms)
+
 ### 1. How to import the metamodel, the models and generate the code
 
 In the following, we report the steps to import the metamodel and the models, and to generate the code.
