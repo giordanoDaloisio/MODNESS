@@ -38,11 +38,9 @@ In the following, we report the steps to import the metamodel and the models, an
 
 #### 1.1 Requirements
 
-**Java version 17:** [https://adoptium.net/](https://adoptium.net/)
-
-##### Manual installation
-
 To open the EMF editor and generate the code and the DSL, you have to download:
+
+- **Java version 17:** [https://adoptium.net/](https://adoptium.net/)
 
 - **Eclipse Modeling Tools 2024-03:**
 
@@ -56,12 +54,6 @@ To open the EMF editor and generate the code and the DSL, you have to download:
 
 - **Acceleo 3.7:** from the Eclipse Marketplace (inside the editor go to Help -> Eclipse Marketplace -> Type Acceleo)
 - **Xtext 2.34.0:** follow the download and installation instructions at <https://eclipse.dev/Xtext/download.html>
-
-##### Eclipse Bundle
-
-Unzip the `eclipse.zip` file and run the `eclipse` executable. The bundle already contains the required plugins.
-
-**Note:** The bundle has been created on a Windows operating system and may not work in other environments. In this case, please follow the manual installation.
 
 #### 1.2 Import the metamodel and models
 
