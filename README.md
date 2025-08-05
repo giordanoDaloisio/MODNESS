@@ -148,6 +148,21 @@ Where `<PYTHON FILE>` is the name of one of the generated Python files (i.e., `c
 
 If you see an error in the Xtext grammar file such as _Couldn't resolve reference to EPackage 'http://www.example.org/fairness'_, you should convert the Ecore project to an Xtext project. To do so, right-click on the `metamodel` project and select _Configure -> Convert to Xtext project_.
 
+## Citation
+
+Please cite our work if you use MODNESS in your work:
+
+```bibtex
+@article{d2025fair,
+  title={How fair are we? From conceptualization to automated assessment of fairness definitions},
+  author={d’Aloisio, Giordano and Di Sipio, Claudio and Di Marco, Antinisca and Di Ruscio, Davide},
+  journal={Software and Systems Modeling},
+  pages={1--27},
+  year={2025},
+  publisher={Springer Berlin Heidelberg}
+}
+```
+
 ## License
 
 This work is released under GPL-3.0 license
